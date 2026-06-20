@@ -1,0 +1,22 @@
+id: algebra.group.quotient.definition
+kind: definition
+title: Definition of quotient group
+
+defines:
+  - algebra.group.quotient
+
+depends_on:
+  - algebra.group.subgroup.normal
+
+statement: |
+  Let $N\trianglelefteq G$ be a normal subgroup. The quotient group $G/N$ is the set of left cosets $gN$ with multiplication defined by $(gN)(hN)=(gh)N$.
+
+display_math:
+  - latex: |
+      G/N=\{gN\mid g\in G\},\qquad (gN)(hN)=(gh)N
+    description: The cosets of a normal subgroup with induced multiplication.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 3.1
+    note: Defines quotient groups using cosets of normal subgroups.

@@ -1,0 +1,21 @@
+id: algebra.group.homomorphism.example.reduction-mod-two
+kind: example
+title: Reduction modulo two as a group homomorphism
+
+example_of:
+  - algebra.group.homomorphism
+
+description: The map sending an integer to its residue class modulo $2$ is a homomorphism from $(\mathbb{Z},+)$ to $(\mathbb{Z}/2\mathbb{Z},+)$ because it preserves addition.
+
+display_math:
+  - latex: |
+      \varphi:\mathbb{Z}\to\mathbb{Z}/2\mathbb{Z},\qquad \varphi(n)=n \bmod 2
+    description: The reduction modulo two homomorphism.
+  - latex: |
+      \varphi(m+n)=\varphi(m)+\varphi(n)
+    description: Preservation of addition.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.6
+    note: Modular arithmetic maps are standard examples of group homomorphisms.

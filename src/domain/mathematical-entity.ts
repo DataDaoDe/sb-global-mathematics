@@ -17,6 +17,10 @@ import {
   type Example,
 } from "./example.js";
 import {
+  HistoricalNoteSchema,
+  type HistoricalNote,
+} from "./historical-note.js";
+import {
   ProofSchema,
   type Proof,
 } from "./proof.js";
@@ -45,6 +49,7 @@ export const EntitySchemas = {
   example: ExampleSchema,
   counterexample: CounterexampleSchema,
   question: QuestionSchema,
+  historical_note: HistoricalNoteSchema,
   source: SourceSchema,
 } as const;
 
@@ -59,6 +64,7 @@ export type MathematicalEntity =
   | Example
   | Counterexample
   | Question
+  | HistoricalNote
   | Source;
 
 const EntityEnvelopeSchema = z

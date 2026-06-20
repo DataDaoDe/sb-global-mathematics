@@ -1,0 +1,16 @@
+id: algebra.group.permutation
+kind: concept
+title: Permutation group
+
+summary: A permutation group is a group whose elements are permutations of a set and whose operation is composition of permutations.
+
+display_math:
+  - latex: |
+      G \leq S_X
+    description: A permutation group on a set $X$ as a subgroup of the symmetric group on $X$.
+
+defined_by:
+  - algebra.group.permutation.definition
+
+broader_concepts:
+  - algebra.group

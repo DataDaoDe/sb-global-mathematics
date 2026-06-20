@@ -31,6 +31,7 @@ describe("Example", () => {
       title: "Integers as a commutative unital ring",
       example_of: [
         "algebra.ring.commutative-unital",
+        "algebra.ring.associative-unital",
       ],
       description:
         "The integers form a commutative unital ring under ordinary addition and multiplication. The multiplicative identity is 1.",
@@ -46,7 +47,11 @@ describe("Example", () => {
         },
       ],
       source_refs: [
-        "source.dummit-foote-abstract-algebra-third-edition",
+        {
+          source: "source.dummit-foote-abstract-algebra-third-edition",
+          locator: "Chapter 7",
+          note: "Uses the integers as a basic motivating ring example.",
+        },
       ],
     });
   });

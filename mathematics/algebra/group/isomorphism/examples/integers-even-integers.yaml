@@ -1,0 +1,19 @@
+id: algebra.group.isomorphism.example.integers-even-integers
+kind: example
+title: Integers are isomorphic to the even integers
+
+example_of:
+  - algebra.group.isomorphism
+
+description: |
+  The map $\varphi:\mathbb{Z}\to 2\mathbb{Z}$ defined by $\varphi(n)=2n$ is a group isomorphism from $(\mathbb{Z},+)$ to $(2\mathbb{Z},+)$.
+
+display_math:
+  - latex: |
+      \varphi(n)=2n,\qquad \varphi(m+n)=\varphi(m)+\varphi(n)
+    description: The doubling map as an additive isomorphism.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.6
+    note: Isomorphisms identify groups with the same structure even when represented differently.

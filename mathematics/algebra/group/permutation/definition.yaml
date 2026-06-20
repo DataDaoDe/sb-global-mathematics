@@ -1,0 +1,24 @@
+id: algebra.group.permutation.definition
+kind: definition
+title: Definition of permutation group
+
+defines:
+  - algebra.group.permutation
+
+depends_on:
+  - foundations.set
+  - foundations.function
+  - algebra.group
+
+statement: |
+  A permutation group on a set $X$ is a group whose elements are bijections $X \to X$ and whose operation is composition of functions.
+
+display_math:
+  - latex: |
+      \sigma,\tau:X\to X,\qquad \sigma\circ\tau:X\to X
+    description: Composition of permutations of a set.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Sections 1.1 and 1.3
+    note: Introduces symmetric and permutation groups as central examples of groups.

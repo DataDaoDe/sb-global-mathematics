@@ -1,4 +1,8 @@
 node_modules/
 .validation-build/
 generated/
+.svelte-kit/
+website/.svelte-kit/
+website/dist/
+website/static/data/
 ._*

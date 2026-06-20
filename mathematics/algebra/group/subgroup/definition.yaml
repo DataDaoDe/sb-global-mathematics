@@ -1,0 +1,22 @@
+id: algebra.group.subgroup.definition
+kind: definition
+title: Definition of subgroup
+
+defines:
+  - algebra.group.subgroup
+
+depends_on:
+  - algebra.group
+
+statement: |
+  Let $(G,*)$ be a group. A subset $H \subseteq G$ is a subgroup of $G$ if $H$ is nonempty and $H$ is a group under the operation inherited from $G$.
+
+display_math:
+  - latex: |
+      H \leq G \iff H \subseteq G \text{ and } (H,*) \text{ is a group}
+    description: A subgroup as a subset that remains a group.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.3
+    note: Gives the standard definition and subgroup criterion.

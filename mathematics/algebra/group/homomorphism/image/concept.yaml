@@ -1,0 +1,16 @@
+id: algebra.group.homomorphism.image
+kind: concept
+title: Image of a group homomorphism
+
+summary: The image of a group homomorphism is the set of elements in the codomain that are reached by applying the homomorphism to elements of the domain.
+
+display_math:
+  - latex: |
+      \operatorname{im}(\varphi)
+    description: The image of a homomorphism $\varphi$.
+
+defined_by:
+  - algebra.group.homomorphism.image.definition
+
+broader_concepts:
+  - algebra.group.subgroup

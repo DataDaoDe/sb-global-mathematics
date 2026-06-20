@@ -31,6 +31,7 @@ if (!validation.valid) {
     writeJson(join(generatedRoot, "entities.json"), graph.entities),
     writeJson(join(generatedRoot, "edges.json"), graph.edges),
     writeJson(join(generatedRoot, "graph.json"), graph),
+    writeJson(join(generatedRoot, "metadata.json"), graph.metadata),
   ]);
 
   console.log(

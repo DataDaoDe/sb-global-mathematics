@@ -1,0 +1,23 @@
+id: algebra.group.homomorphism.definition
+kind: definition
+title: Definition of group homomorphism
+
+defines:
+  - algebra.group.homomorphism
+
+depends_on:
+  - foundations.function
+  - algebra.group
+
+statement: |
+  Let $(G,*)$ and $(H,\circ)$ be groups. A group homomorphism from $G$ to $H$ is a function $\varphi : G \to H$ such that $\varphi(a*b)=\varphi(a)\circ\varphi(b)$ for all $a,b \in G$.
+
+display_math:
+  - latex: |
+      \varphi(a*b)=\varphi(a)\circ\varphi(b)
+    description: Preservation of the group operation.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.6
+    note: Introduces homomorphisms as operation-preserving maps between groups.

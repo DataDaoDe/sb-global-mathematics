@@ -1,0 +1,23 @@
+id: foundations.binary-operation.definition
+kind: definition
+title: Definition of binary operation
+
+defines:
+  - foundations.binary-operation
+
+depends_on:
+  - foundations.set
+  - foundations.function
+
+statement: |
+  A binary operation $*$ on a set $S$ is a function $* : S \times S \to S$. For $a,b \in S$, its value is usually written $a*b$.
+
+display_math:
+  - latex: |
+      \forall a,b \in S,\quad a*b \in S
+    description: Closure of a binary operation on its underlying set.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.1
+    note: Introduces binary operations as part of the definition of a group.

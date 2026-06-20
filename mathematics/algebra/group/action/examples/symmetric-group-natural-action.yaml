@@ -1,0 +1,19 @@
+id: algebra.group.action.example.symmetric-group-natural-action
+kind: example
+title: The natural action of the symmetric group
+
+example_of:
+  - algebra.group.action
+
+description: |
+  The symmetric group $S_3$ acts on the set $\{1,2,3\}$ by sending each element to its image under a permutation.
+
+display_math:
+  - latex: |
+      \sigma\cdot i=\sigma(i)
+    description: The natural action of $S_3$ on $\{1,2,3\}$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.7
+    note: Symmetric groups acting on their underlying sets are standard first examples of group actions.

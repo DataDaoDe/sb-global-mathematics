@@ -4,6 +4,7 @@ import { DisplayMathSchema } from "./display-math.js";
 import { findDuplicates } from "./duplicates.js";
 import { EntityBaseSchema } from "./entity-base.js";
 import { EntityIdSchema } from "./entity-id.js";
+import { SourceReferencesSchema } from "./source-reference.js";
 
 export const PropositionTypeSchema = z.enum([
   "theorem",
@@ -31,7 +32,7 @@ export const PropositionSchema = EntityBaseSchema.extend({
     .default([]),
 
   source_refs: z
-    .array(EntityIdSchema)
+    .array(SourceReferencesSchema.element)
     .default([]),
 }).superRefine((proposition, context) => {
   const duplicateDependencies = findDuplicates(proposition.depends_on);
@@ -44,7 +45,9 @@ export const PropositionSchema = EntityBaseSchema.extend({
     });
   }
 
-  const duplicateSources = findDuplicates(proposition.source_refs);
+  const duplicateSources = findDuplicates(
+    proposition.source_refs.map((reference) => reference.source),
+  );
 
   if (duplicateSources.length > 0) {
     context.addIssue({

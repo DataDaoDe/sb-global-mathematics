@@ -1,0 +1,18 @@
+id: foundations.binary-operation.example.integer-addition
+kind: example
+title: Integer addition as a binary operation
+
+example_of:
+  - foundations.binary-operation
+
+description: Addition on the integers is a binary operation because every pair of integers $m,n$ has a sum $m+n$ that is again an integer.
+
+display_math:
+  - latex: |
+      +:\mathbb{Z}\times\mathbb{Z}\to\mathbb{Z}
+    description: Addition as a binary operation on $\mathbb{Z}$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.1
+    note: Integer addition is a standard motivating example for binary operations and groups.

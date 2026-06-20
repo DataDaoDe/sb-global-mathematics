@@ -1,0 +1,27 @@
+id: algebra.ring.commutative-unital.history.integer-arithmetic-abstraction
+kind: historical_note
+title: Rings as an abstraction of integer-like arithmetic
+
+date_label: Modern abstract algebra formulation
+
+description: The modern concept of a commutative unital ring isolates the formal interaction between addition and multiplication familiar from the integers. This viewpoint treats arithmetic laws such as commutativity, associativity, distributivity, and the existence of additive and multiplicative identities as reusable structure rather than as properties of one number system.
+
+display_math:
+  - latex: |
+      (\mathbb{Z}, +, \cdot)
+      \rightsquigarrow
+      (R, +, \cdot)
+    description: The passage from integer arithmetic to an abstract ring structure.
+
+subjects:
+  - algebra.ring.commutative-unital
+
+developed_from:
+  - algebra.ring.commutative-unital.example.integers
+
+developed_into: []
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Chapter 7
+    note: Secondary source for the modern abstract algebra formulation.

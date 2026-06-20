@@ -1,0 +1,19 @@
+id: algebra.group.homomorphism.image.example.reduction-mod-two
+kind: example
+title: Image of reduction modulo two
+
+example_of:
+  - algebra.group.homomorphism.image
+
+description: |
+  The image of the reduction modulo $2$ homomorphism $\varphi:\mathbb{Z}\to\mathbb{Z}/2\mathbb{Z}$ is all of $\mathbb{Z}/2\mathbb{Z}$, since both residue classes occur.
+
+display_math:
+  - latex: |
+      \operatorname{im}(\varphi)=\mathbb{Z}/2\mathbb{Z}
+    description: The image of the reduction modulo two homomorphism.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.6
+    note: Images of homomorphisms are treated as reached subgroups of the codomain.

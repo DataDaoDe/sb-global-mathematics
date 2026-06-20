@@ -242,9 +242,31 @@ The repository will validate:
 * reference resolution;
 * relation validity;
 * concept-definition consistency;
+* display and inline math rendering;
+* baseline entity completeness;
+* source citation locators;
 * dependency graphs;
 * invalid cycles;
 * formal artifacts where available.
+
+Baseline completeness currently requires:
+
+* every concept to have at least one example;
+* every concept to connect to a motivating or related question;
+* every concept to have historical context;
+* every definition, proposition, proof, example, counterexample, question, and historical note to cite at least one source;
+* every source reference to include a locator.
+
+Source references are structured citation objects:
+
+```yaml
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Chapter 7
+    note: Standard abstract algebra treatment of rings.
+```
+
+Source entities may also include optional `doi` and `isbn` identifiers.
 
 Structured fields generate graph relations automatically. For example:
 
@@ -273,11 +295,14 @@ Synthetic objects should be limited to targeted invalid cases such as:
 Both static and runtime validation are required:
 
 ```bash
+pnpm build
+pnpm build:website
 pnpm check
 pnpm test
 pnpm validate
 pnpm build:graph
 pnpm build:sqlite
+pnpm build:web-data
 ```
 
 ## Technology
@@ -307,6 +332,7 @@ Implemented:
 * `Example` schema;
 * `Counterexample` schema;
 * `Question` schema;
+* `HistoricalNote` schema;
 * `Source` schema;
 * shared display-math validation for renderable mathematical entities;
 * YAML mathematical source files;
@@ -317,22 +343,30 @@ Implemented:
 * schema dispatch by entity kind;
 * canonical JSON graph export;
 * SQLite artifact export;
+* static website data bundle export;
+* static SvelteKit browser prototype;
+* namespace tree browser route;
 * tests using concrete repository content.
 
 Currently supported:
 
 ```text
 concept
+counterexample
 definition
+example
+historical_note
+proof
+proposition
 question
 source
 ```
 
 Planned next:
 
-1. define historical development entities;
+1. add richer historical sources and person/terminology entities;
 2. generate ontology exports;
-3. build a static browser rendering prototype;
+3. refine static browser rendering;
 4. integrate the repository with Socrates Academy.
 
 ## Development

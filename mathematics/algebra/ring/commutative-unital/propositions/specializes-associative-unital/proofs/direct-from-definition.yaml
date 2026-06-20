@@ -23,4 +23,6 @@ depends_on:
   - algebra.ring.associative-unital.definition
 
 source_refs:
-  - source.dummit-foote-abstract-algebra-third-edition
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Chapter 7
+    note: Direct definitional argument using the standard ring definitions.

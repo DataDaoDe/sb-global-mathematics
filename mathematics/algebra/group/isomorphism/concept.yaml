@@ -1,0 +1,16 @@
+id: algebra.group.isomorphism
+kind: concept
+title: Group isomorphism
+
+summary: A group isomorphism is a bijective group homomorphism, showing that two groups have the same group structure even if their elements are named differently.
+
+display_math:
+  - latex: |
+      G \cong H
+    description: The notation that groups $G$ and $H$ are isomorphic.
+
+defined_by:
+  - algebra.group.isomorphism.definition
+
+broader_concepts:
+  - algebra.group.homomorphism

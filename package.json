@@ -4,9 +4,14 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build": "pnpm validate && pnpm build:graph && pnpm build:sqlite && pnpm build:web-data",
+    "build:website": "pnpm build && pnpm prepare:website-data && cd website && vite build",
     "build:graph": "tsc -p tsconfig.validate.json && node .validation-build/cli/build-graph.js",
     "build:sqlite": "tsc -p tsconfig.validate.json && node .validation-build/cli/build-sqlite.js",
-    "check": "tsc --noEmit",
+    "build:web-data": "tsc -p tsconfig.validate.json && node .validation-build/cli/build-web-data.js",
+    "check": "cd website && svelte-kit sync && cd .. && tsc --noEmit",
+    "dev:website": "pnpm build && pnpm prepare:website-data && cd website && vite dev --host 127.0.0.1",
+    "prepare:website-data": "rm -rf website/static/data && mkdir -p website/static && cp -R generated/web website/static/data",
     "test": "vitest run",
     "test:watch": "vitest",
     "validate": "tsc -p tsconfig.validate.json && node .validation-build/cli/validate.js"
@@ -22,8 +27,15 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@sveltejs/adapter-static": "^3.0.10",
+    "@sveltejs/kit": "^2.50.2",
+    "@sveltejs/vite-plugin-svelte": "^7.1.2",
+    "@tailwindcss/vite": "^4.3.1",
     "@types/node": "^26.0.0",
+    "svelte": "^5.56.3",
+    "tailwindcss": "^4.3.1",
     "typescript": "^6.0.3",
+    "vite": "^8.0.16",
     "vitest": "^4.1.9"
   }
 }

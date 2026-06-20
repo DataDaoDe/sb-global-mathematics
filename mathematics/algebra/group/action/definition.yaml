@@ -1,0 +1,24 @@
+id: algebra.group.action.definition
+kind: definition
+title: Definition of group action
+
+defines:
+  - algebra.group.action
+
+depends_on:
+  - algebra.group
+  - foundations.set
+  - foundations.function
+
+statement: |
+  A left action of a group $G$ on a set $X$ is a function $G\times X\to X$, written $(g,x)\mapsto g\cdot x$, such that $e\cdot x=x$ and $(gh)\cdot x=g\cdot(h\cdot x)$ for all $g,h\in G$ and $x\in X$.
+
+display_math:
+  - latex: |
+      e\cdot x=x,\qquad (gh)\cdot x=g\cdot(h\cdot x)
+    description: Identity and compatibility axioms for a group action.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.7
+    note: Introduces group actions as groups acting on sets by compatible transformations.

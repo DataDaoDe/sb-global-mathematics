@@ -1,0 +1,16 @@
+id: algebra.group.subgroup
+kind: concept
+title: Subgroup
+
+summary: A subgroup is a subset of a group that is itself a group under the operation inherited from the ambient group.
+
+display_math:
+  - latex: |
+      H \leq G
+    description: The notation that $H$ is a subgroup of $G$.
+
+defined_by:
+  - algebra.group.subgroup.definition
+
+broader_concepts:
+  - algebra.group

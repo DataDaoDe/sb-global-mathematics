@@ -1,0 +1,21 @@
+id: algebra.group.example.integers-under-addition
+kind: example
+title: Integers under addition form a group
+
+example_of:
+  - algebra.group
+
+description: The integers with ordinary addition form a group. Addition is associative, $0$ is the identity element, and the inverse of an integer $n$ is $-n$.
+
+display_math:
+  - latex: |
+      (\mathbb{Z}, +)
+    description: The additive group of integers.
+  - latex: |
+      n + (-n)=0=(-n)+n
+    description: Additive inverses in $\mathbb{Z}$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.1
+    note: The integers under addition are a basic example of a group.

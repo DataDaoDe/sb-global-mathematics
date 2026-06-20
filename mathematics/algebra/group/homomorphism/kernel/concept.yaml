@@ -1,0 +1,16 @@
+id: algebra.group.homomorphism.kernel
+kind: concept
+title: Kernel of a group homomorphism
+
+summary: The kernel of a group homomorphism is the set of elements in the domain that map to the identity element of the codomain.
+
+display_math:
+  - latex: |
+      \ker(\varphi)
+    description: The kernel of a homomorphism $\varphi$.
+
+defined_by:
+  - algebra.group.homomorphism.kernel.definition
+
+broader_concepts:
+  - algebra.group.subgroup

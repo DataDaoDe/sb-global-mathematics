@@ -1,0 +1,20 @@
+id: foundations.set.definition
+kind: definition
+title: Definition of set
+
+defines:
+  - foundations.set
+
+depends_on: []
+
+statement: A set $A$ is an object whose elements are determined by the membership relation $x \in A$. Two sets $A$ and $B$ are equal exactly when they have the same elements.
+
+display_math:
+  - latex: |
+      A = B \iff \forall x\,(x \in A \iff x \in B)
+    description: Extensional equality of sets.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Uses set-theoretic notation and extensional set language in the preliminary material.

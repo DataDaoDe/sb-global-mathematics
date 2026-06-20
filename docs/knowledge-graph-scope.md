@@ -45,7 +45,23 @@ The source graph records where claims, definitions, terminology, exposition, and
 
 Sources may include books, papers, manuscripts, lectures, encyclopedias, web pages, and formal libraries.
 
+Sources may include optional external identifiers:
+
+* `doi` for DOI-bearing papers, books, chapters, and datasets;
+* `isbn` for books and editions with ISBN identifiers.
+
 A source reference supports a claim. It does not by itself make the claim mathematically correct.
+
+Source references must be structured citation objects:
+
+```yaml
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Chapter 7
+    note: Standard abstract algebra treatment of rings.
+```
+
+The `source` field identifies the source entity. The `locator` field points to the relevant part of the source. The optional `note` explains why this source supports the entity.
 
 ### Question graph
 
@@ -77,12 +93,12 @@ The first coherent graph slice should support:
 * `Example` - a concrete case satisfying or illustrating an entity;
 * `Counterexample` - a concrete case refuting an entity or showing why an assumption matters;
 * `Question` - a motivating mathematical inquiry;
+* `HistoricalNote` - a source-backed note about the development, formulation, terminology, or historical context of mathematical ideas;
 * `Source` - a bibliographic, historical, or formal provenance record.
 
 Later slices should add:
 
 * `Person`;
-* `HistoricalEvent`;
 * `Terminology`;
 * `Formalization`.
 
@@ -101,10 +117,21 @@ Initial relation meanings:
 * `demonstrates_necessity_of`: a counterexample shows why another entity or assumption matters;
 * `motivates`: a question motivates an entity;
 * `related_concepts`: a question is conceptually related to concepts;
+* `historical_context_for`: a historical note gives context for an entity;
+* `developed_from`: a historical note points to earlier ideas or examples involved in development;
+* `developed_into`: a historical note points to later ideas or formalizations;
 * `source_refs`: an entity is supported or documented by sources;
 * `broader_concepts`: a concept specializes broader concepts.
 
-Repository-wide validation must eventually check that relation targets exist and have the expected entity kinds.
+Repository-wide validation must check that relation targets exist and have the expected entity kinds.
+
+Repository-wide completeness validation must also enforce the baseline authoring standard:
+
+* concepts must have at least one example;
+* concepts must connect to a motivating or related question;
+* concepts must have historical context;
+* definitions, propositions, proofs, examples, counterexamples, questions, and historical notes must cite at least one source;
+* source references must include locators.
 
 ## Path Convention
 
@@ -119,6 +146,7 @@ Initial path rules:
 * concept-scoped `example`: `mathematics/<concept id segments>/examples/<example slug>.yaml`;
 * concept-scoped `counterexample`: `mathematics/<concept id segments>/counterexamples/<counterexample slug>.yaml`;
 * concept-scoped `question`: `mathematics/<concept id segments>/questions/<question slug>.yaml`;
+* concept-scoped `historical_note`: `mathematics/<concept id segments>/history/<history slug>.yaml`;
 * `source`: `mathematics/sources/<source slug>.yaml`.
 
 This convention makes the source repository navigable without needing a generated index.
@@ -144,6 +172,16 @@ The initial SQLite export is:
 * `generated/global-mathematics.sqlite`.
 
 It stores normalized `entities`, `edges`, `display_math`, and `metadata` tables.
+
+The initial static website data bundle is:
+
+* `generated/web/metadata.json`;
+* `generated/web/index.json`;
+* `generated/web/search.json`;
+* `generated/web/tree.json`;
+* `generated/web/entities/<entity-id>.json`.
+
+Each entity page includes the entity, raw incoming and outgoing edges, and presentation-friendly relation groups for browser rendering.
 
 ## Display Mathematics
 
@@ -175,7 +213,7 @@ Repository validation must render embedded text math with KaTeX so broken expres
 
 The next useful product slice is complete when:
 
-* concept, definition, proposition, proof, example, counterexample, question, and source entities can be loaded from YAML;
+* concept, definition, proposition, proof, example, counterexample, question, historical note, and source entities can be loaded from YAML;
 * each entity has strict local schema validation;
 * renderable mathematical entities include display mathematics;
 * the commutative unital ring concept has a definition entity;

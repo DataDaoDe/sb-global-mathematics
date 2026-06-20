@@ -1,0 +1,22 @@
+id: algebra.group.subgroup.normal.definition
+kind: definition
+title: Definition of normal subgroup
+
+defines:
+  - algebra.group.subgroup.normal
+
+depends_on:
+  - algebra.group.subgroup
+
+statement: |
+  Let $G$ be a group. A subgroup $N\leq G$ is normal in $G$ if $gng^{-1}\in N$ for every $g\in G$ and every $n\in N$.
+
+display_math:
+  - latex: |
+      \forall g\in G,\quad gNg^{-1}=N
+    description: Conjugation invariance of a normal subgroup.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 3.1
+    note: Introduces normal subgroups as the subgroups that support quotient groups.

@@ -1,0 +1,28 @@
+id: algebra.ring.associative-unital.history.integer-arithmetic-abstraction
+kind: historical_note
+title: Associative unital rings as an abstraction of integer-like arithmetic
+
+date_label: Modern abstract algebra formulation
+
+description: The modern concept of an associative unital ring keeps the structural laws of integer arithmetic that do not require multiplication to be commutative. This abstraction preserves addition, multiplication, distributivity, associativity of multiplication, and a multiplicative identity while allowing multiplication to be noncommutative.
+
+display_math:
+  - latex: |
+      (\mathbb{Z}, +, \cdot)
+      \rightsquigarrow
+      (R, +, \cdot)
+    description: The passage from integer arithmetic to an abstract associative unital ring structure.
+
+subjects:
+  - algebra.ring.associative-unital
+
+developed_from:
+  - algebra.ring.commutative-unital.example.integers
+
+developed_into:
+  - algebra.ring.commutative-unital
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Chapter 7
+    note: Secondary source for the modern abstract algebra formulation.

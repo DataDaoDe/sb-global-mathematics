@@ -1,0 +1,16 @@
+id: algebra.group.action
+kind: concept
+title: Group action
+
+summary: A group action is a way for a group to act as transformations of a set while respecting the group operation.
+
+display_math:
+  - latex: |
+      G \curvearrowright X
+    description: A group $G$ acting on a set $X$.
+
+defined_by:
+  - algebra.group.action.definition
+
+broader_concepts:
+  - algebra.group.homomorphism

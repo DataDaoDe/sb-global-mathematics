@@ -1,0 +1,23 @@
+id: foundations.set.question.describe-reversible-structure
+kind: question
+title: What data is needed to describe reversible structure?
+
+asks: What minimal data is needed to describe a mathematical system whose operations can always be reversed?
+
+display_math:
+  - latex: |
+      (S, *) \quad\text{with reversible operation}
+    description: The kind of structure that the group axioms make precise.
+
+motivates:
+  - foundations.set
+  - foundations.function
+  - foundations.binary-operation
+  - algebra.group
+
+related_concepts: []
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Sections 0.1 and 1.1
+    note: The preliminary material on sets and functions feeds into the definition of groups.

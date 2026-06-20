@@ -24,6 +24,7 @@ export type RepositoryValidationIssueCode =
   | "unresolved-reference"
   | "wrong-reference-kind"
   | "inconsistent-concept-definition"
+  | "incomplete-entity"
   | "unexpected-entity-path"
   | "invalid-display-math"
   | "invalid-text-math";
@@ -54,6 +55,7 @@ const MATHEMATICAL_ENTITY_KINDS = [
   "proof",
   "example",
   "counterexample",
+  "historical_note",
 ] as const satisfies readonly SupportedEntityKind[];
 
 export async function loadRepositoryEntities(
@@ -112,10 +114,168 @@ export function validateEntities(
 
   validateConceptDefinitionConsistency(loadedEntities, entitiesById, issues);
 
+  if (issues.length === 0) {
+    validateCompleteness(loadedEntities, issues);
+  }
+
   return {
     valid: issues.length === 0,
     issues,
   };
+}
+
+function validateCompleteness(
+  loadedEntities: readonly LoadedEntity[],
+  issues: RepositoryValidationIssue[],
+): void {
+  const entities = loadedEntities.map((loadedEntity) => loadedEntity.entity);
+
+  for (const loadedEntity of loadedEntities) {
+    const { entity } = loadedEntity;
+
+    switch (entity.kind) {
+      case "concept":
+        validateConceptCompleteness(loadedEntity, entities, issues);
+        break;
+
+      case "definition":
+      case "proposition":
+      case "proof":
+      case "example":
+      case "counterexample":
+      case "question":
+      case "historical_note":
+        validateSourceBackedEntity(loadedEntity, issues);
+        break;
+
+      case "source":
+        validateSourceCompleteness(loadedEntity, issues);
+        break;
+    }
+  }
+}
+
+function validateConceptCompleteness(
+  loadedEntity: LoadedEntity,
+  entities: readonly MathematicalEntity[],
+  issues: RepositoryValidationIssue[],
+): void {
+  const { entity } = loadedEntity;
+
+  if (entity.kind !== "concept") {
+    return;
+  }
+
+  const hasExample = entities.some((candidate) =>
+    candidate.kind === "example" && candidate.example_of.includes(entity.id)
+  );
+  const hasMotivatingQuestion = entities.some((candidate) =>
+    candidate.kind === "question" &&
+    (
+      candidate.motivates.includes(entity.id) ||
+      candidate.related_concepts.includes(entity.id)
+    )
+  );
+  const hasHistoricalContext = entities.some((candidate) =>
+    candidate.kind === "historical_note" &&
+    candidate.subjects.includes(entity.id)
+  );
+
+  if (!hasExample) {
+    incompleteIssue(
+      loadedEntity,
+      issues,
+      ["id"],
+      "Concepts must have at least one example so readers can ground the idea.",
+    );
+  }
+
+  if (!hasMotivatingQuestion) {
+    incompleteIssue(
+      loadedEntity,
+      issues,
+      ["id"],
+      "Concepts must be connected to at least one motivating or related question.",
+    );
+  }
+
+  if (!hasHistoricalContext) {
+    incompleteIssue(
+      loadedEntity,
+      issues,
+      ["id"],
+      "Concepts must have at least one historical note so development context is not optional.",
+    );
+  }
+}
+
+function validateSourceBackedEntity(
+  loadedEntity: LoadedEntity,
+  issues: RepositoryValidationIssue[],
+): void {
+  const { entity } = loadedEntity;
+
+  if (
+    "source_refs" in entity &&
+    Array.isArray(entity.source_refs) &&
+    entity.source_refs.length === 0
+  ) {
+    incompleteIssue(
+      loadedEntity,
+      issues,
+      ["source_refs"],
+      `${entity.kind} entities must cite at least one source.`,
+    );
+  }
+
+  if ("source_refs" in entity && Array.isArray(entity.source_refs)) {
+    entity.source_refs.forEach((reference, index) => {
+      if (reference.locator === undefined) {
+        incompleteIssue(
+          loadedEntity,
+          issues,
+          ["source_refs", String(index), "locator"],
+          "Source references must include a locator.",
+        );
+      }
+    });
+  }
+}
+
+function validateSourceCompleteness(
+  loadedEntity: LoadedEntity,
+  issues: RepositoryValidationIssue[],
+): void {
+  const { entity } = loadedEntity;
+
+  if (entity.kind !== "source") {
+    return;
+  }
+
+  if (entity.authors.length === 0 && entity.locator === undefined) {
+    incompleteIssue(
+      loadedEntity,
+      issues,
+      ["authors"],
+      "Sources must provide authors or a locator.",
+    );
+  }
+}
+
+function incompleteIssue(
+  loadedEntity: LoadedEntity,
+  issues: RepositoryValidationIssue[],
+  path: readonly string[],
+  message: string,
+): void {
+  issues.push({
+    code: "incomplete-entity",
+    message: `Entity "${loadedEntity.entity.id}" is incomplete: ${message}`,
+    entityId: loadedEntity.entity.id,
+    filePath: loadedEntity.filePath,
+    path,
+    targetId: loadedEntity.entity.id,
+  });
 }
 
 type TextMathExpression = {
@@ -268,6 +428,14 @@ function textFieldsFor(
         {
           fieldName: "asks",
           text: entity.asks,
+        },
+      ];
+
+    case "historical_note":
+      return [
+        {
+          fieldName: "description",
+          text: entity.description,
         },
       ];
 
@@ -545,6 +713,34 @@ function referenceRulesFor(
         },
       ];
 
+    case "historical_note":
+      return [
+        {
+          path: ["subjects"],
+          targetKinds: [
+            "concept",
+            "definition",
+            "proposition",
+            "proof",
+            "example",
+            "counterexample",
+            "question",
+          ],
+        },
+        {
+          path: ["developed_from"],
+          targetKinds: MATHEMATICAL_ENTITY_KINDS,
+        },
+        {
+          path: ["developed_into"],
+          targetKinds: MATHEMATICAL_ENTITY_KINDS,
+        },
+        {
+          path: ["source_refs"],
+          targetKinds: ["source"],
+        },
+      ];
+
     case "source":
       return [];
   }
@@ -562,5 +758,22 @@ function getReferenceIds(
 
   const value = entity[fieldName as keyof MathematicalEntity];
 
+  if (fieldName === "source_refs" && Array.isArray(value)) {
+    return value.flatMap((reference) =>
+      isSourceReferenceLike(reference) ? [reference.source] : []
+    );
+  }
+
   return Array.isArray(value) ? value : [];
+}
+
+function isSourceReferenceLike(
+  value: unknown,
+): value is { readonly source: string } {
+  return (
+    typeof value === "object" &&
+    value !== null &&
+    "source" in value &&
+    typeof value.source === "string"
+  );
 }

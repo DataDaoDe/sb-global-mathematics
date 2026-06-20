@@ -1,4 +1,13 @@
 export {
+  ARTIFACT_SCHEMA_VERSION,
+  createArtifactMetadata,
+} from "./artifacts/metadata.js";
+
+export type {
+  ArtifactMetadata,
+} from "./artifacts/metadata.js";
+
+export {
   EntityIdSchema,
   isEntityId,
   parseEntityId,
@@ -25,6 +34,17 @@ export type {
   DisplayMath,
   DisplayMathExpression,
 } from "./domain/display-math.js";
+
+export {
+  SourceReferenceLocatorSchema,
+  SourceReferenceNoteSchema,
+  SourceReferenceSchema,
+  SourceReferencesSchema,
+} from "./domain/source-reference.js";
+
+export type {
+  SourceReference,
+} from "./domain/source-reference.js";
 
 export {
   EntityBaseSchema,
@@ -80,6 +100,18 @@ export type {
 } from "./domain/example.js";
 
 export {
+  HistoricalNoteDateLabelSchema,
+  HistoricalNoteDescriptionSchema,
+  HistoricalNoteSchema,
+  isHistoricalNote,
+  parseHistoricalNote,
+} from "./domain/historical-note.js";
+
+export type {
+  HistoricalNote,
+} from "./domain/historical-note.js";
+
+export {
   ProofArgumentSchema,
   ProofMethodSchema,
   ProofSchema,
@@ -116,6 +148,8 @@ export type {
 
 export {
   SourceAuthorSchema,
+  SourceDoiSchema,
+  SourceIsbnSchema,
   SourceSchema,
   SourceTypeSchema,
   isSource,
@@ -144,6 +178,19 @@ export {
 export type {
   SqliteExportMetadata,
 } from "./sqlite/export-sqlite.js";
+
+export {
+  buildWebData,
+} from "./web-data/build-web-data.js";
+
+export type {
+  WebDataBundle,
+  WebEntityPage,
+  WebEntitySummary,
+  WebNamespaceTree,
+  WebNamespaceTreeNode,
+  WebSearchEntry,
+} from "./web-data/build-web-data.js";
 
 export {
   EntitySchemas,

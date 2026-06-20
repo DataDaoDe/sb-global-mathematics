@@ -1,0 +1,16 @@
+id: foundations.binary-operation
+kind: concept
+title: Binary operation
+
+summary: A binary operation on a set is a function that combines two elements of the set to produce another element of the same set.
+
+display_math:
+  - latex: |
+      * : S \times S \to S
+    description: A binary operation $*$ on the set $S$.
+
+defined_by:
+  - foundations.binary-operation.definition
+
+broader_concepts:
+  - foundations.function

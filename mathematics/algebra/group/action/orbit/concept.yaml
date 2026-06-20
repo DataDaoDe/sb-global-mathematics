@@ -1,0 +1,16 @@
+id: algebra.group.action.orbit
+kind: concept
+title: Orbit of a group action
+
+summary: The orbit of a point under a group action is the set of all points reachable from it by applying elements of the group.
+
+display_math:
+  - latex: |
+      G\cdot x
+    description: The orbit of $x$ under the action of $G$.
+
+defined_by:
+  - algebra.group.action.orbit.definition
+
+broader_concepts:
+  - algebra.group.action

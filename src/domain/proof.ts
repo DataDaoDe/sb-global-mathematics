@@ -4,6 +4,7 @@ import { DisplayMathSchema } from "./display-math.js";
 import { findDuplicates } from "./duplicates.js";
 import { EntityBaseSchema } from "./entity-base.js";
 import { EntityIdSchema } from "./entity-id.js";
+import { SourceReferencesSchema } from "./source-reference.js";
 
 export const ProofMethodSchema = z
   .string()
@@ -34,7 +35,7 @@ export const ProofSchema = EntityBaseSchema.extend({
     .default([]),
 
   source_refs: z
-    .array(EntityIdSchema)
+    .array(SourceReferencesSchema.element)
     .default([]),
 }).superRefine((proof, context) => {
   const duplicatePropositions = findDuplicates(proof.proves);
@@ -57,7 +58,9 @@ export const ProofSchema = EntityBaseSchema.extend({
     });
   }
 
-  const duplicateSources = findDuplicates(proof.source_refs);
+  const duplicateSources = findDuplicates(
+    proof.source_refs.map((reference) => reference.source),
+  );
 
   if (duplicateSources.length > 0) {
     context.addIssue({

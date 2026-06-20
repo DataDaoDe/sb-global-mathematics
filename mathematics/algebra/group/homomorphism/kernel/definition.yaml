@@ -1,0 +1,23 @@
+id: algebra.group.homomorphism.kernel.definition
+kind: definition
+title: Definition of kernel of a group homomorphism
+
+defines:
+  - algebra.group.homomorphism.kernel
+
+depends_on:
+  - algebra.group.homomorphism
+  - algebra.group.subgroup
+
+statement: |
+  Let $\varphi : G \to H$ be a group homomorphism and let $e_H$ be the identity element of $H$. The kernel of $\varphi$ is the subset of $G$ consisting of all elements sent to $e_H$.
+
+display_math:
+  - latex: |
+      \ker(\varphi)=\{g\in G \mid \varphi(g)=e_H\}
+    description: The kernel as the preimage of the identity.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.6
+    note: Defines kernels of group homomorphisms and develops their basic role.

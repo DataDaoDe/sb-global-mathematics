@@ -2,6 +2,8 @@ import { beforeAll, describe, expect, it } from "vitest";
 
 import {
   SourceSchema,
+  SourceDoiSchema,
+  SourceIsbnSchema,
   SourceTypeSchema,
   isSource,
   loadEntityFile,
@@ -34,6 +36,38 @@ describe("SourceType", () => {
     "",
   ])("rejects unsupported source type: %s", (sourceType) => {
     expect(SourceTypeSchema.safeParse(sourceType).success).toBe(false);
+  });
+});
+
+describe("SourceDoi", () => {
+  it("accepts a DOI-like identifier", () => {
+    expect(SourceDoiSchema.safeParse("10.1000/example.doi").success)
+      .toBe(true);
+  });
+
+  it.each([
+    "doi:10.1000/example",
+    "1000/example",
+    "",
+  ])("rejects unsupported DOI value: %s", (doi) => {
+    expect(SourceDoiSchema.safeParse(doi).success).toBe(false);
+  });
+});
+
+describe("SourceIsbn", () => {
+  it.each([
+    "0471433349",
+    "978-0-471-43334-7",
+  ])("accepts ISBN-like identifier: %s", (isbn) => {
+    expect(SourceIsbnSchema.safeParse(isbn).success).toBe(true);
+  });
+
+  it.each([
+    "isbn 0471433349",
+    "abc",
+    "",
+  ])("rejects unsupported ISBN value: %s", (isbn) => {
+    expect(SourceIsbnSchema.safeParse(isbn).success).toBe(false);
   });
 });
 
@@ -92,6 +126,16 @@ describe("Source", () => {
     });
 
     expect(result.success).toBe(false);
+  });
+
+  it("accepts optional DOI and ISBN fields", () => {
+    const result = SourceSchema.safeParse({
+      ...source,
+      doi: "10.1000/example.doi",
+      isbn: "978-0-471-43334-7",
+    });
+
+    expect(result.success).toBe(true);
   });
 
   it("rejects unknown fields", () => {

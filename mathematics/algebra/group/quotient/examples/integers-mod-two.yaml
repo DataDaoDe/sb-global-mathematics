@@ -1,0 +1,19 @@
+id: algebra.group.quotient.example.integers-mod-two
+kind: example
+title: Integers modulo two as a quotient group
+
+example_of:
+  - algebra.group.quotient
+
+description: |
+  The quotient group $\mathbb{Z}/2\mathbb{Z}$ has two cosets: the even integers and the odd integers.
+
+display_math:
+  - latex: |
+      \mathbb{Z}/2\mathbb{Z}=\{2\mathbb{Z},\,1+2\mathbb{Z}\}
+    description: The two cosets modulo $2$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 3.1
+    note: Quotients by normal subgroups are introduced through cosets such as modular arithmetic.

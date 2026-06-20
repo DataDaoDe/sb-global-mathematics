@@ -67,7 +67,12 @@ describe("Proposition", () => {
         "algebra.ring.associative-unital",
       ],
       source_refs: [
-        "source.dummit-foote-abstract-algebra-third-edition",
+        {
+          source: "source.dummit-foote-abstract-algebra-third-edition",
+          locator: "Chapter 7",
+          note:
+            "Follows from the relationship between ring and commutative ring definitions.",
+        },
       ],
     });
   });

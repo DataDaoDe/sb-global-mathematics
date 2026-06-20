@@ -1,0 +1,16 @@
+id: algebra.group
+kind: concept
+title: Group
+
+summary: A group is a set with an associative binary operation, an identity element, and inverses for all elements; it abstracts reversible composition such as addition, symmetry, and permutation.
+
+display_math:
+  - latex: |
+      (G, *)
+    description: A group with underlying set $G$ and binary operation $*$.
+
+defined_by:
+  - algebra.group.definition
+
+broader_concepts:
+  - foundations.binary-operation

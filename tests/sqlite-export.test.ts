@@ -42,9 +42,10 @@ describe("SQLite export", () => {
     const graph = buildGraph(loadedEntities);
 
     await exportSqlite(graph, databasePath, {
-      generatedAt: "2026-01-01T00:00:00.000Z",
-      entityCount: graph.entities.length,
-      edgeCount: graph.edges.length,
+      schema_version: 1,
+      generated_at: "2026-01-01T00:00:00.000Z",
+      entity_count: graph.entities.length,
+      edge_count: graph.edges.length,
     });
 
     expect(
@@ -58,6 +59,12 @@ describe("SQLite export", () => {
         "SELECT value FROM metadata WHERE key = 'generated_at'",
       ),
     ).toBe("2026-01-01T00:00:00.000Z");
+    expect(
+      await singleValue(
+        databasePath,
+        "SELECT value FROM metadata WHERE key = 'schema_version'",
+      ),
+    ).toBe("1");
 
     expect(
       await singleValue(

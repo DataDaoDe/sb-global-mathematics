@@ -1,0 +1,29 @@
+id: algebra.group.question.compare-and-act
+kind: question
+title: When are groups the same, and how do groups act on objects?
+
+asks: |
+  How can one recognize when two groups have the same structure, form new groups by collapsing normal subgroups, and study groups through their actions on sets?
+
+display_math:
+  - latex: |
+      G\cong H,\qquad G/N,\qquad G\curvearrowright X,\qquad G\cdot x,\qquad G_x
+    description: Isomorphisms, quotients, actions, orbits, and stabilizers as structural tools.
+
+motivates:
+  - algebra.group.isomorphism
+  - algebra.group.subgroup.normal
+  - algebra.group.quotient
+  - algebra.group.action
+  - algebra.group.action.orbit
+  - algebra.group.action.stabilizer
+
+related_concepts:
+  - algebra.group
+  - algebra.group.homomorphism
+  - algebra.group.subgroup
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Sections 1.6, 1.7, and 3.1
+    note: These sections develop isomorphisms, actions, normal subgroups, and quotient groups as structural tools in group theory.

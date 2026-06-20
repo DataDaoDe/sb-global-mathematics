@@ -1,0 +1,15 @@
+id: foundations.function
+kind: concept
+title: Function
+
+summary: A function is a rule assigning to each element of a domain exactly one element of a codomain, making it the basic structure-preserving way to move between mathematical objects.
+
+display_math:
+  - latex: |
+      f : A \to B
+    description: A function with domain $A$ and codomain $B$.
+
+defined_by:
+  - foundations.function.definition
+
+broader_concepts: []

@@ -1,0 +1,28 @@
+id: algebra.group.definition
+kind: definition
+title: Definition of group
+
+defines:
+  - algebra.group
+
+depends_on:
+  - foundations.set
+  - foundations.binary-operation
+
+statement: A group is a pair $(G,*)$ where $G$ is a set and $*$ is a binary operation on $G$ such that $*$ is associative, there is an identity element $e \in G$, and every element $a \in G$ has an inverse $a^{-1} \in G$.
+
+display_math:
+  - latex: |
+      \forall a,b,c \in G,\quad (a*b)*c = a*(b*c)
+    description: Associativity.
+  - latex: |
+      \exists e \in G\,\forall a \in G,\quad e*a=a=a*e
+    description: Existence of an identity element.
+  - latex: |
+      \forall a \in G\,\exists a^{-1} \in G,\quad a*a^{-1}=e=a^{-1}*a
+    description: Existence of inverses.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.1
+    note: Standard definition of a group by closure, associativity, identity, and inverses.

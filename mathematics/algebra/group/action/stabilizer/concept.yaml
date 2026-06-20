@@ -1,0 +1,16 @@
+id: algebra.group.action.stabilizer
+kind: concept
+title: Stabilizer of a group action
+
+summary: The stabilizer of a point under a group action is the subgroup of group elements that leave the point fixed.
+
+display_math:
+  - latex: |
+      G_x
+    description: The stabilizer of $x$ in $G$.
+
+defined_by:
+  - algebra.group.action.stabilizer.definition
+
+broader_concepts:
+  - algebra.group.subgroup

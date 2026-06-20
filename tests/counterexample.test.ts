@@ -51,7 +51,12 @@ describe("Counterexample", () => {
         },
       ],
       source_refs: [
-        "source.dummit-foote-abstract-algebra-third-edition",
+        {
+          source: "source.dummit-foote-abstract-algebra-third-edition",
+          locator: "Chapter 7",
+          note:
+            "Matrix rings provide standard noncommutative ring examples.",
+        },
       ],
     });
   });

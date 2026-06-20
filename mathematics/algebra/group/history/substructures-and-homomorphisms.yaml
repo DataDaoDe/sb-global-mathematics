@@ -1,0 +1,36 @@
+id: algebra.group.history.substructures-and-homomorphisms
+kind: historical_note
+title: Substructures and structure-preserving maps in group theory
+
+date_label: Nineteenth and twentieth century structural algebra
+
+description: |
+  As group theory developed from permutations, equations, and symmetries, mathematicians isolated two complementary ways to study a group: its internal subgroups and the homomorphisms that compare it with other groups. Kernels and images record how much structure a homomorphism collapses and reaches, while cyclic and permutation groups provide central organizing examples.
+
+display_math:
+  - latex: |
+      \text{subgroups} \quad+\quad \text{homomorphisms}
+      \longrightarrow
+      \text{structural group theory}
+    description: Subgroups and homomorphisms as organizing ideas in group theory.
+
+subjects:
+  - algebra.group.subgroup
+  - algebra.group.homomorphism
+  - algebra.group.homomorphism.kernel
+  - algebra.group.homomorphism.image
+  - algebra.group.cyclic
+  - algebra.group.permutation
+
+developed_from:
+  - algebra.group
+  - foundations.function
+
+developed_into:
+  - algebra.group.subgroup
+  - algebra.group.homomorphism
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Sections 1.3, 1.6, and 2.3
+    note: Secondary source for the standard early development of subgroups, homomorphisms, and cyclic groups in abstract algebra.

@@ -8,6 +8,7 @@ export const EntityKindSchema = z.enum([
   "example",
   "counterexample",
   "question",
+  "historical_note",
   "source",
 ]);
 

@@ -1,0 +1,18 @@
+id: algebra.group.subgroup.example.even-integers
+kind: example
+title: Even integers as a subgroup
+
+example_of:
+  - algebra.group.subgroup
+
+description: The even integers $2\mathbb{Z}$ form a subgroup of $(\mathbb{Z},+)$. The sum of two even integers is even, $0$ is even, and the additive inverse of an even integer is even.
+
+display_math:
+  - latex: |
+      2\mathbb{Z}=\{2n\mid n\in\mathbb{Z}\}\leq \mathbb{Z}
+    description: The subgroup of even integers under addition.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.3
+    note: Subgroups of familiar additive groups are standard introductory examples.

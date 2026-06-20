@@ -1,0 +1,22 @@
+id: foundations.function.definition
+kind: definition
+title: Definition of function
+
+defines:
+  - foundations.function
+
+depends_on:
+  - foundations.set
+
+statement: |
+  A function $f : A \to B$ assigns to every element $a \in A$ a unique element $f(a) \in B$.
+
+display_math:
+  - latex: |
+      \forall a \in A\, \exists! b \in B \text{ such that } f(a)=b
+    description: Existence and uniqueness of the value of a function.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Defines and uses functions between sets in the preliminary material.

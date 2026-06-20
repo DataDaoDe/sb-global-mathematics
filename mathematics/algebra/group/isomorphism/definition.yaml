@@ -1,0 +1,22 @@
+id: algebra.group.isomorphism.definition
+kind: definition
+title: Definition of group isomorphism
+
+defines:
+  - algebra.group.isomorphism
+
+depends_on:
+  - algebra.group.homomorphism
+
+statement: |
+  A group isomorphism is a bijective group homomorphism $\varphi:G\to H$. If such a homomorphism exists, the groups $G$ and $H$ are called isomorphic.
+
+display_math:
+  - latex: |
+      \varphi:G\to H,\qquad \varphi \text{ bijective and } \varphi(ab)=\varphi(a)\varphi(b)
+    description: A bijective operation-preserving map.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.6
+    note: Defines isomorphisms as bijective homomorphisms and uses them to identify structurally identical groups.

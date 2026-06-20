@@ -2,7 +2,12 @@ import {
   type EntityId,
 } from "../domain/entity-id.js";
 import type { MathematicalEntity } from "../domain/mathematical-entity.js";
+import type { SourceReference } from "../domain/source-reference.js";
 import type { LoadedEntity } from "../repository/validation.js";
+import {
+  createArtifactMetadata,
+  type ArtifactMetadata,
+} from "../artifacts/metadata.js";
 
 export type GraphRelation =
   | "defined_by"
@@ -15,6 +20,9 @@ export type GraphRelation =
   | "counterexample_to"
   | "demonstrates_necessity_of"
   | "motivates"
+  | "historical_context_for"
+  | "developed_from"
+  | "developed_into"
   | "related_concept";
 
 export type GraphEntity = {
@@ -31,6 +39,7 @@ export type GraphEdge = {
 };
 
 export type GraphArtifact = {
+  readonly metadata: ArtifactMetadata;
   readonly entities: readonly GraphEntity[];
   readonly edges: readonly GraphEdge[];
 };
@@ -52,6 +61,7 @@ export function buildGraph(
     .sort(compareEdges);
 
   return {
+    metadata: createArtifactMetadata(entities.length, edges.length),
     entities,
     edges,
   };
@@ -129,6 +139,20 @@ function edgesForEntity(entity: MathematicalEntity): GraphEdge[] {
         ...sourceReferenceEdges(entity.id, entity.source_refs),
       ];
 
+    case "historical_note":
+      return [
+        ...entity.subjects.map((targetId) =>
+          edge(entity.id, "historical_context_for", targetId)
+        ),
+        ...entity.developed_from.map((targetId) =>
+          edge(entity.id, "developed_from", targetId)
+        ),
+        ...entity.developed_into.map((targetId) =>
+          edge(entity.id, "developed_into", targetId)
+        ),
+        ...sourceReferenceEdges(entity.id, entity.source_refs),
+      ];
+
     case "source":
       return [];
   }
@@ -136,9 +160,11 @@ function edgesForEntity(entity: MathematicalEntity): GraphEdge[] {
 
 function sourceReferenceEdges(
   from: EntityId,
-  targetIds: readonly EntityId[],
+  references: readonly SourceReference[],
 ): GraphEdge[] {
-  return targetIds.map((targetId) => edge(from, "source_ref", targetId));
+  return references.map((reference) =>
+    edge(from, "source_ref", reference.source)
+  );
 }
 
 function edge(

@@ -1,0 +1,18 @@
+id: foundations.set.example.natural-numbers
+kind: example
+title: Natural numbers as a set
+
+example_of:
+  - foundations.set
+
+description: The natural numbers form a set whose elements are numbers such as $0,1,2,3,\ldots$. Membership statements such as $2 \in \mathbb{N}$ are meaningful, while listing order is not part of the set itself.
+
+display_math:
+  - latex: |
+      \mathbb{N}=\{0,1,2,3,\ldots\}
+    description: The natural numbers written by roster notation.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Uses standard set notation in preliminary examples and definitions.

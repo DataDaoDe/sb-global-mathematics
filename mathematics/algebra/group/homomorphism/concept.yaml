@@ -1,0 +1,16 @@
+id: algebra.group.homomorphism
+kind: concept
+title: Group homomorphism
+
+summary: A group homomorphism is a function between groups that preserves the group operation, making it the basic structure-preserving map in group theory.
+
+display_math:
+  - latex: |
+      \varphi : G \to H
+    description: A map from group $G$ to group $H$.
+
+defined_by:
+  - algebra.group.homomorphism.definition
+
+broader_concepts:
+  - foundations.function

@@ -1,12 +1,14 @@
 import { spawn } from "node:child_process";
 import { rm } from "node:fs/promises";
 
+import { createArtifactMetadata } from "../artifacts/metadata.js";
 import type { GraphArtifact, GraphEntity } from "../graph/build-graph.js";
 
 export type SqliteExportMetadata = {
-  readonly generatedAt: string;
-  readonly entityCount: number;
-  readonly edgeCount: number;
+  readonly schema_version: number;
+  readonly generated_at: string;
+  readonly entity_count: number;
+  readonly edge_count: number;
 };
 
 export async function exportSqlite(
@@ -19,11 +21,10 @@ export async function exportSqlite(
 }
 
 function defaultMetadata(graph: GraphArtifact): SqliteExportMetadata {
-  return {
-    generatedAt: new Date().toISOString(),
-    entityCount: graph.entities.length,
-    edgeCount: graph.edges.length,
-  };
+  return createArtifactMetadata(
+    graph.entities.length,
+    graph.edges.length,
+  );
 }
 
 async function removeSqliteFiles(databasePath: string): Promise<void> {
@@ -96,16 +97,20 @@ function buildSql(
 function metadataRows(metadata: SqliteExportMetadata): string {
   const rows: readonly { readonly key: string; readonly value: string }[] = [
     {
+      key: "schema_version",
+      value: String(metadata.schema_version),
+    },
+    {
       key: "generated_at",
-      value: metadata.generatedAt,
+      value: metadata.generated_at,
     },
     {
       key: "entity_count",
-      value: String(metadata.entityCount),
+      value: String(metadata.entity_count),
     },
     {
       key: "edge_count",
-      value: String(metadata.edgeCount),
+      value: String(metadata.edge_count),
     },
   ];
 

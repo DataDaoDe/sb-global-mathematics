@@ -11,11 +11,13 @@ import {
   type Counterexample,
   type Definition,
   type Example,
+  type HistoricalNote,
   type LoadedEntity,
   type Proof,
   type Proposition,
   type Question,
   type Source,
+  type SourceReference,
 } from "../src/index.js";
 
 const testMathematicsRoot = "/test/mathematics";
@@ -32,7 +34,15 @@ const source: Source = {
   kind: "source",
   title: "Test Source",
   source_type: "book",
-  authors: [],
+  authors: [
+    "Test Author",
+  ],
+};
+
+const sourceReference: SourceReference = {
+  source: parseEntityId("source.test"),
+  locator: "Test locator",
+  note: "Test citation note.",
 };
 
 const concept: Concept = {
@@ -58,7 +68,7 @@ const definition: Definition = {
   statement: "A test concept is a concept used in tests.",
   display_math: displayMath,
   source_refs: [
-    parseEntityId("source.test"),
+    sourceReference,
   ],
 };
 
@@ -72,7 +82,7 @@ const example: Example = {
   description: "A concrete instance of the test concept.",
   display_math: displayMath,
   source_refs: [
-    parseEntityId("source.test"),
+    sourceReference,
   ],
 };
 
@@ -89,7 +99,7 @@ const counterexample: Counterexample = {
   description: "A concrete non-instance of the test concept.",
   display_math: displayMath,
   source_refs: [
-    parseEntityId("source.test"),
+    sourceReference,
   ],
 };
 
@@ -104,7 +114,7 @@ const proposition: Proposition = {
     parseEntityId("algebra.test.concept.definition"),
   ],
   source_refs: [
-    parseEntityId("source.test"),
+    sourceReference,
   ],
 };
 
@@ -124,7 +134,7 @@ const proof: Proof = {
     parseEntityId("algebra.test.concept.definition"),
   ],
   source_refs: [
-    parseEntityId("source.test"),
+    sourceReference,
   ],
 };
 
@@ -141,7 +151,26 @@ const question: Question = {
     parseEntityId("algebra.test.concept"),
   ],
   source_refs: [
-    parseEntityId("source.test"),
+    sourceReference,
+  ],
+};
+
+const historicalNote: HistoricalNote = {
+  id: parseEntityId("algebra.test.concept.history.origin"),
+  kind: "historical_note",
+  title: "Historical development of the test concept",
+  date_label: "Test era",
+  description: "A historical note for the test concept.",
+  display_math: displayMath,
+  subjects: [
+    parseEntityId("algebra.test.concept"),
+  ],
+  developed_from: [
+    parseEntityId("algebra.test.concept.example.instance"),
+  ],
+  developed_into: [],
+  source_refs: [
+    sourceReference,
   ],
 };
 
@@ -237,6 +266,9 @@ describe("repository validation", () => {
           "Let $f(x)=x^2$. The block expression $$f'(x)=2x$$ is also renderable.",
       }),
       loaded(definition),
+      loaded(example),
+      loaded(question),
+      loaded(historicalNote),
       loaded(source),
     ], testMathematicsRoot);
 
@@ -377,6 +409,7 @@ describe("repository validation", () => {
       loaded(example),
       loaded(counterexample),
       loaded(question),
+      loaded(historicalNote),
       loaded(source),
     ], testMathematicsRoot);
 
@@ -384,6 +417,97 @@ describe("repository validation", () => {
       valid: true,
       issues: [],
     });
+  });
+
+  it("rejects concepts without an example", () => {
+    const result = validateEntities([
+      loaded(concept),
+      loaded(definition),
+      loaded(question),
+      loaded({
+        ...historicalNote,
+        developed_from: [],
+      }),
+      loaded(source),
+    ], testMathematicsRoot);
+
+    expect(result.valid).toBe(false);
+    expect(result.issues).toEqual([
+      expect.objectContaining({
+        code: "incomplete-entity",
+        entityId: "algebra.test.concept",
+        path: ["id"],
+      }),
+    ]);
+  });
+
+  it("rejects concepts without historical context", () => {
+    const result = validateEntities([
+      loaded(concept),
+      loaded(definition),
+      loaded(example),
+      loaded(question),
+      loaded(source),
+    ], testMathematicsRoot);
+
+    expect(result.valid).toBe(false);
+    expect(result.issues).toEqual([
+      expect.objectContaining({
+        code: "incomplete-entity",
+        entityId: "algebra.test.concept",
+        path: ["id"],
+      }),
+    ]);
+  });
+
+  it("rejects source-backed entity kinds without source references", () => {
+    const result = validateEntities([
+      loaded(concept),
+      loaded(definition),
+      loaded(example),
+      loaded(question),
+      loaded({
+        ...historicalNote,
+        source_refs: [],
+      }),
+      loaded(source),
+    ], testMathematicsRoot);
+
+    expect(result.valid).toBe(false);
+    expect(result.issues).toEqual([
+      expect.objectContaining({
+        code: "incomplete-entity",
+        entityId: "algebra.test.concept.history.origin",
+        path: ["source_refs"],
+      }),
+    ]);
+  });
+
+  it("rejects source references without locators", () => {
+    const result = validateEntities([
+      loaded(concept),
+      loaded(definition),
+      loaded(example),
+      loaded(question),
+      loaded({
+        ...historicalNote,
+        source_refs: [
+          {
+            source: parseEntityId("source.test"),
+          },
+        ],
+      }),
+      loaded(source),
+    ], testMathematicsRoot);
+
+    expect(result.valid).toBe(false);
+    expect(result.issues).toEqual([
+      expect.objectContaining({
+        code: "incomplete-entity",
+        entityId: "algebra.test.concept.history.origin",
+        path: ["source_refs", "0", "locator"],
+      }),
+    ]);
   });
 
   it("rejects example references to the wrong entity kind", () => {

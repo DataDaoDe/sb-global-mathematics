@@ -11,6 +11,13 @@ describe("graph builder", () => {
     const loadedEntities = await loadRepositoryEntities(mathematicsPath());
     const graph = buildGraph(loadedEntities);
 
+    expect(graph.metadata).toEqual({
+      schema_version: 1,
+      generated_at: expect.any(String),
+      entity_count: graph.entities.length,
+      edge_count: graph.edges.length,
+    });
+
     expect(graph.entities.map((entity) => entity.id)).toEqual(
       [...graph.entities.map((entity) => entity.id)].sort(),
     );
@@ -24,7 +31,7 @@ describe("graph builder", () => {
     );
   });
 
-  it("includes canonical edges for definitions, examples, counterexamples, proofs, questions, and sources", async () => {
+  it("includes canonical edges for definitions, examples, counterexamples, proofs, questions, history, and sources", async () => {
     const loadedEntities = await loadRepositoryEntities(mathematicsPath());
     const graph = buildGraph(loadedEntities);
 
@@ -59,6 +66,16 @@ describe("graph builder", () => {
           from: "algebra.ring.commutative-unital.question.generalize-integer-arithmetic",
           relation: "motivates",
           to: "algebra.ring.commutative-unital",
+        },
+        {
+          from: "algebra.ring.commutative-unital.history.integer-arithmetic-abstraction",
+          relation: "historical_context_for",
+          to: "algebra.ring.commutative-unital",
+        },
+        {
+          from: "algebra.ring.commutative-unital.history.integer-arithmetic-abstraction",
+          relation: "developed_from",
+          to: "algebra.ring.commutative-unital.example.integers",
         },
         {
           from: "algebra.ring.commutative-unital.proposition.specializes-associative-unital",

@@ -1,0 +1,18 @@
+id: foundations.function.example.squaring-integers
+kind: example
+title: Squaring as a function on the integers
+
+example_of:
+  - foundations.function
+
+description: The rule $f(n)=n^2$ defines a function $f:\mathbb{Z}\to\mathbb{Z}$ because every integer input $n$ has exactly one integer output $n^2$.
+
+display_math:
+  - latex: |
+      f:\mathbb{Z}\to\mathbb{Z},\qquad f(n)=n^2
+    description: A function from the integers to the integers.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Uses functions between familiar sets in the preliminary material.

@@ -1,0 +1,26 @@
+id: algebra.group.question.substructures-and-maps
+kind: question
+title: How do groups relate to their parts and to other groups?
+
+asks: How can one identify meaningful internal pieces of a group and compare different groups without forgetting their operation?
+
+display_math:
+  - latex: |
+      H\leq G,\qquad \varphi:G\to K,\qquad \ker(\varphi),\operatorname{im}(\varphi)
+    description: Subgroups and homomorphisms as basic tools for navigating groups.
+
+motivates:
+  - algebra.group.subgroup
+  - algebra.group.homomorphism
+  - algebra.group.homomorphism.kernel
+  - algebra.group.homomorphism.image
+  - algebra.group.cyclic
+  - algebra.group.permutation
+
+related_concepts:
+  - algebra.group
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Sections 1.3, 1.6, and 2.3
+    note: Subgroups, homomorphisms, kernels, images, cyclic groups, and permutation groups organize the first structural layer of group theory.

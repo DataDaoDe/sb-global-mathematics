@@ -1,0 +1,19 @@
+id: algebra.group.homomorphism.kernel.example.even-integers-mod-two
+kind: example
+title: Even integers as the kernel of reduction modulo two
+
+example_of:
+  - algebra.group.homomorphism.kernel
+
+description: |
+  For the homomorphism $\varphi:\mathbb{Z}\to\mathbb{Z}/2\mathbb{Z}$ given by reduction modulo $2$, the kernel is the set of even integers.
+
+display_math:
+  - latex: |
+      \ker(\varphi)=2\mathbb{Z}
+    description: The kernel of reduction modulo two.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.6
+    note: Kernels are introduced through homomorphism examples and identity preimages.

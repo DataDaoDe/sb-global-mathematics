@@ -1,0 +1,19 @@
+id: algebra.group.action.stabilizer.example.stabilizer-of-one-in-s3
+kind: example
+title: Stabilizer of one in S3
+
+example_of:
+  - algebra.group.action.stabilizer
+
+description: |
+  For the natural action of $S_3$ on $\{1,2,3\}$, the stabilizer of $1$ consists of the permutations that fix $1$.
+
+display_math:
+  - latex: |
+      (S_3)_1=\{\sigma\in S_3\mid \sigma(1)=1\}
+    description: The stabilizer of $1$ in the natural action of $S_3$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.7
+    note: Stabilizers are subgroups associated with points under a group action.

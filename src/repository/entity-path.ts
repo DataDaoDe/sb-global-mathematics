@@ -56,6 +56,14 @@ export function expectedEntityPath(
         mathematicsRoot,
       );
 
+    case "historical_note":
+      return expectedScopedEntityPath(
+        entity.id,
+        ".history.",
+        "history",
+        mathematicsRoot,
+      );
+
     case "source":
       return join(
         mathematicsRoot,

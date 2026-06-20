@@ -41,13 +41,19 @@ describe("Question", () => {
       ],
       motivates: [
         "algebra.ring.commutative-unital",
+        "algebra.ring.associative-unital",
       ],
       related_concepts: [
         "algebra.ring.commutative-unital",
         "algebra.ring.associative-unital",
       ],
       source_refs: [
-        "source.dummit-foote-abstract-algebra-third-edition",
+        {
+          source: "source.dummit-foote-abstract-algebra-third-edition",
+          locator: "Chapter 7",
+          note:
+            "Ring theory is presented as an abstraction of familiar arithmetic structures.",
+        },
       ],
     });
   });

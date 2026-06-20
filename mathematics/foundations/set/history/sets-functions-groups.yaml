@@ -1,0 +1,30 @@
+id: foundations.set.history.sets-functions-groups
+kind: historical_note
+title: From collections and mappings to abstract groups
+
+date_label: Nineteenth and twentieth century abstraction
+
+description: Modern algebra relies on the language of sets and functions to state structural definitions precisely. The abstract definition of a group packages a set together with a binary operation satisfying axioms that capture reversible composition, a viewpoint shaped by earlier work with permutations, equations, and symmetries.
+
+display_math:
+  - latex: |
+      \text{sets and functions} \longrightarrow \text{binary operations} \longrightarrow \text{groups}
+    description: A conceptual path from foundational language to algebraic structure.
+
+subjects:
+  - foundations.set
+  - foundations.function
+  - foundations.binary-operation
+  - algebra.group
+
+developed_from:
+  - foundations.set
+  - foundations.function
+
+developed_into:
+  - algebra.group
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Sections 0.1 and 1.1
+    note: Secondary source connecting set/function preliminaries with the modern definition of groups.

@@ -1,0 +1,35 @@
+id: algebra.group.history.isomorphisms-quotients-actions
+kind: historical_note
+title: Isomorphisms, quotients, and actions as structural tools
+
+date_label: Modern structural group theory
+
+description: |
+  The modern study of groups emphasizes structure rather than presentation. Isomorphisms identify when two groups are the same for group-theoretic purposes, normal subgroups and quotient groups formalize collapsing compatible internal structure, and group actions connect abstract groups to concrete transformations of sets.
+
+display_math:
+  - latex: |
+      G\cong H,\qquad G/N,\qquad G\curvearrowright X
+    description: Three central structural languages for comparing, collapsing, and representing groups.
+
+subjects:
+  - algebra.group.isomorphism
+  - algebra.group.subgroup.normal
+  - algebra.group.quotient
+  - algebra.group.action
+  - algebra.group.action.orbit
+  - algebra.group.action.stabilizer
+
+developed_from:
+  - algebra.group.homomorphism
+  - algebra.group.subgroup
+  - algebra.group.permutation
+
+developed_into:
+  - algebra.group.quotient
+  - algebra.group.action
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Sections 1.6, 1.7, and 3.1
+    note: Secondary source for the standard organization of isomorphisms, group actions, normal subgroups, and quotient groups.

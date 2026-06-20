@@ -1,0 +1,15 @@
+id: foundations.set
+kind: concept
+title: Set
+
+summary: A set is a mathematical object treated as a collection of elements, where membership is the basic relation and the order or repetition of listed elements is not part of the structure.
+
+display_math:
+  - latex: |
+      x \in A
+    description: The assertion that $x$ is an element of the set $A$.
+
+defined_by:
+  - foundations.set.definition
+
+broader_concepts: []

@@ -48,7 +48,12 @@ describe("Definition", () => {
         },
       ],
       source_refs: [
-        "source.dummit-foote-abstract-algebra-third-edition",
+        {
+          source: "source.dummit-foote-abstract-algebra-third-edition",
+          locator: "Chapter 7",
+          note:
+            "Standard abstract algebra treatment of commutative rings with identity.",
+        },
       ],
     });
   });

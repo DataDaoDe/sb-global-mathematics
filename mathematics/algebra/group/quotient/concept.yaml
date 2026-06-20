@@ -1,0 +1,16 @@
+id: algebra.group.quotient
+kind: concept
+title: Quotient group
+
+summary: A quotient group is the group formed from the cosets of a normal subgroup, collapsing that normal subgroup to the identity.
+
+display_math:
+  - latex: |
+      G/N
+    description: The quotient group of $G$ by a normal subgroup $N$.
+
+defined_by:
+  - algebra.group.quotient.definition
+
+broader_concepts:
+  - algebra.group

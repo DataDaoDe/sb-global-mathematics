@@ -4,6 +4,7 @@ import { DisplayMathSchema } from "./display-math.js";
 import { EntityBaseSchema } from "./entity-base.js";
 import { EntityIdSchema } from "./entity-id.js";
 import { findDuplicates } from "./duplicates.js";
+import { SourceReferencesSchema } from "./source-reference.js";
 
 export const QuestionTextSchema = z
   .string()
@@ -26,7 +27,7 @@ export const QuestionSchema = EntityBaseSchema.extend({
     .default([]),
 
   source_refs: z
-    .array(EntityIdSchema)
+    .array(SourceReferencesSchema.element)
     .default([]),
 }).superRefine((question, context) => {
   const duplicateMotivatedEntities = findDuplicates(question.motivates);
@@ -49,7 +50,9 @@ export const QuestionSchema = EntityBaseSchema.extend({
     });
   }
 
-  const duplicateSources = findDuplicates(question.source_refs);
+  const duplicateSources = findDuplicates(
+    question.source_refs.map((reference) => reference.source),
+  );
 
   if (duplicateSources.length > 0) {
     context.addIssue({

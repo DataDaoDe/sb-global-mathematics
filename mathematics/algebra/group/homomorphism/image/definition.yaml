@@ -1,0 +1,23 @@
+id: algebra.group.homomorphism.image.definition
+kind: definition
+title: Definition of image of a group homomorphism
+
+defines:
+  - algebra.group.homomorphism.image
+
+depends_on:
+  - algebra.group.homomorphism
+  - algebra.group.subgroup
+
+statement: |
+  Let $\varphi : G \to H$ be a group homomorphism. The image of $\varphi$ is the subset of $H$ consisting of all values $\varphi(g)$ with $g \in G$.
+
+display_math:
+  - latex: |
+      \operatorname{im}(\varphi)=\{\varphi(g)\mid g\in G\}
+    description: The image as the set of values of the homomorphism.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.6
+    note: Treats images of homomorphisms as subgroups of the codomain.

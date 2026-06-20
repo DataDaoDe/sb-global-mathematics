@@ -18,6 +18,19 @@ export const SourceAuthorSchema = z
   .min(1, "Source author cannot be empty")
   .max(200, "Source author cannot exceed 200 characters");
 
+export const SourceDoiSchema = z
+  .string()
+  .trim()
+  .regex(/^10\.\d{4,9}\/\S+$/u, "Source DOI must look like 10.xxxx/suffix");
+
+export const SourceIsbnSchema = z
+  .string()
+  .trim()
+  .regex(
+    /^(?:97[89][-\s]?)?\d[-\s]?(?:\d[-\s]?){7,10}[\dX]$/u,
+    "Source ISBN must look like an ISBN-10 or ISBN-13",
+  );
+
 export const SourceSchema = EntityBaseSchema.extend({
   kind: z.literal("source"),
 
@@ -39,6 +52,10 @@ export const SourceSchema = EntityBaseSchema.extend({
     .trim()
     .min(1, "Source locator cannot be empty")
     .optional(),
+
+  doi: SourceDoiSchema.optional(),
+
+  isbn: SourceIsbnSchema.optional(),
 });
 
 export type Source = z.infer<typeof SourceSchema>;

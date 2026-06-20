@@ -1,0 +1,18 @@
+id: algebra.group.permutation.example.symmetric-group-three
+kind: example
+title: The symmetric group on three letters
+
+example_of:
+  - algebra.group.permutation
+
+description: The symmetric group $S_3$ consists of all permutations of the set $\{1,2,3\}$, with composition as the group operation.
+
+display_math:
+  - latex: |
+      S_3=\{\sigma:\{1,2,3\}\to\{1,2,3\}\mid \sigma \text{ is bijective}\}
+    description: The symmetric group on three letters.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.3
+    note: Symmetric groups are standard finite permutation group examples.

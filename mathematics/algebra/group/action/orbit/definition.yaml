@@ -1,0 +1,22 @@
+id: algebra.group.action.orbit.definition
+kind: definition
+title: Definition of orbit of a group action
+
+defines:
+  - algebra.group.action.orbit
+
+depends_on:
+  - algebra.group.action
+
+statement: |
+  Let $G$ act on a set $X$. The orbit of an element $x\in X$ is the subset of $X$ consisting of all elements $g\cdot x$ with $g\in G$.
+
+display_math:
+  - latex: |
+      G\cdot x=\{g\cdot x\mid g\in G\}
+    description: The set of points reached from $x$ by the action.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.7
+    note: Defines orbits as the reachable sets of elements under group actions.

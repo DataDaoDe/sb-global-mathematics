@@ -1,0 +1,23 @@
+id: algebra.group.action.stabilizer.definition
+kind: definition
+title: Definition of stabilizer of a group action
+
+defines:
+  - algebra.group.action.stabilizer
+
+depends_on:
+  - algebra.group.action
+  - algebra.group.subgroup
+
+statement: |
+  Let $G$ act on a set $X$. The stabilizer of $x\in X$ is the subset of $G$ consisting of all elements that fix $x$.
+
+display_math:
+  - latex: |
+      G_x=\{g\in G\mid g\cdot x=x\}
+    description: The group elements that fix $x$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.7
+    note: Defines stabilizers as subgroups attached to points in a group action.

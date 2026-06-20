@@ -1,0 +1,16 @@
+id: algebra.group.subgroup.normal
+kind: concept
+title: Normal subgroup
+
+summary: A normal subgroup is a subgroup invariant under conjugation by elements of the ambient group, precisely the condition needed to form a quotient group.
+
+display_math:
+  - latex: |
+      N \trianglelefteq G
+    description: The notation that $N$ is a normal subgroup of $G$.
+
+defined_by:
+  - algebra.group.subgroup.normal.definition
+
+broader_concepts:
+  - algebra.group.subgroup

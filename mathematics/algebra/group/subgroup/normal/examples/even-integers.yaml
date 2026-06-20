@@ -1,0 +1,19 @@
+id: algebra.group.subgroup.normal.example.even-integers
+kind: example
+title: Even integers are a normal subgroup of the integers
+
+example_of:
+  - algebra.group.subgroup.normal
+
+description: |
+  The subgroup $2\mathbb{Z}$ is normal in $(\mathbb{Z},+)$ because $\mathbb{Z}$ is abelian, so conjugation is trivial.
+
+display_math:
+  - latex: |
+      2\mathbb{Z}\trianglelefteq \mathbb{Z}
+    description: The even integers as a normal subgroup of the additive group of integers.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 3.1
+    note: Abelian group subgroups are standard examples of normal subgroups.

@@ -1,0 +1,19 @@
+id: algebra.group.action.orbit.example.symmetric-group-orbit
+kind: example
+title: Orbit of one under the natural action of S3
+
+example_of:
+  - algebra.group.action.orbit
+
+description: |
+  Under the natural action of $S_3$ on $\{1,2,3\}$, the orbit of $1$ is all of $\{1,2,3\}$ because some permutation sends $1$ to each element.
+
+display_math:
+  - latex: |
+      S_3\cdot 1=\{1,2,3\}
+    description: The orbit of $1$ under the natural action of $S_3$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.7
+    note: Orbits are introduced through group actions on sets.

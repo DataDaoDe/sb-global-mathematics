@@ -4,14 +4,21 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build:graph": "tsc -p tsconfig.validate.json && node .validation-build/cli/build-graph.js",
+    "build:sqlite": "tsc -p tsconfig.validate.json && node .validation-build/cli/build-sqlite.js",
     "check": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "validate": "tsc -p tsconfig.validate.json && node .validation-build/cli/validate.js"
   },
-  "license" : "MIT",
-  "author": { "name": "John Faucett" },
+  "license": "MIT",
+  "author": {
+    "name": "John Faucett"
+  },
   "packageManager": "pnpm@10.16.0",
   "dependencies": {
+    "katex": "^0.17.0",
+    "yaml": "^2.9.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {

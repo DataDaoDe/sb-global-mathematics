@@ -1,0 +1,21 @@
+id: algebra.ring.commutative-unital.question.generalize-integer-arithmetic
+kind: question
+title: What algebraic structures generalize integer arithmetic?
+
+asks: >
+  What structures preserve the interaction between addition and multiplication
+  found in the integers while allowing more general mathematical objects?
+
+display_math:
+  - latex: '(\mathbb{Z}, +, \cdot) \leadsto (R, +, \cdot)'
+    description: Generalizing integer arithmetic to ring-like structures.
+
+motivates:
+  - algebra.ring.commutative-unital
+
+related_concepts:
+  - algebra.ring.commutative-unital
+  - algebra.ring.associative-unital
+
+source_refs:
+  - source.dummit-foote-abstract-algebra-third-edition

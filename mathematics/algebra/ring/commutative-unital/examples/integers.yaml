@@ -1,0 +1,19 @@
+id: algebra.ring.commutative-unital.example.integers
+kind: example
+title: Integers as a commutative unital ring
+
+example_of:
+  - algebra.ring.commutative-unital
+
+description: >
+  The integers form a commutative unital ring under ordinary addition
+  and multiplication. The multiplicative identity is 1.
+
+display_math:
+  - latex: '(\mathbb{Z}, +, \cdot, 0, 1)'
+    description: The integers with ordinary addition and multiplication.
+  - latex: '\forall a,b \in \mathbb{Z},\; ab = ba'
+    description: Integer multiplication is commutative.
+
+source_refs:
+  - source.dummit-foote-abstract-algebra-third-edition

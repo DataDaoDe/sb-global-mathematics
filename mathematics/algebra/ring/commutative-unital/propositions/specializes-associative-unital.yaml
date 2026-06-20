@@ -1,0 +1,19 @@
+id: algebra.ring.commutative-unital.proposition.specializes-associative-unital
+kind: proposition
+title: Every commutative unital ring is an associative unital ring
+
+proposition_type: proposition
+
+claim: >
+  Every commutative unital ring is an associative unital ring.
+
+display_math:
+  - latex: '\mathrm{CommutativeUnitalRing}(R) \Rightarrow \mathrm{AssociativeUnitalRing}(R)'
+    description: Every commutative unital ring is an associative unital ring.
+
+depends_on:
+  - algebra.ring.commutative-unital.definition
+  - algebra.ring.associative-unital
+
+source_refs:
+  - source.dummit-foote-abstract-algebra-third-edition

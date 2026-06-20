@@ -1,0 +1,26 @@
+id: algebra.ring.commutative-unital.proposition.specializes-associative-unital.proof.direct-from-definition
+kind: proof
+title: Direct proof from the definition
+
+proves:
+  - algebra.ring.commutative-unital.proposition.specializes-associative-unital
+
+method: direct proof
+
+argument: >
+  By definition, a commutative unital ring is a ring with a multiplicative
+  identity whose multiplication is commutative. The referenced definition
+  depends on the concept of an associative unital ring, so every
+  commutative unital ring satisfies the requirements of an associative
+  unital ring.
+
+display_math:
+  - latex: '\mathrm{CommutativeUnitalRing}(R) \Rightarrow \mathrm{AssociativeUnitalRing}(R)'
+    description: The implication proved directly from the definition.
+
+depends_on:
+  - algebra.ring.commutative-unital.definition
+  - algebra.ring.associative-unital.definition
+
+source_refs:
+  - source.dummit-foote-abstract-algebra-third-edition

@@ -1,0 +1,14 @@
+import { z } from "zod";
+
+export const EntityKindSchema = z.enum([
+  "concept",
+  "definition",
+  "proposition",
+  "proof",
+  "example",
+  "counterexample",
+  "question",
+  "source",
+]);
+
+export type EntityKind = z.infer<typeof EntityKindSchema>;

@@ -1,0 +1,23 @@
+id: algebra.ring.commutative-unital.counterexample.matrix-ring-m2-real
+kind: counterexample
+title: Two-by-two real matrices are not commutative
+
+counterexample_to:
+  - algebra.ring.commutative-unital
+
+demonstrates_necessity_of:
+  - algebra.ring.associative-unital
+
+description: >
+  The ring of two-by-two real matrices has a multiplicative identity
+  and associative multiplication, but matrix multiplication is not
+  commutative. Therefore it is not a commutative unital ring.
+
+display_math:
+  - latex: 'M_2(\mathbb{R})'
+    description: The ring of two-by-two real matrices.
+  - latex: '\begin{pmatrix}0&1\\0&0\end{pmatrix}\begin{pmatrix}0&0\\1&0\end{pmatrix} \ne \begin{pmatrix}0&0\\1&0\end{pmatrix}\begin{pmatrix}0&1\\0&0\end{pmatrix}'
+    description: A concrete failure of commutativity.
+
+source_refs:
+  - source.dummit-foote-abstract-algebra-third-edition

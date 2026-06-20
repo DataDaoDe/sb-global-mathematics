@@ -1,0 +1,19 @@
+id: algebra.ring.commutative-unital
+kind: concept
+title: Commutative unital ring
+
+summary: >
+  An associative ring with a multiplicative identity
+  whose multiplication is commutative.
+
+display_math:
+  - latex: '\forall a,b \in R,\; ab = ba'
+    description: Multiplication is commutative.
+  - latex: '\exists 1_R \in R\; \forall a \in R,\; 1_Ra = a1_R = a'
+    description: A multiplicative identity exists.
+
+defined_by:
+  - algebra.ring.commutative-unital.definition
+
+broader_concepts:
+  - algebra.ring.associative-unital

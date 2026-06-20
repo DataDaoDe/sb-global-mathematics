@@ -1,0 +1,19 @@
+id: algebra.ring.associative-unital.definition
+kind: definition
+title: Definition of associative unital ring
+
+defines:
+  - algebra.ring.associative-unital
+
+statement: >
+  An associative unital ring is a ring whose multiplication is associative
+  and has a multiplicative identity.
+
+display_math:
+  - latex: '\forall a,b,c \in R,\; (ab)c = a(bc)'
+    description: Multiplication is associative.
+  - latex: '\exists 1_R \in R\; \forall a \in R,\; 1_Ra = a1_R = a'
+    description: A multiplicative identity exists.
+
+source_refs:
+  - source.dummit-foote-abstract-algebra-third-edition

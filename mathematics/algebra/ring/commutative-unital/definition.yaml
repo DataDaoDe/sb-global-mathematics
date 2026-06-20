@@ -1,0 +1,22 @@
+id: algebra.ring.commutative-unital.definition
+kind: definition
+title: Definition of commutative unital ring
+
+defines:
+  - algebra.ring.commutative-unital
+
+depends_on:
+  - algebra.ring.associative-unital
+
+statement: >
+  A commutative unital ring is a ring with a multiplicative identity
+  whose multiplication is commutative.
+
+display_math:
+  - latex: '(R,+,\cdot,0,1_R)'
+    description: The underlying ring structure with distinguished additive and multiplicative identities.
+  - latex: '\forall a,b \in R,\; ab = ba'
+    description: Multiplication is commutative.
+
+source_refs:
+  - source.dummit-foote-abstract-algebra-third-edition

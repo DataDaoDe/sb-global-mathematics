@@ -1,0 +1,19 @@
+id: foundations.cartesian-product.example.two-sets
+kind: example
+title: Cartesian product of two two-element sets
+
+example_of:
+  - foundations.cartesian-product
+
+description: |
+  If $A=\{1,2\}$ and $B=\{x,y\}$, then $A\times B$ contains four ordered pairs, one for each choice of an element of $A$ followed by an element of $B$.
+
+display_math:
+  - latex: |
+      A\times B=\{(1,x),(1,y),(2,x),(2,y)\}
+    description: A concrete Cartesian product.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Cartesian products are part of the preliminary set notation.

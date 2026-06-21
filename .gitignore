@@ -5,4 +5,7 @@ generated/
 website/.svelte-kit/
 website/dist/
 website/static/data/
+
+# macOS Finder metadata and AppleDouble sidecar files.
+.DS_Store
 ._*

@@ -1,0 +1,26 @@
+id: algebra.group.quotient.counterexample.non-normal-subgroup-s3
+kind: counterexample
+title: A non-normal subgroup of S3 does not produce a quotient group
+
+counterexample_to:
+  - algebra.group.quotient
+
+demonstrates_necessity_of:
+  - algebra.group.subgroup.normal.definition
+  - algebra.group.quotient.definition
+
+description: |
+  Let $G=S_3$ and $H=\{e,(12)\}$. The subgroup $H$ is not normal in $S_3$. Its left cosets exist as subsets of $S_3$, but multiplying cosets by $(gH)(kH)=(gk)H$ is not well-defined: changing representatives can change the resulting coset. This is why quotient groups require normal subgroups, not arbitrary subgroups.
+
+display_math:
+  - latex: |
+      H=\{e,(12)\}\leq S_3,\qquad H\not\trianglelefteq S_3
+    description: A non-normal subgroup of $S_3$.
+  - latex: |
+      (gH)(kH)=(gk)H
+    description: The proposed quotient multiplication fails to be well-defined when $H$ is not normal.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 3.1
+    note: Normality is the condition that makes quotient group multiplication well-defined.

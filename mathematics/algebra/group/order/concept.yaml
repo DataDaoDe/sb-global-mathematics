@@ -1,0 +1,16 @@
+id: algebra.group.order
+kind: concept
+title: Order of a group
+
+summary: The order of a group is the cardinality of its underlying set.
+
+display_math:
+  - latex: |
+      |G|
+    description: The order of the group $G$.
+
+defined_by:
+  - algebra.group.order.definition
+
+broader_concepts:
+  - algebra.group

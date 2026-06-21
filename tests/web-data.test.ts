@@ -32,14 +32,14 @@ describe("web data builder", () => {
       ]),
     );
     expect(webData.tree.root.counts).toEqual({
-      concept: 18,
-      counterexample: 1,
-      definition: 18,
-      example: 17,
-      historical_note: 5,
-      proof: 1,
-      proposition: 1,
-      question: 4,
+      concept: 38,
+      counterexample: 8,
+      definition: 39,
+      example: 37,
+      historical_note: 8,
+      proof: 4,
+      proposition: 4,
+      question: 7,
       source: 1,
     });
   });
@@ -60,14 +60,14 @@ describe("web data builder", () => {
       expect.objectContaining({
         label: "Algebra",
         counts: {
-          concept: 15,
-          counterexample: 1,
-          definition: 15,
-          example: 14,
-          historical_note: 4,
-          proof: 1,
-          proposition: 1,
-          question: 3,
+          concept: 27,
+          counterexample: 4,
+          definition: 27,
+          example: 26,
+          historical_note: 6,
+          proof: 4,
+          proposition: 4,
+          question: 5,
         },
       }),
     );

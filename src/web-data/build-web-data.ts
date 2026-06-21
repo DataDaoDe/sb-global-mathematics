@@ -18,8 +18,14 @@ export type WebEntityPage = {
   readonly outgoing: readonly GraphEdge[];
   readonly incoming: readonly GraphEdge[];
   readonly relations: Record<string, readonly WebEntitySummary[]>;
+  readonly definitions: readonly WebDefinitionEntry[];
   readonly history: readonly WebHistoryEntry[];
   readonly citation_backlinks: readonly WebCitationBacklink[];
+};
+
+export type WebDefinitionEntry = {
+  readonly entity: Extract<GraphEntity["data"], { kind: "definition" }>;
+  readonly equivalent_to: readonly WebEntitySummary[];
 };
 
 export type WebHistoryEntry = {
@@ -34,6 +40,10 @@ export type WebCitationBacklink = SourceReference & {
 
 type HistoricalNoteGraphEntity = GraphEntity & {
   readonly data: Extract<GraphEntity["data"], { kind: "historical_note" }>;
+};
+
+type DefinitionGraphEntity = GraphEntity & {
+  readonly data: Extract<GraphEntity["data"], { kind: "definition" }>;
 };
 
 export type WebSearchEntry = {
@@ -86,6 +96,7 @@ const OUTGOING_RELATION_GROUPS: Partial<
   demonstrates_necessity_of: "necessity_targets",
   developed_from: "developed_from",
   developed_into: "developed_into",
+  equivalent_to: "equivalent_definitions",
 };
 
 export function buildWebData(graph: GraphArtifact): WebDataBundle {
@@ -222,9 +233,34 @@ function buildEntityPage(
     outgoing,
     incoming,
     relations: groupRelations(outgoing, incoming, entitiesById),
+    definitions: buildDefinitionEntries(entity, entitiesById),
     history: buildHistoryEntries(incoming, entitiesById),
     citation_backlinks: buildCitationBacklinks(entity, entitiesById),
   };
+}
+
+function buildDefinitionEntries(
+  entity: GraphEntity,
+  entitiesById: ReadonlyMap<string, GraphEntity>,
+): readonly WebDefinitionEntry[] {
+  if (entity.data.kind !== "concept") {
+    return [];
+  }
+
+  return entity.data.defined_by
+    .map((definitionId) => entitiesById.get(definitionId))
+    .filter((definition): definition is DefinitionGraphEntity =>
+      definition !== undefined && definition.data.kind === "definition"
+    )
+    .map((definition) => ({
+      entity: definition.data,
+      equivalent_to: definition.data.equivalent_to
+        .map((id) => entitiesById.get(id))
+        .filter(isDefined)
+        .map(toSummary)
+        .sort(compareSummaries),
+    }))
+    .sort(compareDefinitionEntries);
 }
 
 function buildHistoryEntries(
@@ -396,6 +432,32 @@ function compareSummaries(
   right: WebEntitySummary,
 ): number {
   return left.id.localeCompare(right.id);
+}
+
+function compareDefinitionEntries(
+  left: WebDefinitionEntry,
+  right: WebDefinitionEntry,
+): number {
+  return definitionRoleRank(left.entity.definition_role) -
+      definitionRoleRank(right.entity.definition_role) ||
+    left.entity.id.localeCompare(right.entity.id);
+}
+
+function definitionRoleRank(role: string): number {
+  switch (role) {
+    case "primary":
+      return 0;
+    case "equivalent":
+      return 1;
+    case "alternative":
+      return 2;
+    case "contextual":
+      return 3;
+    case "historical":
+      return 4;
+    default:
+      return 5;
+  }
 }
 
 function compareCitationBacklinks(

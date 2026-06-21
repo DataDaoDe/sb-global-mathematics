@@ -10,6 +10,7 @@ display_math:
     description: A function with domain $A$ and codomain $B$.
 
 defined_by:
-  - foundations.function.definition
+  - foundations.function.definition.assignment
+  - foundations.function.definition.graph
 
 broader_concepts: []

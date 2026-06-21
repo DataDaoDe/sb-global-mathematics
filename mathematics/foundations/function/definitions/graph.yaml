@@ -1,0 +1,29 @@
+id: foundations.function.definition.graph
+kind: definition
+title: Function as a functional relation
+
+definition_role: equivalent
+definition_style: set-theoretic
+scope: Set theory
+
+defines:
+  - foundations.function
+
+equivalent_to:
+  - foundations.function.definition.assignment
+
+depends_on:
+  - foundations.set
+
+statement: |
+  A function from $A$ to $B$ is a subset $f\subseteq A\times B$ such that for every $a\in A$ there exists a unique $b\in B$ with $(a,b)\in f$.
+
+display_math:
+  - latex: |
+      f\subseteq A\times B,\qquad \forall a\in A\,\exists! b\in B\text{ such that }(a,b)\in f
+    description: A function represented as a relation with exactly one output for each input.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: The set-theoretic graph formulation makes the uniqueness condition explicit.

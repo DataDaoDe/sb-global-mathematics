@@ -15,11 +15,7 @@ export function expectedEntityPath(
       );
 
     case "definition":
-      return join(
-        mathematicsRoot,
-        ...entity.id.replace(/\.definition$/, "").split("."),
-        "definition.yaml",
-      );
+      return expectedDefinitionPath(entity.id, mathematicsRoot);
 
     case "proposition":
       return expectedScopedEntityPath(
@@ -71,6 +67,32 @@ export function expectedEntityPath(
         `${entity.id.replace(/^source\./, "")}.yaml`,
       );
   }
+}
+
+function expectedDefinitionPath(
+  id: string,
+  mathematicsRoot: string,
+): string {
+  const variantMarker = ".definition.";
+  const variantMarkerIndex = id.indexOf(variantMarker);
+
+  if (variantMarkerIndex !== -1) {
+    const conceptId = id.slice(0, variantMarkerIndex);
+    const slug = id.slice(variantMarkerIndex + variantMarker.length);
+
+    return join(
+      mathematicsRoot,
+      ...conceptId.split("."),
+      "definitions",
+      `${slug}.yaml`,
+    );
+  }
+
+  return join(
+    mathematicsRoot,
+    ...id.replace(/\.definition$/, "").split("."),
+    "definition.yaml",
+  );
 }
 
 function expectedProofPath(

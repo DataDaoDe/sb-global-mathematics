@@ -1,0 +1,37 @@
+id: algebra.group.history.internal-structure
+kind: historical_note
+title: Internal structure through generation and conjugation
+
+date_label: Structural finite group theory
+
+description: |
+  Beyond defining groups and homomorphisms, group theory studies how a group organizes itself. Generated subgroups and presentations describe groups from chosen data, while conjugacy, centers, centralizers, and normalizers expose internal symmetries that become central in classification and representation problems.
+
+display_math:
+  - latex: |
+      \langle S\rangle,\qquad Z(G),\qquad C_G(A),\qquad N_G(A)
+    description: Internal constructions used to analyze group structure.
+
+subjects:
+  - algebra.group.generated-subgroup
+  - algebra.group.presentation
+  - algebra.group.conjugacy
+  - algebra.group.center
+  - algebra.group.centralizer
+  - algebra.group.normalizer
+  - algebra.group.action.proposition.orbit-stabilizer-theorem
+  - algebra.group.homomorphism.proposition.first-isomorphism-theorem
+
+developed_from:
+  - algebra.group.subgroup
+  - algebra.group.action
+  - algebra.group.homomorphism
+
+developed_into:
+  - algebra.group.action.proposition.orbit-stabilizer-theorem
+  - algebra.group.homomorphism.proposition.first-isomorphism-theorem
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Sections 2.4, 4.3, and 6.3
+    note: Secondary source for generated subgroups, conjugacy tools, and presentations.

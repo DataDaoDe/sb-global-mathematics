@@ -1,6 +1,7 @@
 <script lang="ts">
   import DisplayMath from "./DisplayMath.svelte";
   import CitationBacklinks from "./CitationBacklinks.svelte";
+  import DefinitionList from "./DefinitionList.svelte";
   import EntityDetails from "./EntityDetails.svelte";
   import EntityLink from "./EntityLink.svelte";
   import HistorySection from "./HistorySection.svelte";
@@ -82,6 +83,7 @@
         {/if}
 
         <EntityDetails entity={page.entity} />
+        <DefinitionList definitions={page.definitions} index={siteData.index} />
 
         {#if page.entity.statement}
           <section class="article-section">
@@ -134,7 +136,7 @@
         <CitationBacklinks backlinks={page.citation_backlinks} />
 
         {#each sectionOrder as relationName}
-          {#if page.relations[relationName]?.length}
+          {#if page.relations[relationName]?.length && !(page.entity.kind === "concept" && (relationName === "defined_by" || relationName === "definitions"))}
             <RelationSection
               title={relationName}
               entities={page.relations[relationName]}

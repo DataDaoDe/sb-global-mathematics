@@ -1,0 +1,22 @@
+id: algebra.group.coset.definition
+kind: definition
+title: Definition of coset
+
+defines:
+  - algebra.group.coset
+
+depends_on:
+  - algebra.group.subgroup
+
+statement: |
+  Let $H\leq G$ and let $g\in G$. The left coset of $H$ represented by $g$ is the set $gH=\{gh\mid h\in H\}$.
+
+display_math:
+  - latex: |
+      gH=\{gh\mid h\in H\}
+    description: A left coset of a subgroup.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.3
+    note: Defines left and right cosets of subgroups.

@@ -1,0 +1,22 @@
+id: algebra.group.element-order.definition
+kind: definition
+title: Definition of order of a group element
+
+defines:
+  - algebra.group.element-order
+
+depends_on:
+  - algebra.group
+
+statement: |
+  Let $g$ be an element of a group $G$. The order of $g$ is the least positive integer $n$ such that $g^n=e$, if such an integer exists.
+
+display_math:
+  - latex: |
+      |g|=\min\{n\in\mathbb{Z}_{>0}\mid g^n=e\}
+    description: The least positive exponent that returns to the identity.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.1
+    note: Defines order of an element and relates it to powers of group elements.

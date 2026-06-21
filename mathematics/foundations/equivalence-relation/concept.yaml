@@ -1,0 +1,16 @@
+id: foundations.equivalence-relation
+kind: concept
+title: Equivalence relation
+
+summary: An equivalence relation is a relation that identifies objects as the same for a specified purpose by satisfying reflexivity, symmetry, and transitivity.
+
+display_math:
+  - latex: |
+      x\sim x,\qquad x\sim y\Rightarrow y\sim x,\qquad x\sim y,\ y\sim z\Rightarrow x\sim z
+    description: The reflexive, symmetric, and transitive laws for an equivalence relation.
+
+defined_by:
+  - foundations.equivalence-relation.definition
+
+broader_concepts:
+  - foundations.relation

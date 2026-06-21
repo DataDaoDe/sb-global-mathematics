@@ -1,0 +1,16 @@
+id: algebra.group.abelian
+kind: concept
+title: Abelian group
+
+summary: An abelian group is a group whose operation is commutative, so the order of multiplying any two elements does not matter.
+
+display_math:
+  - latex: |
+      ab=ba
+    description: The commutativity condition in multiplicative notation.
+
+defined_by:
+  - algebra.group.abelian.definition
+
+broader_concepts:
+  - algebra.group

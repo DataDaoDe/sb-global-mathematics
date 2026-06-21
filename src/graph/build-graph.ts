@@ -13,6 +13,7 @@ export type GraphRelation =
   | "defined_by"
   | "broader_concept"
   | "defines"
+  | "equivalent_to"
   | "depends_on"
   | "source_ref"
   | "proves"
@@ -83,6 +84,9 @@ function edgesForEntity(entity: MathematicalEntity): GraphEdge[] {
       return [
         ...entity.defines.map((targetId) =>
           edge(entity.id, "defines", targetId)
+        ),
+        ...entity.equivalent_to.map((targetId) =>
+          edge(entity.id, "equivalent_to", targetId)
         ),
         ...entity.depends_on.map((targetId) =>
           edge(entity.id, "depends_on", targetId)

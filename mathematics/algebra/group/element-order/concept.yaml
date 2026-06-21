@@ -1,0 +1,16 @@
+id: algebra.group.element-order
+kind: concept
+title: Order of a group element
+
+summary: The order of an element in a group is the least positive power of the element equal to the identity, when such a power exists.
+
+display_math:
+  - latex: |
+      |g|
+    description: The order of a group element $g$.
+
+defined_by:
+  - algebra.group.element-order.definition
+
+broader_concepts:
+  - algebra.group

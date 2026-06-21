@@ -1,0 +1,22 @@
+id: foundations.function.surjective.counterexample.inclusion-natural-integers
+kind: counterexample
+title: The inclusion of natural numbers into integers is not surjective
+
+counterexample_to:
+  - foundations.function.surjective
+
+demonstrates_necessity_of:
+  - foundations.function.surjective.definition
+
+description: |
+  The inclusion map $i:\mathbb{N}\to\mathbb{Z}$ defined by $i(n)=n$ is not surjective, because negative integers such as $-1$ are elements of the codomain with no preimage in $\mathbb{N}$. This shows that surjectivity depends on the specified codomain, not only on the formula.
+
+display_math:
+  - latex: |
+      -1\in\mathbb{Z},\qquad \nexists n\in\mathbb{N}\text{ with }i(n)=-1
+    description: A codomain element not hit by the inclusion map.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Onto-ness is presented as a condition relative to a specified codomain.

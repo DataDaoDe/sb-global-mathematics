@@ -1,0 +1,26 @@
+id: foundations.quotient-set.definition
+kind: definition
+title: Definition of quotient set
+
+defines:
+  - foundations.quotient-set
+
+depends_on:
+  - foundations.equivalence-relation
+  - foundations.set
+
+statement: |
+  Let $\sim$ be an equivalence relation on a set $X$. The quotient set $X/{\sim}$ is the set of all equivalence classes $[x]=\{y\in X\mid y\sim x\}$.
+
+display_math:
+  - latex: |
+      [x]=\{y\in X\mid y\sim x\}
+    description: The equivalence class of $x$.
+  - latex: |
+      X/{\sim}=\{[x]\mid x\in X\}
+    description: The set of all equivalence classes.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Introduces equivalence classes and quotient sets in preliminary set theory.

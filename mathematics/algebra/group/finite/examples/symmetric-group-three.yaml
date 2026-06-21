@@ -1,0 +1,19 @@
+id: algebra.group.finite.example.symmetric-group-three
+kind: example
+title: The symmetric group S3 is finite
+
+example_of:
+  - algebra.group.finite
+
+description: |
+  The symmetric group $S_3$ has six elements, one for each permutation of the set $\{1,2,3\}$.
+
+display_math:
+  - latex: |
+      |S_3|=3!=6
+    description: The order of the symmetric group on three letters.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.3
+    note: Symmetric groups on finite sets are standard finite group examples.

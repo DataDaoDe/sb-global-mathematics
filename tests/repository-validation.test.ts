@@ -61,9 +61,12 @@ const definition: Definition = {
   id: parseEntityId("algebra.test.concept.definition"),
   kind: "definition",
   title: "Definition of test concept",
+  definition_role: "primary",
+  definition_style: "formal",
   defines: [
     parseEntityId("algebra.test.concept"),
   ],
+  equivalent_to: [],
   depends_on: [],
   statement: "A test concept is a concept used in tests.",
   display_math: displayMath,
@@ -302,6 +305,35 @@ describe("repository validation", () => {
     ]);
   });
 
+  it("rejects inline math inside display math descriptions that KaTeX cannot render", () => {
+    const result = validateEntities([
+      loaded({
+        ...concept,
+        display_math: [
+          {
+            latex: "x^2",
+            description: "This caption contains malformed math $\\frac{1}$.",
+          },
+        ],
+      }),
+      loaded(definition),
+      loaded(source),
+    ], testMathematicsRoot);
+
+    const textMathIssues = result.issues.filter(
+      (issue) => issue.code === "invalid-text-math",
+    );
+
+    expect(result.valid).toBe(false);
+    expect(textMathIssues).toEqual([
+      expect.objectContaining({
+        code: "invalid-text-math",
+        entityId: "algebra.test.concept",
+        path: ["display_math.0.description"],
+      }),
+    ]);
+  });
+
   it("rejects unclosed math delimiters inside text fields", () => {
     const result = validateEntities([
       loaded({
@@ -417,6 +449,127 @@ describe("repository validation", () => {
       valid: true,
       issues: [],
     });
+  });
+
+  it("rejects a concept with no primary definition", () => {
+    const result = validateEntities([
+      loaded(concept),
+      loaded({
+        ...definition,
+        definition_role: "equivalent",
+      }),
+      loaded(example),
+      loaded(question),
+      loaded(historicalNote),
+      loaded(source),
+    ], testMathematicsRoot);
+
+    expect(result.valid).toBe(false);
+    expect(result.issues).toEqual([
+      expect.objectContaining({
+        code: "invalid-definition-set",
+        entityId: "algebra.test.concept",
+        targetId: "algebra.test.concept",
+        path: ["defined_by"],
+      }),
+    ]);
+  });
+
+  it("rejects a concept with multiple primary definitions", () => {
+    const secondDefinition: Definition = {
+      ...definition,
+      id: parseEntityId("algebra.test.concept.definition.alternative"),
+      title: "Alternative definition of test concept",
+    };
+
+    const result = validateEntities([
+      loaded({
+        ...concept,
+        defined_by: [
+          definition.id,
+          secondDefinition.id,
+        ],
+      }),
+      loaded(definition),
+      loaded(secondDefinition),
+      loaded(example),
+      loaded(question),
+      loaded(historicalNote),
+      loaded(source),
+    ], testMathematicsRoot);
+
+    expect(result.valid).toBe(false);
+    expect(result.issues).toEqual([
+      expect.objectContaining({
+        code: "invalid-definition-set",
+        entityId: "algebra.test.concept",
+        targetId: "algebra.test.concept",
+        path: ["defined_by"],
+      }),
+    ]);
+  });
+
+  it("rejects equivalent definitions that define different concepts", () => {
+    const otherConcept: Concept = {
+      ...concept,
+      id: parseEntityId("algebra.test.other-concept"),
+      title: "Other test concept",
+      defined_by: [
+        parseEntityId("algebra.test.other-concept.definition"),
+      ],
+    };
+    const otherDefinition: Definition = {
+      ...definition,
+      id: parseEntityId("algebra.test.other-concept.definition"),
+      title: "Definition of other test concept",
+      defines: [
+        otherConcept.id,
+      ],
+    };
+
+    const result = validateEntities([
+      loaded({
+        ...definition,
+        equivalent_to: [
+          otherDefinition.id,
+        ],
+      }),
+      loaded(concept),
+      loaded(otherConcept),
+      loaded(otherDefinition),
+      loaded({
+        ...example,
+        example_of: [
+          concept.id,
+          otherConcept.id,
+        ],
+      }),
+      loaded({
+        ...question,
+        motivates: [
+          concept.id,
+          otherConcept.id,
+        ],
+      }),
+      loaded({
+        ...historicalNote,
+        subjects: [
+          concept.id,
+          otherConcept.id,
+        ],
+      }),
+      loaded(source),
+    ], testMathematicsRoot);
+
+    expect(result.valid).toBe(false);
+    expect(result.issues).toEqual([
+      expect.objectContaining({
+        code: "invalid-definition-set",
+        entityId: "algebra.test.concept.definition",
+        targetId: "algebra.test.other-concept.definition",
+        path: ["equivalent_to"],
+      }),
+    ]);
   });
 
   it("rejects concepts without an example", () => {

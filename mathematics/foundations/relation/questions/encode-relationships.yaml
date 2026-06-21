@@ -1,0 +1,29 @@
+id: foundations.relation.question.encode-relationships
+kind: question
+title: How can relationships between mathematical objects be encoded?
+
+asks: |
+  How can one record ordered data, products of sets, relations, equivalence classes, and one-to-one or onto correspondences in a way that supports later definitions of functions, quotients, permutations, and isomorphisms?
+
+display_math:
+  - latex: |
+      (a,b),\qquad A\times B,\qquad R\subseteq A\times B,\qquad X/{\sim},\qquad f:A\to B
+    description: Ordered pairs, products, relations, quotient sets, and structured functions as foundational encodings.
+
+motivates:
+  - foundations.ordered-pair
+  - foundations.cartesian-product
+  - foundations.relation
+  - foundations.equivalence-relation
+  - foundations.quotient-set
+  - foundations.function.injective
+  - foundations.function.surjective
+  - foundations.bijection
+
+related_concepts:
+  - foundations.function
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: The preliminary set-theoretic language motivates these foundational encodings.

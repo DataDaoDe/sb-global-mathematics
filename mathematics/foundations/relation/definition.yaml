@@ -1,0 +1,23 @@
+id: foundations.relation.definition
+kind: definition
+title: Definition of relation
+
+defines:
+  - foundations.relation
+
+depends_on:
+  - foundations.set
+  - foundations.cartesian-product
+
+statement: |
+  A relation from a set $A$ to a set $B$ is a subset $R\subseteq A\times B$. If $(a,b)\in R$, one says that $a$ is related to $b$ by $R$.
+
+display_math:
+  - latex: |
+      R\subseteq A\times B
+    description: A relation as a subset of a Cartesian product.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Relations are part of the set-theoretic background for functions and equivalence relations.

@@ -1,0 +1,16 @@
+id: foundations.quotient-set
+kind: concept
+title: Quotient set
+
+summary: A quotient set is the set of equivalence classes determined by an equivalence relation, replacing individual objects by the classes of objects declared equivalent.
+
+display_math:
+  - latex: |
+      X/{\sim}=\{[x]\mid x\in X\}
+    description: The quotient set of $X$ by an equivalence relation $\sim$.
+
+defined_by:
+  - foundations.quotient-set.definition
+
+broader_concepts:
+  - foundations.set

@@ -1,0 +1,20 @@
+id: algebra.group.subgroup.index.example.even-integers
+kind: example
+title: The even integers have index two in the integers
+
+example_of:
+  - algebra.group.subgroup.index
+
+description: |
+  The subgroup $2\mathbb{Z}$ has index $2$ in $\mathbb{Z}$ because its cosets are exactly the even integers and the odd integers. Index counts the number of cosets, so it measures how many translated copies of the subgroup are needed to cover the ambient group.
+
+display_math:
+  - latex: |
+      [\mathbb{Z}:2\mathbb{Z}]=2
+    description: |
+      The index $[\mathbb{Z}:2\mathbb{Z}]$ counts the two cosets of $2\mathbb{Z}$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.3
+    note: Index is computed by counting cosets.

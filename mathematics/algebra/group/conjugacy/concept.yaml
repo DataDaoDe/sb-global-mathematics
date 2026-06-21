@@ -1,0 +1,16 @@
+id: algebra.group.conjugacy
+kind: concept
+title: Conjugacy
+
+summary: Conjugacy relates group elements that differ by an inner change of coordinates inside the group.
+
+display_math:
+  - latex: |
+      y=gxg^{-1}
+    description: The element $y$ is conjugate to $x$.
+
+defined_by:
+  - algebra.group.conjugacy.definition
+
+broader_concepts:
+  - algebra.group

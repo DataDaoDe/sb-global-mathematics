@@ -1,0 +1,16 @@
+id: algebra.group.finite
+kind: concept
+title: Finite group
+
+summary: A finite group is a group whose underlying set has finitely many elements.
+
+display_math:
+  - latex: |
+      |G|<\infty
+    description: The group $G$ has finite order.
+
+defined_by:
+  - algebra.group.finite.definition
+
+broader_concepts:
+  - algebra.group

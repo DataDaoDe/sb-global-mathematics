@@ -87,7 +87,7 @@ Historical relations must remain separate from mathematical dependency. An idea 
 The first coherent graph slice should support:
 
 * `Concept` - a mathematical notion;
-* `Definition` - a precise characterization of one or more concepts;
+* `Definition` - a precise characterization of one or more concepts, including primary, equivalent, alternative, historical, and contextual formulations;
 * `Proposition` - a mathematical claim;
 * `Proof` - an argument proving one or more propositions;
 * `Example` - a concrete case satisfying or illustrating an entity;
@@ -110,6 +110,7 @@ Initial relation meanings:
 
 * `defined_by`: a concept is defined by a definition;
 * `defines`: a definition defines a concept;
+* `equivalent_to`: a definition is mathematically equivalent to another definition of the same concept;
 * `depends_on`: a definition uses prior mathematical entities;
 * `proves`: a proof proves a proposition;
 * `example_of`: an example illustrates an entity;
@@ -128,6 +129,7 @@ Repository-wide validation must check that relation targets exist and have the e
 Repository-wide completeness validation must also enforce the baseline authoring standard:
 
 * concepts must have at least one example;
+* concepts must have exactly one primary definition;
 * concepts must connect to a motivating or related question;
 * concepts must have historical context;
 * definitions, propositions, proofs, examples, counterexamples, questions, and historical notes must cite at least one source;
@@ -140,7 +142,8 @@ Entity file paths must be derivable from entity IDs.
 Initial path rules:
 
 * `concept`: `mathematics/<id segments>/concept.yaml`;
-* `definition`: `mathematics/<concept id segments>/definition.yaml`;
+* primary/simple `definition`: `mathematics/<concept id segments>/definition.yaml`;
+* definition variant: `mathematics/<concept id segments>/definitions/<definition slug>.yaml`;
 * concept-scoped `proposition`: `mathematics/<concept id segments>/propositions/<proposition slug>.yaml`;
 * proposition-scoped `proof`: `mathematics/<concept id segments>/propositions/<proposition slug>/proofs/<proof slug>.yaml`;
 * concept-scoped `example`: `mathematics/<concept id segments>/examples/<example slug>.yaml`;
@@ -150,6 +153,27 @@ Initial path rules:
 * `source`: `mathematics/sources/<source slug>.yaml`.
 
 This convention makes the source repository navigable without needing a generated index.
+
+## Definition Variants
+
+Concepts may have multiple definition entities. This is required for concepts
+such as `foundations.function`, where the assignment formulation and the
+set-theoretic graph formulation are both important.
+
+Every definition has:
+
+* `definition_role`: `primary`, `equivalent`, `alternative`, `historical`, or `contextual`;
+* `definition_style`: `formal`, `intuitive`, `constructive`, `axiomatic`, `categorical`, or `set-theoretic`;
+* optional `scope`, describing the mathematical setting where the formulation is used;
+* `equivalent_to`, for definitions equivalent to another definition of the same concept.
+
+Each concept must list all of its definition entities in `defined_by`, and must
+have exactly one definition with `definition_role: primary`.
+
+Do not create separate concepts merely for different formulations of the same
+mathematical idea. Create separate concepts only when the object has distinct
+mathematical behavior, such as partial functions, multivalued functions, or
+continuous functions.
 
 ## Generated Artifacts
 

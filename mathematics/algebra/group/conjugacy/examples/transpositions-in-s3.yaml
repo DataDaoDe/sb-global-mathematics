@@ -1,0 +1,19 @@
+id: algebra.group.conjugacy.example.transpositions-in-s3
+kind: example
+title: Transpositions in S3 are conjugate
+
+example_of:
+  - algebra.group.conjugacy
+
+description: |
+  In $S_3$, any two transpositions are conjugate. Conjugation relabels the entries moved by a permutation.
+
+display_math:
+  - latex: |
+      (123)(12)(123)^{-1}=(23)
+    description: A conjugacy calculation in $S_3$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 4.3
+    note: Symmetric groups are standard examples for conjugacy classes.

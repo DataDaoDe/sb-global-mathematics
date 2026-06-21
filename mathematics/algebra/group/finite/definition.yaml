@@ -1,0 +1,23 @@
+id: algebra.group.finite.definition
+kind: definition
+title: Definition of finite group
+
+defines:
+  - algebra.group.finite
+
+depends_on:
+  - algebra.group
+  - foundations.set
+
+statement: |
+  A group $G$ is finite if its underlying set has finitely many elements.
+
+display_math:
+  - latex: |
+      |G|=n \text{ for some } n\in\mathbb{N}
+    description: A finite group has a natural-number cardinality.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.1
+    note: Uses finite groups and their orders throughout the introductory group theory material.

@@ -1,0 +1,26 @@
+id: algebra.group.homomorphism.proposition.first-isomorphism-theorem
+kind: proposition
+title: First isomorphism theorem for groups
+
+proposition_type: theorem
+
+claim: |
+  If $\varphi:G\to H$ is a group homomorphism, then $G/\ker(\varphi)$ is isomorphic to $\operatorname{im}(\varphi)$. The theorem says that the only information lost by $\varphi$ is exactly the kernel, and after quotienting by that loss the map becomes a faithful description of its image.
+
+display_math:
+  - latex: |
+      G/\ker(\varphi)\cong \operatorname{im}(\varphi)
+    description: The quotient by the kernel is isomorphic to the image.
+
+depends_on:
+  - algebra.group.homomorphism
+  - algebra.group.homomorphism.kernel
+  - algebra.group.homomorphism.image
+  - algebra.group.quotient
+  - algebra.group.isomorphism
+  - foundations.quotient-set
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 3.3
+    note: Standard statement of the first isomorphism theorem for groups.

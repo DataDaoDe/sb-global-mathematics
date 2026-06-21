@@ -6,15 +6,17 @@ defines:
   - algebra.group.quotient
 
 depends_on:
+  - foundations.quotient-set
   - algebra.group.subgroup.normal
+  - algebra.group.coset
 
 statement: |
-  Let $N\trianglelefteq G$ be a normal subgroup. The quotient group $G/N$ is the set of left cosets $gN$ with multiplication defined by $(gN)(hN)=(gh)N$.
+  Let $N\trianglelefteq G$ be a normal subgroup. The quotient group $G/N$ is the quotient set whose elements are the cosets $gN$, with multiplication defined by $(gN)(hN)=(gh)N$. Normality is the condition that makes this multiplication independent of the chosen coset representatives.
 
 display_math:
   - latex: |
       G/N=\{gN\mid g\in G\},\qquad (gN)(hN)=(gh)N
-    description: The cosets of a normal subgroup with induced multiplication.
+    description: The cosets of a normal subgroup with well-defined induced multiplication.
 
 source_refs:
   - source: source.dummit-foote-abstract-algebra-third-edition

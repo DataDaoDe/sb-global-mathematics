@@ -1,0 +1,23 @@
+id: foundations.quotient-set.counterexample.order-classes
+kind: counterexample
+title: A non-equivalence relation does not form quotient classes
+
+counterexample_to:
+  - foundations.quotient-set
+
+demonstrates_necessity_of:
+  - foundations.equivalence-relation.definition
+  - foundations.quotient-set.definition
+
+description: |
+  The relation $\leq$ on $\mathbb{Z}$ does not define a quotient set by equivalence classes, because it is not symmetric. The collection $\{y\in\mathbb{Z}\mid y\leq x\}$ is a downward-closed set, not a class of objects mutually equivalent to $x$.
+
+display_math:
+  - latex: |
+      \{y\in\mathbb{Z}\mid y\leq x\}\neq [x]\ \text{for an equivalence relation}
+    description: Order ideals are not equivalence classes.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Equivalence classes require an equivalence relation, not an arbitrary relation.

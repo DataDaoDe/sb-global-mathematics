@@ -1,0 +1,27 @@
+id: foundations.bijection.definition
+kind: definition
+title: Definition of bijection
+
+defines:
+  - foundations.bijection
+
+depends_on:
+  - foundations.function
+  - foundations.function.injective
+  - foundations.function.surjective
+
+statement: |
+  A function $f:A\to B$ is a bijection if it is both injective and surjective. Equivalently, every element of $B$ has exactly one preimage in $A$.
+
+display_math:
+  - latex: |
+      f\text{ is bijective}\iff f\text{ is injective and surjective}
+    description: A bijection is both one-to-one and onto.
+  - latex: |
+      \forall b\in B\,\exists! a\in A\text{ such that } f(a)=b
+    description: Equivalent unique-preimage characterization.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Bijections are used to compare sizes of sets and define structure-preserving equivalences.

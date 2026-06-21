@@ -2,7 +2,7 @@ id: algebra.group.quotient
 kind: concept
 title: Quotient group
 
-summary: A quotient group is the group formed from the cosets of a normal subgroup, collapsing that normal subgroup to the identity.
+summary: A quotient group is formed by replacing elements of a group with cosets of a normal subgroup, thereby collapsing that normal subgroup to the identity while retaining a well-defined group operation on the resulting classes.
 
 display_math:
   - latex: |

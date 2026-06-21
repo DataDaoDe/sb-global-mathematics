@@ -1,0 +1,22 @@
+id: foundations.equivalence-relation.counterexample.less-than-or-equal
+kind: counterexample
+title: Less-than-or-equal is not an equivalence relation
+
+counterexample_to:
+  - foundations.equivalence-relation
+
+demonstrates_necessity_of:
+  - foundations.equivalence-relation.definition
+
+description: |
+  The relation $\leq$ on $\mathbb{Z}$ is reflexive and transitive, but it is not symmetric. For instance, $1\leq 2$ is true while $2\leq 1$ is false. This shows that an equivalence relation is not merely a way to compare objects; it must compare them in a way that makes them mutually interchangeable within an equivalence class.
+
+display_math:
+  - latex: |
+      1\leq 2\quad\text{but}\quad 2\nleq 1
+    description: Failure of symmetry for the usual order on integers.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: The three axioms distinguish equivalence relations from other binary relations.

@@ -1,0 +1,19 @@
+id: algebra.group.presentation.example.cyclic-group-order-two
+kind: example
+title: Presentation of the cyclic group of order two
+
+example_of:
+  - algebra.group.presentation
+
+description: |
+  The cyclic group of order two can be presented by one generator whose square is the identity.
+
+display_math:
+  - latex: |
+      C_2=\langle a\mid a^2=e\rangle
+    description: A presentation of the cyclic group of order two.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 6.3
+    note: Cyclic groups provide basic examples of group presentations.

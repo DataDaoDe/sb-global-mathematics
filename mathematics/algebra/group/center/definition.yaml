@@ -1,0 +1,22 @@
+id: algebra.group.center.definition
+kind: definition
+title: Definition of center of a group
+
+defines:
+  - algebra.group.center
+
+depends_on:
+  - algebra.group.subgroup
+
+statement: |
+  The center of a group $G$ is the set of all elements of $G$ that commute with every element of $G$.
+
+display_math:
+  - latex: |
+      Z(G)=\{z\in G\mid zg=gz\text{ for all }g\in G\}
+    description: Elements that commute with all elements of $G$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 4.3
+    note: Defines the center as the subgroup of globally commuting elements.

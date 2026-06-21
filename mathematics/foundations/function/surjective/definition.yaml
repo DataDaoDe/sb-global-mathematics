@@ -1,0 +1,26 @@
+id: foundations.function.surjective.definition
+kind: definition
+title: Definition of surjective function
+
+defines:
+  - foundations.function.surjective
+
+depends_on:
+  - foundations.function
+  - foundations.set
+
+statement: |
+  A function $f:A\to B$ is surjective, or onto, if for every $b\in B$ there exists at least one $a\in A$ such that $f(a)=b$. Equivalently, the image of $f$ is its codomain $B$.
+
+display_math:
+  - latex: |
+      \forall b\in B,\ \exists a\in A,\ f(a)=b
+    description: Every codomain element has a preimage.
+  - latex: |
+      f(A)=B
+    description: The image equals the codomain.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Defines onto functions in the preliminary material on functions.

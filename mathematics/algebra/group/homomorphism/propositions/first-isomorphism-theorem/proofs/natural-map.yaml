@@ -1,0 +1,28 @@
+id: algebra.group.homomorphism.proposition.first-isomorphism-theorem.proof.natural-map
+kind: proof
+title: Proof of the first isomorphism theorem by the natural map
+
+proves:
+  - algebra.group.homomorphism.proposition.first-isomorphism-theorem
+
+method: induced homomorphism
+
+argument: |
+  Define $\overline{\varphi}:G/\ker(\varphi)\to\operatorname{im}(\varphi)$ by $\overline{\varphi}(g\ker(\varphi))=\varphi(g)$. This is well-defined because two representatives determine the same coset precisely when they differ by an element of the kernel, and that is precisely when they have the same image under $\varphi$. The induced map is a homomorphism because $\varphi$ preserves multiplication. It is surjective by definition of the image, and it is injective because the only coset mapping to the identity is $\ker(\varphi)$ itself. Hence it is an isomorphism.
+
+display_math:
+  - latex: |
+      \overline{\varphi}(g\ker(\varphi))=\varphi(g)
+    description: The induced map from $G/\ker(\varphi)$ to $\operatorname{im}(\varphi)$.
+
+depends_on:
+  - algebra.group.homomorphism.proposition.first-isomorphism-theorem
+  - algebra.group.homomorphism.kernel
+  - algebra.group.homomorphism.image
+  - algebra.group.quotient
+  - algebra.group.isomorphism
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 3.3
+    note: Standard proof by constructing the induced isomorphism from the quotient to the image.

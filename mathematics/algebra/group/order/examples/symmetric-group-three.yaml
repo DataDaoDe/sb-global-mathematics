@@ -1,0 +1,19 @@
+id: algebra.group.order.example.symmetric-group-three
+kind: example
+title: Order of S3
+
+example_of:
+  - algebra.group.order
+
+description: |
+  The order of $S_3$ is $6$ because there are $3!$ permutations of a three-element set.
+
+display_math:
+  - latex: |
+      |S_3|=6
+    description: The group order of $S_3$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.3
+    note: Finite symmetric groups illustrate group order by counting permutations.

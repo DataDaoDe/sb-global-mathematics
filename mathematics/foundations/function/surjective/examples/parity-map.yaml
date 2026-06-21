@@ -1,0 +1,22 @@
+id: foundations.function.surjective.example.parity-map
+kind: example
+title: The parity map from integers onto two residues is surjective
+
+example_of:
+  - foundations.function.surjective
+
+description: |
+  The function $p:\mathbb{Z}\to\{0,1\}$ defined by sending an integer to its parity is surjective. Both elements of the codomain are hit: even integers map to $0$, and odd integers map to $1$. It is not injective because many integers have the same parity.
+
+display_math:
+  - latex: |
+      p(n)=n\bmod 2
+    description: The parity function from integers to two residue classes.
+  - latex: |
+      p(0)=0,\qquad p(1)=1
+    description: Both codomain elements are hit.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Modular arithmetic functions provide standard examples of onto maps.

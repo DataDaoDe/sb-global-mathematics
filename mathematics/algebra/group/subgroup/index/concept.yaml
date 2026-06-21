@@ -1,0 +1,16 @@
+id: algebra.group.subgroup.index
+kind: concept
+title: Index of a subgroup
+
+summary: The index of a subgroup is the number of left cosets of that subgroup in the ambient group.
+
+display_math:
+  - latex: |
+      [G:H]
+    description: The index of $H$ in $G$.
+
+defined_by:
+  - algebra.group.subgroup.index.definition
+
+broader_concepts:
+  - algebra.group.coset

@@ -1,0 +1,26 @@
+id: foundations.function.injective.definition
+kind: definition
+title: Definition of injective function
+
+defines:
+  - foundations.function.injective
+
+depends_on:
+  - foundations.function
+  - foundations.set
+
+statement: |
+  A function $f:A\to B$ is injective, or one-to-one, if for all $a,a'\in A$, the equality $f(a)=f(a')$ implies $a=a'$. Equivalently, distinct elements of $A$ have distinct images in $B$.
+
+display_math:
+  - latex: |
+      \forall a,a'\in A,\ f(a)=f(a')\Rightarrow a=a'
+    description: Equality of outputs forces equality of inputs.
+  - latex: |
+      a\neq a'\Rightarrow f(a)\neq f(a')
+    description: Distinct inputs have distinct outputs.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Defines one-to-one functions in the preliminary material on functions.

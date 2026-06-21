@@ -1,0 +1,19 @@
+id: foundations.ordered-pair.example.two-one
+kind: example
+title: The ordered pair (2,1)
+
+example_of:
+  - foundations.ordered-pair
+
+description: |
+  The ordered pair $(2,1)$ is different from $(1,2)$ because the coordinates occur in different positions.
+
+display_math:
+  - latex: |
+      (2,1)\neq(1,2)
+    description: Ordered pairs remember coordinate order.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Ordered-pair notation is standard in the preliminary language for products and relations.

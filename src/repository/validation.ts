@@ -24,6 +24,7 @@ export type RepositoryValidationIssueCode =
   | "unresolved-reference"
   | "wrong-reference-kind"
   | "inconsistent-concept-definition"
+  | "invalid-definition-set"
   | "incomplete-entity"
   | "unexpected-entity-path"
   | "invalid-display-math"
@@ -113,6 +114,11 @@ export function validateEntities(
   }
 
   validateConceptDefinitionConsistency(loadedEntities, entitiesById, issues);
+
+  if (issues.length === 0) {
+    validateDefinitionSetConsistency(loadedEntities, entitiesById, issues);
+    validateEquivalentDefinitionConsistency(loadedEntities, entitiesById, issues);
+  }
 
   if (issues.length === 0) {
     validateCompleteness(loadedEntities, issues);
@@ -374,6 +380,17 @@ function errorMessage(error: unknown): string {
 function textFieldsFor(
   entity: MathematicalEntity,
 ): readonly { readonly fieldName: string; readonly text: string }[] {
+  const displayMathDescriptions = entity.kind === "source" ? [] : entity
+    .display_math
+    .flatMap((expression, index) =>
+      expression.description === undefined ? [] : [
+        {
+          fieldName: `display_math.${index}.description`,
+          text: expression.description,
+        },
+      ]
+    );
+
   switch (entity.kind) {
     case "concept":
       return [
@@ -381,6 +398,7 @@ function textFieldsFor(
           fieldName: "summary",
           text: entity.summary,
         },
+        ...displayMathDescriptions,
       ];
 
     case "definition":
@@ -389,6 +407,7 @@ function textFieldsFor(
           fieldName: "statement",
           text: entity.statement,
         },
+        ...displayMathDescriptions,
       ];
 
     case "proposition":
@@ -397,6 +416,7 @@ function textFieldsFor(
           fieldName: "claim",
           text: entity.claim,
         },
+        ...displayMathDescriptions,
       ];
 
     case "proof":
@@ -405,6 +425,7 @@ function textFieldsFor(
           fieldName: "argument",
           text: entity.argument,
         },
+        ...displayMathDescriptions,
       ];
 
     case "example":
@@ -413,6 +434,7 @@ function textFieldsFor(
           fieldName: "description",
           text: entity.description,
         },
+        ...displayMathDescriptions,
       ];
 
     case "counterexample":
@@ -421,6 +443,7 @@ function textFieldsFor(
           fieldName: "description",
           text: entity.description,
         },
+        ...displayMathDescriptions,
       ];
 
     case "question":
@@ -429,6 +452,7 @@ function textFieldsFor(
           fieldName: "asks",
           text: entity.asks,
         },
+        ...displayMathDescriptions,
       ];
 
     case "historical_note":
@@ -437,6 +461,7 @@ function textFieldsFor(
           fieldName: "description",
           text: entity.description,
         },
+        ...displayMathDescriptions,
       ];
 
     case "source":
@@ -601,6 +626,82 @@ function validateConceptDefinitionConsistency(
   }
 }
 
+function validateDefinitionSetConsistency(
+  loadedEntities: readonly LoadedEntity[],
+  entitiesById: ReadonlyMap<string, LoadedEntity>,
+  issues: RepositoryValidationIssue[],
+): void {
+  for (const loadedEntity of loadedEntities) {
+    const { entity } = loadedEntity;
+
+    if (entity.kind !== "concept") {
+      continue;
+    }
+
+    const primaryDefinitions = entity.defined_by
+      .map((definitionId) => entitiesById.get(definitionId)?.entity)
+      .filter((definition) =>
+        definition?.kind === "definition" &&
+        definition.definition_role === "primary"
+      );
+
+    if (primaryDefinitions.length !== 1) {
+      issues.push({
+        code: "invalid-definition-set",
+        message:
+          `Concept "${entity.id}" must have exactly one primary definition, but has ${primaryDefinitions.length}`,
+        entityId: entity.id,
+        filePath: loadedEntity.filePath,
+        path: ["defined_by"],
+        targetId: entity.id,
+      });
+    }
+  }
+}
+
+function validateEquivalentDefinitionConsistency(
+  loadedEntities: readonly LoadedEntity[],
+  entitiesById: ReadonlyMap<string, LoadedEntity>,
+  issues: RepositoryValidationIssue[],
+): void {
+  for (const loadedEntity of loadedEntities) {
+    const { entity } = loadedEntity;
+
+    if (entity.kind !== "definition") {
+      continue;
+    }
+
+    for (const equivalentDefinitionId of entity.equivalent_to) {
+      const equivalentDefinition = entitiesById.get(equivalentDefinitionId)
+        ?.entity;
+
+      if (equivalentDefinition?.kind !== "definition") {
+        continue;
+      }
+
+      if (!sameEntityIdSet(entity.defines, equivalentDefinition.defines)) {
+        issues.push({
+          code: "invalid-definition-set",
+          message:
+            `Definition "${entity.id}" lists "${equivalentDefinitionId}" as equivalent, but they do not define the same concepts`,
+          entityId: entity.id,
+          filePath: loadedEntity.filePath,
+          path: ["equivalent_to"],
+          targetId: equivalentDefinitionId,
+        });
+      }
+    }
+  }
+}
+
+function sameEntityIdSet(
+  left: readonly string[],
+  right: readonly string[],
+): boolean {
+  return left.length === right.length &&
+    [...left].sort().every((leftId, index) => leftId === [...right].sort()[index]);
+}
+
 function referenceRulesFor(
   entity: MathematicalEntity,
 ): readonly ReferenceRule[] {
@@ -622,6 +723,10 @@ function referenceRulesFor(
         {
           path: ["defines"],
           targetKinds: ["concept"],
+        },
+        {
+          path: ["equivalent_to"],
+          targetKinds: ["definition"],
         },
         {
           path: ["depends_on"],

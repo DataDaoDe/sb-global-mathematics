@@ -1,0 +1,16 @@
+id: foundations.cartesian-product
+kind: concept
+title: Cartesian product
+
+summary: The Cartesian product of two sets is the set of all ordered pairs whose first coordinate comes from the first set and whose second coordinate comes from the second set.
+
+display_math:
+  - latex: |
+      A\times B
+    description: The Cartesian product of sets $A$ and $B$.
+
+defined_by:
+  - foundations.cartesian-product.definition
+
+broader_concepts:
+  - foundations.set

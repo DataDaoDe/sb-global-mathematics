@@ -1,0 +1,23 @@
+id: foundations.cartesian-product.definition
+kind: definition
+title: Definition of Cartesian product
+
+defines:
+  - foundations.cartesian-product
+
+depends_on:
+  - foundations.set
+  - foundations.ordered-pair
+
+statement: |
+  The Cartesian product $A\times B$ is the set of all ordered pairs $(a,b)$ with $a\in A$ and $b\in B$.
+
+display_math:
+  - latex: |
+      A\times B=\{(a,b)\mid a\in A,\ b\in B\}
+    description: The set of all ordered pairs from $A$ and $B$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Cartesian products are used in the preliminary set-theoretic language for relations and functions.

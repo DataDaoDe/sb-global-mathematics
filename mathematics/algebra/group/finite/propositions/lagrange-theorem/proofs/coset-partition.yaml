@@ -1,0 +1,30 @@
+id: algebra.group.finite.proposition.lagrange-theorem.proof.coset-partition
+kind: proof
+title: Proof of Lagrange's theorem by coset partition
+
+proves:
+  - algebra.group.finite.proposition.lagrange-theorem
+
+method: coset counting
+
+argument: |
+  The left cosets of $H$ in $G$ partition $G$: every element of $G$ lies in some coset, and two left cosets are either equal or disjoint. Each coset $gH$ has the same number of elements as $H$, because the map $H\to gH$ sending $h$ to $gh$ is a bijection with inverse $gh\mapsto h$. If there are $[G:H]$ left cosets, then counting the disjoint union of cosets gives $|G|=[G:H]|H|$. Since $[G:H]$ is an integer, $|H|$ divides $|G|$.
+
+display_math:
+  - latex: |
+      G=\bigsqcup_{i=1}^{[G:H]} g_iH
+    description: |
+      The partition of $G$ into $[G:H]$ left cosets of $H$.
+  - latex: |
+      |G|=\sum_{i=1}^{[G:H]} |g_iH|=[G:H]\,|H|
+    description: Counting equal-sized cosets, each with $|H|$ elements.
+
+depends_on:
+  - algebra.group.finite.proposition.lagrange-theorem
+  - algebra.group.coset
+  - algebra.group.subgroup.index
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.3
+    note: Standard proof of Lagrange's theorem by partitioning a finite group into cosets.

@@ -1,0 +1,22 @@
+id: foundations.equivalence-relation.example.congruence-mod-two
+kind: example
+title: Congruence modulo two is an equivalence relation
+
+example_of:
+  - foundations.equivalence-relation
+
+description: |
+  On the integers, define $a\sim b$ when $a-b$ is divisible by $2$. This relation groups integers by parity. Every integer has the same parity as itself, parity agreement is symmetric, and if $a$ has the same parity as $b$ while $b$ has the same parity as $c$, then $a$ has the same parity as $c$.
+
+display_math:
+  - latex: |
+      a\sim b\iff 2\mid(a-b)
+    description: Congruence modulo two on $\mathbb{Z}$.
+  - latex: |
+      [0]=2\mathbb{Z},\qquad [1]=1+2\mathbb{Z}
+    description: The two equivalence classes are even and odd integers.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Congruence modulo an integer is a standard example of an equivalence relation.

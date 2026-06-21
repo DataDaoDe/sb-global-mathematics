@@ -1,0 +1,22 @@
+id: foundations.function.injective.example.inclusion-natural-integers
+kind: example
+title: The inclusion of natural numbers into integers is injective
+
+example_of:
+  - foundations.function.injective
+
+description: |
+  The inclusion map $i:\mathbb{N}\to\mathbb{Z}$ defined by $i(n)=n$ is injective. If two natural numbers have the same image as integers, then they were already the same natural number. This example is useful because it is injective without being surjective onto $\mathbb{Z}$.
+
+display_math:
+  - latex: |
+      i:\mathbb{N}\to\mathbb{Z},\qquad i(n)=n
+    description: The inclusion function from natural numbers to integers.
+  - latex: |
+      i(m)=i(n)\Rightarrow m=n
+    description: Equality of integer images forces equality of natural number inputs.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Inclusion maps and one-to-one functions are standard preliminary examples.

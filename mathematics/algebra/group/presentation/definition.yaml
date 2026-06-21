@@ -1,0 +1,22 @@
+id: algebra.group.presentation.definition
+kind: definition
+title: Definition of group presentation
+
+defines:
+  - algebra.group.presentation
+
+depends_on:
+  - algebra.group.generated-subgroup
+
+statement: |
+  A presentation of a group specifies generators together with relations those generators satisfy, written $\langle S\mid R\rangle$.
+
+display_math:
+  - latex: |
+      G=\langle S\mid R\rangle
+    description: A group described by generators and defining relations.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 6.3
+    note: Introduces presentations by generators and relations.

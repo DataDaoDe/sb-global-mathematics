@@ -28,9 +28,12 @@ describe("Definition", () => {
       id: "algebra.ring.commutative-unital.definition",
       kind: "definition",
       title: "Definition of commutative unital ring",
+      definition_role: "primary",
+      definition_style: "formal",
       defines: [
         "algebra.ring.commutative-unital",
       ],
+      equivalent_to: [],
       depends_on: [
         "algebra.ring.associative-unital",
       ],
@@ -124,6 +127,18 @@ describe("Definition", () => {
       depends_on: [
         dependencyId,
         dependencyId,
+      ],
+    });
+
+    expect(result.success).toBe(false);
+  });
+
+  it("rejects duplicate equivalent definitions", () => {
+    const result = DefinitionSchema.safeParse({
+      ...definition,
+      equivalent_to: [
+        "algebra.ring.commutative-unital.definition.graph",
+        "algebra.ring.commutative-unital.definition.graph",
       ],
     });
 

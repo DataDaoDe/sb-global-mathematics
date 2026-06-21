@@ -6,12 +6,15 @@ example_of:
   - algebra.group.quotient
 
 description: |
-  The quotient group $\mathbb{Z}/2\mathbb{Z}$ has two cosets: the even integers and the odd integers.
+  The quotient group $\mathbb{Z}/2\mathbb{Z}$ has two cosets: the even integers and the odd integers. Addition in the quotient records parity addition: even plus even is even, even plus odd is odd, and odd plus odd is even. The construction turns the subgroup $2\mathbb{Z}$ into the identity element of a two-element group.
 
 display_math:
   - latex: |
       \mathbb{Z}/2\mathbb{Z}=\{2\mathbb{Z},\,1+2\mathbb{Z}\}
     description: The two cosets modulo $2$.
+  - latex: |
+      (a+2\mathbb{Z})+(b+2\mathbb{Z})=(a+b)+2\mathbb{Z}
+    description: Addition of cosets in the quotient group.
 
 source_refs:
   - source: source.dummit-foote-abstract-algebra-third-edition

@@ -11,12 +11,45 @@ export const DefinitionStatementSchema = z
   .trim()
   .min(1, "Definition statement cannot be empty");
 
+export const DefinitionRoleSchema = z.enum([
+  "primary",
+  "equivalent",
+  "alternative",
+  "historical",
+  "contextual",
+]);
+
+export const DefinitionStyleSchema = z.enum([
+  "formal",
+  "intuitive",
+  "constructive",
+  "axiomatic",
+  "categorical",
+  "set-theoretic",
+]);
+
+export const DefinitionScopeSchema = z
+  .string()
+  .trim()
+  .min(1, "Definition scope cannot be empty")
+  .max(200, "Definition scope cannot exceed 200 characters");
+
 export const DefinitionSchema = EntityBaseSchema.extend({
   kind: z.literal("definition"),
+
+  definition_role: DefinitionRoleSchema.default("primary"),
+
+  definition_style: DefinitionStyleSchema.default("formal"),
+
+  scope: DefinitionScopeSchema.optional(),
 
   defines: z
     .array(EntityIdSchema)
     .min(1, "A definition must define at least one concept"),
+
+  equivalent_to: z
+    .array(EntityIdSchema)
+    .default([]),
 
   depends_on: z
     .array(EntityIdSchema)
@@ -37,6 +70,21 @@ export const DefinitionSchema = EntityBaseSchema.extend({
       code: "custom",
       path: ["defines"],
       message: `Duplicate defined concepts: ${duplicateDefinedConcepts.join(", ")}`,
+    });
+  }
+
+  const duplicateEquivalentDefinitions = findDuplicates(
+    definition.equivalent_to,
+  );
+
+  if (duplicateEquivalentDefinitions.length > 0) {
+    context.addIssue({
+      code: "custom",
+      path: ["equivalent_to"],
+      message:
+        `Duplicate equivalent definitions: ${
+          duplicateEquivalentDefinitions.join(", ")
+        }`,
     });
   }
 

@@ -1,0 +1,22 @@
+id: foundations.function.injective.counterexample.squaring-integers
+kind: counterexample
+title: Squaring integers is not injective
+
+counterexample_to:
+  - foundations.function.injective
+
+demonstrates_necessity_of:
+  - foundations.function.injective.definition
+
+description: |
+  The function $f:\mathbb{Z}\to\mathbb{Z}$ defined by $f(n)=n^2$ is not injective, because $1$ and $-1$ are distinct inputs with the same output. This shows why injectivity is stronger than merely being a well-defined function.
+
+display_math:
+  - latex: |
+      f(1)=1=f(-1),\qquad 1\neq -1
+    description: Distinct integer inputs with the same square.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Functions between familiar sets illustrate one-to-one and non-one-to-one behavior.

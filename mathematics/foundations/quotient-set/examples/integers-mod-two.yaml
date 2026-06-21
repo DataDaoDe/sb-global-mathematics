@@ -1,0 +1,19 @@
+id: foundations.quotient-set.example.integers-mod-two
+kind: example
+title: Integers modulo two as a quotient set
+
+example_of:
+  - foundations.quotient-set
+
+description: |
+  For congruence modulo $2$, the quotient set $\mathbb{Z}/{\sim}$ has two elements: the class of even integers and the class of odd integers. The quotient set records the result of forgetting the exact integer while retaining its parity.
+
+display_math:
+  - latex: |
+      \mathbb{Z}/{\sim}=\{2\mathbb{Z},\,1+2\mathbb{Z}\}
+    description: The quotient set of integers by congruence modulo two.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Congruence classes modulo an integer provide standard examples of quotient sets.

@@ -1,0 +1,22 @@
+id: algebra.group.conjugacy.definition
+kind: definition
+title: Definition of conjugacy
+
+defines:
+  - algebra.group.conjugacy
+
+depends_on:
+  - algebra.group
+
+statement: |
+  Elements $x,y\in G$ are conjugate in $G$ if there exists $g\in G$ such that $y=gxg^{-1}$.
+
+display_math:
+  - latex: |
+      x\sim y \iff \exists g\in G,\ y=gxg^{-1}
+    description: Conjugacy of elements in a group.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 4.3
+    note: Develops conjugacy as a central equivalence relation in group theory.

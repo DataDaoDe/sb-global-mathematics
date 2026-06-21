@@ -1,0 +1,16 @@
+id: foundations.ordered-pair
+kind: concept
+title: Ordered pair
+
+summary: An ordered pair records two objects in a specified order, so the first coordinate and second coordinate have distinct roles.
+
+display_math:
+  - latex: |
+      (a,b)
+    description: An ordered pair with first coordinate $a$ and second coordinate $b$.
+
+defined_by:
+  - foundations.ordered-pair.definition
+
+broader_concepts:
+  - foundations.set

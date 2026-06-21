@@ -1,0 +1,37 @@
+id: foundations.relation.history.set-theoretic-encoding
+kind: historical_note
+title: Set-theoretic encoding of functions and relations
+
+date_label: Modern set-theoretic foundations
+
+description: |
+  Modern mathematics often represents structured data using ordered pairs, Cartesian products, and subsets of products. Equivalence relations then make controlled identification precise: instead of saying informally that two objects should count as the same, one forms equivalence classes and quotient sets. Injective, surjective, and bijective functions refine how sets correspond to one another. This language makes relations and functions precise enough to support later constructions such as quotient groups, permutations, group actions, and isomorphisms.
+
+display_math:
+  - latex: |
+      (a,b)\in A\times B,\qquad R\subseteq A\times B,\qquad X/{\sim}=\{[x]\mid x\in X\}
+    description: Relations and quotient sets built from ordered pairs, products, and equivalence classes.
+
+subjects:
+  - foundations.ordered-pair
+  - foundations.cartesian-product
+  - foundations.relation
+  - foundations.equivalence-relation
+  - foundations.quotient-set
+  - foundations.function.injective
+  - foundations.function.surjective
+  - foundations.bijection
+
+developed_from:
+  - foundations.set
+
+developed_into:
+  - foundations.function
+  - algebra.group.quotient
+  - algebra.group.permutation
+  - algebra.group.isomorphism
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Secondary source for the set-theoretic language used throughout abstract algebra.

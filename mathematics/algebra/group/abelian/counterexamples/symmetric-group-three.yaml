@@ -1,0 +1,22 @@
+id: algebra.group.abelian.counterexample.symmetric-group-three
+kind: counterexample
+title: The symmetric group S3 is not abelian
+
+counterexample_to:
+  - algebra.group.abelian
+
+demonstrates_necessity_of:
+  - algebra.group.abelian.definition
+
+description: |
+  The group $S_3$ is not abelian because composition of permutations can depend on order.
+
+display_math:
+  - latex: |
+      (12)(23)\neq(23)(12)
+    description: Two transpositions in $S_3$ that do not commute.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.3
+    note: Symmetric groups provide standard nonabelian examples.

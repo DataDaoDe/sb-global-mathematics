@@ -1,0 +1,16 @@
+id: algebra.group.normalizer
+kind: concept
+title: Normalizer
+
+summary: The normalizer of a subset consists of group elements that preserve the subset under conjugation, identifying the largest part of the ambient group in which that subset behaves as a normal subgroup.
+
+display_math:
+  - latex: |
+      N_G(A)
+    description: The normalizer of $A$ in $G$.
+
+defined_by:
+  - algebra.group.normalizer.definition
+
+broader_concepts:
+  - algebra.group.subgroup

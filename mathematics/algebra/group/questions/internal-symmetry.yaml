@@ -1,0 +1,31 @@
+id: algebra.group.question.internal-symmetry
+kind: question
+title: How does a group act on its own internal structure?
+
+asks: |
+  How do generated subgroups, conjugacy, centralizers, normalizers, and centers reveal the internal symmetry and organization of a group?
+
+display_math:
+  - latex: |
+      \langle S\rangle,\qquad gxg^{-1},\qquad Z(G),\qquad C_G(A),\qquad N_G(A)
+    description: Internal group-theoretic constructions built from generation and conjugation.
+
+motivates:
+  - algebra.group.generated-subgroup
+  - algebra.group.presentation
+  - algebra.group.conjugacy
+  - algebra.group.center
+  - algebra.group.centralizer
+  - algebra.group.normalizer
+  - algebra.group.action.proposition.orbit-stabilizer-theorem
+  - algebra.group.homomorphism.proposition.first-isomorphism-theorem
+
+related_concepts:
+  - algebra.group
+  - algebra.group.action
+  - algebra.group.homomorphism
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Sections 2.4, 4.3, and 6.3
+    note: Generated subgroups, presentations, conjugacy, centralizers, and normalizers organize internal group structure.

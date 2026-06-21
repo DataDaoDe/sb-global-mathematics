@@ -1,0 +1,26 @@
+id: algebra.group.action.proposition.orbit-stabilizer-theorem.proof.cosets
+kind: proof
+title: Proof of orbit-stabilizer theorem by cosets
+
+proves:
+  - algebra.group.action.proposition.orbit-stabilizer-theorem
+
+method: coset bijection
+
+argument: |
+  Let $G$ act on $X$ and fix $x\in X$. The map $G\to G\cdot x$ sending $g$ to $g\cdot x$ is surjective. Two elements $g,h\in G$ have the same image exactly when $h^{-1}g\in G_x$, which is equivalent to $gG_x=hG_x$. Thus the orbit $G\cdot x$ is in bijection with the left cosets of $G_x$ in $G$. Therefore $|G\cdot x|=[G:G_x]$, and Lagrange's theorem gives $|G|=[G:G_x]|G_x|=|G\cdot x|\,|G_x|$.
+
+display_math:
+  - latex: |
+      G/G_x \longleftrightarrow G\cdot x,\qquad gG_x\mapsto g\cdot x
+    description: Cosets of the stabilizer correspond to points in the orbit.
+
+depends_on:
+  - algebra.group.action.proposition.orbit-stabilizer-theorem
+  - algebra.group.finite.proposition.lagrange-theorem
+  - algebra.group.coset
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 4.1
+    note: Standard proof using cosets of the stabilizer.

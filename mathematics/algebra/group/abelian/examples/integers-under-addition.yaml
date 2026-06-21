@@ -1,0 +1,19 @@
+id: algebra.group.abelian.example.integers-under-addition
+kind: example
+title: Integers under addition are abelian
+
+example_of:
+  - algebra.group.abelian
+
+description: |
+  The group $(\mathbb{Z},+)$ is abelian because integer addition satisfies $m+n=n+m$ for all integers $m$ and $n$.
+
+display_math:
+  - latex: |
+      m+n=n+m
+    description: Commutativity of integer addition.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.1
+    note: Additive groups such as the integers are standard abelian group examples.

@@ -1,0 +1,16 @@
+id: algebra.group.centralizer
+kind: concept
+title: Centralizer
+
+summary: The centralizer of a subset consists of all group elements that commute with every element of that subset, so it localizes the idea of the center to the elements that respect a chosen part of the group.
+
+display_math:
+  - latex: |
+      C_G(A)
+    description: The centralizer of $A$ in $G$.
+
+defined_by:
+  - algebra.group.centralizer.definition
+
+broader_concepts:
+  - algebra.group.subgroup

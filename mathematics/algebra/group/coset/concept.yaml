@@ -1,0 +1,16 @@
+id: algebra.group.coset
+kind: concept
+title: Coset
+
+summary: A coset is a translate of a subgroup by an element of the ambient group.
+
+display_math:
+  - latex: |
+      gH
+    description: The left coset of $H$ represented by $g$.
+
+defined_by:
+  - algebra.group.coset.definition
+
+broader_concepts:
+  - algebra.group.subgroup

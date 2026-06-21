@@ -1,0 +1,34 @@
+id: algebra.group.history.counting-and-cosets
+kind: historical_note
+title: Counting finite groups through cosets
+
+date_label: Classical finite group theory
+
+description: |
+  A central early insight of finite group theory is that subgroups organize the elements of a finite group into equal-sized cosets. This turns algebraic structure into arithmetic divisibility, with Lagrange's theorem expressing the relationship between the order of a group, the order of a subgroup, and the subgroup's index.
+
+display_math:
+  - latex: |
+      G=\bigsqcup_{i=1}^{[G:H]} g_iH
+    description: A finite group partitioned into cosets of a subgroup.
+
+subjects:
+  - algebra.group.abelian
+  - algebra.group.finite
+  - algebra.group.order
+  - algebra.group.element-order
+  - algebra.group.coset
+  - algebra.group.subgroup.index
+  - algebra.group.finite.proposition.lagrange-theorem
+
+developed_from:
+  - algebra.group.subgroup
+  - algebra.group.permutation
+
+developed_into:
+  - algebra.group.finite.proposition.lagrange-theorem
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Sections 1.1 and 1.3
+    note: Secondary source for finite group order, cosets, index, and Lagrange's theorem.

@@ -1,0 +1,29 @@
+id: foundations.equivalence-relation.definition
+kind: definition
+title: Definition of equivalence relation
+
+defines:
+  - foundations.equivalence-relation
+
+depends_on:
+  - foundations.relation
+  - foundations.set
+
+statement: |
+  Let $X$ be a set. A relation $\sim$ on $X$ is an equivalence relation if for all $x,y,z\in X$ it is reflexive, symmetric, and transitive: $x\sim x$; if $x\sim y$, then $y\sim x$; and if $x\sim y$ and $y\sim z$, then $x\sim z$.
+
+display_math:
+  - latex: |
+      \forall x\in X,\ x\sim x
+    description: Reflexivity.
+  - latex: |
+      \forall x,y\in X,\ x\sim y\Rightarrow y\sim x
+    description: Symmetry.
+  - latex: |
+      \forall x,y,z\in X,\ (x\sim y\land y\sim z)\Rightarrow x\sim z
+    description: Transitivity.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Gives the preliminary set-theoretic language of equivalence relations used in algebra.

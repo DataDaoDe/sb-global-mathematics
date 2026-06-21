@@ -1,0 +1,16 @@
+id: foundations.relation
+kind: concept
+title: Relation
+
+summary: A relation from one set to another is a set of ordered pairs, recording which elements of the first set are related to which elements of the second.
+
+display_math:
+  - latex: |
+      R\subseteq A\times B
+    description: A relation from $A$ to $B$.
+
+defined_by:
+  - foundations.relation.definition
+
+broader_concepts:
+  - foundations.set

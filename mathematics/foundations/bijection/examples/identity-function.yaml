@@ -1,0 +1,26 @@
+id: foundations.bijection.example.identity-function
+kind: example
+title: Identity function as a bijection
+
+example_of:
+  - foundations.bijection
+  - foundations.function.injective
+  - foundations.function.surjective
+
+description: |
+  The identity function on a set $A$ is a bijection from $A$ to itself because it is both injective and surjective. It is injective since $\operatorname{id}_A(a)=\operatorname{id}_A(a')$ implies $a=a'$, and it is surjective since every element $a\in A$ is hit by itself.
+
+display_math:
+  - latex: |
+      \operatorname{id}_A:A\to A,\qquad \operatorname{id}_A(a)=a
+    description: The identity bijection on $A$.
+  - latex: |
+      \operatorname{id}_A(a)=\operatorname{id}_A(a')\Rightarrow a=a',
+      \qquad
+      \forall b\in A,\ \operatorname{id}_A(b)=b
+    description: The identity function is injective and surjective.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Identity maps are standard examples of bijections.

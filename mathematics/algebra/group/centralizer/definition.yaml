@@ -1,0 +1,22 @@
+id: algebra.group.centralizer.definition
+kind: definition
+title: Definition of centralizer
+
+defines:
+  - algebra.group.centralizer
+
+depends_on:
+  - algebra.group.subgroup
+
+statement: |
+  Let $A\subseteq G$. The centralizer of $A$ in $G$ is the set of all $g\in G$ such that $ga=ag$ for every $a\in A$.
+
+display_math:
+  - latex: |
+      C_G(A)=\{g\in G\mid ga=ag\text{ for all }a\in A\}
+    description: Elements of $G$ commuting with every element of $A$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 4.3
+    note: Defines centralizers in the study of conjugacy and group actions.

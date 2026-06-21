@@ -1,0 +1,19 @@
+id: algebra.group.centralizer.example.transposition-in-s3
+kind: example
+title: Centralizer of a transposition in S3
+
+example_of:
+  - algebra.group.centralizer
+
+description: |
+  In $S_3$, the centralizer of the transposition $(12)$ consists of the identity and $(12)$ itself.
+
+display_math:
+  - latex: |
+      C_{S_3}((12))=\{e,(12)\}
+    description: The elements of $S_3$ commuting with $(12)$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 4.3
+    note: Centralizers are computed naturally in symmetric groups.

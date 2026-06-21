@@ -1,0 +1,19 @@
+id: algebra.group.coset.example.integers-mod-two
+kind: example
+title: Cosets of even integers in the integers
+
+example_of:
+  - algebra.group.coset
+
+description: |
+  The subgroup $2\mathbb{Z}$ of $\mathbb{Z}$ has two cosets. The coset $2\mathbb{Z}$ itself contains all even integers, while $1+2\mathbb{Z}$ contains all odd integers. These two cosets do not overlap, and together they partition $\mathbb{Z}$ according to parity.
+
+display_math:
+  - latex: |
+      2\mathbb{Z},\qquad 1+2\mathbb{Z}
+    description: The two cosets of $2\mathbb{Z}$ in $\mathbb{Z}$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.3
+    note: Modular arithmetic gives a standard example of cosets.

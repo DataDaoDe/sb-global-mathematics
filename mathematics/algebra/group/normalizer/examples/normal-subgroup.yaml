@@ -1,0 +1,19 @@
+id: algebra.group.normalizer.example.normal-subgroup
+kind: example
+title: A normal subgroup is its own normalized subset under the whole group
+
+example_of:
+  - algebra.group.normalizer
+
+description: |
+  If $N\trianglelefteq G$, then every element of $G$ normalizes $N$, so the normalizer of $N$ is all of $G$.
+
+display_math:
+  - latex: |
+      N\trianglelefteq G\implies N_G(N)=G
+    description: Normal subgroups are preserved by conjugation by all elements.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 4.3
+    note: Normalizers generalize the normality condition for subgroups.

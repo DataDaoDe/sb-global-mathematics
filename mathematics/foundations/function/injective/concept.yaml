@@ -1,0 +1,16 @@
+id: foundations.function.injective
+kind: concept
+title: Injective function
+
+summary: An injective function is a function that never sends two distinct inputs to the same output, so each output value is hit by at most one input.
+
+display_math:
+  - latex: |
+      f(a)=f(a')\Rightarrow a=a'
+    description: The defining condition for an injective function.
+
+defined_by:
+  - foundations.function.injective.definition
+
+broader_concepts:
+  - foundations.function

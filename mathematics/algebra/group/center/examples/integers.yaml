@@ -1,0 +1,19 @@
+id: algebra.group.center.example.integers
+kind: example
+title: The center of the integers under addition
+
+example_of:
+  - algebra.group.center
+
+description: |
+  Since $(\mathbb{Z},+)$ is abelian, every element commutes with every other element, so the center is all of $\mathbb{Z}$.
+
+display_math:
+  - latex: |
+      Z(\mathbb{Z})=\mathbb{Z}
+    description: The center of an abelian group is the whole group.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 4.3
+    note: Centers measure how much of a group commutes with everything.

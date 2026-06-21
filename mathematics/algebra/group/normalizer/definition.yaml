@@ -1,0 +1,23 @@
+id: algebra.group.normalizer.definition
+kind: definition
+title: Definition of normalizer
+
+defines:
+  - algebra.group.normalizer
+
+depends_on:
+  - algebra.group.subgroup
+  - algebra.group.conjugacy
+
+statement: |
+  Let $A\subseteq G$. The normalizer of $A$ in $G$ is the set of all $g\in G$ such that $gAg^{-1}=A$.
+
+display_math:
+  - latex: |
+      N_G(A)=\{g\in G\mid gAg^{-1}=A\}
+    description: Elements preserving $A$ by conjugation.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 4.3
+    note: Defines normalizers alongside centralizers and conjugacy.

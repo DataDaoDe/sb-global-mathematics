@@ -1,0 +1,19 @@
+id: foundations.relation.example.divisibility
+kind: example
+title: Divisibility as a relation
+
+example_of:
+  - foundations.relation
+
+description: |
+  Divisibility is a relation on the positive integers: one may record $(a,b)$ when $a$ divides $b$.
+
+display_math:
+  - latex: |
+      R=\{(a,b)\in\mathbb{Z}_{>0}\times\mathbb{Z}_{>0}\mid a\mid b\}
+    description: The divisibility relation on positive integers.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Relations provide the set-theoretic setting for functions and equivalence relations.

@@ -1,0 +1,16 @@
+id: foundations.function.surjective
+kind: concept
+title: Surjective function
+
+summary: A surjective function is a function whose image is the entire codomain, so every codomain element is hit by at least one input.
+
+display_math:
+  - latex: |
+      \forall b\in B,\ \exists a\in A\text{ such that }f(a)=b
+    description: The defining condition for a surjective function.
+
+defined_by:
+  - foundations.function.surjective.definition
+
+broader_concepts:
+  - foundations.function

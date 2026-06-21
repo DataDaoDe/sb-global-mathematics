@@ -1,0 +1,26 @@
+id: algebra.group.finite.proposition.lagrange-theorem
+kind: proposition
+title: Lagrange's theorem
+
+proposition_type: theorem
+
+claim: |
+  If $G$ is a finite group and $H\leq G$, then $|H|$ divides $|G|$ and $|G|=[G:H]|H|$. Equivalently, the size of a finite group is the number of cosets of $H$ multiplied by the size of $H$.
+
+display_math:
+  - latex: |
+      |G|=[G:H]\,|H|
+    description: |
+      Lagrange's counting formula: group order equals subgroup index times subgroup order.
+
+depends_on:
+  - algebra.group.finite
+  - algebra.group.subgroup
+  - algebra.group.coset
+  - algebra.group.subgroup.index
+  - algebra.group.order
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.3
+    note: Standard statement of Lagrange's theorem for finite groups.

@@ -1,0 +1,23 @@
+id: algebra.group.order.definition
+kind: definition
+title: Definition of order of a group
+
+defines:
+  - algebra.group.order
+
+depends_on:
+  - algebra.group
+  - foundations.set
+
+statement: |
+  The order of a group $G$, written $|G|$, is the number of elements of the underlying set of $G$.
+
+display_math:
+  - latex: |
+      |G|=\#\{g\mid g\in G\}
+    description: The cardinality of the underlying set of a group.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.1
+    note: Introduces the order of a group as the size of its underlying set.

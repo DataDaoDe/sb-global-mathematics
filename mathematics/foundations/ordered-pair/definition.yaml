@@ -1,0 +1,22 @@
+id: foundations.ordered-pair.definition
+kind: definition
+title: Definition of ordered pair
+
+defines:
+  - foundations.ordered-pair
+
+depends_on:
+  - foundations.set
+
+statement: |
+  An ordered pair $(a,b)$ is a mathematical object determined by a first coordinate $a$ and a second coordinate $b$, with equality defined coordinatewise.
+
+display_math:
+  - latex: |
+      (a,b)=(c,d)\iff a=c \text{ and } b=d
+    description: Equality of ordered pairs.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Ordered pairs are part of the standard set-theoretic language used for products, relations, and functions.

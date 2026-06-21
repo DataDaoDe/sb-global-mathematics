@@ -1,9 +1,16 @@
-id: foundations.function.definition
+id: foundations.function.definition.assignment
 kind: definition
-title: Definition of function
+title: Function as unique assignment
+
+definition_role: primary
+definition_style: intuitive
+scope: Elementary set theory
 
 defines:
   - foundations.function
+
+equivalent_to:
+  - foundations.function.definition.graph
 
 depends_on:
   - foundations.set

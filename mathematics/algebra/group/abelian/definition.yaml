@@ -1,0 +1,22 @@
+id: algebra.group.abelian.definition
+kind: definition
+title: Definition of abelian group
+
+defines:
+  - algebra.group.abelian
+
+depends_on:
+  - algebra.group
+
+statement: |
+  A group $G$ is abelian if $ab=ba$ for all $a,b\in G$.
+
+display_math:
+  - latex: |
+      \forall a,b\in G,\quad ab=ba
+    description: The group operation is commutative.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.1
+    note: Defines abelian groups as groups with commutative operation.

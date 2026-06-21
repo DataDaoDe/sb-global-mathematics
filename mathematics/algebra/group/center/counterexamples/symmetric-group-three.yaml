@@ -1,0 +1,25 @@
+id: algebra.group.center.counterexample.symmetric-group-three
+kind: counterexample
+title: S3 has trivial center
+
+counterexample_to:
+  - algebra.group.abelian
+
+demonstrates_necessity_of:
+  - algebra.group.center.definition
+
+description: |
+  The symmetric group $S_3$ is not abelian, and its center is only the identity element. For example, the transposition $(12)$ does not commute with the cycle $(123)$. This shows that the center measures the globally commuting part of a group, and in a nonabelian group that part can be very small.
+
+display_math:
+  - latex: |
+      (12)(123)\neq(123)(12)
+    description: Noncommuting elements in $S_3$.
+  - latex: |
+      Z(S_3)=\{e\}
+    description: The center of $S_3$ is trivial.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.3
+    note: Symmetric groups provide standard nonabelian examples with nontrivial conjugation behavior.

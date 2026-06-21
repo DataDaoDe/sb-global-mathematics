@@ -1,0 +1,18 @@
+id: foundations.bijection
+kind: concept
+title: Bijection
+
+summary: A bijection is a function that is both one-to-one and onto, pairing every element of the domain with exactly one element of the codomain and every codomain element with exactly one preimage.
+
+display_math:
+  - latex: |
+      f:A\to B\text{ is bijective}\iff f\text{ is injective and surjective}
+    description: A bijective function is both injective and surjective.
+
+defined_by:
+  - foundations.bijection.definition
+
+broader_concepts:
+  - foundations.function
+  - foundations.function.injective
+  - foundations.function.surjective

@@ -1,0 +1,24 @@
+id: algebra.group.action.proposition.orbit-stabilizer-theorem
+kind: proposition
+title: Orbit-stabilizer theorem
+
+proposition_type: theorem
+
+claim: |
+  If a finite group $G$ acts on a set $X$ and $x\in X$, then $|G|=|G\cdot x|\,|G_x|$.
+
+display_math:
+  - latex: |
+      |G|=|G\cdot x|\,|G_x|
+    description: Group order as orbit size times stabilizer size.
+
+depends_on:
+  - algebra.group.action
+  - algebra.group.action.orbit
+  - algebra.group.action.stabilizer
+  - algebra.group.order
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 4.1
+    note: Standard statement of the orbit-stabilizer theorem for group actions.

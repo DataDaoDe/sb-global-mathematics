@@ -1,0 +1,22 @@
+id: algebra.group.subgroup.index.definition
+kind: definition
+title: Definition of index of a subgroup
+
+defines:
+  - algebra.group.subgroup.index
+
+depends_on:
+  - algebra.group.coset
+
+statement: |
+  Let $H\leq G$. The index $[G:H]$ is the number of distinct left cosets of $H$ in $G$.
+
+display_math:
+  - latex: |
+      [G:H]=|\{gH\mid g\in G\}|
+    description: The number of left cosets of $H$ in $G$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.3
+    note: Defines subgroup index through the number of cosets.

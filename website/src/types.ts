@@ -57,6 +57,18 @@ export type HistoryEntry = {
   readonly developed_into: readonly EntitySummary[];
 };
 
+export type DefinitionEntry = {
+  readonly entity: Entity & {
+    readonly kind: "definition";
+    readonly statement: string;
+    readonly definition_role: string;
+    readonly definition_style: string;
+    readonly scope?: string;
+    readonly equivalent_to?: readonly string[];
+  };
+  readonly equivalent_to: readonly EntitySummary[];
+};
+
 export type CitationBacklink = SourceReference & {
   readonly entity: EntitySummary;
 };
@@ -79,6 +91,7 @@ export type EntityPage = {
   readonly outgoing: readonly Edge[];
   readonly incoming: readonly Edge[];
   readonly relations: Record<string, readonly EntitySummary[]>;
+  readonly definitions: readonly DefinitionEntry[];
   readonly history: readonly HistoryEntry[];
   readonly citation_backlinks: readonly CitationBacklink[];
 };

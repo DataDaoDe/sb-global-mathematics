@@ -1,0 +1,16 @@
+id: algebra.group.presentation
+kind: concept
+title: Group presentation
+
+summary: A group presentation describes a group by generators and relations, specifying which formal words in the generators are declared equal to the identity.
+
+display_math:
+  - latex: |
+      \langle S\mid R\rangle
+    description: A group presentation with generators $S$ and relations $R$.
+
+defined_by:
+  - algebra.group.presentation.definition
+
+broader_concepts:
+  - algebra.group.generated-subgroup

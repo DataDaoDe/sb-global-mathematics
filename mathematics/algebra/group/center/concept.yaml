@@ -1,0 +1,16 @@
+id: algebra.group.center
+kind: concept
+title: Center of a group
+
+summary: The center of a group is the subgroup of elements that commute with every element of the group, measuring the part of a group that behaves abelianly from every internal viewpoint.
+
+display_math:
+  - latex: |
+      Z(G)
+    description: The center of a group $G$.
+
+defined_by:
+  - algebra.group.center.definition
+
+broader_concepts:
+  - algebra.group.subgroup

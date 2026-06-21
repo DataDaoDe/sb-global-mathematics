@@ -1,0 +1,29 @@
+id: algebra.group.question.counting-and-cosets
+kind: question
+title: How does subgroup structure constrain the size of a finite group?
+
+asks: |
+  How can cosets be used to measure subgroup size and prove divisibility facts about finite groups?
+
+display_math:
+  - latex: |
+      |G|=[G:H]\,|H|
+    description: The counting relation behind Lagrange's theorem.
+
+motivates:
+  - algebra.group.abelian
+  - algebra.group.finite
+  - algebra.group.order
+  - algebra.group.element-order
+  - algebra.group.coset
+  - algebra.group.subgroup.index
+  - algebra.group.finite.proposition.lagrange-theorem
+
+related_concepts:
+  - algebra.group
+  - algebra.group.subgroup
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Sections 1.1 and 1.3
+    note: Counting elements, cosets, and subgroup index leads to Lagrange's theorem.

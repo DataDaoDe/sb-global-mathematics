@@ -1,0 +1,24 @@
+id: algebra.group.homomorphism.example.sign-homomorphism
+kind: example
+title: The sign homomorphism on S3
+
+example_of:
+  - algebra.group.homomorphism
+  - algebra.group.homomorphism.kernel
+  - algebra.group.homomorphism.image
+
+description: |
+  The sign map $\operatorname{sgn}:S_3\to\{\pm1\}$ sends even permutations to $1$ and odd permutations to $-1$. It is a group homomorphism. Its kernel is $A_3$, and its image is all of $\{\pm1\}$.
+
+display_math:
+  - latex: |
+      \operatorname{sgn}(\sigma\tau)=\operatorname{sgn}(\sigma)\operatorname{sgn}(\tau)
+    description: The sign map preserves multiplication.
+  - latex: |
+      \ker(\operatorname{sgn})=A_3,\qquad \operatorname{im}(\operatorname{sgn})=\{\pm1\}
+    description: Kernel and image of the sign homomorphism.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Sections 1.3 and 3.3
+    note: Alternating groups and homomorphism kernels provide standard examples.

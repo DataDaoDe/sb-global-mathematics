@@ -1,0 +1,21 @@
+id: foundations.bijection.example.integers-even-integers
+kind: example
+title: A bijection from integers to even integers
+
+example_of:
+  - foundations.bijection
+  - foundations.function.injective
+  - foundations.function.surjective
+
+description: |
+  The function $f:\mathbb{Z}\to 2\mathbb{Z}$ defined by $f(n)=2n$ is a bijection. It is injective because $2m=2n$ implies $m=n$, and it is surjective onto $2\mathbb{Z}$ because every even integer has the form $2n$.
+
+display_math:
+  - latex: |
+      f:\mathbb{Z}\to 2\mathbb{Z},\qquad f(n)=2n
+    description: A bijection from all integers to the even integers.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Bijections are used to compare sets by one-to-one and onto maps.

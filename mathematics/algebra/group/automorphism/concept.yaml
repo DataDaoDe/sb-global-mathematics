@@ -1,0 +1,16 @@
+id: algebra.group.automorphism
+kind: concept
+title: Group automorphism
+
+summary: A group automorphism is an isomorphism from a group to itself, capturing a symmetry of the group structure rather than a symmetry of an external object.
+
+display_math:
+  - latex: |
+      \operatorname{Aut}(G)
+    description: The automorphism group of $G$, whose elements are automorphisms of $G$.
+
+defined_by:
+  - algebra.group.automorphism.definition
+
+broader_concepts:
+  - algebra.group.isomorphism

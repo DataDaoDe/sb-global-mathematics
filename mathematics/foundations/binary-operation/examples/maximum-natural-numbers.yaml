@@ -1,0 +1,19 @@
+id: foundations.binary-operation.example.maximum-natural-numbers
+kind: example
+title: Maximum as a binary operation
+
+example_of:
+  - foundations.binary-operation
+
+description: |
+  The operation $\max:\mathbb{N}\times\mathbb{N}\to\mathbb{N}$ is a binary operation on the natural numbers. This example differs from addition because combining two inputs returns whichever input is larger, showing that a binary operation need not behave like arithmetic addition or multiplication.
+
+display_math:
+  - latex: |
+      \max(a,b)\in\mathbb{N}\qquad(a,b\in\mathbb{N})
+    description: The maximum of two natural numbers is again a natural number.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Binary operations are functions from a product set back to the same set.

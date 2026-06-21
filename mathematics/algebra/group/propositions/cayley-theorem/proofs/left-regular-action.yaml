@@ -1,0 +1,37 @@
+id: algebra.group.proposition.cayley-theorem.proof.left-regular-action
+kind: proof
+title: Proof of Cayley's theorem by the left regular action
+
+proves:
+  - algebra.group.proposition.cayley-theorem
+
+method: left regular action
+
+argument: |
+  Let $G$ act on its underlying set by left multiplication: $g\cdot x=gx$. For each $g\in G$, define $\lambda_g:G\to G$ by $\lambda_g(x)=gx$. Each $\lambda_g$ is a bijection, with inverse $\lambda_{g^{-1}}$, so $\lambda_g$ is a permutation of the set $G$. The assignment $g\mapsto \lambda_g$ is a homomorphism from $G$ to $\operatorname{Sym}(G)$ because $\lambda_{gh}=\lambda_g\circ\lambda_h$. It is injective because if $\lambda_g$ is the identity permutation, then $g=\lambda_g(e)=e$. Therefore $G$ is isomorphic to the subgroup $\lambda(G)$ of $\operatorname{Sym}(G)$.
+
+display_math:
+  - latex: |
+      \lambda_g(x)=gx
+    description: The permutation of $G$ induced by left multiplication by $g$.
+  - latex: |
+      \lambda_{gh}=\lambda_g\circ\lambda_h
+    description: The left regular representation is a homomorphism.
+  - latex: |
+      \ker(\lambda)=\{e\}
+    description: The representation is injective.
+
+depends_on:
+  - algebra.group.proposition.cayley-theorem
+  - algebra.group.action
+  - algebra.group.permutation
+  - algebra.group.homomorphism
+  - algebra.group.isomorphism
+
+source_refs:
+  - source: source.cayley-1854-theory-of-groups
+    locator: Philosophical Magazine, 1854
+    note: Primary historical source for the permutation representation viewpoint.
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.7
+    note: Standard proof using the left regular action.

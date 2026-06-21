@@ -16,10 +16,32 @@ export const HistoricalNoteDateLabelSchema = z
   .trim()
   .min(1, "Historical note date label cannot be empty");
 
+export const HistoricalNoteEventTypeSchema = z.enum([
+  "origin",
+  "publication",
+  "formalization",
+  "generalization",
+  "terminology",
+  "application",
+  "synthesis",
+]);
+
+export const HistoricalNoteYearSchema = z
+  .number()
+  .int()
+  .min(-3000)
+  .max(9999);
+
 export const HistoricalNoteSchema = EntityBaseSchema.extend({
   kind: z.literal("historical_note"),
 
   date_label: HistoricalNoteDateLabelSchema,
+
+  event_type: HistoricalNoteEventTypeSchema,
+
+  start_year: HistoricalNoteYearSchema,
+
+  end_year: HistoricalNoteYearSchema.optional(),
 
   description: HistoricalNoteDescriptionSchema,
 
@@ -41,6 +63,14 @@ export const HistoricalNoteSchema = EntityBaseSchema.extend({
     .array(SourceReferencesSchema.element)
     .default([]),
 }).superRefine((note, context) => {
+  if (note.end_year !== undefined && note.end_year < note.start_year) {
+    context.addIssue({
+      code: "custom",
+      path: ["end_year"],
+      message: "Historical note end_year cannot be earlier than start_year",
+    });
+  }
+
   const duplicateSubjects = findDuplicates(note.subjects);
 
   if (duplicateSubjects.length > 0) {

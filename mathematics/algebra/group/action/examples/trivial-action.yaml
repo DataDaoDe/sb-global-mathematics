@@ -1,0 +1,24 @@
+id: algebra.group.action.example.trivial-action
+kind: example
+title: The trivial group action
+
+example_of:
+  - algebra.group.action
+  - algebra.group.action.orbit
+  - algebra.group.action.stabilizer
+
+description: |
+  Any group $G$ acts trivially on a set $X$ by the rule $g\cdot x=x$ for all $g\in G$ and $x\in X$. In this action, every orbit is a singleton and every stabilizer is the whole group. It is the opposite extreme from a transitive action.
+
+display_math:
+  - latex: |
+      g\cdot x=x
+    description: Every group element fixes every point.
+  - latex: |
+      G\cdot x=\{x\},\qquad G_x=G
+    description: Orbits and stabilizers for the trivial action.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.7
+    note: Trivial actions are standard boundary examples of group actions.

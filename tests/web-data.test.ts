@@ -32,16 +32,35 @@ describe("web data builder", () => {
       ]),
     );
     expect(webData.tree.root.counts).toEqual({
-      concept: 38,
+      concept: 39,
       counterexample: 8,
-      definition: 39,
-      example: 37,
+      definition: 40,
+      example: 62,
       historical_note: 8,
-      proof: 4,
-      proposition: 4,
+      proof: 5,
+      proposition: 5,
       question: 7,
-      source: 1,
+      source: 5,
     });
+    expect(webData.timeline).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          entity: expect.objectContaining({
+            id: "algebra.ring.commutative-unital.history.integer-arithmetic-abstraction",
+            event_type: "formalization",
+            start_year: 1921,
+            end_year: 1930,
+          }),
+          subjects: [
+            {
+              id: "algebra.ring.commutative-unital",
+              kind: "concept",
+              title: "Commutative unital ring",
+            },
+          ],
+        }),
+      ]),
+    );
   });
 
   it("builds a namespace tree from entity identifiers", async () => {
@@ -60,13 +79,13 @@ describe("web data builder", () => {
       expect.objectContaining({
         label: "Algebra",
         counts: {
-          concept: 27,
+          concept: 28,
           counterexample: 4,
-          definition: 27,
-          example: 26,
+          definition: 28,
+          example: 43,
           historical_note: 6,
-          proof: 4,
-          proposition: 4,
+          proof: 5,
+          proposition: 5,
           question: 5,
         },
       }),
@@ -126,13 +145,18 @@ describe("web data builder", () => {
             title: "Definition of commutative unital ring",
           },
         ],
-        examples: [
+        examples: expect.arrayContaining([
           {
             id: "algebra.ring.commutative-unital.example.integers",
             kind: "example",
             title: "Integers as a commutative unital ring",
           },
-        ],
+          {
+            id: "algebra.ring.commutative-unital.example.polynomial-ring-integers",
+            kind: "example",
+            title: "Integer polynomial ring as a commutative unital ring",
+          },
+        ]),
         counterexamples: [
           {
             id: "algebra.ring.commutative-unital.counterexample.matrix-ring-m2-real",
@@ -161,13 +185,20 @@ describe("web data builder", () => {
         entity: expect.objectContaining({
           id: "algebra.ring.commutative-unital.history.integer-arithmetic-abstraction",
           date_label: "Modern abstract algebra formulation",
-          source_refs: [
-            {
+          event_type: "formalization",
+          start_year: 1921,
+          end_year: 1930,
+          source_refs: expect.arrayContaining([
+            expect.objectContaining({
+              source: "source.noether-1921-idealtheorie",
+              locator: "Mathematische Annalen 83",
+            }),
+            expect.objectContaining({
               source: "source.dummit-foote-abstract-algebra-third-edition",
               locator: "Chapter 7",
               note: "Secondary source for the modern abstract algebra formulation.",
-            },
-          ],
+            }),
+          ]),
         }),
         developed_from: [
           {

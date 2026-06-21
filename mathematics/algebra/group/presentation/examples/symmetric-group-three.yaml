@@ -1,0 +1,19 @@
+id: algebra.group.presentation.example.symmetric-group-three
+kind: example
+title: A presentation of S3
+
+example_of:
+  - algebra.group.presentation
+
+description: |
+  The symmetric group $S_3$ has a presentation with a transposition $s$ and a three-cycle $r$, subject to $s^2=e$, $r^3=e$, and $srs=r^{-1}$. This example shows how a presentation can encode a nonabelian group using generators and relations.
+
+display_math:
+  - latex: |
+      S_3\cong \langle r,s\mid r^3=e,\ s^2=e,\ srs=r^{-1}\rangle
+    description: A standard presentation of $S_3$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 6.3
+    note: Presentations encode groups by generators and relations.

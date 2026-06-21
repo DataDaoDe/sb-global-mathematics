@@ -1,0 +1,19 @@
+id: foundations.function.example.constant-map
+kind: example
+title: A constant function
+
+example_of:
+  - foundations.function
+
+description: |
+  The map $c:\mathbb{Z}\to\mathbb{Z}$ defined by $c(n)=0$ is a function because each integer input has exactly one output. It is useful as a boundary example: it is usually neither injective nor surjective onto the stated codomain, but it is still a perfectly valid function.
+
+display_math:
+  - latex: |
+      c:\mathbb{Z}\to\mathbb{Z},\qquad c(n)=0
+    description: A constant function on the integers.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Functions between sets are introduced in the preliminary material.

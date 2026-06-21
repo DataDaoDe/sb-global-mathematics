@@ -3,9 +3,12 @@ kind: historical_note
 title: Isomorphisms, quotients, and actions as structural tools
 
 date_label: Modern structural group theory
+event_type: synthesis
+start_year: 1854
+end_year: 1930
 
 description: |
-  The modern study of groups emphasizes structure rather than presentation. Isomorphisms identify when two groups are the same for group-theoretic purposes, normal subgroups and quotient groups formalize collapsing compatible internal structure, and group actions connect abstract groups to concrete transformations of sets.
+  The modern study of groups emphasizes structure rather than presentation. Cayley's work made it natural to compare abstract groups with concrete permutation groups, a viewpoint that later became central to isomorphisms and group actions. Normal subgroups and quotient groups formalize collapsing compatible internal structure, while actions connect abstract groups to transformations of sets.
 
 display_math:
   - latex: |
@@ -14,11 +17,13 @@ display_math:
 
 subjects:
   - algebra.group.isomorphism
+  - algebra.group.automorphism
   - algebra.group.subgroup.normal
   - algebra.group.quotient
   - algebra.group.action
   - algebra.group.action.orbit
   - algebra.group.action.stabilizer
+  - algebra.group.proposition.cayley-theorem
 
 developed_from:
   - algebra.group.homomorphism
@@ -28,8 +33,12 @@ developed_from:
 developed_into:
   - algebra.group.quotient
   - algebra.group.action
+  - algebra.group.proposition.cayley-theorem
 
 source_refs:
+  - source: source.cayley-1854-theory-of-groups
+    locator: Philosophical Magazine, 1854
+    note: Primary source connecting abstract finite groups with permutation representations.
   - source: source.dummit-foote-abstract-algebra-third-edition
     locator: Sections 1.6, 1.7, and 3.1
     note: Secondary source for the standard organization of isomorphisms, group actions, normal subgroups, and quotient groups.

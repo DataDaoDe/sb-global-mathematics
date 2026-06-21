@@ -4,17 +4,19 @@ import type {
   NamespaceTree,
   SearchEntry,
   SiteData,
+  TimelineEntry,
 } from "../types";
 
 const DATA_ROOT = "/data";
 type Fetch = typeof fetch;
 
 export async function loadSiteData(fetcher: Fetch = fetch): Promise<SiteData> {
-  const [metadata, index, search, tree] = await Promise.all([
+  const [metadata, index, search, tree, timeline] = await Promise.all([
     loadJson<Metadata>(fetcher, `${DATA_ROOT}/metadata.json`),
     loadJson<SearchEntry[]>(fetcher, `${DATA_ROOT}/index.json`),
     loadJson<SearchEntry[]>(fetcher, `${DATA_ROOT}/search.json`),
     loadJson<NamespaceTree>(fetcher, `${DATA_ROOT}/tree.json`),
+    loadJson<TimelineEntry[]>(fetcher, `${DATA_ROOT}/timeline.json`),
   ]);
 
   return {
@@ -22,6 +24,7 @@ export async function loadSiteData(fetcher: Fetch = fetch): Promise<SiteData> {
     index,
     search,
     tree,
+    timeline,
   };
 }
 

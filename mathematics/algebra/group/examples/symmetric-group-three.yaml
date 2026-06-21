@@ -1,0 +1,21 @@
+id: algebra.group.example.symmetric-group-three
+kind: example
+title: The symmetric group S3
+
+example_of:
+  - algebra.group
+  - algebra.group.finite
+  - algebra.group.permutation
+
+description: |
+  The symmetric group $S_3$ consists of all permutations of a three-element set, with composition as the operation. It is a finite nonabelian group of order $6$, so it gives a compact example where group structure is genuinely noncommutative.
+
+display_math:
+  - latex: |
+      S_3=\operatorname{Sym}(\{1,2,3\}),\qquad |S_3|=6
+    description: The symmetric group on three letters.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.3
+    note: Symmetric groups are standard finite permutation group examples.

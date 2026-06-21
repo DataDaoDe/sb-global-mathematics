@@ -1,0 +1,19 @@
+id: foundations.ordered-pair.example.order-matters
+kind: example
+title: Ordered pairs with reversed coordinates
+
+example_of:
+  - foundations.ordered-pair
+
+description: |
+  The ordered pairs $(1,2)$ and $(2,1)$ are different. This example isolates the point of an ordered pair: it records not only which objects appear, but which object is first and which is second.
+
+display_math:
+  - latex: |
+      (1,2)\neq(2,1)
+    description: Reversing coordinates changes an ordered pair.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Ordered pairs are part of the set-theoretic language for products and relations.

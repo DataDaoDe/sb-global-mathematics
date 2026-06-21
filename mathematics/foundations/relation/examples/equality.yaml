@@ -1,0 +1,20 @@
+id: foundations.relation.example.equality
+kind: example
+title: Equality as a relation
+
+example_of:
+  - foundations.relation
+  - foundations.equivalence-relation
+
+description: |
+  Equality on a set $X$ is a relation because it is a subset of $X\times X$: it contains precisely the pairs $(x,x)$. It is also the smallest equivalence relation on $X$, since it identifies only each element with itself.
+
+display_math:
+  - latex: |
+      =_X=\{(x,x)\mid x\in X\}
+    description: Equality as the diagonal relation on $X$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Equality and equivalence relations are part of the standard preliminary language.

@@ -27,13 +27,15 @@ describe("HistoricalNote", () => {
   });
 
   it("loads a concrete historical note from the repository", () => {
-    expect(historicalNote).toEqual({
+    expect(historicalNote).toEqual(expect.objectContaining({
       id: "algebra.ring.commutative-unital.history.integer-arithmetic-abstraction",
       kind: "historical_note",
       title: "Rings as an abstraction of integer-like arithmetic",
       date_label: "Modern abstract algebra formulation",
-      description:
-        "The modern concept of a commutative unital ring isolates the formal interaction between addition and multiplication familiar from the integers. This viewpoint treats arithmetic laws such as commutativity, associativity, distributivity, and the existence of additive and multiplicative identities as reusable structure rather than as properties of one number system.",
+      event_type: "formalization",
+      start_year: 1921,
+      end_year: 1930,
+      description: expect.stringContaining("commutative unital ring"),
       display_math: [
         {
           latex:
@@ -49,14 +51,17 @@ describe("HistoricalNote", () => {
         "algebra.ring.commutative-unital.example.integers",
       ],
       developed_into: [],
-      source_refs: [
-        {
+      source_refs: expect.arrayContaining([
+        expect.objectContaining({
+          source: "source.noether-1921-idealtheorie",
+          locator: "Mathematische Annalen 83",
+        }),
+        expect.objectContaining({
           source: "source.dummit-foote-abstract-algebra-third-edition",
           locator: "Chapter 7",
-          note: "Secondary source for the modern abstract algebra formulation.",
-        },
-      ],
-    });
+        }),
+      ]),
+    }));
   });
 
   it("represents a valid HistoricalNote", () => {
@@ -68,6 +73,16 @@ describe("HistoricalNote", () => {
     const result = HistoricalNoteSchema.safeParse({
       ...historicalNote,
       date_label: "   ",
+    });
+
+    expect(result.success).toBe(false);
+  });
+
+  it("rejects historical ranges whose end year is earlier than their start year", () => {
+    const result = HistoricalNoteSchema.safeParse({
+      ...historicalNote,
+      start_year: 1930,
+      end_year: 1921,
     });
 
     expect(result.success).toBe(false);

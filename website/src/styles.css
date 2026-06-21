@@ -573,6 +573,97 @@ h2 {
   border-bottom: 1px solid #d8d0c1;
 }
 
+.timeline-header {
+  max-width: 900px;
+  padding: 12px 0 18px;
+  border-bottom: 1px solid #d8d0c1;
+}
+
+.timeline-list {
+  display: grid;
+  gap: 0;
+  padding-top: 10px;
+}
+
+.timeline-entry {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 22px;
+  padding: 18px 0;
+  border-bottom: 1px solid #d8d0c1;
+}
+
+.timeline-date {
+  display: grid;
+  align-content: start;
+  gap: 4px;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+}
+
+.timeline-date strong {
+  color: #171512;
+  font-size: 0.98rem;
+}
+
+.timeline-date span {
+  color: #7a3f31;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.timeline-body {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+.timeline-body header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 12px;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+}
+
+.timeline-body header span {
+  color: #736b5d;
+  font-size: 0.72rem;
+  font-weight: 750;
+  text-transform: uppercase;
+}
+
+.timeline-body header a {
+  color: #1f527c;
+  font-size: 1rem;
+  font-weight: 750;
+}
+
+.timeline-relations {
+  display: grid;
+  gap: 2px;
+}
+
+.timeline-relations h2 {
+  color: #6f675a;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 .tree-shell {
   padding-top: 14px;
 }
@@ -690,6 +781,11 @@ h2 {
   .tree-leaf-heading {
     grid-template-columns: 1fr;
     gap: 3px;
+  }
+
+  .timeline-entry {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .tree-counts {

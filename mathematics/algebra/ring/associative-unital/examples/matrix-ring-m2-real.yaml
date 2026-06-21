@@ -1,0 +1,19 @@
+id: algebra.ring.associative-unital.example.matrix-ring-m2-real
+kind: example
+title: Two-by-two real matrices as an associative unital ring
+
+example_of:
+  - algebra.ring.associative-unital
+
+description: |
+  The ring $M_2(\mathbb{R})$ of two-by-two real matrices is an associative unital ring. Matrix addition and multiplication satisfy the ring axioms, multiplication is associative, and the identity matrix is a multiplicative identity. This example is important because multiplication is not commutative.
+
+display_math:
+  - latex: |
+      I_2=\begin{pmatrix}1&0\\0&1\end{pmatrix}
+    description: The multiplicative identity in $M_2(\mathbb{R})$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Chapter 7
+    note: Matrix rings are standard noncommutative associative unital rings.

@@ -1,0 +1,19 @@
+id: algebra.group.element-order.example.three-cycle-in-s3
+kind: example
+title: A three-cycle in S3 has order three
+
+example_of:
+  - algebra.group.element-order
+
+description: |
+  The permutation $(123)$ in $S_3$ has order $3$ because applying it three times returns every element to its original position, and no smaller positive power does so.
+
+display_math:
+  - latex: |
+      (123)^3=e,\qquad (123)\neq e,\qquad (123)^2\neq e
+    description: The least positive exponent returning $(123)$ to the identity is $3$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.3
+    note: Cycle notation gives concrete examples for element orders.

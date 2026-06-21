@@ -1,0 +1,23 @@
+id: algebra.group.coset.example.a3-in-s3
+kind: example
+title: Cosets of A3 in S3
+
+example_of:
+  - algebra.group.coset
+  - algebra.group.subgroup.index
+
+description: |
+  In $S_3$, the alternating subgroup $A_3$ has two cosets: $A_3$ itself and the set of odd permutations. This example shows cosets in a nonabelian ambient group and gives a finite index-two subgroup.
+
+display_math:
+  - latex: |
+      S_3=A_3\sqcup (12)A_3
+    description: The two cosets of $A_3$ in $S_3$.
+  - latex: |
+      [S_3:A_3]=2
+    description: The index of $A_3$ in $S_3$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Sections 1.3 and 3.1
+    note: Symmetric and alternating groups provide standard finite coset examples.

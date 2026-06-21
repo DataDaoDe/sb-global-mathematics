@@ -1,0 +1,26 @@
+id: algebra.group.automorphism.definition
+kind: definition
+title: Definition of group automorphism
+
+defines:
+  - algebra.group.automorphism
+
+depends_on:
+  - algebra.group
+  - algebra.group.isomorphism
+
+statement: |
+  A group automorphism of a group $G$ is a group isomorphism $\varphi:G\to G$. The set of all automorphisms of $G$ is denoted $\operatorname{Aut}(G)$.
+
+display_math:
+  - latex: |
+      \varphi:G\to G,\qquad \varphi(ab)=\varphi(a)\varphi(b),\qquad \varphi\text{ bijective}
+    description: A bijective homomorphism from a group to itself.
+  - latex: |
+      \operatorname{Aut}(G)=\{\varphi:G\to G\mid \varphi\text{ is an isomorphism}\}
+    description: The automorphism group as the set of self-isomorphisms of $G$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 4.4
+    note: Introduces automorphisms as isomorphisms from a group to itself.

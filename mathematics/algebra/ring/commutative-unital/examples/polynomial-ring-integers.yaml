@@ -1,0 +1,19 @@
+id: algebra.ring.commutative-unital.example.polynomial-ring-integers
+kind: example
+title: Integer polynomial ring as a commutative unital ring
+
+example_of:
+  - algebra.ring.commutative-unital
+
+description: |
+  The polynomial ring $\mathbb{Z}[x]$ is a commutative unital ring. It extends the integers by allowing formal polynomials in $x$, while keeping commutative addition and multiplication and the constant polynomial $1$ as the multiplicative identity.
+
+display_math:
+  - latex: |
+      \mathbb{Z}[x]
+    description: The ring of polynomials with integer coefficients.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Chapter 7
+    note: Polynomial rings are standard examples of commutative rings with identity.

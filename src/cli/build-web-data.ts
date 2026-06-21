@@ -41,6 +41,7 @@ if (!validation.valid) {
     writeJson(join(webRoot, "index.json"), webData.index),
     writeJson(join(webRoot, "search.json"), webData.search),
     writeJson(join(webRoot, "tree.json"), webData.tree),
+    writeJson(join(webRoot, "timeline.json"), webData.timeline),
   ]);
 
   console.log(

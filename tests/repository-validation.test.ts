@@ -163,6 +163,8 @@ const historicalNote: HistoricalNote = {
   kind: "historical_note",
   title: "Historical development of the test concept",
   date_label: "Test era",
+  event_type: "origin",
+  start_year: 1900,
   description: "A historical note for the test concept.",
   display_math: displayMath,
   subjects: [

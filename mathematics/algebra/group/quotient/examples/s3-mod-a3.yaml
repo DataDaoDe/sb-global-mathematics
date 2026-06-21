@@ -1,0 +1,20 @@
+id: algebra.group.quotient.example.s3-mod-a3
+kind: example
+title: The quotient S3 by A3
+
+example_of:
+  - algebra.group.quotient
+  - algebra.group.subgroup.normal
+
+description: |
+  The alternating group $A_3$ is a normal subgroup of $S_3$, and the quotient $S_3/A_3$ has two elements. It records the parity of a permutation: even permutations lie in $A_3$, while odd permutations lie in the other coset.
+
+display_math:
+  - latex: |
+      S_3/A_3\cong \mathbb{Z}/2\mathbb{Z}
+    description: The quotient by the alternating subgroup records permutation parity.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 3.1
+    note: Quotient groups by normal subgroups are standard structural examples.

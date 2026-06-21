@@ -1,0 +1,19 @@
+id: algebra.group.center.example.symmetric-group-three
+kind: example
+title: The center of S3 is trivial
+
+example_of:
+  - algebra.group.center
+
+description: |
+  The center of $S_3$ is $\{e\}$. This contrasts with abelian groups, where the whole group is its center, and shows that a nonabelian group can have only the identity as a globally commuting element.
+
+display_math:
+  - latex: |
+      Z(S_3)=\{e\}
+    description: The trivial center of the symmetric group on three letters.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 4.3
+    note: Symmetric groups provide standard examples for centers and conjugation.

@@ -3,9 +3,12 @@ kind: historical_note
 title: Set-theoretic encoding of functions and relations
 
 date_label: Modern set-theoretic foundations
+event_type: formalization
+start_year: 1870
+end_year: 1930
 
 description: |
-  Modern mathematics often represents structured data using ordered pairs, Cartesian products, and subsets of products. Equivalence relations then make controlled identification precise: instead of saying informally that two objects should count as the same, one forms equivalence classes and quotient sets. Injective, surjective, and bijective functions refine how sets correspond to one another. This language makes relations and functions precise enough to support later constructions such as quotient groups, permutations, group actions, and isomorphisms.
+  Modern mathematics often represents structured data using ordered pairs, Cartesian products, and subsets of products. Equivalence relations then make controlled identification precise: instead of saying informally that two objects should count as the same, one forms equivalence classes and quotient sets. Dedekind's foundational work treated systems and mappings as mathematical objects in their own right, helping prepare the language in which injective, surjective, and bijective functions refine how sets correspond to one another. This language makes relations and functions precise enough to support later constructions such as quotient groups, permutations, group actions, and isomorphisms.
 
 display_math:
   - latex: |
@@ -32,6 +35,9 @@ developed_into:
   - algebra.group.isomorphism
 
 source_refs:
+  - source: source.dedekind-1888-was-sind-zahlen
+    locator: 1888 monograph
+    note: Primary source for foundational use of systems and mappings in arithmetic and set-theoretic reasoning.
   - source: source.dummit-foote-abstract-algebra-third-edition
     locator: Section 0.1
     note: Secondary source for the set-theoretic language used throughout abstract algebra.

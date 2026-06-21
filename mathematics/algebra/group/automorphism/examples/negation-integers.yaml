@@ -1,0 +1,22 @@
+id: algebra.group.automorphism.example.negation-integers
+kind: example
+title: Negation is an automorphism of the additive integers
+
+example_of:
+  - algebra.group.automorphism
+
+description: |
+  The map $\varphi:\mathbb{Z}\to\mathbb{Z}$ defined by $\varphi(n)=-n$ is a group automorphism of $(\mathbb{Z},+)$. It is bijective, and it preserves addition because $\varphi(m+n)=-(m+n)=(-m)+(-n)$.
+
+display_math:
+  - latex: |
+      \varphi(n)=-n
+    description: Negation on the additive group of integers.
+  - latex: |
+      \varphi(m+n)=\varphi(m)+\varphi(n)
+    description: Negation preserves addition.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 4.4
+    note: Automorphisms are isomorphisms from a group to itself.

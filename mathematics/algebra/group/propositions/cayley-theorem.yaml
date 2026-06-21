@@ -1,0 +1,31 @@
+id: algebra.group.proposition.cayley-theorem
+kind: proposition
+title: Cayley's theorem
+
+proposition_type: theorem
+
+claim: |
+  Every group $G$ is isomorphic to a subgroup of the permutation group on its underlying set. For finite $G$ of order $n$, this says that $G$ is isomorphic to a subgroup of $S_n$.
+
+display_math:
+  - latex: |
+      G\cong \lambda(G)\leq \operatorname{Sym}(G)
+    description: A group is isomorphic to its left regular permutation representation.
+  - latex: |
+      |G|=n\Rightarrow G\hookrightarrow S_n
+    description: A finite group of order $n$ embeds in the symmetric group $S_n$.
+
+depends_on:
+  - algebra.group
+  - algebra.group.isomorphism
+  - algebra.group.homomorphism
+  - algebra.group.permutation
+  - algebra.group.action
+
+source_refs:
+  - source: source.cayley-1854-theory-of-groups
+    locator: Philosophical Magazine, 1854
+    note: Primary source for representing abstract finite groups by permutations.
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 1.7
+    note: Standard modern statement and proof of Cayley's theorem by group actions.

@@ -12,6 +12,7 @@
 <main class="site-shell">
   <nav class="top-nav">
     <a href="/">Global Mathematics</a>
+    <a href="/timeline">Timeline</a>
     <span>{siteData.metadata.entity_count} entities</span>
   </nav>
 

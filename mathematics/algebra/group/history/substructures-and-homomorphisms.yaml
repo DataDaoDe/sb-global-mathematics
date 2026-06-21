@@ -3,9 +3,12 @@ kind: historical_note
 title: Substructures and structure-preserving maps in group theory
 
 date_label: Nineteenth and twentieth century structural algebra
+event_type: synthesis
+start_year: 1854
+end_year: 1930
 
 description: |
-  As group theory developed from permutations, equations, and symmetries, mathematicians isolated two complementary ways to study a group: its internal subgroups and the homomorphisms that compare it with other groups. Kernels and images record how much structure a homomorphism collapses and reaches, while cyclic and permutation groups provide central organizing examples.
+  As group theory developed from permutations, equations, and symmetries, mathematicians isolated two complementary ways to study a group: its internal subgroups and the homomorphisms that compare it with other groups. Cayley's abstract finite groups retained permutation groups as a universal representation model, making it natural to ask when different presentations describe the same structure. Kernels and images record how much structure a homomorphism collapses and reaches, while cyclic and permutation groups provide central organizing examples.
 
 display_math:
   - latex: |
@@ -31,6 +34,9 @@ developed_into:
   - algebra.group.homomorphism
 
 source_refs:
+  - source: source.cayley-1854-theory-of-groups
+    locator: Philosophical Magazine, 1854
+    note: Primary source for the early abstract group concept and permutation representation viewpoint.
   - source: source.dummit-foote-abstract-algebra-third-edition
     locator: Sections 1.3, 1.6, and 2.3
     note: Secondary source for the standard early development of subgroups, homomorphisms, and cyclic groups in abstract algebra.

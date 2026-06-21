@@ -3,8 +3,12 @@ kind: historical_note
 title: Associative unital rings as an abstraction of integer-like arithmetic
 
 date_label: Modern abstract algebra formulation
+event_type: formalization
+start_year: 1921
+end_year: 1930
 
-description: The modern concept of an associative unital ring keeps the structural laws of integer arithmetic that do not require multiplication to be commutative. This abstraction preserves addition, multiplication, distributivity, associativity of multiplication, and a multiplicative identity while allowing multiplication to be noncommutative.
+description: |
+  The modern concept of an associative unital ring keeps the structural laws of integer arithmetic that do not require multiplication to be commutative. This abstraction preserves addition, multiplication, distributivity, associativity of multiplication, and a multiplicative identity while allowing multiplication to be noncommutative. The twentieth-century axiomatic treatment of rings was shaped by ideal theory and structural algebra, with Noether's work helping establish rings and ideals as objects to be studied through their internal algebraic structure.
 
 display_math:
   - latex: |
@@ -23,6 +27,9 @@ developed_into:
   - algebra.ring.commutative-unital
 
 source_refs:
+  - source: source.noether-1921-idealtheorie
+    locator: Mathematische Annalen 83
+    note: Primary source for the structural ideal-theoretic approach that shaped modern ring theory.
   - source: source.dummit-foote-abstract-algebra-third-edition
     locator: Chapter 7
     note: Secondary source for the modern abstract algebra formulation.

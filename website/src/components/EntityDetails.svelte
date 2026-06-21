@@ -27,6 +27,9 @@
       detail("Proposition type", stringField(candidate, "proposition_type")),
       detail("Proof method", stringField(candidate, "method")),
       detail("Date", stringField(candidate, "date_label")),
+      detail("Event type", stringField(candidate, "event_type")),
+      detail("Start year", numberField(candidate, "start_year")?.toString()),
+      detail("End year", numberField(candidate, "end_year")?.toString()),
     ].filter((item): item is Detail => item !== null);
   }
 

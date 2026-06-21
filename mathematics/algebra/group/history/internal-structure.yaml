@@ -3,9 +3,12 @@ kind: historical_note
 title: Internal structure through generation and conjugation
 
 date_label: Structural finite group theory
+event_type: synthesis
+start_year: 1854
+end_year: 1930
 
 description: |
-  Beyond defining groups and homomorphisms, group theory studies how a group organizes itself. Generated subgroups and presentations describe groups from chosen data, while conjugacy, centers, centralizers, and normalizers expose internal symmetries that become central in classification and representation problems.
+  Beyond defining groups and homomorphisms, group theory studies how a group organizes itself. Cayley's abstract presentation of finite groups helped detach the subject from any single concrete family of permutations, while still preserving the representation of abstract groups by permutations as a guiding model. Generated subgroups and presentations describe groups from chosen data, while conjugacy, centers, centralizers, and normalizers expose internal symmetries that become central in classification and representation problems.
 
 display_math:
   - latex: |
@@ -19,8 +22,10 @@ subjects:
   - algebra.group.center
   - algebra.group.centralizer
   - algebra.group.normalizer
+  - algebra.group.automorphism
   - algebra.group.action.proposition.orbit-stabilizer-theorem
   - algebra.group.homomorphism.proposition.first-isomorphism-theorem
+  - algebra.group.proposition.cayley-theorem
 
 developed_from:
   - algebra.group.subgroup
@@ -30,8 +35,12 @@ developed_from:
 developed_into:
   - algebra.group.action.proposition.orbit-stabilizer-theorem
   - algebra.group.homomorphism.proposition.first-isomorphism-theorem
+  - algebra.group.proposition.cayley-theorem
 
 source_refs:
+  - source: source.cayley-1854-theory-of-groups
+    locator: Philosophical Magazine, 1854
+    note: Primary source for the abstract finite-group viewpoint and representation by permutations.
   - source: source.dummit-foote-abstract-algebra-third-edition
     locator: Sections 2.4, 4.3, and 6.3
     note: Secondary source for generated subgroups, conjugacy tools, and presentations.

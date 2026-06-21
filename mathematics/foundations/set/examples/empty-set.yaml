@@ -1,0 +1,19 @@
+id: foundations.set.example.empty-set
+kind: example
+title: The empty set
+
+example_of:
+  - foundations.set
+
+description: |
+  The empty set $\varnothing$ is a set with no elements. It is an important boundary example because many definitions involving sets must handle the possibility that no elements exist at all.
+
+display_math:
+  - latex: |
+      \varnothing=\{x\mid x\neq x\}
+    description: A set with no elements.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Uses standard set notation in preliminary material.

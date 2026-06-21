@@ -3,9 +3,12 @@ kind: historical_note
 title: Counting finite groups through cosets
 
 date_label: Classical finite group theory
+event_type: generalization
+start_year: 1771
+end_year: 1870
 
 description: |
-  A central early insight of finite group theory is that subgroups organize the elements of a finite group into equal-sized cosets. This turns algebraic structure into arithmetic divisibility, with Lagrange's theorem expressing the relationship between the order of a group, the order of a subgroup, and the subgroup's index.
+  A central early insight of finite group theory is that subgroups organize the elements of a finite group into equal-sized cosets. This turns algebraic structure into arithmetic divisibility, with Lagrange's theorem expressing the relationship between the order of a group, the order of a subgroup, and the subgroup's index. Historically, this line of thought grew from attempts to understand permutations arising in equations before the modern abstract definition of group had fully stabilized.
 
 display_math:
   - latex: |
@@ -29,6 +32,9 @@ developed_into:
   - algebra.group.finite.proposition.lagrange-theorem
 
 source_refs:
+  - source: source.lagrange-1771-resolution-equations
+    locator: Memoir on algebraic resolution of equations
+    note: Primary source for early permutation-theoretic ideas behind what became Lagrange-style counting in group theory.
   - source: source.dummit-foote-abstract-algebra-third-edition
     locator: Sections 1.1 and 1.3
     note: Secondary source for finite group order, cosets, index, and Lagrange's theorem.

@@ -1,0 +1,24 @@
+id: algebra.group.action.example.conjugation-action
+kind: example
+title: A group acting on itself by conjugation
+
+example_of:
+  - algebra.group.action
+  - algebra.group.conjugacy
+  - algebra.group.centralizer
+
+description: |
+  Every group $G$ acts on itself by conjugation: $g\cdot x=gxg^{-1}$. The orbits are conjugacy classes, and the stabilizer of an element $x$ is its centralizer $C_G(x)$. This example connects actions, conjugacy, and centralizers in one construction.
+
+display_math:
+  - latex: |
+      g\cdot x=gxg^{-1}
+    description: The conjugation action of $G$ on itself.
+  - latex: |
+      G_x=C_G(x)
+    description: The stabilizer under conjugation is the centralizer.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 4.3
+    note: Conjugation actions organize conjugacy classes and centralizers.

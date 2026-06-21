@@ -23,6 +23,13 @@ export type WebEntityPage = {
   readonly citation_backlinks: readonly WebCitationBacklink[];
 };
 
+export type WebTimelineEntry = {
+  readonly entity: Extract<GraphEntity["data"], { kind: "historical_note" }>;
+  readonly subjects: readonly WebEntitySummary[];
+  readonly developed_from: readonly WebEntitySummary[];
+  readonly developed_into: readonly WebEntitySummary[];
+};
+
 export type WebDefinitionEntry = {
   readonly entity: Extract<GraphEntity["data"], { kind: "definition" }>;
   readonly equivalent_to: readonly WebEntitySummary[];
@@ -72,6 +79,7 @@ export type WebDataBundle = {
   readonly index: readonly WebEntitySummary[];
   readonly search: readonly WebSearchEntry[];
   readonly tree: WebNamespaceTree;
+  readonly timeline: readonly WebTimelineEntry[];
 };
 
 const INCOMING_RELATION_GROUPS: Partial<
@@ -114,7 +122,41 @@ export function buildWebData(graph: GraphArtifact): WebDataBundle {
     index: graph.entities.map(toSummary),
     search: graph.entities.map(toSearchEntry),
     tree: buildNamespaceTree(graph.entities),
+    timeline: buildTimeline(graph.entities, entitiesById),
   };
+}
+
+function buildTimeline(
+  entities: readonly GraphEntity[],
+  entitiesById: ReadonlyMap<string, GraphEntity>,
+): readonly WebTimelineEntry[] {
+  return entities
+    .filter((entity): entity is HistoricalNoteGraphEntity =>
+      entity.data.kind === "historical_note"
+    )
+    .map((entity) => {
+      const note = entity.data;
+
+      return {
+        entity: note,
+        subjects: note.subjects
+          .map((id) => entitiesById.get(id))
+          .filter(isDefined)
+          .map(toSummary)
+          .sort(compareSummaries),
+        developed_from: note.developed_from
+          .map((id) => entitiesById.get(id))
+          .filter(isDefined)
+          .map(toSummary)
+          .sort(compareSummaries),
+        developed_into: note.developed_into
+          .map((id) => entitiesById.get(id))
+          .filter(isDefined)
+          .map(toSummary)
+          .sort(compareSummaries),
+      };
+    })
+    .sort(compareTimelineEntries);
 }
 
 function buildNamespaceTree(
@@ -440,6 +482,16 @@ function compareDefinitionEntries(
 ): number {
   return definitionRoleRank(left.entity.definition_role) -
       definitionRoleRank(right.entity.definition_role) ||
+    left.entity.id.localeCompare(right.entity.id);
+}
+
+function compareTimelineEntries(
+  left: WebTimelineEntry,
+  right: WebTimelineEntry,
+): number {
+  return left.entity.start_year - right.entity.start_year ||
+    (left.entity.end_year ?? left.entity.start_year) -
+      (right.entity.end_year ?? right.entity.start_year) ||
     left.entity.id.localeCompare(right.entity.id);
 }
 

@@ -1,0 +1,19 @@
+id: foundations.cartesian-product.example.product-with-empty-set
+kind: example
+title: Cartesian product with the empty set
+
+example_of:
+  - foundations.cartesian-product
+
+description: |
+  For any set $A$, the product $A\times\varnothing$ is empty because there is no second coordinate available. This is a useful edge case: even when $A$ has many elements, the product has no ordered pairs if one factor is empty.
+
+display_math:
+  - latex: |
+      A\times\varnothing=\varnothing
+    description: A Cartesian product with an empty factor is empty.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Cartesian products are part of the preliminary set-theoretic language.

@@ -76,11 +76,26 @@ Questions are not exercises. They represent inquiry paths such as:
 
 Questions may motivate concepts, definitions, propositions, examples, and counterexamples.
 
+The historical development of a question should be modeled with `HistoricalNote`
+entities whose `subjects` include that question. Do not add separate timeline
+fields directly to `Question` unless a concrete use case requires question
+entities to be dated independently of historical evidence. This keeps one
+timeline model for concepts, results, examples, sources, and guiding problems.
+
 ### Historical graph
 
 The historical graph records development over time: emergence, naming, publication, generalization, formalization, and changes in terminology.
 
 Historical relations must remain separate from mathematical dependency. An idea may historically precede another idea without being a mathematical prerequisite. A modern prerequisite may also have been formalized after the idea it helps explain.
+
+Historical notes must be placeable on a timeline. Each historical note must include:
+
+* `event_type` - one of `origin`, `publication`, `formalization`, `generalization`, `terminology`, `application`, or `synthesis`;
+* `start_year` - the normalized year used for sorting and visual timeline placement;
+* `end_year` - an optional inclusive end year for developments that span a period;
+* `date_label` - the human-readable historical period or date label used in prose.
+
+The normalized year fields support sorting and visual navigation. `date_label` remains the reader-facing label and may carry nuance such as "nineteenth-century abstraction" or "modern abstract algebra formulation."
 
 ## Initial Entity Types
 

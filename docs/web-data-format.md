@@ -162,6 +162,9 @@ the subject of historical notes:
     "kind": "historical_note",
     "title": "Rings as an abstraction of integer-like arithmetic",
     "date_label": "Modern abstract algebra formulation",
+    "event_type": "formalization",
+    "start_year": 1921,
+    "end_year": 1930,
     "description": "The modern concept...",
     "source_refs": []
   },
@@ -172,6 +175,31 @@ the subject of historical notes:
 
 The historical note entity remains the normative content. `developed_from` and
 `developed_into` are summary expansions for presentation.
+
+The web-data bundle also emits `timeline.json`, a chronological projection of
+all historical notes:
+
+```json
+{
+  "entity": {
+    "id": "algebra.ring.commutative-unital.history.integer-arithmetic-abstraction",
+    "kind": "historical_note",
+    "title": "Rings as an abstraction of integer-like arithmetic",
+    "event_type": "formalization",
+    "start_year": 1921,
+    "end_year": 1930,
+    "date_label": "Modern abstract algebra formulation"
+  },
+  "subjects": [],
+  "developed_from": [],
+  "developed_into": []
+}
+```
+
+Timeline entries are sorted by `start_year`, then by `end_year`, then by entity
+identifier. The historical note entity remains the normative content; the
+timeline projection adds expanded subject and development summaries for browser
+presentation.
 
 `citation_backlinks` is populated on source pages. It records every entity that
 cites the source, preserving the locator and note from the citing entity:

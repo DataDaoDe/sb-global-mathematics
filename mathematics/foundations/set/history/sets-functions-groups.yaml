@@ -3,8 +3,12 @@ kind: historical_note
 title: From collections and mappings to abstract groups
 
 date_label: Nineteenth and twentieth century abstraction
+event_type: synthesis
+start_year: 1854
+end_year: 1930
 
-description: Modern algebra relies on the language of sets and functions to state structural definitions precisely. The abstract definition of a group packages a set together with a binary operation satisfying axioms that capture reversible composition, a viewpoint shaped by earlier work with permutations, equations, and symmetries.
+description: |
+  Modern algebra relies on the language of sets and functions to state structural definitions precisely. Cayley's finite groups showed how an abstract operation could be studied independently of a particular numerical system while remaining representable by permutations. Dedekind's foundational work on systems and mappings helped normalize the idea that collections and structure-preserving maps could themselves be primary mathematical objects. The abstract definition of a group packages a set together with a binary operation satisfying axioms that capture reversible composition, a viewpoint shaped by earlier work with permutations, equations, and symmetries.
 
 display_math:
   - latex: |
@@ -25,6 +29,12 @@ developed_into:
   - algebra.group
 
 source_refs:
+  - source: source.cayley-1854-theory-of-groups
+    locator: Philosophical Magazine, 1854
+    note: Primary source for the abstract finite-group viewpoint.
+  - source: source.dedekind-1888-was-sind-zahlen
+    locator: 1888 monograph
+    note: Primary source for foundational treatment of systems and mappings.
   - source: source.dummit-foote-abstract-algebra-third-edition
     locator: Sections 0.1 and 1.1
     note: Secondary source connecting set/function preliminaries with the modern definition of groups.

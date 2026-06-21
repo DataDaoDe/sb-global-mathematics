@@ -49,12 +49,19 @@ export type HistoryEntry = {
   readonly entity: Entity & {
     readonly kind: "historical_note";
     readonly date_label: string;
+    readonly event_type: string;
+    readonly start_year: number;
+    readonly end_year?: number;
     readonly description: string;
     readonly developed_from?: readonly string[];
     readonly developed_into?: readonly string[];
   };
   readonly developed_from: readonly EntitySummary[];
   readonly developed_into: readonly EntitySummary[];
+};
+
+export type TimelineEntry = HistoryEntry & {
+  readonly subjects: readonly EntitySummary[];
 };
 
 export type DefinitionEntry = {
@@ -108,4 +115,5 @@ export type SiteData = {
   readonly index: readonly EntitySummary[];
   readonly search: readonly SearchEntry[];
   readonly tree: NamespaceTree;
+  readonly timeline: readonly TimelineEntry[];
 };

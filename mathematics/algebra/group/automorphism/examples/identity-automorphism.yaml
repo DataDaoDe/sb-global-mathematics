@@ -1,0 +1,22 @@
+id: algebra.group.automorphism.example.identity-automorphism
+kind: example
+title: The identity map is a group automorphism
+
+example_of:
+  - algebra.group.automorphism
+
+description: |
+  For any group $G$, the identity map $\operatorname{id}_G:G\to G$ is an automorphism. It preserves multiplication, is bijective, and leaves every element fixed. This is the neutral example of an automorphism, and it acts as the identity element in $\operatorname{Aut}(G)$.
+
+display_math:
+  - latex: |
+      \operatorname{id}_G(g)=g
+    description: The identity automorphism fixes every element of $G$.
+  - latex: |
+      \operatorname{id}_G(ab)=ab=\operatorname{id}_G(a)\operatorname{id}_G(b)
+    description: The identity map preserves the group operation.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 4.4
+    note: Identity automorphisms are basic examples in the automorphism group.

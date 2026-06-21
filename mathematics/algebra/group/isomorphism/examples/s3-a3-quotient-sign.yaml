@@ -1,0 +1,20 @@
+id: algebra.group.isomorphism.example.s3-a3-quotient-sign
+kind: example
+title: S3/A3 is isomorphic to the sign group
+
+example_of:
+  - algebra.group.isomorphism
+  - algebra.group.quotient
+
+description: |
+  The quotient $S_3/A_3$ is isomorphic to the two-element group $\{\pm1\}$ under multiplication. The isomorphism is induced by the sign homomorphism and sends the even coset to $1$ and the odd coset to $-1$.
+
+display_math:
+  - latex: |
+      S_3/A_3\cong \{\pm1\}
+    description: The quotient by $A_3$ is the sign group.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Sections 3.1 and 3.3
+    note: Quotients by kernels are standard examples of group isomorphisms.

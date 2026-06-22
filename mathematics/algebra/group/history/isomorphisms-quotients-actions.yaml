@@ -10,6 +10,18 @@ end_year: 1930
 description: |
   The modern study of groups emphasizes structure rather than presentation. Cayley's work made it natural to compare abstract groups with concrete permutation groups, a viewpoint that later became central to isomorphisms and group actions. Normal subgroups and quotient groups formalize collapsing compatible internal structure, while actions connect abstract groups to transformations of sets.
 
+summary: Isomorphisms, quotients, and actions turned group theory into a language of comparison, collapse, and representation.
+
+prior_formulation: Groups could be presented concretely, but the relation between different presentations required a structural language.
+
+conceptual_change: Isomorphisms identified sameness of structure, quotient groups formalized compatible collapse, and actions represented abstract groups through transformations.
+
+resulting_formulation: A group can be compared with another group, collapsed by a normal subgroup, or studied through its action on a set.
+
+enabled_developments:
+  - Cayley's theorem expressed every group as a permutation group.
+  - Quotient and action techniques became central to modern structural algebra.
+
 display_math:
   - latex: |
       G\cong H,\qquad G/N,\qquad G\curvearrowright X

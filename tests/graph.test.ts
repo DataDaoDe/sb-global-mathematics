@@ -68,6 +68,16 @@ describe("graph builder", () => {
           to: "algebra.ring.commutative-unital",
         },
         {
+          from: "foundations.mathematical-logic.question.represent-validity-symbolically",
+          relation: "prerequisite_question",
+          to: "foundations.mathematical-logic.question.what-makes-argument-valid",
+        },
+        {
+          from: "foundations.mathematical-logic.question.what-makes-argument-valid",
+          relation: "successor_question",
+          to: "foundations.mathematical-logic.question.represent-validity-symbolically",
+        },
+        {
           from: "algebra.ring.commutative-unital.history.integer-arithmetic-abstraction",
           relation: "historical_context_for",
           to: "algebra.ring.commutative-unital",

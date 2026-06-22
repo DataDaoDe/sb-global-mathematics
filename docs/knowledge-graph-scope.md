@@ -82,11 +82,27 @@ fields directly to `Question` unless a concrete use case requires question
 entities to be dated independently of historical evidence. This keeps one
 timeline model for concepts, results, examples, sources, and guiding problems.
 
+Question progression is modeled separately from historical chronology.
+Questions may list:
+
+* `prerequisite_questions` - earlier questions that make the present question intelligible;
+* `successor_questions` - later questions naturally opened by the present question.
+
+These links are pedagogical and conceptual. They must not be treated as
+historical date evidence; historical timing remains source-backed through
+`HistoricalNote`.
+
 ### Historical graph
 
 The historical graph records development over time: emergence, naming, publication, generalization, formalization, and changes in terminology.
 
 Historical relations must remain separate from mathematical dependency. An idea may historically precede another idea without being a mathematical prerequisite. A modern prerequisite may also have been formalized after the idea it helps explain.
+
+Historical notes are evidence-backed development claims, not merely dated
+annotations. Each note must make explicit what changed and why the change
+matters. A historical note should identify the source evidence, the affected
+entities, the earlier formulation, the conceptual change, the resulting
+formulation, and the developments the change enabled.
 
 Historical notes must be placeable on a timeline. Each historical note must include:
 
@@ -94,6 +110,14 @@ Historical notes must be placeable on a timeline. Each historical note must incl
 * `start_year` - the normalized year used for sorting and visual timeline placement;
 * `end_year` - an optional inclusive end year for developments that span a period;
 * `date_label` - the human-readable historical period or date label used in prose.
+* `summary` - a concise statement of the historical development claim;
+* `conceptual_change` - the precise mathematical or conceptual shift recorded by the note.
+
+Historical notes may also include:
+
+* `prior_formulation` - the earlier state of the idea or problem;
+* `resulting_formulation` - the formulation that emerged from the change;
+* `enabled_developments` - later uses, questions, or technical developments made possible by the change.
 
 The normalized year fields support sorting and visual navigation. `date_label` remains the reader-facing label and may carry nuance such as "nineteenth-century abstraction" or "modern abstract algebra formulation."
 
@@ -133,6 +157,8 @@ Initial relation meanings:
 * `demonstrates_necessity_of`: a counterexample shows why another entity or assumption matters;
 * `motivates`: a question motivates an entity;
 * `related_concepts`: a question is conceptually related to concepts;
+* `prerequisite_questions`: a question depends pedagogically or conceptually on earlier questions;
+* `successor_questions`: a question opens later questions in a progression;
 * `historical_context_for`: a historical note gives context for an entity;
 * `developed_from`: a historical note points to earlier ideas or examples involved in development;
 * `developed_into`: a historical note points to later ideas or formalizations;
@@ -147,6 +173,10 @@ Repository-wide completeness validation must also enforce the baseline authoring
 * concepts must have exactly one primary definition;
 * concepts must connect to a motivating or related question;
 * concepts must have historical context;
+* propositions must have at least one proof;
+* proofs must list each proposition they prove in `depends_on`;
+* counterexamples must identify what necessity they demonstrate;
+* question progression links must be reciprocal between `prerequisite_questions` and `successor_questions`;
 * definitions, propositions, proofs, examples, counterexamples, questions, and historical notes must cite at least one source;
 * source references must include locators.
 

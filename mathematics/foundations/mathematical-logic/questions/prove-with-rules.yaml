@@ -1,0 +1,42 @@
+id: foundations.mathematical-logic.question.prove-with-rules
+kind: question
+title: How do assumptions justify conclusions?
+
+asks: |
+  Given assumptions and accepted inference rules, when is a conclusion genuinely forced rather than merely plausible?
+
+display_math:
+  - latex: |
+      \Gamma \vdash \varphi\ ?\qquad \Gamma \models \varphi\ ?
+    description: The guiding question comparing derivability and validity.
+
+motivates:
+  - foundations.mathematical-logic
+  - foundations.logical-validity
+  - foundations.soundness
+  - foundations.deduction
+  - foundations.direct-proof
+  - foundations.conditional-statement
+  - foundations.contrapositive
+  - foundations.proof-by-contrapositive
+
+related_concepts:
+  - foundations.mathematical-logic
+  - foundations.logical-validity
+  - foundations.soundness
+  - foundations.deduction
+  - foundations.direct-proof
+  - foundations.conditional-statement
+  - foundations.contrapositive
+  - foundations.proof-by-contrapositive
+
+prerequisite_questions:
+  - foundations.mathematical-logic.question.express-general-claims
+
+successor_questions:
+  - foundations.mathematical-logic.question.distinguish-proof-from-truth
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Chapters 1-2
+    note: The relationship between formal deduction and semantic consequence motivates first-order logic.

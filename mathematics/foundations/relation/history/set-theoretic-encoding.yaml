@@ -10,6 +10,18 @@ end_year: 1930
 description: |
   Modern mathematics often represents structured data using ordered pairs, Cartesian products, and subsets of products. Equivalence relations then make controlled identification precise: instead of saying informally that two objects should count as the same, one forms equivalence classes and quotient sets. Dedekind's foundational work treated systems and mappings as mathematical objects in their own right, helping prepare the language in which injective, surjective, and bijective functions refine how sets correspond to one another. This language makes relations and functions precise enough to support later constructions such as quotient groups, permutations, group actions, and isomorphisms.
 
+summary: Set-theoretic encoding made relations, functions, and quotient constructions precise as objects built from sets.
+
+prior_formulation: Correspondence, identification, and relation-like ideas were often handled informally or in context-specific notation.
+
+conceptual_change: Ordered pairs, Cartesian products, subsets, equivalence classes, and mappings became reusable set-theoretic objects.
+
+resulting_formulation: Relations are subsets of products, functions are special relations, and quotient sets are sets of equivalence classes.
+
+enabled_developments:
+  - Quotient groups, permutations, group actions, and isomorphisms could be stated with precise set-theoretic dependencies.
+  - Injective, surjective, and bijective functions became general tools for comparing sets and structures.
+
 display_math:
   - latex: |
       (a,b)\in A\times B,\qquad R\subseteq A\times B,\qquad X/{\sim}=\{[x]\mid x\in X\}

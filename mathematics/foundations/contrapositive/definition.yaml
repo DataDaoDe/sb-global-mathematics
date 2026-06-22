@@ -1,0 +1,24 @@
+id: foundations.contrapositive.definition
+kind: definition
+title: Definition of contrapositive
+
+defines:
+  - foundations.contrapositive
+
+depends_on:
+  - foundations.conditional-statement
+
+statement: |
+  For a conditional statement $P\Rightarrow Q$, the contrapositive is the conditional statement $\neg Q\Rightarrow \neg P$.
+
+display_math:
+  - latex: |
+      P\Rightarrow Q
+      \quad\leadsto\quad
+      \neg Q\Rightarrow \neg P
+    description: Forming the contrapositive of a conditional statement.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 3
+    note: The contrapositive is treated as an equivalent way to prove a conditional.

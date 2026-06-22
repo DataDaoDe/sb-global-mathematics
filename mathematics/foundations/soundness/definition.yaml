@@ -1,0 +1,23 @@
+id: foundations.soundness.definition
+kind: definition
+title: Definition of soundness
+
+defines:
+  - foundations.soundness
+
+depends_on:
+  - foundations.mathematical-logic
+  - foundations.logical-validity
+
+statement: |
+  A deductive system is sound for a semantics when every conclusion derivable from assumptions in the system is semantically valid from those assumptions.
+
+display_math:
+  - latex: |
+      \text{if }\Gamma \vdash \varphi\text{, then }\Gamma \models \varphi
+    description: Soundness connects syntactic proof to semantic truth preservation.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.4
+    note: Soundness is proved by showing that formal deductions preserve truth in all models.

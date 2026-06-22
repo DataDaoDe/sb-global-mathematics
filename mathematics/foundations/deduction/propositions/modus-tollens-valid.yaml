@@ -1,0 +1,25 @@
+id: foundations.deduction.proposition.modus-tollens-valid
+kind: proposition
+title: Modus tollens is valid
+
+proposition_type: theorem
+
+claim: |
+  For statements $P$ and $Q$, the argument from $P\Rightarrow Q$ and $\neg Q$ to $\neg P$ is logically valid.
+
+display_math:
+  - latex: |
+      P\Rightarrow Q,\quad \neg Q\ \models\ \neg P
+    description: Semantic validity of modus tollens.
+
+depends_on:
+  - foundations.deduction
+  - foundations.logical-validity
+  - foundations.conditional-statement
+  - foundations.contrapositive
+  - foundations.conditional-statement.proposition.contrapositive-equivalence
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 3
+    note: Modus tollens is the inference pattern underlying many contrapositive proofs.

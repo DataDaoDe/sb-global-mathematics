@@ -10,6 +10,18 @@ end_year: 1930
 description: |
   The modern concept of a commutative unital ring isolates the formal interaction between addition and multiplication familiar from the integers. This viewpoint treats arithmetic laws such as commutativity, associativity, distributivity, and the existence of additive and multiplicative identities as reusable structure rather than as properties of one number system. In the historical development of modern algebra, commutative rings became especially central through algebraic number theory and ideal theory, where arithmetic is studied by examining the structure of ideals inside rings.
 
+summary: Commutative unital rings abstracted integer-like arithmetic into reusable algebraic structure.
+
+prior_formulation: Addition and multiplication were first encountered through concrete number systems such as the integers.
+
+conceptual_change: Arithmetic laws were separated from the integers and treated as axioms for a general class of algebraic systems.
+
+resulting_formulation: A commutative unital ring is a set with two operations satisfying additive, multiplicative, distributive, commutative, and identity laws.
+
+enabled_developments:
+  - Ideal theory became a structural way to study arithmetic inside rings.
+  - Commutative algebra could treat number-theoretic and geometric examples uniformly.
+
 display_math:
   - latex: |
       (\mathbb{Z}, +, \cdot)

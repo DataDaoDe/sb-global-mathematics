@@ -1,0 +1,32 @@
+id: foundations.deduction.proposition.modus-ponens-valid.proof.truth-table
+kind: proof
+title: Truth-table proof of modus ponens validity
+
+proves:
+  - foundations.deduction.proposition.modus-ponens-valid
+
+method: truth table
+
+argument: |
+  To test validity, look only at rows in which all premises are true. If $P$ is true and $P\Rightarrow Q$ is true, then the truth table for the conditional forces $Q$ to be true. There is no valuation in which both premises are true and the conclusion is false. Therefore the argument form is logically valid.
+
+display_math:
+  - latex: |
+      \begin{array}{c c|c|c}
+      P&Q&P\Rightarrow Q&Q\\
+      T&T&T&T\\
+      T&F&F&F\\
+      F&T&T&T\\
+      F&F&T&F
+      \end{array}
+    description: The only row where both premises are true also has true conclusion.
+
+depends_on:
+  - foundations.deduction.proposition.modus-ponens-valid
+  - foundations.logical-validity
+  - foundations.conditional-statement
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Truth tables provide a direct way to verify validity of propositional argument forms.

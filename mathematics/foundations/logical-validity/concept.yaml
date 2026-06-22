@@ -1,0 +1,16 @@
+id: foundations.logical-validity
+kind: concept
+title: Logical validity
+
+summary: Logical validity is the property that an argument form cannot have true premises and a false conclusion under the intended semantics.
+
+display_math:
+  - latex: |
+      \Gamma \models \varphi
+    description: The conclusion $\varphi$ is a semantic consequence of assumptions $\Gamma$.
+
+defined_by:
+  - foundations.logical-validity.definition
+
+broader_concepts:
+  - foundations.mathematical-logic

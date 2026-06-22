@@ -18,6 +18,8 @@
     propositions: "Propositions",
     proofs: "Proofs",
     motivating_questions: "Motivating questions",
+    prerequisite_questions: "Prerequisite questions",
+    successor_questions: "Successor questions",
     developed_from: "Developed from",
     developed_into: "Developed into",
     related_concepts: "Related concepts",

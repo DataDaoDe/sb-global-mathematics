@@ -43,7 +43,7 @@ export const SourceSchema = EntityBaseSchema.extend({
   year: z
     .number()
     .int()
-    .min(0)
+    .min(-3000)
     .max(9999)
     .optional(),
 

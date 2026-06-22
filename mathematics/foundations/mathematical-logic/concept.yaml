@@ -1,0 +1,15 @@
+id: foundations.mathematical-logic
+kind: concept
+title: Mathematical logic
+
+summary: Mathematical logic studies formal languages, statements, inference, and proof, making explicit when conclusions follow from assumptions.
+
+display_math:
+  - latex: |
+      \Gamma \vdash \varphi
+    description: The statement $\varphi$ is derivable from assumptions $\Gamma$.
+
+defined_by:
+  - foundations.mathematical-logic.definition
+
+broader_concepts: []

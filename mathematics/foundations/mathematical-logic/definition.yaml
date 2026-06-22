@@ -1,0 +1,21 @@
+id: foundations.mathematical-logic.definition
+kind: definition
+title: Definition of mathematical logic
+
+defines:
+  - foundations.mathematical-logic
+
+depends_on: []
+
+statement: |
+  Mathematical logic is the study of formal mathematical languages, statements, models, inference rules, and proofs, with special attention to when a conclusion follows from specified assumptions.
+
+display_math:
+  - latex: |
+      \Gamma \vdash \varphi,\qquad \Gamma \models \varphi
+    description: Syntactic derivability and semantic consequence.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Chapters 1-2
+    note: Standard treatment of formal languages, truth, and deductive systems.

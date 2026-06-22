@@ -1,0 +1,26 @@
+id: foundations.logical-validity.counterexample.affirming-the-consequent
+kind: counterexample
+title: Affirming the consequent is not valid
+
+counterexample_to:
+  - foundations.logical-validity.definition
+
+demonstrates_necessity_of:
+  - foundations.logical-validity.definition
+  - foundations.conditional-statement.definition
+
+description: |
+  The argument form from $P\Rightarrow Q$ and $Q$ to $P$ is invalid. Let $P$ be "the integer $n$ is divisible by $4$" and let $Q$ be "the integer $n$ is even." For $n=2$, the conditional $P\Rightarrow Q$ is true and $Q$ is true, but $P$ is false. This gives a valuation in which the premises are true and the conclusion is false.
+
+display_math:
+  - latex: |
+      P\Rightarrow Q,\quad Q\ \not\models\ P
+    description: The invalid argument form called affirming the consequent.
+  - latex: |
+      4\nmid 2,\qquad 2\mid 2
+    description: A concrete instance where the consequent is true but the antecedent is false.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Invalid argument forms are detected by a case where premises are true and the conclusion is false.

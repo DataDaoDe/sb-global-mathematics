@@ -36,6 +36,18 @@ describe("HistoricalNote", () => {
       start_year: 1921,
       end_year: 1930,
       description: expect.stringContaining("commutative unital ring"),
+      summary:
+        "Commutative unital rings abstracted integer-like arithmetic into reusable algebraic structure.",
+      prior_formulation:
+        "Addition and multiplication were first encountered through concrete number systems such as the integers.",
+      conceptual_change:
+        "Arithmetic laws were separated from the integers and treated as axioms for a general class of algebraic systems.",
+      resulting_formulation:
+        "A commutative unital ring is a set with two operations satisfying additive, multiplicative, distributive, commutative, and identity laws.",
+      enabled_developments: [
+        "Ideal theory became a structural way to study arithmetic inside rings.",
+        "Commutative algebra could treat number-theoretic and geometric examples uniformly.",
+      ],
       display_math: [
         {
           latex:
@@ -73,6 +85,15 @@ describe("HistoricalNote", () => {
     const result = HistoricalNoteSchema.safeParse({
       ...historicalNote,
       date_label: "   ",
+    });
+
+    expect(result.success).toBe(false);
+  });
+
+  it("rejects an empty conceptual change", () => {
+    const result = HistoricalNoteSchema.safeParse({
+      ...historicalNote,
+      conceptual_change: "   ",
     });
 
     expect(result.success).toBe(false);

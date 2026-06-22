@@ -1,0 +1,26 @@
+id: foundations.logical-validity.counterexample.denying-the-antecedent
+kind: counterexample
+title: Denying the antecedent is not valid
+
+counterexample_to:
+  - foundations.logical-validity.definition
+
+demonstrates_necessity_of:
+  - foundations.logical-validity.definition
+  - foundations.conditional-statement.definition
+
+description: |
+  The argument form from $P\Rightarrow Q$ and $\neg P$ to $\neg Q$ is invalid. Let $P$ be "the integer $n$ is divisible by $4$" and let $Q$ be "the integer $n$ is even." For $n=2$, $P\Rightarrow Q$ is true and $\neg P$ is true, but $\neg Q$ is false because $2$ is even. The premises can therefore be true while the conclusion is false.
+
+display_math:
+  - latex: |
+      P\Rightarrow Q,\quad \neg P\ \not\models\ \neg Q
+    description: The invalid argument form called denying the antecedent.
+  - latex: |
+      4\nmid 2,\qquad 2\mid 2
+    description: A concrete case where the antecedent is false but the consequent is true.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Invalid argument forms are detected by an interpretation where premises are true and conclusion is false.

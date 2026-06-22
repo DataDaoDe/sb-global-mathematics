@@ -21,6 +21,8 @@ export type GraphRelation =
   | "counterexample_to"
   | "demonstrates_necessity_of"
   | "motivates"
+  | "prerequisite_question"
+  | "successor_question"
   | "historical_context_for"
   | "developed_from"
   | "developed_into"
@@ -139,6 +141,12 @@ function edgesForEntity(entity: MathematicalEntity): GraphEdge[] {
         ),
         ...entity.related_concepts.map((targetId) =>
           edge(entity.id, "related_concept", targetId)
+        ),
+        ...entity.prerequisite_questions.map((targetId) =>
+          edge(entity.id, "prerequisite_question", targetId)
+        ),
+        ...entity.successor_questions.map((targetId) =>
+          edge(entity.id, "successor_question", targetId)
         ),
         ...sourceReferenceEdges(entity.id, entity.source_refs),
       ];

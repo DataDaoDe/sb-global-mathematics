@@ -119,6 +119,16 @@ describe("Source", () => {
     expect(result.success).toBe(false);
   });
 
+  it("accepts BCE source years for ancient works", () => {
+    const result = SourceSchema.safeParse({
+      ...source,
+      id: "source.example-ancient-work",
+      year: -350,
+    });
+
+    expect(result.success).toBe(true);
+  });
+
   it("rejects an empty locator", () => {
     const result = SourceSchema.safeParse({
       ...source,

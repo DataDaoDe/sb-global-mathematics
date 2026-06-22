@@ -134,6 +134,7 @@ const proof: Proof = {
   argument: "The claim follows directly from the definition.",
   display_math: displayMath,
   depends_on: [
+    parseEntityId("algebra.test.concept.proposition.basic-claim"),
     parseEntityId("algebra.test.concept.definition"),
   ],
   source_refs: [
@@ -153,6 +154,8 @@ const question: Question = {
   related_concepts: [
     parseEntityId("algebra.test.concept"),
   ],
+  prerequisite_questions: [],
+  successor_questions: [],
   source_refs: [
     sourceReference,
   ],
@@ -166,6 +169,10 @@ const historicalNote: HistoricalNote = {
   event_type: "origin",
   start_year: 1900,
   description: "A historical note for the test concept.",
+  summary: "A concise historical development claim for the test concept.",
+  conceptual_change:
+    "The test concept became explicit enough to be represented in the repository.",
+  enabled_developments: [],
   display_math: displayMath,
   subjects: [
     parseEntityId("algebra.test.concept"),
@@ -743,6 +750,7 @@ describe("repository validation", () => {
       }),
       loaded(concept),
       loaded(definition),
+      loaded(proposition),
       loaded(source),
     ], testMathematicsRoot);
 
@@ -754,6 +762,121 @@ describe("repository validation", () => {
           "algebra.test.concept.proposition.basic-claim.proof.direct",
         targetId: "algebra.test.concept",
         path: ["proves"],
+      }),
+    ]);
+  });
+
+  it("rejects propositions without proofs", () => {
+    const result = validateEntities([
+      loaded(concept),
+      loaded(definition),
+      loaded(example),
+      loaded(question),
+      loaded(historicalNote),
+      loaded(proposition),
+      loaded(source),
+    ], testMathematicsRoot);
+
+    expect(result.valid).toBe(false);
+    expect(result.issues).toEqual([
+      expect.objectContaining({
+        code: "incomplete-entity",
+        entityId: "algebra.test.concept.proposition.basic-claim",
+        path: ["id"],
+      }),
+    ]);
+  });
+
+  it("rejects proofs that do not depend on the propositions they prove", () => {
+    const result = validateEntities([
+      loaded(concept),
+      loaded(definition),
+      loaded(example),
+      loaded(question),
+      loaded(historicalNote),
+      loaded(proposition),
+      loaded({
+        ...proof,
+        depends_on: [
+          parseEntityId("algebra.test.concept.definition"),
+        ],
+      }),
+      loaded(source),
+    ], testMathematicsRoot);
+
+    const proofIssues = result.issues.filter((issue) =>
+      issue.code === "inconsistent-proof"
+    );
+
+    expect(result.valid).toBe(false);
+    expect(proofIssues).toEqual([
+      expect.objectContaining({
+        code: "inconsistent-proof",
+        entityId:
+          "algebra.test.concept.proposition.basic-claim.proof.direct",
+        targetId: "algebra.test.concept.proposition.basic-claim",
+        path: ["depends_on"],
+      }),
+    ]);
+  });
+
+  it("rejects counterexamples that do not state what necessity they demonstrate", () => {
+    const result = validateEntities([
+      loaded({
+        ...counterexample,
+        demonstrates_necessity_of: [],
+      }),
+      loaded(concept),
+      loaded(definition),
+      loaded(example),
+      loaded(question),
+      loaded(historicalNote),
+      loaded(source),
+    ], testMathematicsRoot);
+
+    expect(result.valid).toBe(false);
+    expect(result.issues).toEqual([
+      expect.objectContaining({
+        code: "incomplete-entity",
+        entityId: "algebra.test.concept.counterexample.non-instance",
+        path: ["demonstrates_necessity_of"],
+      }),
+    ]);
+  });
+
+  it("rejects non-reciprocal successor question links", () => {
+    const successorQuestion: Question = {
+      ...question,
+      id: parseEntityId("algebra.test.successor-question"),
+      title: "What follows from the test concept?",
+      motivates: [],
+      related_concepts: [
+        concept.id,
+      ],
+    };
+
+    const result = validateEntities([
+      loaded({
+        ...question,
+        successor_questions: [
+          successorQuestion.id,
+        ],
+      }),
+      loaded(successorQuestion),
+      loaded(concept),
+      loaded(definition),
+      loaded(example),
+      loaded(historicalNote),
+      loaded(source),
+    ], testMathematicsRoot);
+
+    expect(result.valid).toBe(false);
+    expect(result.issues).toEqual([
+      expect.objectContaining({
+        code: "inconsistent-question-progression",
+        entityId: "algebra.test.question",
+        targetId: "algebra.test.successor-question",
+        path: ["successor_questions"],
       }),
     ]);
   });

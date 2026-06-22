@@ -1,0 +1,47 @@
+id: foundations.mathematical-logic.history.boole-algebraic-logic
+kind: historical_note
+title: Boole's algebraic treatment of logic
+
+date_label: Algebraic logic
+event_type: formalization
+start_year: 1854
+
+description: |
+  Boole represented logical operations through algebraic symbolism, treating classes and propositions with equations. This shifted part of logic from verbal syllogistic analysis toward symbolic calculation, even though it did not yet provide the quantificational language of modern first-order logic.
+
+summary: Boole recast parts of logic as symbolic algebra over classes and propositions.
+
+prior_formulation: Validity was primarily organized through syllogistic and term-logical forms.
+
+conceptual_change: Logical operations became calculable with algebraic symbols and equations.
+
+resulting_formulation: Logical reasoning could be manipulated symbolically, preparing later algebraic and formal approaches to logic.
+
+enabled_developments:
+  - Symbolic logic could separate formal manipulation from ordinary-language presentation.
+  - Later systems could ask for more expressive languages than algebraic class logic.
+
+display_math:
+  - latex: |
+      x(1-x)=0
+    description: A Boolean algebraic expression of non-contradiction for a class $x$.
+
+subjects:
+  - foundations.mathematical-logic
+  - foundations.logical-validity
+  - foundations.conditional-statement
+  - foundations.mathematical-logic.question.represent-validity-symbolically
+
+developed_from:
+  - foundations.mathematical-logic.history.aristotle-syllogistic
+
+developed_into:
+  - foundations.mathematical-logic.history.frege-quantification
+
+source_refs:
+  - source: source.boole-1854-laws-of-thought
+    locator: Chapters I-II
+    note: Primary source for Boole's algebraic presentation of logic.
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Chapter 1
+    note: Secondary context for symbolic logic before first-order formalization.

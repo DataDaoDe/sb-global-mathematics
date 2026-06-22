@@ -1,0 +1,33 @@
+id: foundations.conditional-statement.proposition.contrapositive-equivalence.proof.truth-table
+kind: proof
+title: Truth-table proof of contrapositive equivalence
+
+proves:
+  - foundations.conditional-statement.proposition.contrapositive-equivalence
+
+method: truth table
+
+argument: |
+  Compare the truth values of $P\Rightarrow Q$ and $\neg Q\Rightarrow \neg P$. If $P$ and $Q$ are both true, both conditionals are true. If $P$ is true and $Q$ is false, both conditionals are false. If $P$ is false and $Q$ is true, both conditionals are true. If both are false, both conditionals are true. The two statements therefore have the same truth value in every case, so they are logically equivalent.
+
+display_math:
+  - latex: |
+      \begin{array}{c c|c|c}
+      P&Q&P\Rightarrow Q&\neg Q\Rightarrow \neg P\\
+      T&T&T&T\\
+      T&F&F&F\\
+      F&T&T&T\\
+      F&F&T&T
+      \end{array}
+    description: Truth table comparing a conditional with its contrapositive.
+
+depends_on:
+  - foundations.conditional-statement.proposition.contrapositive-equivalence
+  - foundations.conditional-statement
+  - foundations.contrapositive
+  - foundations.logical-validity
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Truth tables establish equivalence of propositional forms.

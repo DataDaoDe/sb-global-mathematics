@@ -1,0 +1,50 @@
+id: foundations.mathematical-logic.history.formal-deduction-and-semantics
+kind: historical_note
+title: Formal deduction and semantic consequence
+
+date_label: Early twentieth-century formal logic
+event_type: formalization
+start_year: 1920
+end_year: 1930
+
+description: |
+  Modern mathematical logic separated syntactic derivability from semantic consequence, making questions such as soundness precise: formal proofs should preserve truth in every intended interpretation.
+
+summary: Twentieth-century logic distinguished formal derivability from semantic consequence.
+
+prior_formulation: Valid reasoning and proof were often discussed together without a fully explicit separation between formal derivation and truth in interpretations.
+
+conceptual_change: Logic separated proof-theoretic derivability, written $\Gamma\vdash\varphi$, from semantic consequence, written $\Gamma\models\varphi$.
+
+resulting_formulation: Soundness and completeness became precise metatheoretic questions connecting formal systems with their semantics.
+
+enabled_developments:
+  - Soundness could be stated as derivability implying semantic consequence.
+  - Completeness and incompleteness results could compare provability with truth.
+
+display_math:
+  - latex: |
+      \Gamma \vdash \varphi \quad\text{and}\quad \Gamma \models \varphi
+    description: The modern distinction between proof-theoretic and semantic consequence.
+
+subjects:
+  - foundations.mathematical-logic
+  - foundations.logical-validity
+  - foundations.soundness
+  - foundations.deduction
+  - foundations.direct-proof
+  - foundations.conditional-statement
+  - foundations.contrapositive
+  - foundations.proof-by-contrapositive
+
+developed_from:
+  - foundations.mathematical-logic.history.goedel-completeness
+  - foundations.mathematical-logic.history.tarski-semantic-truth
+  - foundations.mathematical-logic.history.gentzen-proof-systems
+
+developed_into: []
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Chapters 1-2
+    note: Modern textbook presentation of formal languages, semantics, deductions, and soundness.

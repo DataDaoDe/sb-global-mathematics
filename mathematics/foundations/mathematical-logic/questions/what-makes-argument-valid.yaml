@@ -1,0 +1,34 @@
+id: foundations.mathematical-logic.question.what-makes-argument-valid
+kind: question
+title: What makes an argument valid?
+
+asks: |
+  What conditions make a conclusion follow necessarily from given premises?
+
+display_math:
+  - latex: |
+      \Gamma \models \varphi\ ?
+    description: Asking whether the conclusion follows from the premises.
+
+motivates:
+  - foundations.mathematical-logic
+  - foundations.logical-validity
+  - foundations.deduction
+
+related_concepts:
+  - foundations.mathematical-logic
+  - foundations.logical-validity
+  - foundations.deduction
+
+prerequisite_questions: []
+
+successor_questions:
+  - foundations.mathematical-logic.question.represent-validity-symbolically
+
+source_refs:
+  - source: source.aristotle-prior-analytics
+    locator: Book I
+    note: Aristotle analyzes forms of deduction and valid syllogistic inference.
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Chapters 1-2
+    note: Modern logic recasts validity through formal languages and semantic consequence.

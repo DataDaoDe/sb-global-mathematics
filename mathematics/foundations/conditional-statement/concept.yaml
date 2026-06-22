@@ -1,0 +1,16 @@
+id: foundations.conditional-statement
+kind: concept
+title: Conditional statement
+
+summary: A conditional statement asserts that whenever an antecedent holds, a consequent holds.
+
+display_math:
+  - latex: |
+      P\Rightarrow Q
+    description: If $P$, then $Q$.
+
+defined_by:
+  - foundations.conditional-statement.definition
+
+broader_concepts:
+  - foundations.mathematical-logic

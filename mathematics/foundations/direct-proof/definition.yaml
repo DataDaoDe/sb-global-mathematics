@@ -1,0 +1,22 @@
+id: foundations.direct-proof.definition
+kind: definition
+title: Definition of direct proof
+
+defines:
+  - foundations.direct-proof
+
+depends_on:
+  - foundations.deduction
+
+statement: |
+  A direct proof of a statement such as $P\Rightarrow Q$ assumes $P$ and derives $Q$ through definitions, previously established results, and valid inference steps.
+
+display_math:
+  - latex: |
+      P\Rightarrow Q
+    description: A conditional statement proved by deriving $Q$ from $P$.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 3
+    note: Standard introduction to direct proof strategies for conditional statements.

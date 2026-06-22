@@ -1,0 +1,22 @@
+id: foundations.deduction.definition
+kind: definition
+title: Definition of deduction
+
+defines:
+  - foundations.deduction
+
+depends_on:
+  - foundations.mathematical-logic
+
+statement: |
+  A deduction of a conclusion $\varphi$ from assumptions $\Gamma$ is a finite argument in which each step is either an assumption, an accepted axiom, or follows from earlier steps by an accepted rule of inference.
+
+display_math:
+  - latex: |
+      \Gamma \vdash \varphi
+    description: The conclusion $\varphi$ is derivable from $\Gamma$.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.4
+    note: Formal deductions are finite sequences governed by axioms and inference rules.

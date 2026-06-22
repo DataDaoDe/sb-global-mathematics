@@ -10,6 +10,18 @@ end_year: 1930
 description: |
   The modern concept of an associative unital ring keeps the structural laws of integer arithmetic that do not require multiplication to be commutative. This abstraction preserves addition, multiplication, distributivity, associativity of multiplication, and a multiplicative identity while allowing multiplication to be noncommutative. The twentieth-century axiomatic treatment of rings was shaped by ideal theory and structural algebra, with Noether's work helping establish rings and ideals as objects to be studied through their internal algebraic structure.
 
+summary: Associative unital rings abstracted arithmetic while allowing multiplication to be noncommutative.
+
+prior_formulation: Integer arithmetic suggested two operations, but multiplication there is commutative.
+
+conceptual_change: The ring axioms were broadened to preserve distributive two-operation structure without requiring commutative multiplication.
+
+resulting_formulation: An associative unital ring has addition, multiplication, distributivity, associative multiplication, and a multiplicative identity.
+
+enabled_developments:
+  - Matrix rings and operator-like examples fit the same ring language as commutative arithmetic.
+  - Noncommutative algebra could reuse ring-theoretic structure without forcing commutativity.
+
 display_math:
   - latex: |
       (\mathbb{Z}, +, \cdot)

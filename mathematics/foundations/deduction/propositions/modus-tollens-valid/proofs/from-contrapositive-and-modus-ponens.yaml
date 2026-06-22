@@ -1,0 +1,29 @@
+id: foundations.deduction.proposition.modus-tollens-valid.proof.from-contrapositive-and-modus-ponens
+kind: proof
+title: Proof of modus tollens from contrapositive equivalence
+
+proves:
+  - foundations.deduction.proposition.modus-tollens-valid
+
+method: contrapositive equivalence
+
+argument: |
+  By contrapositive equivalence, $P\Rightarrow Q$ is equivalent to $\neg Q\Rightarrow \neg P$. If the premises include $P\Rightarrow Q$ and $\neg Q$, replace the first premise by its equivalent contrapositive and then apply modus ponens to $\neg Q$ and $\neg Q\Rightarrow \neg P$. The conclusion $\neg P$ follows, so the original argument form is valid.
+
+display_math:
+  - latex: |
+      P\Rightarrow Q\equiv \neg Q\Rightarrow \neg P,\qquad
+      \neg Q,\quad \neg Q\Rightarrow \neg P\ \models\ \neg P
+    description: Modus tollens obtained from contrapositive equivalence and modus ponens.
+
+depends_on:
+  - foundations.deduction.proposition.modus-tollens-valid
+  - foundations.deduction.proposition.modus-ponens-valid
+  - foundations.conditional-statement.proposition.contrapositive-equivalence
+  - foundations.logical-validity
+  - foundations.contrapositive
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 3
+    note: Contrapositive equivalence explains why modus tollens is a valid inference form.

@@ -1,0 +1,39 @@
+id: foundations.mathematical-logic.question.when-is-system-sound-complete
+kind: question
+title: When does a proof system match its semantics?
+
+asks: |
+  Under what conditions does a formal proof system prove only valid conclusions, and prove every valid conclusion of its language?
+
+display_math:
+  - latex: |
+      \Gamma\vdash\varphi \Rightarrow \Gamma\models\varphi,
+      \qquad
+      \Gamma\models\varphi \Rightarrow \Gamma\vdash\varphi
+    description: Soundness and completeness as two directions connecting proof and semantics.
+
+motivates:
+  - foundations.soundness
+  - foundations.logical-validity
+  - foundations.deduction
+  - foundations.mathematical-logic
+
+related_concepts:
+  - foundations.soundness
+  - foundations.logical-validity
+  - foundations.deduction
+  - foundations.mathematical-logic
+
+prerequisite_questions:
+  - foundations.mathematical-logic.question.distinguish-proof-from-truth
+
+successor_questions:
+  - foundations.mathematical-logic.question.what-are-limits-of-formal-systems
+
+source_refs:
+  - source: source.hilbert-ackermann-1928-grundzuge-theoretische-logik
+    locator: First edition
+    note: Hilbert and Ackermann formulate completeness as a central metatheoretic question for first-order logic.
+  - source: source.goedel-1930-completeness
+    locator: 1930 paper
+    note: Gödel answers the completeness question affirmatively for first-order logic.

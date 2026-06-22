@@ -10,6 +10,18 @@ end_year: 1930
 description: |
   Modern algebra relies on the language of sets and functions to state structural definitions precisely. Cayley's finite groups showed how an abstract operation could be studied independently of a particular numerical system while remaining representable by permutations. Dedekind's foundational work on systems and mappings helped normalize the idea that collections and structure-preserving maps could themselves be primary mathematical objects. The abstract definition of a group packages a set together with a binary operation satisfying axioms that capture reversible composition, a viewpoint shaped by earlier work with permutations, equations, and symmetries.
 
+summary: Sets, functions, and binary operations became the foundational language for defining abstract groups.
+
+prior_formulation: Groups arose from concrete permutations, equations, and symmetries before being stated as set-based structures.
+
+conceptual_change: Collections, mappings, and operations became explicit mathematical data, allowing group axioms to be stated independently of a particular representation.
+
+resulting_formulation: A group is modeled as a set equipped with a binary operation satisfying axioms for reversible composition.
+
+enabled_developments:
+  - Abstract algebra could define structures by operations and axioms.
+  - Group theory could move between abstract definitions and permutation representations.
+
 display_math:
   - latex: |
       \text{sets and functions} \longrightarrow \text{binary operations} \longrightarrow \text{groups}

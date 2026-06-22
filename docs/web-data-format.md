@@ -166,6 +166,11 @@ the subject of historical notes:
     "start_year": 1921,
     "end_year": 1930,
     "description": "The modern concept...",
+    "summary": "Commutative unital rings abstracted integer-like arithmetic into reusable algebraic structure.",
+    "prior_formulation": "Addition and multiplication were first encountered through concrete number systems such as the integers.",
+    "conceptual_change": "Arithmetic laws were separated from the integers and treated as axioms for a general class of algebraic systems.",
+    "resulting_formulation": "A commutative unital ring is a set with two operations satisfying additive, multiplicative, distributive, commutative, and identity laws.",
+    "enabled_developments": [],
     "source_refs": []
   },
   "developed_from": [],
@@ -175,6 +180,11 @@ the subject of historical notes:
 
 The historical note entity remains the normative content. `developed_from` and
 `developed_into` are summary expansions for presentation.
+
+Historical note content is evidence-centered. Timeline and page views should
+prefer `summary` for compact cards, use `conceptual_change` as the main
+development claim, and show `prior_formulation`, `resulting_formulation`, and
+`enabled_developments` when the reader expands a historical event.
 
 The web-data bundle also emits `timeline.json`, a chronological projection of
 all historical notes:
@@ -188,7 +198,9 @@ all historical notes:
     "event_type": "formalization",
     "start_year": 1921,
     "end_year": 1930,
-    "date_label": "Modern abstract algebra formulation"
+    "date_label": "Modern abstract algebra formulation",
+    "summary": "Commutative unital rings abstracted integer-like arithmetic into reusable algebraic structure.",
+    "conceptual_change": "Arithmetic laws were separated from the integers and treated as axioms for a general class of algebraic systems."
   },
   "subjects": [],
   "developed_from": [],

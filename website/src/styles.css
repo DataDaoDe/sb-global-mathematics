@@ -485,6 +485,64 @@ h2 {
   padding: 0;
 }
 
+.history-summary {
+  color: #211d18;
+  font-weight: 650;
+}
+
+.history-development,
+.development-grid {
+  display: grid;
+  gap: 4px;
+}
+
+.history-development h3,
+.development-grid h3 {
+  margin: 0;
+  color: #6f675a;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.history-more {
+  border-top: 1px dotted #cfc6b6;
+  padding-top: 7px;
+}
+
+.history-more summary {
+  color: #1f527c;
+  cursor: pointer;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+  font-size: 0.8rem;
+  font-weight: 750;
+}
+
+.development-grid {
+  padding-top: 8px;
+}
+
+.development-grid section {
+  display: grid;
+  gap: 3px;
+}
+
+.development-grid ul {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+  padding-left: 18px;
+}
+
 .history-relations {
   display: grid;
   gap: 2px;
@@ -647,6 +705,30 @@ h2 {
   font-weight: 750;
 }
 
+.timeline-summary {
+  color: #211d18;
+  font-weight: 650;
+}
+
+.timeline-development {
+  display: grid;
+  gap: 3px;
+  padding: 0 0 2px;
+}
+
+.timeline-development h2 {
+  margin: 0;
+  color: #6f675a;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 .timeline-relations {
   display: grid;
   gap: 2px;
@@ -761,6 +843,7 @@ h2 {
   .entity-link code {
     grid-column: 1;
   }
+
 }
 
 @media (max-width: 560px) {

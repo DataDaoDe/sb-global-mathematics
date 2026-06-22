@@ -101,8 +101,10 @@ export type {
 
 export {
   HistoricalNoteDateLabelSchema,
+  HistoricalNoteDevelopmentTextSchema,
   HistoricalNoteDescriptionSchema,
   HistoricalNoteSchema,
+  HistoricalNoteSummarySchema,
   isHistoricalNote,
   parseHistoricalNote,
 } from "./domain/historical-note.js";

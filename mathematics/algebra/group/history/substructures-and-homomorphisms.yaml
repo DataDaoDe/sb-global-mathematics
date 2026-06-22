@@ -10,6 +10,18 @@ end_year: 1930
 description: |
   As group theory developed from permutations, equations, and symmetries, mathematicians isolated two complementary ways to study a group: its internal subgroups and the homomorphisms that compare it with other groups. Cayley's abstract finite groups retained permutation groups as a universal representation model, making it natural to ask when different presentations describe the same structure. Kernels and images record how much structure a homomorphism collapses and reaches, while cyclic and permutation groups provide central organizing examples.
 
+summary: Subgroups and homomorphisms became the paired internal and external lenses for studying groups.
+
+prior_formulation: Early group theory centered on permutations, equations, and concrete symmetry operations.
+
+conceptual_change: The subject isolated subgroups as internal structure and homomorphisms as structure-preserving comparison maps.
+
+resulting_formulation: Kernels, images, cyclic groups, and permutation groups organize how groups contain, generate, compare, and represent structure.
+
+enabled_developments:
+  - Kernel-image reasoning prepared the first isomorphism theorem.
+  - Cyclic and permutation groups became standard organizing examples.
+
 display_math:
   - latex: |
       \text{subgroups} \quad+\quad \text{homomorphisms}

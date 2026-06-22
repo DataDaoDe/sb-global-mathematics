@@ -10,6 +10,18 @@ end_year: 1870
 description: |
   A central early insight of finite group theory is that subgroups organize the elements of a finite group into equal-sized cosets. This turns algebraic structure into arithmetic divisibility, with Lagrange's theorem expressing the relationship between the order of a group, the order of a subgroup, and the subgroup's index. Historically, this line of thought grew from attempts to understand permutations arising in equations before the modern abstract definition of group had fully stabilized.
 
+summary: Lagrange-style counting turned subgroup structure into divisibility statements about finite groups.
+
+prior_formulation: Permutations arising from equations were studied before the modern abstract group concept stabilized.
+
+conceptual_change: Subgroups came to organize a finite group into equal-sized cosets, converting structural containment into arithmetic divisibility.
+
+resulting_formulation: The order of a finite group factors through the order and index of a subgroup.
+
+enabled_developments:
+  - Coset partitions became the standard proof mechanism for Lagrange's theorem.
+  - Index and element order became reusable invariants in finite group theory.
+
 display_math:
   - latex: |
       G=\bigsqcup_{i=1}^{[G:H]} g_iH

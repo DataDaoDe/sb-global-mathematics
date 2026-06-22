@@ -1,0 +1,23 @@
+id: foundations.deduction.proposition.hypothetical-syllogism-valid
+kind: proposition
+title: Hypothetical syllogism is valid
+
+proposition_type: theorem
+
+claim: |
+  For statements $P$, $Q$, and $R$, the argument from $P\Rightarrow Q$ and $Q\Rightarrow R$ to $P\Rightarrow R$ is logically valid.
+
+display_math:
+  - latex: |
+      P\Rightarrow Q,\quad Q\Rightarrow R\ \models\ P\Rightarrow R
+    description: Semantic validity of chaining conditional statements.
+
+depends_on:
+  - foundations.deduction
+  - foundations.logical-validity
+  - foundations.conditional-statement
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Truth-functional validity explains standard propositional argument forms.

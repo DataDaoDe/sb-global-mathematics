@@ -1,0 +1,23 @@
+id: foundations.conditional-statement.proposition.contrapositive-equivalence
+kind: proposition
+title: A conditional is equivalent to its contrapositive
+
+proposition_type: theorem
+
+claim: |
+  For statements $P$ and $Q$, the conditional $P\Rightarrow Q$ is logically equivalent to its contrapositive $\neg Q\Rightarrow \neg P$.
+
+display_math:
+  - latex: |
+      (P\Rightarrow Q)\iff(\neg Q\Rightarrow \neg P)
+    description: Equivalence of a conditional and its contrapositive.
+
+depends_on:
+  - foundations.conditional-statement
+  - foundations.contrapositive
+  - foundations.logical-validity
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 3
+    note: Contrapositive proof relies on the logical equivalence of a conditional and its contrapositive.

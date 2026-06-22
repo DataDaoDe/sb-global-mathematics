@@ -1,0 +1,27 @@
+id: foundations.mathematical-logic.example.modus-ponens
+kind: example
+title: Modus ponens as a valid deduction
+
+example_of:
+  - foundations.mathematical-logic
+  - foundations.logical-validity
+  - foundations.soundness
+  - foundations.deduction
+  - foundations.direct-proof
+  - foundations.conditional-statement
+
+description: |
+  From premises $P$ and $P\Rightarrow Q$, the conclusion $Q$ follows. As a proof step, modus ponens is a direct deductive move; in a sound system, using it preserves validity.
+
+display_math:
+  - latex: |
+      P,\quad P\Rightarrow Q\ \vdash\ Q
+    description: Modus ponens as a deduction rule.
+  - latex: |
+      P,\quad P\Rightarrow Q\ \models\ Q
+    description: Modus ponens as a valid argument form.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.4
+    note: Modus ponens appears as the basic inference rule in a formal deductive system.

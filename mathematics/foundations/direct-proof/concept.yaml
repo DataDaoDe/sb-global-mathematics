@@ -1,0 +1,16 @@
+id: foundations.direct-proof
+kind: concept
+title: Direct proof
+
+summary: A direct proof establishes a conclusion by starting from the assumptions and definitions and deriving the claim without changing the target statement.
+
+display_math:
+  - latex: |
+      P \vdash Q
+    description: A direct derivation of $Q$ from $P$.
+
+defined_by:
+  - foundations.direct-proof.definition
+
+broader_concepts:
+  - foundations.deduction

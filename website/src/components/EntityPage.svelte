@@ -43,12 +43,26 @@
     "propositions",
     "proofs",
     "motivating_questions",
+    "prerequisite_questions",
+    "successor_questions",
     "developed_from",
     "developed_into",
     "related_concepts",
     "sources",
     "necessity_targets",
   ];
+
+  function stringArrayField(fieldName: string): readonly string[] {
+    if (page === null) {
+      return [];
+    }
+
+    const value = page.entity[fieldName];
+
+    return Array.isArray(value) && value.every((item) => typeof item === "string")
+      ? value
+      : [];
+  }
 </script>
 
 <main class="site-shell">
@@ -104,6 +118,45 @@
           <section class="article-section">
             <h2>Description</h2>
             <TextMath className="entity-prose" text={String(page.entity.description)} />
+          </section>
+        {/if}
+
+        {#if page.entity.conceptual_change}
+          <section class="article-section development-section">
+            <h2>Conceptual Change</h2>
+            <TextMath className="entity-prose" text={String(page.entity.conceptual_change)} />
+          </section>
+        {/if}
+
+        {#if page.entity.prior_formulation || page.entity.resulting_formulation || stringArrayField("enabled_developments").length}
+          <section class="article-section development-section">
+            <h2>Development Detail</h2>
+            <div class="development-grid">
+              {#if page.entity.prior_formulation}
+                <section>
+                  <h3>Prior formulation</h3>
+                  <TextMath className="entity-prose" text={String(page.entity.prior_formulation)} />
+                </section>
+              {/if}
+
+              {#if page.entity.resulting_formulation}
+                <section>
+                  <h3>Resulting formulation</h3>
+                  <TextMath className="entity-prose" text={String(page.entity.resulting_formulation)} />
+                </section>
+              {/if}
+
+              {#if stringArrayField("enabled_developments").length}
+                <section>
+                  <h3>Enabled developments</h3>
+                  <ul>
+                    {#each stringArrayField("enabled_developments") as development}
+                      <li><TextMath className="entity-prose" text={development} /></li>
+                    {/each}
+                  </ul>
+                </section>
+              {/if}
+            </div>
           </section>
         {/if}
 

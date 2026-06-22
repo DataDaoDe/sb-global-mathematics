@@ -1,0 +1,16 @@
+id: foundations.deduction
+kind: concept
+title: Deduction
+
+summary: Deduction is the process of deriving a conclusion from assumptions by accepted rules of inference.
+
+display_math:
+  - latex: |
+      \Gamma \vdash \varphi
+    description: A formal deduction of $\varphi$ from assumptions $\Gamma$.
+
+defined_by:
+  - foundations.deduction.definition
+
+broader_concepts:
+  - foundations.mathematical-logic

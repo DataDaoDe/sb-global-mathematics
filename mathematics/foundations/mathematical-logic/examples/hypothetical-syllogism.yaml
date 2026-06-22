@@ -1,0 +1,26 @@
+id: foundations.mathematical-logic.example.hypothetical-syllogism
+kind: example
+title: Chaining conditional statements
+
+example_of:
+  - foundations.mathematical-logic
+  - foundations.logical-validity
+  - foundations.deduction
+  - foundations.direct-proof
+  - foundations.conditional-statement
+
+description: |
+  If every multiple of $4$ is even, and every even integer has square divisible by $4$, then every multiple of $4$ has square divisible by $4$. The middle claim, evenness, links the first conditional to the second.
+
+display_math:
+  - latex: |
+      (4\mid n\Rightarrow 2\mid n),\quad
+      (2\mid n\Rightarrow 4\mid n^2)
+      \ \vdash\ 
+      (4\mid n\Rightarrow 4\mid n^2)
+    description: A number-theoretic instance of hypothetical syllogism.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 3
+    note: Direct proofs often chain conditional implications through intermediate claims.

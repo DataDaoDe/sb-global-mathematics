@@ -1,0 +1,17 @@
+id: foundations.proof-by-contrapositive
+kind: concept
+title: Proof by contrapositive
+
+summary: Proof by contrapositive proves a conditional statement by proving its logically equivalent contrapositive.
+
+display_math:
+  - latex: |
+      (\neg Q\Rightarrow \neg P)\vdash(P\Rightarrow Q)
+    description: Proving a conditional through its contrapositive.
+
+defined_by:
+  - foundations.proof-by-contrapositive.definition
+
+broader_concepts:
+  - foundations.deduction
+  - foundations.contrapositive

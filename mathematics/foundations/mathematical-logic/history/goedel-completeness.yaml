@@ -1,0 +1,50 @@
+id: foundations.mathematical-logic.history.goedel-completeness
+kind: historical_note
+title: Gödel's completeness theorem for first-order logic
+
+date_label: Completeness of first-order logic
+event_type: publication
+start_year: 1930
+
+description: |
+  Gödel proved that every semantically valid first-order formula is formally derivable in an appropriate proof system. This gave a precise positive answer to the completeness question for first-order logic and clarified one way proof and truth can coincide.
+
+summary: Gödel proved that first-order semantic validity is captured by formal derivability.
+
+prior_formulation: Hilbert and Ackermann had posed completeness as a metatheoretic question about first-order logic.
+
+conceptual_change: Completeness became a theorem connecting semantic consequence with formal proof.
+
+resulting_formulation: For first-order logic, semantic validity implies formal provability.
+
+enabled_developments:
+  - Model-theoretic and proof-theoretic study could rely on a precise bridge between semantics and derivability.
+  - The distinction between completeness of a logic and completeness of stronger arithmetic theories became important.
+
+display_math:
+  - latex: |
+      \models\varphi\Rightarrow\vdash\varphi
+    description: Completeness for first-order validities.
+
+subjects:
+  - foundations.mathematical-logic
+  - foundations.logical-validity
+  - foundations.soundness
+  - foundations.deduction
+  - foundations.mathematical-logic.question.distinguish-proof-from-truth
+  - foundations.mathematical-logic.question.when-is-system-sound-complete
+
+developed_from:
+  - foundations.mathematical-logic.history.hilbert-ackermann-first-order-logic
+
+developed_into:
+  - foundations.mathematical-logic.history.goedel-incompleteness
+  - foundations.mathematical-logic.history.formal-deduction-and-semantics
+
+source_refs:
+  - source: source.goedel-1930-completeness
+    locator: 1930 paper
+    note: Primary source for Gödel's completeness theorem.
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.5
+    note: Secondary textbook treatment of completeness for first-order logic.

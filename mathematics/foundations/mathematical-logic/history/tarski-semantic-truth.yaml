@@ -1,0 +1,48 @@
+id: foundations.mathematical-logic.history.tarski-semantic-truth
+kind: historical_note
+title: Tarski's semantic conception of truth
+
+date_label: Semantic truth for formalized languages
+event_type: formalization
+start_year: 1936
+
+description: |
+  Tarski gave a precise account of truth for formalized languages, separating the object language from the metalanguage used to define truth. This sharpened the semantic side of the proof-versus-truth distinction and made model-theoretic notions of truth and satisfaction mathematically tractable.
+
+summary: Tarski made truth for formalized languages a precise metatheoretic notion.
+
+prior_formulation: Completeness and incompleteness had already forced careful comparison between proof and truth, but truth itself needed a rigorous semantic account.
+
+conceptual_change: Truth was defined in a metalanguage for sentences of a formal object language.
+
+resulting_formulation: Semantic truth and satisfaction could be studied with explicit language-level separation.
+
+enabled_developments:
+  - Model-theoretic semantics became a precise part of mathematical logic.
+  - Soundness and semantic consequence could be formulated with clearer truth conditions.
+
+display_math:
+  - latex: |
+      \ulcorner\varphi\urcorner\text{ is true}\iff \varphi
+    description: A schematic Tarski biconditional relating a named sentence to what it states.
+
+subjects:
+  - foundations.mathematical-logic
+  - foundations.logical-validity
+  - foundations.soundness
+  - foundations.mathematical-logic.question.distinguish-proof-from-truth
+
+developed_from:
+  - foundations.mathematical-logic.history.goedel-incompleteness
+  - foundations.mathematical-logic.history.goedel-completeness
+
+developed_into:
+  - foundations.mathematical-logic.history.formal-deduction-and-semantics
+
+source_refs:
+  - source: source.tarski-1936-truth-formalized-languages
+    locator: 1936 paper
+    note: Primary source for Tarski's semantic account of truth in formalized languages.
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Chapter 2
+    note: Secondary textbook context for truth, satisfaction, and semantic consequence.

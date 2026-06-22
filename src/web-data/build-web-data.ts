@@ -101,6 +101,8 @@ const OUTGOING_RELATION_GROUPS: Partial<
   depends_on: "dependencies",
   source_ref: "sources",
   related_concept: "related_concepts",
+  prerequisite_question: "prerequisite_questions",
+  successor_question: "successor_questions",
   demonstrates_necessity_of: "necessity_targets",
   developed_from: "developed_from",
   developed_into: "developed_into",
@@ -463,7 +465,16 @@ function searchableText(entity: GraphEntity): string {
     case "question":
       return `${data.title}\n${data.asks}`;
     case "historical_note":
-      return `${data.title}\n${data.date_label}\n${data.description}`;
+      return [
+        data.title,
+        data.date_label,
+        data.summary,
+        data.description,
+        data.prior_formulation,
+        data.conceptual_change,
+        data.resulting_formulation,
+        ...data.enabled_developments,
+      ].filter((text) => text !== undefined).join("\n");
     case "source":
       return `${data.title}\n${data.authors.join("\n")}`;
   }

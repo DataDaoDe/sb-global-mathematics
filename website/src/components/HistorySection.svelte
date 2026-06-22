@@ -23,7 +23,53 @@
             <a href={`/e/${entry.entity.id}`}>{entry.entity.title}</a>
           </header>
 
-          <TextMath className="entity-prose" text={entry.entity.description} />
+          {#if entry.entity.summary}
+            <TextMath className="entity-prose history-summary" text={entry.entity.summary} />
+          {/if}
+
+          {#if entry.entity.conceptual_change}
+            <div class="history-development">
+              <h3>Conceptual change</h3>
+              <TextMath className="entity-prose" text={entry.entity.conceptual_change} />
+            </div>
+          {:else}
+            <TextMath className="entity-prose" text={entry.entity.description} />
+          {/if}
+
+          <details class="history-more">
+            <summary>Development detail</summary>
+            <div class="development-grid">
+              {#if entry.entity.prior_formulation}
+                <section>
+                  <h3>Prior formulation</h3>
+                  <TextMath className="entity-prose" text={entry.entity.prior_formulation} />
+                </section>
+              {/if}
+
+              {#if entry.entity.resulting_formulation}
+                <section>
+                  <h3>Resulting formulation</h3>
+                  <TextMath className="entity-prose" text={entry.entity.resulting_formulation} />
+                </section>
+              {/if}
+
+              {#if entry.entity.enabled_developments?.length}
+                <section>
+                  <h3>Enabled developments</h3>
+                  <ul>
+                    {#each entry.entity.enabled_developments as development}
+                      <li><TextMath className="entity-prose" text={development} /></li>
+                    {/each}
+                  </ul>
+                </section>
+              {/if}
+
+              <section>
+                <h3>Full note</h3>
+                <TextMath className="entity-prose" text={entry.entity.description} />
+              </section>
+            </div>
+          </details>
 
           <SourceReferences
             references={entry.entity.source_refs}

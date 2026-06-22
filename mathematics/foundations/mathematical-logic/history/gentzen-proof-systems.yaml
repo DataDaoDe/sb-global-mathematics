@@ -1,0 +1,47 @@
+id: foundations.mathematical-logic.history.gentzen-proof-systems
+kind: historical_note
+title: Gentzen's natural deduction and sequent calculus
+
+date_label: Proof-theoretic calculi
+event_type: formalization
+start_year: 1935
+
+description: |
+  Gentzen introduced natural deduction and sequent calculi, making the structure of formal proof itself a central object of study. These systems gave proof theory tools for analyzing how assumptions, rules, and conclusions interact.
+
+summary: Gentzen turned formal proof structure into a subject of systematic proof-theoretic analysis.
+
+prior_formulation: Hilbert-style systems emphasized axioms and few inference rules, which often obscured the structure of ordinary mathematical reasoning.
+
+conceptual_change: Proof systems were organized around introduction, elimination, and sequent rules that expose assumptions and conclusions.
+
+resulting_formulation: Natural deduction and sequent calculus became standard calculi for studying derivability.
+
+enabled_developments:
+  - Proof normalization and cut elimination became central proof-theoretic tools.
+  - Deduction could be studied structurally rather than only axiomatically.
+
+display_math:
+  - latex: |
+      \Gamma\Rightarrow\Delta
+    description: A sequent expressing that conclusions $\Delta$ follow from assumptions $\Gamma$.
+
+subjects:
+  - foundations.mathematical-logic
+  - foundations.deduction
+  - foundations.direct-proof
+  - foundations.mathematical-logic.question.prove-with-rules
+
+developed_from:
+  - foundations.mathematical-logic.history.hilbert-ackermann-first-order-logic
+
+developed_into:
+  - foundations.mathematical-logic.history.formal-deduction-and-semantics
+
+source_refs:
+  - source: source.gentzen-1935-logical-deduction
+    locator: 1935 paper
+    note: Primary source for natural deduction and sequent calculus.
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.4
+    note: Secondary context for formal deductions and proof systems.

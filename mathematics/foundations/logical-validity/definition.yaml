@@ -1,0 +1,22 @@
+id: foundations.logical-validity.definition
+kind: definition
+title: Definition of logical validity
+
+defines:
+  - foundations.logical-validity
+
+depends_on:
+  - foundations.mathematical-logic
+
+statement: |
+  An argument with premises $\Gamma$ and conclusion $\varphi$ is logically valid when every interpretation or model that makes all statements in $\Gamma$ true also makes $\varphi$ true.
+
+display_math:
+  - latex: |
+      \Gamma \models \varphi
+    description: Semantic consequence from premises to conclusion.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.5
+    note: Semantic consequence is the model-theoretic form of validity.

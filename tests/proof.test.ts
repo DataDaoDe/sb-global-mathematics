@@ -46,6 +46,7 @@ describe("Proof", () => {
         },
       ],
       depends_on: [
+        "algebra.ring.commutative-unital.proposition.specializes-associative-unital",
         "algebra.ring.commutative-unital.definition",
         "algebra.ring.associative-unital.definition",
       ],

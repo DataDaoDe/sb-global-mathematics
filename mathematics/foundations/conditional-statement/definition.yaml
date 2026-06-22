@@ -1,0 +1,22 @@
+id: foundations.conditional-statement.definition
+kind: definition
+title: Definition of conditional statement
+
+defines:
+  - foundations.conditional-statement
+
+depends_on:
+  - foundations.mathematical-logic
+
+statement: |
+  A conditional statement has the form $P\Rightarrow Q$, read "if $P$, then $Q$"; $P$ is the antecedent and $Q$ is the consequent.
+
+display_math:
+  - latex: |
+      P\Rightarrow Q
+    description: A conditional statement with antecedent $P$ and consequent $Q$.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Conditional statements and their logical forms are introduced before proof strategies.

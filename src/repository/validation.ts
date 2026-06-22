@@ -24,6 +24,8 @@ export type RepositoryValidationIssueCode =
   | "unresolved-reference"
   | "wrong-reference-kind"
   | "inconsistent-concept-definition"
+  | "inconsistent-proof"
+  | "inconsistent-question-progression"
   | "invalid-definition-set"
   | "incomplete-entity"
   | "unexpected-entity-path"
@@ -145,13 +147,29 @@ function validateCompleteness(
         break;
 
       case "definition":
-      case "proposition":
-      case "proof":
       case "example":
-      case "counterexample":
-      case "question":
       case "historical_note":
         validateSourceBackedEntity(loadedEntity, issues);
+        break;
+
+      case "proposition":
+        validateSourceBackedEntity(loadedEntity, issues);
+        validatePropositionCompleteness(loadedEntity, entities, issues);
+        break;
+
+      case "proof":
+        validateSourceBackedEntity(loadedEntity, issues);
+        validateProofCompleteness(loadedEntity, issues);
+        break;
+
+      case "counterexample":
+        validateSourceBackedEntity(loadedEntity, issues);
+        validateCounterexampleCompleteness(loadedEntity, issues);
+        break;
+
+      case "question":
+        validateSourceBackedEntity(loadedEntity, issues);
+        validateQuestionProgressionConsistency(loadedEntity, entities, issues);
         break;
 
       case "source":
@@ -213,6 +231,147 @@ function validateConceptCompleteness(
       "Concepts must have at least one historical note so development context is not optional.",
     );
   }
+}
+
+function validatePropositionCompleteness(
+  loadedEntity: LoadedEntity,
+  entities: readonly MathematicalEntity[],
+  issues: RepositoryValidationIssue[],
+): void {
+  const { entity } = loadedEntity;
+
+  if (entity.kind !== "proposition") {
+    return;
+  }
+
+  const hasProof = entities.some((candidate) =>
+    candidate.kind === "proof" && candidate.proves.includes(entity.id)
+  );
+
+  if (!hasProof) {
+    incompleteIssue(
+      loadedEntity,
+      issues,
+      ["id"],
+      "Propositions must have at least one proof so claims are not left unsupported.",
+    );
+  }
+}
+
+function validateProofCompleteness(
+  loadedEntity: LoadedEntity,
+  issues: RepositoryValidationIssue[],
+): void {
+  const { entity } = loadedEntity;
+
+  if (entity.kind !== "proof") {
+    return;
+  }
+
+  const missingProvedDependencies = entity.proves.filter((propositionId) =>
+    !entity.depends_on.includes(propositionId)
+  );
+
+  if (missingProvedDependencies.length > 0) {
+    const [targetId] = missingProvedDependencies;
+
+    if (targetId === undefined) {
+      return;
+    }
+
+    issues.push({
+      code: "inconsistent-proof",
+      message:
+        `Proof "${entity.id}" must list each proved proposition in depends_on: ${missingProvedDependencies.join(", ")}`,
+      entityId: entity.id,
+      filePath: loadedEntity.filePath,
+      path: ["depends_on"],
+      targetId,
+    });
+  }
+}
+
+function validateCounterexampleCompleteness(
+  loadedEntity: LoadedEntity,
+  issues: RepositoryValidationIssue[],
+): void {
+  const { entity } = loadedEntity;
+
+  if (entity.kind !== "counterexample") {
+    return;
+  }
+
+  if (entity.demonstrates_necessity_of.length === 0) {
+    incompleteIssue(
+      loadedEntity,
+      issues,
+      ["demonstrates_necessity_of"],
+      "Counterexamples must explain which definition, proposition, or assumption they show to be necessary.",
+    );
+  }
+}
+
+function validateQuestionProgressionConsistency(
+  loadedEntity: LoadedEntity,
+  entities: readonly MathematicalEntity[],
+  issues: RepositoryValidationIssue[],
+): void {
+  const { entity } = loadedEntity;
+
+  if (entity.kind !== "question") {
+    return;
+  }
+
+  const questionsById = new Map(
+    entities
+      .filter((candidate) => candidate.kind === "question")
+      .map((question) => [question.id, question]),
+  );
+
+  for (const successorId of entity.successor_questions) {
+    const successor = questionsById.get(successorId);
+
+    if (successor !== undefined && !successor.prerequisite_questions.includes(entity.id)) {
+      questionProgressionIssue(
+        loadedEntity,
+        issues,
+        ["successor_questions"],
+        successorId,
+        `Question "${entity.id}" lists "${successorId}" as a successor, but the successor does not list it as a prerequisite.`,
+      );
+    }
+  }
+
+  for (const prerequisiteId of entity.prerequisite_questions) {
+    const prerequisite = questionsById.get(prerequisiteId);
+
+    if (prerequisite !== undefined && !prerequisite.successor_questions.includes(entity.id)) {
+      questionProgressionIssue(
+        loadedEntity,
+        issues,
+        ["prerequisite_questions"],
+        prerequisiteId,
+        `Question "${entity.id}" lists "${prerequisiteId}" as a prerequisite, but the prerequisite does not list it as a successor.`,
+      );
+    }
+  }
+}
+
+function questionProgressionIssue(
+  loadedEntity: LoadedEntity,
+  issues: RepositoryValidationIssue[],
+  path: readonly string[],
+  targetId: string,
+  message: string,
+): void {
+  issues.push({
+    code: "inconsistent-question-progression",
+    message,
+    entityId: loadedEntity.entity.id,
+    filePath: loadedEntity.filePath,
+    path,
+    targetId,
+  });
 }
 
 function validateSourceBackedEntity(
@@ -458,9 +617,37 @@ function textFieldsFor(
     case "historical_note":
       return [
         {
+          fieldName: "summary",
+          text: entity.summary,
+        },
+        {
           fieldName: "description",
           text: entity.description,
         },
+        {
+          fieldName: "conceptual_change",
+          text: entity.conceptual_change,
+        },
+        ...(
+          entity.prior_formulation === undefined ? [] : [
+            {
+              fieldName: "prior_formulation",
+              text: entity.prior_formulation,
+            },
+          ]
+        ),
+        ...(
+          entity.resulting_formulation === undefined ? [] : [
+            {
+              fieldName: "resulting_formulation",
+              text: entity.resulting_formulation,
+            },
+          ]
+        ),
+        ...entity.enabled_developments.map((text, index) => ({
+          fieldName: `enabled_developments.${index}`,
+          text,
+        })),
         ...displayMathDescriptions,
       ];
 
@@ -811,6 +998,14 @@ function referenceRulesFor(
         {
           path: ["related_concepts"],
           targetKinds: ["concept"],
+        },
+        {
+          path: ["prerequisite_questions"],
+          targetKinds: ["question"],
+        },
+        {
+          path: ["successor_questions"],
+          targetKinds: ["question"],
         },
         {
           path: ["source_refs"],

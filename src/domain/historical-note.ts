@@ -11,6 +11,17 @@ export const HistoricalNoteDescriptionSchema = z
   .trim()
   .min(1, "Historical note description cannot be empty");
 
+export const HistoricalNoteSummarySchema = z
+  .string()
+  .trim()
+  .min(1, "Historical note summary cannot be empty")
+  .max(300, "Historical note summary cannot exceed 300 characters");
+
+export const HistoricalNoteDevelopmentTextSchema = z
+  .string()
+  .trim()
+  .min(1, "Historical development text cannot be empty");
+
 export const HistoricalNoteDateLabelSchema = z
   .string()
   .trim()
@@ -44,6 +55,18 @@ export const HistoricalNoteSchema = EntityBaseSchema.extend({
   end_year: HistoricalNoteYearSchema.optional(),
 
   description: HistoricalNoteDescriptionSchema,
+
+  summary: HistoricalNoteSummarySchema,
+
+  prior_formulation: HistoricalNoteDevelopmentTextSchema.optional(),
+
+  conceptual_change: HistoricalNoteDevelopmentTextSchema,
+
+  resulting_formulation: HistoricalNoteDevelopmentTextSchema.optional(),
+
+  enabled_developments: z
+    .array(HistoricalNoteDevelopmentTextSchema)
+    .default([]),
 
   display_math: DisplayMathSchema,
 
@@ -99,6 +122,21 @@ export const HistoricalNoteSchema = EntityBaseSchema.extend({
       code: "custom",
       path: ["developed_into"],
       message: `Duplicate successor ideas: ${duplicateSuccessors.join(", ")}`,
+    });
+  }
+
+  const duplicateEnabledDevelopments = findDuplicates(
+    note.enabled_developments,
+  );
+
+  if (duplicateEnabledDevelopments.length > 0) {
+    context.addIssue({
+      code: "custom",
+      path: ["enabled_developments"],
+      message:
+        `Duplicate enabled developments: ${
+          duplicateEnabledDevelopments.join(", ")
+        }`,
     });
   }
 

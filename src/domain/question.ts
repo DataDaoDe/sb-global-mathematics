@@ -26,6 +26,14 @@ export const QuestionSchema = EntityBaseSchema.extend({
     .array(EntityIdSchema)
     .default([]),
 
+  prerequisite_questions: z
+    .array(EntityIdSchema)
+    .default([]),
+
+  successor_questions: z
+    .array(EntityIdSchema)
+    .default([]),
+
   source_refs: z
     .array(SourceReferencesSchema.element)
     .default([]),
@@ -47,6 +55,52 @@ export const QuestionSchema = EntityBaseSchema.extend({
       code: "custom",
       path: ["related_concepts"],
       message: `Duplicate related concepts: ${duplicateRelatedConcepts.join(", ")}`,
+    });
+  }
+
+  const duplicatePrerequisiteQuestions = findDuplicates(
+    question.prerequisite_questions,
+  );
+
+  if (duplicatePrerequisiteQuestions.length > 0) {
+    context.addIssue({
+      code: "custom",
+      path: ["prerequisite_questions"],
+      message:
+        `Duplicate prerequisite questions: ${
+          duplicatePrerequisiteQuestions.join(", ")
+        }`,
+    });
+  }
+
+  const duplicateSuccessorQuestions = findDuplicates(
+    question.successor_questions,
+  );
+
+  if (duplicateSuccessorQuestions.length > 0) {
+    context.addIssue({
+      code: "custom",
+      path: ["successor_questions"],
+      message:
+        `Duplicate successor questions: ${
+          duplicateSuccessorQuestions.join(", ")
+        }`,
+    });
+  }
+
+  if (question.prerequisite_questions.includes(question.id)) {
+    context.addIssue({
+      code: "custom",
+      path: ["prerequisite_questions"],
+      message: "A question cannot be a prerequisite of itself",
+    });
+  }
+
+  if (question.successor_questions.includes(question.id)) {
+    context.addIssue({
+      code: "custom",
+      path: ["successor_questions"],
+      message: "A question cannot be a successor of itself",
     });
   }
 

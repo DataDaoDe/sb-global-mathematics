@@ -1,0 +1,23 @@
+id: foundations.mathematical-logic.example.contrapositive-of-divisibility
+kind: example
+title: Contrapositive form of a divisibility claim
+
+example_of:
+  - foundations.contrapositive
+  - foundations.proof-by-contrapositive
+
+description: |
+  The conditional "if an integer is divisible by $4$, then it is even" has contrapositive "if an integer is not even, then it is not divisible by $4$." Proving the contrapositive proves the original conditional.
+
+display_math:
+  - latex: |
+      4\mid n\Rightarrow 2\mid n
+    description: The original conditional statement.
+  - latex: |
+      2\nmid n\Rightarrow 4\nmid n
+    description: The contrapositive statement.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 3
+    note: Elementary number-theoretic conditionals are standard examples for contrapositive proof.

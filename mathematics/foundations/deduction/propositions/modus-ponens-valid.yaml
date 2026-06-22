@@ -1,0 +1,23 @@
+id: foundations.deduction.proposition.modus-ponens-valid
+kind: proposition
+title: Modus ponens is valid
+
+proposition_type: theorem
+
+claim: |
+  For statements $P$ and $Q$, the argument from $P$ and $P\Rightarrow Q$ to $Q$ is logically valid.
+
+display_math:
+  - latex: |
+      P,\quad P\Rightarrow Q\ \models\ Q
+    description: Semantic validity of modus ponens.
+
+depends_on:
+  - foundations.deduction
+  - foundations.logical-validity
+  - foundations.conditional-statement
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.4
+    note: Modus ponens is the basic inference rule used in the deductive calculus.

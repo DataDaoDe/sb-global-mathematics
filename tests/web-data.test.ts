@@ -32,15 +32,15 @@ describe("web data builder", () => {
       ]),
     );
     expect(webData.tree.root.counts).toEqual({
-      concept: 39,
-      counterexample: 8,
-      definition: 40,
-      example: 62,
-      historical_note: 8,
-      proof: 5,
-      proposition: 5,
-      question: 7,
-      source: 5,
+      concept: 47,
+      counterexample: 10,
+      definition: 48,
+      example: 66,
+      historical_note: 17,
+      proof: 9,
+      proposition: 9,
+      question: 14,
+      source: 15,
     });
     expect(webData.timeline).toEqual(
       expect.arrayContaining([
@@ -50,6 +50,7 @@ describe("web data builder", () => {
             event_type: "formalization",
             start_year: 1921,
             end_year: 1930,
+            conceptual_change: expect.stringContaining("Arithmetic laws"),
           }),
           subjects: [
             {
@@ -199,6 +200,7 @@ describe("web data builder", () => {
               note: "Secondary source for the modern abstract algebra formulation.",
             }),
           ]),
+          conceptual_change: expect.stringContaining("Arithmetic laws"),
         }),
         developed_from: [
           {

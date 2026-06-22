@@ -1,0 +1,49 @@
+id: foundations.mathematical-logic.history.hilbert-ackermann-first-order-logic
+kind: historical_note
+title: Hilbert and Ackermann's first-order logic text
+
+date_label: Canonical first-order logic
+event_type: synthesis
+start_year: 1928
+
+description: |
+  Hilbert and Ackermann presented first-order logic as a systematic elementary formalism and made metatheoretic questions explicit, including whether the axioms and rules are complete for the intended semantics. Their formulation helped stabilize first-order logic as a central object of mathematical logic.
+
+summary: Hilbert and Ackermann organized first-order logic as a canonical formal system with explicit metatheoretic problems.
+
+prior_formulation: Formal logic had powerful notation and axiomatic systems, but first-order logic had not yet stabilized as the standard elementary core.
+
+conceptual_change: First-order syntax, axioms, rules, and metatheoretic questions were presented as a unified formal system.
+
+resulting_formulation: Completeness and decision questions became precise problems about first-order logic.
+
+enabled_developments:
+  - Gödel's completeness theorem answered a central problem about first-order logic.
+  - The Entscheidungsproblem became a sharply formulated decision problem.
+
+display_math:
+  - latex: |
+      \Gamma\models\varphi\ ?\quad\Longrightarrow\quad\Gamma\vdash\varphi\ ?
+    description: The completeness question for a formal proof system.
+
+subjects:
+  - foundations.mathematical-logic
+  - foundations.logical-validity
+  - foundations.soundness
+  - foundations.deduction
+  - foundations.mathematical-logic.question.when-is-system-sound-complete
+
+developed_from:
+  - foundations.mathematical-logic.history.frege-quantification
+
+developed_into:
+  - foundations.mathematical-logic.history.goedel-completeness
+  - foundations.mathematical-logic.history.goedel-incompleteness
+
+source_refs:
+  - source: source.hilbert-ackermann-1928-grundzuge-theoretische-logik
+    locator: First edition
+    note: Primary source for the systematic textbook presentation of first-order logic and its metatheoretic questions.
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Chapters 1-2
+    note: Secondary source for first-order syntax, semantics, and proof systems.

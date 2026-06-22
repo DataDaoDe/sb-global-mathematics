@@ -1,0 +1,34 @@
+id: foundations.mathematical-logic.question.what-are-limits-of-formal-systems
+kind: question
+title: What are the limits of formal systems?
+
+asks: |
+  Are there mathematical truths that cannot be proved inside a given formal system, even when the system is strong enough to express arithmetic?
+
+display_math:
+  - latex: |
+      \text{true}_T(\varphi)\ \nRightarrow\ T\vdash\varphi
+    description: A schematic contrast between truth and provability in a theory.
+
+motivates:
+  - foundations.mathematical-logic
+  - foundations.soundness
+  - foundations.deduction
+
+related_concepts:
+  - foundations.mathematical-logic
+  - foundations.soundness
+  - foundations.deduction
+
+prerequisite_questions:
+  - foundations.mathematical-logic.question.when-is-system-sound-complete
+
+successor_questions: []
+
+source_refs:
+  - source: source.goedel-1931-incompleteness
+    locator: 1931 paper
+    note: Gödel proves that sufficiently strong formal systems have inherent limits of provability.
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Chapter 3
+    note: Modern textbook treatment of incompleteness and formal arithmetic.

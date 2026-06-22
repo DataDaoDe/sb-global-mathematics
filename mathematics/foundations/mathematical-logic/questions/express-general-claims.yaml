@@ -1,0 +1,33 @@
+id: foundations.mathematical-logic.question.express-general-claims
+kind: question
+title: How can logic express general mathematical claims?
+
+asks: |
+  How can a formal language express statements involving all objects, some objects, and relations among variables?
+
+display_math:
+  - latex: |
+      \forall x\,\exists y\,R(x,y)
+    description: Quantifiers express generality and existence in a formal language.
+
+motivates:
+  - foundations.mathematical-logic
+  - foundations.deduction
+
+related_concepts:
+  - foundations.mathematical-logic
+  - foundations.deduction
+
+prerequisite_questions:
+  - foundations.mathematical-logic.question.represent-validity-symbolically
+
+successor_questions:
+  - foundations.mathematical-logic.question.prove-with-rules
+
+source_refs:
+  - source: source.frege-1879-begriffsschrift
+    locator: Part I
+    note: Frege's formal language introduced quantificational structure for mathematical reasoning.
+  - source: source.hilbert-ackermann-1928-grundzuge-theoretische-logik
+    locator: First edition
+    note: Hilbert and Ackermann present first-order logic as a systematic formalism.

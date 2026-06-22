@@ -47,6 +47,8 @@ describe("Question", () => {
         "algebra.ring.commutative-unital",
         "algebra.ring.associative-unital",
       ],
+      prerequisite_questions: [],
+      successor_questions: [],
       source_refs: [
         {
           source: "source.dummit-foote-abstract-algebra-third-edition",
@@ -116,6 +118,27 @@ describe("Question", () => {
         conceptId,
         conceptId,
       ],
+    });
+
+    expect(result.success).toBe(false);
+  });
+
+  it("rejects duplicate prerequisite questions", () => {
+    const result = QuestionSchema.safeParse({
+      ...question,
+      prerequisite_questions: [
+        "foundations.mathematical-logic.question.what-makes-argument-valid",
+        "foundations.mathematical-logic.question.what-makes-argument-valid",
+      ],
+    });
+
+    expect(result.success).toBe(false);
+  });
+
+  it("rejects a question as its own successor", () => {
+    const result = QuestionSchema.safeParse({
+      ...question,
+      successor_questions: [question.id],
     });
 
     expect(result.success).toBe(false);

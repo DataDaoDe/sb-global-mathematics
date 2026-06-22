@@ -1,0 +1,49 @@
+id: foundations.mathematical-logic.history.aristotle-syllogistic
+kind: historical_note
+title: Aristotle's syllogistic theory of deduction
+
+date_label: Classical Greek logic
+event_type: origin
+start_year: -350
+
+description: |
+  Aristotle's Prior Analytics gave a systematic account of deductions in which conclusions follow from premises by form. Its syllogistic did not use modern quantifier notation, but it treated validity as a matter of argument structure rather than persuasion or topic alone.
+
+summary: Aristotle made valid deduction an object of systematic analysis through syllogistic forms.
+
+prior_formulation: Reasoning was discussed in rhetoric, dialectic, and mathematics before being isolated as a formal object of study.
+
+conceptual_change: |
+  Deduction became analyzable by form: certain premise patterns guarantee a conclusion.
+
+resulting_formulation: Valid arguments can be classified by schemas whose correctness does not depend on the particular subject matter.
+
+enabled_developments:
+  - Later logic could ask which inference forms preserve truth.
+  - Modern accounts of validity could compare older term logic with symbolic and quantificational systems.
+
+display_math:
+  - latex: |
+      A\text{ belongs to all }B,\quad B\text{ belongs to all }C
+      \Rightarrow
+      A\text{ belongs to all }C
+    description: A schematic syllogistic inference form.
+
+subjects:
+  - foundations.mathematical-logic
+  - foundations.logical-validity
+  - foundations.deduction
+  - foundations.mathematical-logic.question.what-makes-argument-valid
+
+developed_from: []
+
+developed_into:
+  - foundations.mathematical-logic.history.boole-algebraic-logic
+
+source_refs:
+  - source: source.aristotle-prior-analytics
+    locator: Book I
+    note: Primary source for Aristotle's syllogistic theory of deduction.
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Chapter 1
+    note: Secondary context for the later formalization of validity.

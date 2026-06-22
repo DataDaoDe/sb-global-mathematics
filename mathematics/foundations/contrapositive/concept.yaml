@@ -1,0 +1,16 @@
+id: foundations.contrapositive
+kind: concept
+title: Contrapositive
+
+summary: The contrapositive of a conditional statement reverses and negates its antecedent and consequent.
+
+display_math:
+  - latex: |
+      \neg Q\Rightarrow \neg P
+    description: The contrapositive of $P\Rightarrow Q$.
+
+defined_by:
+  - foundations.contrapositive.definition
+
+broader_concepts:
+  - foundations.conditional-statement

@@ -1,0 +1,47 @@
+id: foundations.mathematical-logic.history.frege-quantification
+kind: historical_note
+title: Frege's formal language with quantification
+
+date_label: Begriffsschrift and quantificational logic
+event_type: formalization
+start_year: 1879
+
+description: |
+  Frege's Begriffsschrift introduced a formal language powerful enough to express general mathematical reasoning with variables, functions, relations, and quantificational structure. This moved logic beyond algebraic treatment of classes toward a language that could represent the internal form of mathematical statements.
+
+summary: Frege introduced a formal notation capable of expressing quantificational mathematical reasoning.
+
+prior_formulation: Algebraic logic represented important symbolic operations but lacked the full variable-binding structure needed for modern predicate logic.
+
+conceptual_change: Quantification and variable binding became part of formal logical syntax.
+
+resulting_formulation: General mathematical claims could be represented in a formal language rather than paraphrased in ordinary language.
+
+enabled_developments:
+  - First-order logic could emerge as a canonical formal language.
+  - Proof systems could operate over formulas with quantifiers and relations.
+
+display_math:
+  - latex: |
+      \forall x\,(P(x)\Rightarrow Q(x))
+    description: Modern notation for a quantified conditional, representing the kind of generality Frege made formal.
+
+subjects:
+  - foundations.mathematical-logic
+  - foundations.deduction
+  - foundations.conditional-statement
+  - foundations.mathematical-logic.question.express-general-claims
+
+developed_from:
+  - foundations.mathematical-logic.history.boole-algebraic-logic
+
+developed_into:
+  - foundations.mathematical-logic.history.hilbert-ackermann-first-order-logic
+
+source_refs:
+  - source: source.frege-1879-begriffsschrift
+    locator: Preface and Part I
+    note: Primary source for Frege's formal concept-script and quantificational notation.
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Chapter 1
+    note: Secondary context for first-order languages and quantifiers.

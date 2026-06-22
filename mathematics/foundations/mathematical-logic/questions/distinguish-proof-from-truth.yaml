@@ -1,0 +1,37 @@
+id: foundations.mathematical-logic.question.distinguish-proof-from-truth
+kind: question
+title: What is the difference between proof and truth?
+
+asks: |
+  When should formal provability be distinguished from truth in every intended interpretation?
+
+display_math:
+  - latex: |
+      \Gamma\vdash\varphi \quad\text{versus}\quad \Gamma\models\varphi
+    description: Comparing formal derivability with semantic consequence.
+
+motivates:
+  - foundations.mathematical-logic
+  - foundations.logical-validity
+  - foundations.soundness
+  - foundations.deduction
+
+related_concepts:
+  - foundations.mathematical-logic
+  - foundations.logical-validity
+  - foundations.soundness
+  - foundations.deduction
+
+prerequisite_questions:
+  - foundations.mathematical-logic.question.prove-with-rules
+
+successor_questions:
+  - foundations.mathematical-logic.question.when-is-system-sound-complete
+
+source_refs:
+  - source: source.goedel-1930-completeness
+    locator: 1930 paper
+    note: Gödel's completeness theorem compares formal derivability with semantic validity for first-order logic.
+  - source: source.tarski-1936-truth-formalized-languages
+    locator: 1936 paper
+    note: Tarski gives a precise semantic account of truth for formalized languages.

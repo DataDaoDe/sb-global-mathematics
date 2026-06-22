@@ -1,0 +1,16 @@
+id: foundations.soundness
+kind: concept
+title: Soundness
+
+summary: Soundness is the guarantee that a deductive system proves only semantically valid conclusions.
+
+display_math:
+  - latex: |
+      \Gamma \vdash \varphi \Rightarrow \Gamma \models \varphi
+    description: Derivability implies semantic consequence.
+
+defined_by:
+  - foundations.soundness.definition
+
+broader_concepts:
+  - foundations.mathematical-logic

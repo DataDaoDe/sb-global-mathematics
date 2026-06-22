@@ -53,6 +53,11 @@ export type HistoryEntry = {
     readonly start_year: number;
     readonly end_year?: number;
     readonly description: string;
+    readonly summary?: string;
+    readonly prior_formulation?: string;
+    readonly conceptual_change?: string;
+    readonly resulting_formulation?: string;
+    readonly enabled_developments?: readonly string[];
     readonly developed_from?: readonly string[];
     readonly developed_into?: readonly string[];
   };

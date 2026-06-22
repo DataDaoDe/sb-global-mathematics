@@ -35,11 +35,12 @@
   </nav>
 
   <section class="timeline-header">
-    <p class="eyebrow">Historical Timeline</p>
-    <h1>Trace the development of mathematical ideas.</h1>
+    <p class="eyebrow">Historical Notes</p>
+    <h1>Source-backed development notes.</h1>
     <p class="lede">
-      Historical entries are sorted by normalized year ranges while preserving
-      their source-backed narrative and development links.
+      This is a chronological projection of the graph, not the primary learning
+      path. Use entity pages for concepts, definitions, examples, propositions,
+      and proofs.
     </p>
   </section>
 
@@ -57,7 +58,16 @@
             <a href={`/e/${entry.entity.id}`}>{entry.entity.title}</a>
           </header>
 
-          <TextMath className="entity-prose" text={entry.entity.description} />
+          {#if entry.entity.summary}
+            <TextMath className="entity-prose timeline-summary" text={entry.entity.summary} />
+          {/if}
+
+          {#if entry.entity.conceptual_change}
+            <div class="timeline-development">
+              <h2>Conceptual Change</h2>
+              <TextMath className="entity-prose" text={entry.entity.conceptual_change} />
+            </div>
+          {/if}
 
           <SourceReferences
             references={entry.entity.source_refs}
@@ -70,28 +80,6 @@
               <h2>Subjects</h2>
               <div class="entry-list">
                 {#each entry.subjects as entity}
-                  <EntityLink {entity} compact />
-                {/each}
-              </div>
-            </div>
-          {/if}
-
-          {#if entry.developed_from.length > 0}
-            <div class="timeline-relations">
-              <h2>Developed from</h2>
-              <div class="entry-list">
-                {#each entry.developed_from as entity}
-                  <EntityLink {entity} compact />
-                {/each}
-              </div>
-            </div>
-          {/if}
-
-          {#if entry.developed_into.length > 0}
-            <div class="timeline-relations">
-              <h2>Developed into</h2>
-              <div class="entry-list">
-                {#each entry.developed_into as entity}
                   <EntityLink {entity} compact />
                 {/each}
               </div>

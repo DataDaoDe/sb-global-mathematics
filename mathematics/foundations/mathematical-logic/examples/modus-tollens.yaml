@@ -1,0 +1,26 @@
+id: foundations.mathematical-logic.example.modus-tollens
+kind: example
+title: Modus tollens as contrapositive reasoning
+
+example_of:
+  - foundations.mathematical-logic
+  - foundations.logical-validity
+  - foundations.deduction
+  - foundations.contrapositive
+  - foundations.proof-by-contrapositive
+
+description: |
+  Suppose $P$ means "a number is divisible by $4$" and $Q$ means "the number is even." From $P\Rightarrow Q$ and $\neg Q$, modus tollens concludes $\neg P$. In words: if divisibility by $4$ implies evenness, then an odd number cannot be divisible by $4$.
+
+display_math:
+  - latex: |
+      P\Rightarrow Q,\quad \neg Q\ \vdash\ \neg P
+    description: Modus tollens as a deductive rule.
+  - latex: |
+      4\mid n\Rightarrow 2\mid n,\quad 2\nmid n\ \vdash\ 4\nmid n
+    description: A divisibility instance of modus tollens.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 3
+    note: Contrapositive reasoning is a standard proof strategy for conditional statements.

@@ -1,0 +1,48 @@
+id: foundations.mathematical-logic.history.goedel-incompleteness
+kind: historical_note
+title: Gödel's incompleteness theorem
+
+date_label: Limits of formal arithmetic
+event_type: publication
+start_year: 1931
+
+description: |
+  Gödel proved that sufficiently strong consistent formal systems capable of expressing arithmetic cannot prove every arithmetical truth expressible in their language. This did not contradict the completeness of first-order logic; it showed that formal theories strong enough for arithmetic have internal limits.
+
+summary: Gödel showed that strong formal arithmetic theories cannot capture all arithmetical truth by proof.
+
+prior_formulation: Completeness for first-order logic showed that logical validities are formally derivable, leaving open what happens inside strong mathematical theories.
+
+conceptual_change: Provability inside a formal theory was separated from truth about arithmetic.
+
+resulting_formulation: A sufficiently strong consistent formal theory has sentences that are not decidable within the theory.
+
+enabled_developments:
+  - Metamathematics had to distinguish completeness of a logic from completeness of a theory.
+  - Formal systems could be studied through arithmetization of syntax.
+
+display_math:
+  - latex: |
+      T\nvdash G_T
+    description: A schematic Gödel sentence not provable in a suitable consistent theory $T$.
+
+subjects:
+  - foundations.mathematical-logic
+  - foundations.deduction
+  - foundations.soundness
+  - foundations.mathematical-logic.question.what-are-limits-of-formal-systems
+
+developed_from:
+  - foundations.mathematical-logic.history.hilbert-ackermann-first-order-logic
+  - foundations.mathematical-logic.history.goedel-completeness
+
+developed_into:
+  - foundations.mathematical-logic.history.tarski-semantic-truth
+
+source_refs:
+  - source: source.goedel-1931-incompleteness
+    locator: 1931 paper
+    note: Primary source for Gödel's incompleteness theorem.
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Chapter 3
+    note: Secondary textbook treatment of incompleteness and formal arithmetic.

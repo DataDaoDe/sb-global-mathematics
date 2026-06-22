@@ -1,0 +1,23 @@
+id: foundations.proof-by-contrapositive.definition
+kind: definition
+title: Definition of proof by contrapositive
+
+defines:
+  - foundations.proof-by-contrapositive
+
+depends_on:
+  - foundations.deduction
+  - foundations.contrapositive
+
+statement: |
+  A proof by contrapositive of $P\Rightarrow Q$ proves the equivalent conditional $\neg Q\Rightarrow \neg P$ and then concludes $P\Rightarrow Q$.
+
+display_math:
+  - latex: |
+      \neg Q\Rightarrow \neg P
+    description: The target statement used in a proof by contrapositive.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 3
+    note: Contrapositive proof is introduced as a proof technique for conditional statements.

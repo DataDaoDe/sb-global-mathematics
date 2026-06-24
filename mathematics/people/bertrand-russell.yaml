@@ -1,0 +1,12 @@
+id: person.bertrand-russell
+kind: person
+title: Bertrand Russell
+
+sort_name: Russell, Bertrand
+birth_year: 1872
+death_year: 1970
+
+source_refs:
+  - source: source.russell-1903-principles-of-mathematics
+    locator: Author metadata
+    note: Source authored by Bertrand Russell.

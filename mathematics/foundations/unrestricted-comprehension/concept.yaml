@@ -1,0 +1,17 @@
+id: foundations.unrestricted-comprehension
+kind: concept
+title: Unrestricted comprehension
+
+summary: Unrestricted comprehension is the naive principle that every definite property determines a set of exactly the objects satisfying that property.
+
+display_math:
+  - latex: |
+      \{x:\varphi(x)\}
+    description: Naive set formation from an arbitrary property.
+
+defined_by:
+  - foundations.unrestricted-comprehension.definition
+
+broader_concepts:
+  - foundations.set
+  - foundations.mathematical-logic

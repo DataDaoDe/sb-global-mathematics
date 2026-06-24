@@ -1,0 +1,28 @@
+id: foundations.zermelo-fraenkel-set-theory-with-choice.proposition.well-ordering-equivalent-choice.proof.proof-outline
+kind: proof
+title: Proof outline for choice and well-ordering equivalence
+
+proves:
+  - foundations.zermelo-fraenkel-set-theory-with-choice.proposition.well-ordering-equivalent-choice
+
+method: equivalence proof
+
+argument: |
+  Assume the axiom of choice. Given a set $A$, choose an element from every nonempty subset of $A$. Transfinite recursion then repeatedly selects the next unused element until $A$ has been exhausted; ordering elements by the stage at which they are chosen gives a well-ordering of $A$. Conversely, assume every set can be well-ordered. For any family of nonempty sets, well-order the union of the family and choose from each member its least element in that well-order. This defines a choice function.
+
+display_math:
+  - latex: |
+      \mathrm{AC}\Rightarrow\text{well-order every }A,\qquad
+      \text{well-order }\bigcup A\Rightarrow\text{choose least elements}
+    description: The two directions of the equivalence.
+
+depends_on:
+  - foundations.zermelo-fraenkel-set-theory-with-choice.proposition.well-ordering-equivalent-choice
+  - foundations.zermelo-fraenkel-set-theory-with-choice.definition.axiom-of-choice
+  - foundations.relation
+  - foundations.function
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Standard proof that choice and well-ordering are equivalent over ZF.

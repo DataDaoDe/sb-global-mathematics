@@ -1,0 +1,12 @@
+id: person.max-zorn
+kind: person
+title: Max Zorn
+
+sort_name: Zorn, Max
+birth_year: 1906
+death_year: 1993
+
+source_refs:
+  - source: source.zorn-1935-transfinite-algebra
+    locator: Author metadata
+    note: Source authored by Max Zorn.

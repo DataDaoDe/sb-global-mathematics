@@ -1,0 +1,12 @@
+id: person.gottlob-frege
+kind: person
+title: Gottlob Frege
+
+sort_name: Frege, Gottlob
+birth_year: 1848
+death_year: 1925
+
+source_refs:
+  - source: source.frege-1879-begriffsschrift
+    locator: Author metadata
+    note: Source authored by Gottlob Frege.

@@ -26,7 +26,8 @@ export type GraphRelation =
   | "historical_context_for"
   | "developed_from"
   | "developed_into"
-  | "related_concept";
+  | "related_concept"
+  | "authored_by";
 
 export type GraphEntity = {
   readonly id: EntityId;
@@ -166,6 +167,11 @@ function edgesForEntity(entity: MathematicalEntity): GraphEdge[] {
       ];
 
     case "source":
+      return entity.author_refs.map((targetId) =>
+        edge(entity.id, "authored_by", targetId)
+      );
+
+    case "person":
       return [];
   }
 }

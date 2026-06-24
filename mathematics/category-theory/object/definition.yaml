@@ -1,0 +1,22 @@
+id: category-theory.object.definition
+kind: definition
+title: Definition of object in a category
+
+defines:
+  - category-theory.object
+
+depends_on:
+  - category-theory.category
+
+statement: |
+  An object of a category $\mathcal{C}$ is one of the entities between which the morphisms of $\mathcal{C}$ are defined. Category theory usually studies an object through its incoming and outgoing morphisms rather than through its elements.
+
+display_math:
+  - latex: |
+      A,B,C\in\mathrm{Ob}(\mathcal{C})
+    description: Objects of a category.
+
+source_refs:
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter I
+    note: Objects are primitive data in the definition of a category.

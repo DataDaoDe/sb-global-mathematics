@@ -1,0 +1,20 @@
+id: foundations.zermelo-fraenkel-set-theory.example.separation-even-naturals
+kind: example
+title: Separation forms the even natural numbers from an existing set
+
+example_of:
+  - foundations.zermelo-fraenkel-set-theory
+  - foundations.set
+
+description: |
+  Separation does not say that every definable collection exists absolutely. It says that once $\mathbb{N}$ is available as a set, the natural numbers satisfying a formula such as "there exists $k$ with $n=2k$" form a subset of $\mathbb{N}$.
+
+display_math:
+  - latex: |
+      E=\{n\in\mathbb{N}:\exists k\in\mathbb{N}\,(n=2k)\}
+    description: The even natural numbers formed by separation from $\mathbb{N}$.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Separation forms definable subsets of existing sets.

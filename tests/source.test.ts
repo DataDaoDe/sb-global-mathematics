@@ -8,6 +8,7 @@ import {
   isSource,
   loadEntityFile,
   mathematicsPath,
+  parseEntityId,
   parseSource,
   type Source,
 } from "../src/index.js";
@@ -84,9 +85,9 @@ describe("Source", () => {
       kind: "source",
       title: "Abstract Algebra, Third Edition",
       source_type: "book",
-      authors: [
-        "David S. Dummit",
-        "Richard M. Foote",
+      author_refs: [
+        parseEntityId("person.david-s-dummit"),
+        parseEntityId("person.richard-m-foote"),
       ],
       year: 2004,
     });
@@ -101,10 +102,10 @@ describe("Source", () => {
     expect(parseSource(source)).toEqual(source);
   });
 
-  it("rejects an empty author", () => {
+  it("rejects an invalid author reference", () => {
     const result = SourceSchema.safeParse({
       ...source,
-      authors: [""],
+      author_refs: ["not a person id"],
     });
 
     expect(result.success).toBe(false);

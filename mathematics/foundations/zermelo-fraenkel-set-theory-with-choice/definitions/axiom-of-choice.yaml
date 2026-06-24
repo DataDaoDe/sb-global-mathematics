@@ -1,0 +1,34 @@
+id: foundations.zermelo-fraenkel-set-theory-with-choice.definition.axiom-of-choice
+kind: definition
+title: Axiom of choice
+
+definition_role: contextual
+definition_style: axiomatic
+scope: ZFC axiom
+
+defines:
+  - foundations.zermelo-fraenkel-set-theory-with-choice
+
+depends_on:
+  - foundations.zermelo-fraenkel-set-theory
+  - foundations.function
+  - foundations.set
+
+statement: |
+  The axiom of choice says that every set $A$ of nonempty pairwise indexed sets has a choice function: a function that selects one element from each member of $A$.
+
+display_math:
+  - latex: |
+      \forall A\,
+      \bigl((\forall X\in A\,X\neq\varnothing)
+      \Rightarrow
+      \exists f\,\forall X\in A\,(f(X)\in X)\bigr)
+    description: Choice function form of the axiom of choice.
+
+source_refs:
+  - source: source.zermelo-1908-grundlagen-mengenlehre
+    locator: Axiom VI
+    note: Zermelo included a choice principle in his original axiom system.
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Standard modern formulation of the axiom of choice.

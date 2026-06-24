@@ -1,0 +1,29 @@
+id: foundations.unrestricted-comprehension.definition
+kind: definition
+title: Definition of unrestricted comprehension
+
+definition_style: axiomatic
+scope: Naive set formation principle
+
+defines:
+  - foundations.unrestricted-comprehension
+
+depends_on:
+  - foundations.set
+  - foundations.mathematical-logic
+
+statement: |
+  Unrestricted comprehension asserts that for every property $\varphi(x)$, there is a set whose elements are exactly the objects $x$ satisfying $\varphi(x)$.
+
+display_math:
+  - latex: |
+      \exists A\,\forall x\,(x\in A\iff \varphi(x))
+    description: Unrestricted comprehension for an arbitrary property $\varphi$.
+
+source_refs:
+  - source: source.russell-1903-principles-of-mathematics
+    locator: Chapter X
+    note: Russell analyzes the contradiction arising from unrestricted class formation.
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Modern set theory motivates restricted axioms by avoiding naive comprehension.

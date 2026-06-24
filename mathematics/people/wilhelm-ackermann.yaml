@@ -1,0 +1,12 @@
+id: person.wilhelm-ackermann
+kind: person
+title: Wilhelm Ackermann
+
+sort_name: Ackermann, Wilhelm
+birth_year: 1896
+death_year: 1962
+
+source_refs:
+  - source: source.hilbert-ackermann-1928-grundzuge-theoretische-logik
+    locator: Author metadata
+    note: Source authored by Wilhelm Ackermann.

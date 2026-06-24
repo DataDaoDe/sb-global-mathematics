@@ -3,7 +3,7 @@ kind: source
 title: Abstract Algebra, Third Edition
 
 source_type: book
-authors:
-  - David S. Dummit
-  - Richard M. Foote
+author_refs:
+  - person.david-s-dummit
+  - person.richard-m-foote
 year: 2004

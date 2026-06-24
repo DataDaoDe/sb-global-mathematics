@@ -1,0 +1,17 @@
+id: foundations.zermelo-fraenkel-set-theory
+kind: concept
+title: Zermelo-Fraenkel set theory
+
+summary: Zermelo-Fraenkel set theory is an axiomatic theory of sets whose axioms specify which sets exist and how sets are determined by membership.
+
+display_math:
+  - latex: |
+      \mathrm{ZF}
+    description: Zermelo-Fraenkel set theory without the axiom of choice.
+
+defined_by:
+  - foundations.zermelo-fraenkel-set-theory.definition
+
+broader_concepts:
+  - foundations.set
+  - foundations.mathematical-logic

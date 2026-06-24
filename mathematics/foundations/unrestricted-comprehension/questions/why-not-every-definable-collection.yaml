@@ -1,0 +1,33 @@
+id: foundations.unrestricted-comprehension.question.why-not-every-definable-collection
+kind: question
+title: Why not every definable collection?
+
+asks: |
+  Why can a property such as $x\notin x$ not automatically determine a set of all objects satisfying that property?
+
+display_math:
+  - latex: |
+      \{x:x\notin x\}\ ?
+    description: The dangerous collection behind Russell's paradox.
+
+motivates:
+  - foundations.unrestricted-comprehension
+  - foundations.zermelo-fraenkel-set-theory
+  - foundations.set
+
+related_concepts:
+  - foundations.unrestricted-comprehension
+  - foundations.zermelo-fraenkel-set-theory
+  - foundations.set
+  - foundations.mathematical-logic
+
+prerequisite_questions:
+  - foundations.set.question.describe-reversible-structure
+
+successor_questions:
+  - foundations.zermelo-fraenkel-set-theory.question.which-collections-exist
+
+source_refs:
+  - source: source.russell-1903-principles-of-mathematics
+    locator: Chapter X
+    note: Russell's paradox motivates rejecting unrestricted comprehension.

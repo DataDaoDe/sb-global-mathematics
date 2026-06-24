@@ -1,0 +1,12 @@
+id: person.samuel-eilenberg
+kind: person
+title: Samuel Eilenberg
+
+sort_name: Eilenberg, Samuel
+birth_year: 1913
+death_year: 1998
+
+source_refs:
+  - source: source.eilenberg-mac-lane-1945-natural-equivalences
+    locator: Author metadata
+    note: Source authored by Samuel Eilenberg.

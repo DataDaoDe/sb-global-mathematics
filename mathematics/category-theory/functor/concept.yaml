@@ -1,0 +1,16 @@
+id: category-theory.functor
+kind: concept
+title: Functor
+
+summary: A functor maps one category to another while preserving identities and composition.
+
+display_math:
+  - latex: |
+      F:\mathcal{C}\to\mathcal{D}
+    description: A functor from category $\mathcal{C}$ to category $\mathcal{D}$.
+
+defined_by:
+  - category-theory.functor.definition
+
+broader_concepts:
+  - category-theory.category

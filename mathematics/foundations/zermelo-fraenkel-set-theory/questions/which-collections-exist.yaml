@@ -1,0 +1,35 @@
+id: foundations.zermelo-fraenkel-set-theory.question.which-collections-exist
+kind: question
+title: Which collections are sets?
+
+asks: |
+  Which collections can be treated as sets without allowing paradoxical totalities such as the collection of all sets that are not members of themselves?
+
+display_math:
+  - latex: |
+      \{x:\varphi(x)\}\ ?\qquad
+      \{x\in A:\varphi(x)\}
+    description: The contrast between unrestricted comprehension and separation from an existing set.
+
+motivates:
+  - foundations.zermelo-fraenkel-set-theory
+  - foundations.unrestricted-comprehension
+  - foundations.set
+  - foundations.mathematical-logic
+
+related_concepts:
+  - foundations.zermelo-fraenkel-set-theory
+  - foundations.unrestricted-comprehension
+  - foundations.set
+  - foundations.mathematical-logic
+
+prerequisite_questions:
+  - foundations.unrestricted-comprehension.question.why-not-every-definable-collection
+
+successor_questions:
+  - foundations.zermelo-fraenkel-set-theory-with-choice.question.when-can-we-choose-simultaneously
+
+source_refs:
+  - source: source.zermelo-1908-grundlagen-mengenlehre
+    locator: Introduction and Axiom III
+    note: Zermelo's axiomatization restricts set formation to avoid paradoxes while retaining mathematics.

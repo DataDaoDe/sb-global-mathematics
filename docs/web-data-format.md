@@ -108,14 +108,17 @@ Each file in `generated/web/entities/` contains:
 
 `entity` is the normalized source entity, including renderable `display_math` for mathematical entities.
 
-Source entities may include optional publication identifiers:
+Source entities point to first-class people through `author_refs` and may include optional publication identifiers:
 
 ```json
 {
+  "author_refs": ["person.david-s-dummit", "person.richard-m-foote"],
   "doi": "10.1000/example.doi",
   "isbn": "978-0-471-43334-7"
 }
 ```
+
+Person entities may include `sort_name`, `birth_year`, `death_year`, and `source_refs`. Source pages expose outgoing `authors` relation groups, and person pages expose incoming `authored_sources`.
 
 Source-backed entities include structured `source_refs`:
 

@@ -1,0 +1,30 @@
+id: foundations.zermelo-fraenkel-set-theory.definition.extensionality
+kind: definition
+title: Axiom of extensionality
+
+definition_role: contextual
+definition_style: axiomatic
+scope: ZF axiom
+
+defines:
+  - foundations.zermelo-fraenkel-set-theory
+
+depends_on:
+  - foundations.set
+
+statement: |
+  The axiom of extensionality says that two sets are equal when they have exactly the same elements. Membership determines set identity.
+
+display_math:
+  - latex: |
+      \forall A\,\forall B\,
+      \bigl(\forall x\,(x\in A\iff x\in B)\Rightarrow A=B\bigr)
+    description: Extensionality for sets.
+
+source_refs:
+  - source: source.zermelo-1908-grundlagen-mengenlehre
+    locator: Axiom I
+    note: Zermelo's axiom system begins by making set identity depend on elements.
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Modern first-order formulation of extensionality.

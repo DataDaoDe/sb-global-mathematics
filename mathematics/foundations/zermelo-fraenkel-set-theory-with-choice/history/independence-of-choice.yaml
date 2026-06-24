@@ -1,0 +1,49 @@
+id: foundations.zermelo-fraenkel-set-theory-with-choice.history.independence-of-choice
+kind: historical_note
+title: Independence of Choice from ZF
+
+date_label: Gödel and Cohen independence results
+event_type: formalization
+start_year: 1940
+end_year: 1963
+
+description: |
+  Gödel showed, via the constructible universe, that the axiom of choice is consistent with ZF if ZF itself is consistent. Cohen's forcing method later supplied the complementary independence technology showing that choice cannot be recovered from ZF alone in the ordinary relative-consistency sense. Together these results placed the axiom of choice outside the purely derivable consequences of ZF.
+
+summary: Gödel and Cohen showed that Choice is not settled by the other ZF axioms, assuming the usual relative-consistency hypotheses.
+
+prior_formulation: Choice was debated as a plausible but controversial principle, not clearly forced by the other set-theoretic axioms.
+
+conceptual_change: Choice became understood as an independent strengthening rather than a theorem of ZF.
+
+resulting_formulation: Mathematicians distinguish ZF from ZFC and track which theorems require choice or choice-like principles.
+
+enabled_developments:
+  - Independence proofs became central to modern set theory.
+  - Mathematical results could be classified by their dependence on choice principles.
+
+display_math:
+  - latex: |
+      \mathrm{ZF}\nvdash \mathrm{AC},\qquad
+      \mathrm{Con}(\mathrm{ZF})\Rightarrow\mathrm{Con}(\mathrm{ZF}+\mathrm{AC})
+    description: Schematic statement of independence and relative consistency.
+
+subjects:
+  - foundations.zermelo-fraenkel-set-theory-with-choice
+  - foundations.zermelo-fraenkel-set-theory
+  - foundations.mathematical-logic
+
+developed_from:
+  - foundations.zermelo-fraenkel-set-theory.history.replacement-and-first-order-form
+  - foundations.mathematical-logic.history.goedel-incompleteness
+
+developed_into:
+  - foundations.zermelo-fraenkel-set-theory-with-choice
+
+source_refs:
+  - source: source.goedel-1940-consistency-continuum-hypothesis
+    locator: Princeton University Press
+    note: Gödel's constructible universe gives relative consistency of choice and the continuum hypothesis.
+  - source: source.cohen-1963-independence-continuum-hypothesis-i
+    locator: Proceedings of the National Academy of Sciences 50
+    note: Cohen introduced forcing for independence results around the continuum hypothesis and choice.

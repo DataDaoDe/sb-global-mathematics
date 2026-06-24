@@ -1,0 +1,18 @@
+id: foundations.zermelo-fraenkel-set-theory-with-choice
+kind: concept
+title: Zermelo-Fraenkel set theory with Choice
+
+summary: Zermelo-Fraenkel set theory with Choice, abbreviated ZFC, is ZF together with the axiom of choice, allowing simultaneous selections from arbitrary families of nonempty sets.
+
+display_math:
+  - latex: |
+      \mathrm{ZFC}=\mathrm{ZF}+\mathrm{AC}
+    description: ZF extended by the axiom of choice.
+
+defined_by:
+  - foundations.zermelo-fraenkel-set-theory-with-choice.definition
+
+broader_concepts:
+  - foundations.zermelo-fraenkel-set-theory
+  - foundations.set
+  - foundations.mathematical-logic

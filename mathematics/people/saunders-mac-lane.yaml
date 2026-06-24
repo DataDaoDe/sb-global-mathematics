@@ -1,0 +1,15 @@
+id: person.saunders-mac-lane
+kind: person
+title: Saunders Mac Lane
+
+sort_name: Mac Lane, Saunders
+birth_year: 1909
+death_year: 2005
+
+source_refs:
+  - source: source.eilenberg-mac-lane-1945-natural-equivalences
+    locator: Author metadata
+    note: Source coauthored by Saunders Mac Lane.
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Author metadata
+    note: Source authored by Saunders Mac Lane.

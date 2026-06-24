@@ -3,7 +3,7 @@ kind: source
 title: Reflexions sur la resolution algebrique des equations
 
 source_type: paper
-authors:
-  - Joseph-Louis Lagrange
+author_refs:
+  - person.joseph-louis-lagrange
 year: 1771
 locator: Nouveaux Memoires de l'Academie Royale des Sciences et Belles-Lettres de Berlin

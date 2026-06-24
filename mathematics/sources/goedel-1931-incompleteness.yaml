@@ -3,6 +3,6 @@ kind: source
 title: Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I
 
 source_type: paper
-authors:
-  - Kurt Gödel
+author_refs:
+  - person.kurt-goedel
 year: 1931

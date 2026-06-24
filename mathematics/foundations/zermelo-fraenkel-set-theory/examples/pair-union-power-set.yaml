@@ -1,0 +1,21 @@
+id: foundations.zermelo-fraenkel-set-theory.example.pair-union-power-set
+kind: example
+title: Building sets by pairing, union, and power set
+
+example_of:
+  - foundations.zermelo-fraenkel-set-theory
+  - foundations.set
+
+description: |
+  Starting from sets $a$ and $b$, pairing gives $\{a,b\}$. Union can then collect the elements of a set of sets, and power set can form the set of all subsets of a given set. ZF controls these constructions by explicit axioms rather than by unrestricted comprehension.
+
+display_math:
+  - latex: |
+      a,b\quad\leadsto\quad \{a,b\}\quad\leadsto\quad
+      \bigcup\{a,b\}\quad\leadsto\quad \mathcal{P}(\{a,b\})
+    description: Several basic ZF set-forming operations.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Pairing, union, and power set are standard set-existence axioms.

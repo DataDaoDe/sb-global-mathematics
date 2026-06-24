@@ -85,6 +85,7 @@ export type WebDataBundle = {
 const INCOMING_RELATION_GROUPS: Partial<
   Record<GraphRelation, string>
 > = {
+  authored_by: "authored_sources",
   defines: "definitions",
   example_of: "examples",
   counterexample_to: "counterexamples",
@@ -96,6 +97,7 @@ const INCOMING_RELATION_GROUPS: Partial<
 const OUTGOING_RELATION_GROUPS: Partial<
   Record<GraphRelation, string>
 > = {
+  authored_by: "authors",
   defined_by: "defined_by",
   broader_concept: "broader_concepts",
   depends_on: "dependencies",
@@ -370,6 +372,7 @@ function sourceReferencesFor(
     case "counterexample":
     case "question":
     case "historical_note":
+    case "person":
       return data.source_refs;
     case "concept":
     case "source":
@@ -476,7 +479,9 @@ function searchableText(entity: GraphEntity): string {
         ...data.enabled_developments,
       ].filter((text) => text !== undefined).join("\n");
     case "source":
-      return `${data.title}\n${data.authors.join("\n")}`;
+      return `${data.title}\n${data.author_refs.join("\n")}`;
+    case "person":
+      return `${data.title}\n${data.sort_name ?? ""}`;
   }
 }
 

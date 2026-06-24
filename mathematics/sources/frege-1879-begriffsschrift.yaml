@@ -3,6 +3,6 @@ kind: source
 title: Begriffsschrift, eine der arithmetischen nachgebildete Formelsprache des reinen Denkens
 
 source_type: book
-authors:
-  - Gottlob Frege
+author_refs:
+  - person.gottlob-frege
 year: 1879

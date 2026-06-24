@@ -3,6 +3,6 @@ kind: source
 title: A Mathematical Introduction to Logic, Second Edition
 
 source_type: book
-authors:
-  - Herbert B. Enderton
+author_refs:
+  - person.herbert-b-enderton
 year: 2001

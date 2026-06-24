@@ -1,0 +1,28 @@
+id: category-theory.category.definition
+kind: definition
+title: Definition of category
+
+defines:
+  - category-theory.category
+
+depends_on:
+  - foundations.set
+  - foundations.function
+
+statement: |
+  A category $\mathcal{C}$ consists of objects, morphisms between objects, an identity morphism $\mathrm{id}_A:A\to A$ for each object $A$, and a composition operation sending $f:A\to B$ and $g:B\to C$ to $g\circ f:A\to C$. Composition is associative and identity morphisms are left and right units.
+
+display_math:
+  - latex: |
+      (h\circ g)\circ f=h\circ(g\circ f),
+      \qquad
+      f\circ\mathrm{id}_A=f=\mathrm{id}_B\circ f
+    description: Associativity and identity laws for morphism composition.
+
+source_refs:
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter I
+    note: Standard definition of a category.
+  - source: source.leinster-basic-category-theory
+    locator: Chapter 1
+    note: Introductory definition of categories by objects, maps, identities, and composition.

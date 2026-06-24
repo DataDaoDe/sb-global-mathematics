@@ -7,7 +7,8 @@ export type EntityKind =
   | "counterexample"
   | "question"
   | "historical_note"
-  | "source";
+  | "source"
+  | "person";
 
 export type DisplayMath = {
   readonly latex: string;

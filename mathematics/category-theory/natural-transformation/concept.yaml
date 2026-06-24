@@ -1,0 +1,16 @@
+id: category-theory.natural-transformation
+kind: concept
+title: Natural transformation
+
+summary: A natural transformation compares two functors by a family of morphisms that commute with every morphism in the source category.
+
+display_math:
+  - latex: |
+      \eta:F\Rightarrow G
+    description: A natural transformation from functor $F$ to functor $G$.
+
+defined_by:
+  - category-theory.natural-transformation.definition
+
+broader_concepts:
+  - category-theory.functor

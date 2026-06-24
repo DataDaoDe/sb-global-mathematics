@@ -1,0 +1,28 @@
+id: foundations.unrestricted-comprehension.counterexample.russell-paradox
+kind: counterexample
+title: Russell's paradox refutes unrestricted comprehension
+
+counterexample_to:
+  - foundations.unrestricted-comprehension
+  - foundations.unrestricted-comprehension.definition
+
+demonstrates_necessity_of:
+  - foundations.zermelo-fraenkel-set-theory.definition.separation
+  - foundations.zermelo-fraenkel-set-theory
+
+description: |
+  Unrestricted comprehension would allow the set $R=\{x:x\notin x\}$. Asking whether $R\in R$ gives a contradiction. If $R\in R$, then by the defining property of $R$, $R\notin R$. If $R\notin R$, then $R$ satisfies the defining property and so $R\in R$. Thus unrestricted comprehension cannot be a consistent set-existence principle.
+
+display_math:
+  - latex: |
+      R=\{x:x\notin x\},\qquad
+      R\in R\iff R\notin R
+    description: Russell's contradiction.
+
+source_refs:
+  - source: source.russell-1903-principles-of-mathematics
+    locator: Chapter X
+    note: Russell's paradox shows the inconsistency of unrestricted class comprehension.
+  - source: source.zermelo-1908-grundlagen-mengenlehre
+    locator: Introduction and Axiom III
+    note: Zermelo's restricted separation avoids unrestricted set formation.

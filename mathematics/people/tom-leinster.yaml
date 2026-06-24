@@ -1,0 +1,10 @@
+id: person.tom-leinster
+kind: person
+title: Tom Leinster
+
+sort_name: Leinster, Tom
+
+source_refs:
+  - source: source.leinster-basic-category-theory
+    locator: Author metadata
+    note: Source authored by Tom Leinster.

@@ -66,6 +66,13 @@ export function expectedEntityPath(
         "sources",
         `${entity.id.replace(/^source\./, "")}.yaml`,
       );
+
+    case "person":
+      return join(
+        mathematicsRoot,
+        "people",
+        `${entity.id.replace(/^person\./, "")}.yaml`,
+      );
   }
 }
 

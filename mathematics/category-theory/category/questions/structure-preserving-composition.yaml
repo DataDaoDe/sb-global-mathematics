@@ -1,0 +1,41 @@
+id: category-theory.category.question.structure-preserving-composition
+kind: question
+title: What remains when we focus on structure-preserving maps?
+
+asks: |
+  Across sets, groups, rings, spaces, and other mathematical systems, what common structure remains if we focus on objects, structure-preserving maps, and how those maps compose?
+
+display_math:
+  - latex: |
+      A\xrightarrow{f}B\xrightarrow{g}C
+      \quad\leadsto\quad
+      g\circ f
+    description: The recurring pattern of composable structure-preserving maps.
+
+motivates:
+  - category-theory.category
+  - category-theory.object
+  - category-theory.morphism
+  - category-theory.identity-morphism
+  - category-theory.morphism-composition
+  - category-theory.functor
+  - category-theory.natural-transformation
+
+related_concepts:
+  - category-theory.category
+  - category-theory.object
+  - category-theory.morphism
+  - category-theory.identity-morphism
+  - category-theory.morphism-composition
+  - category-theory.functor
+  - category-theory.natural-transformation
+
+prerequisite_questions:
+  - foundations.set.question.describe-reversible-structure
+
+successor_questions: []
+
+source_refs:
+  - source: source.eilenberg-mac-lane-1945-natural-equivalences
+    locator: Introduction
+    note: Category theory emerged to organize natural transformations between constructions.

@@ -16,7 +16,10 @@
   function buildDetails(candidate: Entity): readonly Detail[] {
     return [
       detail("Source type", stringField(candidate, "source_type")),
-      detail("Authors", stringArrayField(candidate, "authors")?.join(", ")),
+      detail("Sort name", stringField(candidate, "sort_name")),
+      detail("Author refs", stringArrayField(candidate, "author_refs")?.join(", ")),
+      detail("Birth year", numberField(candidate, "birth_year")?.toString()),
+      detail("Death year", numberField(candidate, "death_year")?.toString()),
       detail("Year", numberField(candidate, "year")?.toString()),
       detail("DOI", stringField(candidate, "doi")),
       detail("ISBN", stringField(candidate, "isbn")),

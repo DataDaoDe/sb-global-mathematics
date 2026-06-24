@@ -175,6 +175,10 @@ function validateCompleteness(
       case "source":
         validateSourceCompleteness(loadedEntity, issues);
         break;
+
+      case "person":
+        validatePersonCompleteness(loadedEntity, issues);
+        break;
     }
   }
 }
@@ -417,12 +421,32 @@ function validateSourceCompleteness(
     return;
   }
 
-  if (entity.authors.length === 0 && entity.locator === undefined) {
+  if (entity.author_refs.length === 0 && entity.locator === undefined) {
     incompleteIssue(
       loadedEntity,
       issues,
-      ["authors"],
-      "Sources must provide authors or a locator.",
+      ["author_refs"],
+      "Sources must provide author references or a locator.",
+    );
+  }
+}
+
+function validatePersonCompleteness(
+  loadedEntity: LoadedEntity,
+  issues: RepositoryValidationIssue[],
+): void {
+  const { entity } = loadedEntity;
+
+  if (entity.kind !== "person") {
+    return;
+  }
+
+  if (entity.source_refs.length === 0) {
+    incompleteIssue(
+      loadedEntity,
+      issues,
+      ["source_refs"],
+      "People must cite at least one source for identity or biographical details.",
     );
   }
 }
@@ -455,7 +479,7 @@ function validateDisplayMath(
 ): void {
   const { entity } = loadedEntity;
 
-  if (entity.kind === "source") {
+  if (entity.kind === "source" || entity.kind === "person") {
     return;
   }
 
@@ -539,18 +563,21 @@ function errorMessage(error: unknown): string {
 function textFieldsFor(
   entity: MathematicalEntity,
 ): readonly { readonly fieldName: string; readonly text: string }[] {
-  const displayMathDescriptions = entity.kind === "source" ? [] : entity
-    .display_math
-    .flatMap((expression, index) =>
-      expression.description === undefined ? [] : [
-        {
-          fieldName: `display_math.${index}.description`,
-          text: expression.description,
-        },
-      ]
-    );
+  const displayMathDescriptions =
+    entity.kind === "source" || entity.kind === "person" ? [] : entity
+      .display_math
+      .flatMap((expression, index) =>
+        expression.description === undefined ? [] : [
+          {
+            fieldName: `display_math.${index}.description`,
+            text: expression.description,
+          },
+        ]
+      );
 
   switch (entity.kind) {
+    case "person":
+      return [];
     case "concept":
       return [
         {
@@ -1042,7 +1069,19 @@ function referenceRulesFor(
       ];
 
     case "source":
-      return [];
+      return [
+        {
+          path: ["author_refs"],
+          targetKinds: ["person"],
+        },
+      ];
+    case "person":
+      return [
+        {
+          path: ["source_refs"],
+          targetKinds: ["source"],
+        },
+      ];
   }
 }
 

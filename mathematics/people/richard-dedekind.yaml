@@ -1,0 +1,12 @@
+id: person.richard-dedekind
+kind: person
+title: Richard Dedekind
+
+sort_name: Dedekind, Richard
+birth_year: 1831
+death_year: 1916
+
+source_refs:
+  - source: source.dedekind-1888-was-sind-zahlen
+    locator: Author metadata
+    note: Source authored by Richard Dedekind.

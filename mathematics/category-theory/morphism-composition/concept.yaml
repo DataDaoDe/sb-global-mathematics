@@ -1,0 +1,18 @@
+id: category-theory.morphism-composition
+kind: concept
+title: Morphism composition
+
+summary: Morphism composition combines arrows with matching codomain and domain, forming the basic operation that categories are built around.
+
+display_math:
+  - latex: |
+      A\xrightarrow{f}B\xrightarrow{g}C
+      \quad\leadsto\quad
+      g\circ f:A\to C
+    description: Composing morphisms $f$ and $g$.
+
+defined_by:
+  - category-theory.morphism-composition.definition
+
+broader_concepts:
+  - category-theory.morphism

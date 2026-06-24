@@ -1,0 +1,27 @@
+id: category-theory.natural-transformation.definition
+kind: definition
+title: Definition of natural transformation
+
+defines:
+  - category-theory.natural-transformation
+
+depends_on:
+  - category-theory.category
+  - category-theory.functor
+  - category-theory.morphism
+
+statement: |
+  Given functors $F,G:\mathcal{C}\to\mathcal{D}$, a natural transformation $\eta:F\Rightarrow G$ assigns to each object $A$ of $\mathcal{C}$ a morphism $\eta_A:F(A)\to G(A)$ in $\mathcal{D}$ such that for every morphism $f:A\to B$ in $\mathcal{C}$, the naturality square commutes.
+
+display_math:
+  - latex: |
+      G(f)\circ \eta_A=\eta_B\circ F(f)
+    description: The naturality condition for a morphism $f:A\to B$.
+
+source_refs:
+  - source: source.eilenberg-mac-lane-1945-natural-equivalences
+    locator: Section 1
+    note: Natural equivalence is the founding motivation for category theory.
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter I
+    note: Standard definition of natural transformation.

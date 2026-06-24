@@ -3,6 +3,6 @@ kind: source
 title: How to Prove It, Third Edition
 
 source_type: book
-authors:
-  - Daniel J. Velleman
+author_refs:
+  - person.daniel-j-velleman
 year: 2019

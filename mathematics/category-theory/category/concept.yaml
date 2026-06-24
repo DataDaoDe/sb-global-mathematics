@@ -1,0 +1,16 @@
+id: category-theory.category
+kind: concept
+title: Category
+
+summary: A category is a system of objects and morphisms with identity morphisms and associative composition, designed to track structure-preserving maps and how they compose.
+
+display_math:
+  - latex: |
+      \mathcal{C}
+    description: A category, usually denoted by a calligraphic letter.
+
+defined_by:
+  - category-theory.category.definition
+
+broader_concepts:
+  - foundations.set

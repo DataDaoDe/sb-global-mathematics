@@ -1,0 +1,23 @@
+id: category-theory.identity-morphism.definition
+kind: definition
+title: Definition of identity morphism
+
+defines:
+  - category-theory.identity-morphism
+
+depends_on:
+  - category-theory.category
+  - category-theory.morphism
+
+statement: |
+  For each object $A$ of a category, the identity morphism $\mathrm{id}_A:A\to A$ is the morphism such that $f\circ \mathrm{id}_A=f$ for every $f:A\to B$ and $\mathrm{id}_A\circ g=g$ for every $g:C\to A$.
+
+display_math:
+  - latex: |
+      f\circ \mathrm{id}_A=f,\qquad \mathrm{id}_A\circ g=g
+    description: Left and right identity laws.
+
+source_refs:
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter I
+    note: Identity arrows are part of the definition of a category.

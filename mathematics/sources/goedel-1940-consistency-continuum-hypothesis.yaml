@@ -1,0 +1,9 @@
+id: source.goedel-1940-consistency-continuum-hypothesis
+kind: source
+title: The Consistency of the Continuum-Hypothesis
+
+source_type: book
+author_refs:
+  - person.kurt-goedel
+year: 1940
+locator: Princeton University Press

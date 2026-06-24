@@ -1,0 +1,9 @@
+id: source.mac-lane-categories-working-mathematician-second-edition
+kind: source
+title: Categories for the Working Mathematician, Second Edition
+
+source_type: book
+author_refs:
+  - person.saunders-mac-lane
+year: 1998
+isbn: "9780387984032"

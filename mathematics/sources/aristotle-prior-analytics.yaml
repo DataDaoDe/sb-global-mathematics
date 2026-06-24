@@ -3,6 +3,6 @@ kind: source
 title: Prior Analytics
 
 source_type: book
-authors:
-  - Aristotle
+author_refs:
+  - person.aristotle
 year: -350

@@ -34,9 +34,8 @@ const source: Source = {
   kind: "source",
   title: "Test Source",
   source_type: "book",
-  authors: [
-    "Test Author",
-  ],
+  author_refs: [],
+  locator: "Test source locator",
 };
 
 const sourceReference: SourceReference = {

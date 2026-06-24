@@ -1,0 +1,18 @@
+id: person.kurt-goedel
+kind: person
+title: Kurt Gödel
+
+sort_name: Godel, Kurt
+birth_year: 1906
+death_year: 1978
+
+source_refs:
+  - source: source.goedel-1930-completeness
+    locator: Author metadata
+    note: Source authored by Kurt Gödel.
+  - source: source.goedel-1931-incompleteness
+    locator: Author metadata
+    note: Source authored by Kurt Gödel.
+  - source: source.goedel-1940-consistency-continuum-hypothesis
+    locator: Author metadata
+    note: Source authored by Kurt Gödel.

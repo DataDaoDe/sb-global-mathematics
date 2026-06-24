@@ -141,7 +141,7 @@ function displayMathRows(entities: readonly GraphEntity[]): string {
   const rows: string[] = [];
 
   for (const entity of entities) {
-    if (entity.data.kind === "source") {
+    if (entity.data.kind === "source" || entity.data.kind === "person") {
       continue;
     }
 

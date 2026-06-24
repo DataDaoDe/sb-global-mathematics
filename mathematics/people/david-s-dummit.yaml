@@ -1,0 +1,12 @@
+id: person.david-s-dummit
+kind: person
+title: David S. Dummit
+
+sort_name: Dummit, David S.
+birth_year: 1948
+death_year: 2017
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Author metadata
+    note: Source authored by David S. Dummit.

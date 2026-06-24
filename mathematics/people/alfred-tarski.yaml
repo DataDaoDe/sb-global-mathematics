@@ -1,0 +1,12 @@
+id: person.alfred-tarski
+kind: person
+title: Alfred Tarski
+
+sort_name: Tarski, Alfred
+birth_year: 1901
+death_year: 1983
+
+source_refs:
+  - source: source.tarski-1936-truth-formalized-languages
+    locator: Author metadata
+    note: Source authored by Alfred Tarski.

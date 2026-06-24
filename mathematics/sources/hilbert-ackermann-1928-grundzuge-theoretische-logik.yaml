@@ -3,7 +3,7 @@ kind: source
 title: Grundzüge der theoretischen Logik
 
 source_type: book
-authors:
-  - David Hilbert
-  - Wilhelm Ackermann
+author_refs:
+  - person.david-hilbert
+  - person.wilhelm-ackermann
 year: 1928

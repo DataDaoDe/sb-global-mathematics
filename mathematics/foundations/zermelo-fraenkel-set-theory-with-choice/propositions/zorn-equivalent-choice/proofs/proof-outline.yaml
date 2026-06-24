@@ -1,0 +1,29 @@
+id: foundations.zermelo-fraenkel-set-theory-with-choice.proposition.zorn-equivalent-choice.proof.proof-outline
+kind: proof
+title: Proof outline for Zorn's lemma and choice equivalence
+
+proves:
+  - foundations.zermelo-fraenkel-set-theory-with-choice.proposition.zorn-equivalent-choice
+
+method: equivalence proof
+
+argument: |
+  From choice, one proves Zorn's lemma by using choices to extend nonmaximal elements along chains until a maximal element must occur. Conversely, assume Zorn's lemma and let $A$ be a family of nonempty sets. Partially order all partial choice functions by extension. The union of any chain of partial choice functions is again a partial choice function, so every chain has an upper bound. Zorn's lemma gives a maximal partial choice function, and maximality forces it to be defined on every member of $A$.
+
+display_math:
+  - latex: |
+      \{\text{partial choice functions}\},\ \subseteq
+      \quad\Longrightarrow\quad
+      \text{maximal partial choice function}
+    description: Zorn's lemma applied to partial choice functions.
+
+depends_on:
+  - foundations.zermelo-fraenkel-set-theory-with-choice.proposition.zorn-equivalent-choice
+  - foundations.zermelo-fraenkel-set-theory-with-choice.definition.axiom-of-choice
+  - foundations.function
+  - foundations.relation
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Standard proof of the equivalence between Zorn's lemma and choice.

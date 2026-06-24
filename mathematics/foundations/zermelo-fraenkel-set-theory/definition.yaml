@@ -1,0 +1,30 @@
+id: foundations.zermelo-fraenkel-set-theory.definition
+kind: definition
+title: Definition of Zermelo-Fraenkel set theory
+
+definition_style: axiomatic
+scope: First-order axiomatic set theory
+
+defines:
+  - foundations.zermelo-fraenkel-set-theory
+
+depends_on:
+  - foundations.set
+  - foundations.mathematical-logic
+  - foundations.logical-validity
+
+statement: |
+  Zermelo-Fraenkel set theory, abbreviated $\mathrm{ZF}$, is the first-order theory of the membership relation $\in$ whose axioms include extensionality, empty set, pairing, union, power set, separation, replacement, infinity, and foundation.
+
+display_math:
+  - latex: |
+      \mathrm{ZF}=
+      \{\mathrm{Extensionality},\mathrm{Empty},\mathrm{Pairing},\mathrm{Union},
+      \mathrm{Power},\mathrm{Separation},\mathrm{Replacement},
+      \mathrm{Infinity},\mathrm{Foundation}\}
+    description: A standard informal list of the ZF axiom families.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Standard modern reference for the ZF and ZFC axiom systems.

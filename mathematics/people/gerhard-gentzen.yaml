@@ -1,0 +1,12 @@
+id: person.gerhard-gentzen
+kind: person
+title: Gerhard Gentzen
+
+sort_name: Gentzen, Gerhard
+birth_year: 1909
+death_year: 1945
+
+source_refs:
+  - source: source.gentzen-1935-logical-deduction
+    locator: Author metadata
+    note: Source authored by Gerhard Gentzen.

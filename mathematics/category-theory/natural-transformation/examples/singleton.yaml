@@ -1,0 +1,21 @@
+id: category-theory.natural-transformation.example.singleton
+kind: example
+title: Singleton map as a natural transformation
+
+example_of:
+  - category-theory.natural-transformation
+  - category-theory.functor
+
+description: |
+  In $\mathbf{Set}$, let $P$ send a set to its power set and a function to direct image on subsets. The maps $\eta_A:A\to P(A)$ defined by $\eta_A(a)=\{a\}$ form a natural transformation from the identity functor to $P$.
+
+display_math:
+  - latex: |
+      \eta_A(a)=\{a\},\qquad
+      P(f)(\eta_A(a))=\{f(a)\}=\eta_B(f(a))
+    description: Naturality of the singleton map for $f:A\to B$.
+
+source_refs:
+  - source: source.leinster-basic-category-theory
+    locator: Chapter 1
+    note: Natural transformations are families of maps compatible with morphisms.

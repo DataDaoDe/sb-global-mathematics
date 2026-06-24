@@ -1,0 +1,16 @@
+id: category-theory.identity-morphism
+kind: concept
+title: Identity morphism
+
+summary: An identity morphism is the distinguished morphism on an object that acts as a left and right unit for composition.
+
+display_math:
+  - latex: |
+      \mathrm{id}_A:A\to A
+    description: The identity morphism on object $A$.
+
+defined_by:
+  - category-theory.identity-morphism.definition
+
+broader_concepts:
+  - category-theory.morphism

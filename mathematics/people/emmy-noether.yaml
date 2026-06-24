@@ -1,0 +1,12 @@
+id: person.emmy-noether
+kind: person
+title: Emmy Noether
+
+sort_name: Noether, Emmy
+birth_year: 1882
+death_year: 1935
+
+source_refs:
+  - source: source.noether-1921-idealtheorie
+    locator: Author metadata
+    note: Source authored by Emmy Noether.

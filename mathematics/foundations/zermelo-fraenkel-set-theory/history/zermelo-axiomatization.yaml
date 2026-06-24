@@ -1,0 +1,45 @@
+id: foundations.zermelo-fraenkel-set-theory.history.zermelo-axiomatization
+kind: historical_note
+title: Zermelo's axiomatization of set theory
+
+date_label: Zermelo's 1908 axiomatization
+event_type: formalization
+start_year: 1908
+end_year: 1908
+
+description: |
+  Zermelo's 1908 paper gave set theory an explicit axiom system after the discovery of set-theoretic paradoxes. Instead of allowing arbitrary comprehension, Zermelo used restricted separation from an already given set, together with axioms for elementary sets, union, power set, infinity, and choice. This shifted set theory from informal collection-forming language toward controlled existence principles.
+
+summary: Zermelo replaced naive comprehension with an explicit axiom system for controlled set existence.
+
+prior_formulation: Naive set theory treated definable collections too freely, making paradoxical collections difficult to exclude.
+
+conceptual_change: Set existence became governed by named axioms rather than by unrestricted collection formation.
+
+resulting_formulation: Zermelo set theory supplied extensionality, restricted separation, elementary set formation, union, power set, infinity, and choice-like principles.
+
+enabled_developments:
+  - Set theory could serve as a more disciplined foundation for ordinary mathematics.
+  - Later logicians could compare, repair, and formalize the axiom system.
+
+display_math:
+  - latex: |
+      \{x:\varphi(x)\}\quad\leadsto\quad
+      \{x\in A:\varphi(x)\}
+    description: The move from unrestricted comprehension to restricted separation.
+
+subjects:
+  - foundations.zermelo-fraenkel-set-theory
+  - foundations.set
+  - foundations.mathematical-logic
+
+developed_from:
+  - foundations.set
+
+developed_into:
+  - foundations.zermelo-fraenkel-set-theory
+
+source_refs:
+  - source: source.zermelo-1908-grundlagen-mengenlehre
+    locator: Mathematische Annalen 65
+    note: Primary source for the first Zermelo axiom system.

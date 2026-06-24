@@ -1,0 +1,26 @@
+id: category-theory.category.example.set
+kind: example
+title: The category of sets
+
+example_of:
+  - category-theory.category
+  - category-theory.object
+  - category-theory.morphism
+  - category-theory.identity-morphism
+  - category-theory.morphism-composition
+  - foundations.set
+  - foundations.function
+
+description: |
+  The category $\mathbf{Set}$ has sets as objects and functions as morphisms. The identity morphism on a set is the identity function, and composition of morphisms is ordinary function composition.
+
+display_math:
+  - latex: |
+      \mathrm{Ob}(\mathbf{Set})=\{\text{sets}\},\qquad
+      \mathrm{Hom}_{\mathbf{Set}}(A,B)=\{f:A\to B\}
+    description: Objects and morphisms in the category of sets.
+
+source_refs:
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter I
+    note: The category of sets is a standard first example.

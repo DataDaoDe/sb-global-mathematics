@@ -1,0 +1,28 @@
+id: foundations.zermelo-fraenkel-set-theory.definition.foundation
+kind: definition
+title: Foundation axiom
+
+definition_role: contextual
+definition_style: axiomatic
+scope: ZF axiom
+
+defines:
+  - foundations.zermelo-fraenkel-set-theory
+
+depends_on:
+  - foundations.set
+
+statement: |
+  The foundation axiom says that every nonempty set has an element disjoint from it. It rules out infinitely descending membership chains and, in ordinary ZF, sets that contain themselves.
+
+display_math:
+  - latex: |
+      \forall A\,
+      (A\neq\varnothing\Rightarrow
+      \exists x\,(x\in A\wedge x\cap A=\varnothing))
+    description: Foundation as the existence of an $\in$-minimal element.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Standard modern formulation of foundation.

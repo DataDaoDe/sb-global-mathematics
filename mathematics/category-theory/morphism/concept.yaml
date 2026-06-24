@@ -1,0 +1,16 @@
+id: category-theory.morphism
+kind: concept
+title: Morphism
+
+summary: A morphism is an arrow from one object to another in a category, abstracting the role played by structure-preserving maps.
+
+display_math:
+  - latex: |
+      f:A\to B
+    description: A morphism from object $A$ to object $B$.
+
+defined_by:
+  - category-theory.morphism.definition
+
+broader_concepts:
+  - category-theory.category

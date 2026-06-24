@@ -1,0 +1,9 @@
+id: source.fraenkel-1922-cantor-zermelo-mengenlehre
+kind: source
+title: Zu den Grundlagen der Cantor-Zermeloschen Mengenlehre
+
+source_type: paper
+author_refs:
+  - person.abraham-a-fraenkel
+year: 1922
+locator: Mathematische Annalen 86, 230-237

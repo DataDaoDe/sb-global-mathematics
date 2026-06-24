@@ -17,6 +17,10 @@ motivates:
 
 related_concepts: []
 
+successor_questions:
+  - category-theory.category.question.structure-preserving-composition
+  - foundations.unrestricted-comprehension.question.why-not-every-definable-collection
+
 source_refs:
   - source: source.dummit-foote-abstract-algebra-third-edition
     locator: Sections 0.1 and 1.1

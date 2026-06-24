@@ -1,0 +1,10 @@
+id: person.daniel-j-velleman
+kind: person
+title: Daniel J. Velleman
+
+sort_name: Velleman, Daniel J.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Author metadata
+    note: Source authored by Daniel J. Velleman.

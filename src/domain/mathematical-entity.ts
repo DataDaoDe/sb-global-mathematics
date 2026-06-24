@@ -25,6 +25,10 @@ import {
   type Proof,
 } from "./proof.js";
 import {
+  PersonSchema,
+  type Person,
+} from "./person.js";
+import {
   PropositionSchema,
   type Proposition,
 } from "./proposition.js";
@@ -51,6 +55,7 @@ export const EntitySchemas = {
   question: QuestionSchema,
   historical_note: HistoricalNoteSchema,
   source: SourceSchema,
+  person: PersonSchema,
 } as const;
 
 export type SupportedEntityKind =
@@ -65,7 +70,8 @@ export type MathematicalEntity =
   | Counterexample
   | Question
   | HistoricalNote
-  | Source;
+  | Source
+  | Person;
 
 const EntityEnvelopeSchema = z
   .object({

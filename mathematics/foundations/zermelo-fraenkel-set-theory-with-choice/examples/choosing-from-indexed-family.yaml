@@ -1,0 +1,20 @@
+id: foundations.zermelo-fraenkel-set-theory-with-choice.example.choosing-from-indexed-family
+kind: example
+title: A choice function for an indexed family
+
+example_of:
+  - foundations.zermelo-fraenkel-set-theory-with-choice
+  - foundations.function
+
+description: |
+  For a finite family such as $A=\{\{1,2\},\{3,4\}\}$, a choice function can be written explicitly by choosing $1$ from the first set and $3$ from the second. The axiom of choice matters because it asserts the existence of such a simultaneous selection for arbitrary families of nonempty sets, including families where no explicit rule is given.
+
+display_math:
+  - latex: |
+      f(\{1,2\})=1,\qquad f(\{3,4\})=3
+    description: A concrete finite choice function.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Choice functions are the standard function form of the axiom of choice.

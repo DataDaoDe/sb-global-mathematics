@@ -133,11 +133,11 @@ The first coherent graph slice should support:
 * `Counterexample` - a concrete case refuting an entity or showing why an assumption matters;
 * `Question` - a motivating mathematical inquiry;
 * `HistoricalNote` - a source-backed note about the development, formulation, terminology, or historical context of mathematical ideas;
-* `Source` - a bibliographic, historical, or formal provenance record.
+* `Source` - a bibliographic, historical, or formal provenance record;
+* `Person` - a named historical or contemporary contributor referenced by sources.
 
 Later slices should add:
 
-* `Person`;
 * `Terminology`;
 * `Formalization`.
 
@@ -163,6 +163,7 @@ Initial relation meanings:
 * `developed_from`: a historical note points to earlier ideas or examples involved in development;
 * `developed_into`: a historical note points to later ideas or formalizations;
 * `source_refs`: an entity is supported or documented by sources;
+* `author_refs`: a source points to the people who authored it;
 * `broader_concepts`: a concept specializes broader concepts.
 
 Repository-wide validation must check that relation targets exist and have the expected entity kinds.
@@ -178,6 +179,7 @@ Repository-wide completeness validation must also enforce the baseline authoring
 * counterexamples must identify what necessity they demonstrate;
 * question progression links must be reciprocal between `prerequisite_questions` and `successor_questions`;
 * definitions, propositions, proofs, examples, counterexamples, questions, and historical notes must cite at least one source;
+* people must cite at least one source for identity or biographical details;
 * source references must include locators.
 
 ## Path Convention

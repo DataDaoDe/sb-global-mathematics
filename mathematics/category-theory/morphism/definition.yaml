@@ -1,0 +1,23 @@
+id: category-theory.morphism.definition
+kind: definition
+title: Definition of morphism
+
+defines:
+  - category-theory.morphism
+
+depends_on:
+  - category-theory.category
+  - category-theory.object
+
+statement: |
+  A morphism $f:A\to B$ in a category $\mathcal{C}$ is an arrow with domain $A$ and codomain $B$. Morphisms are the composable structure-preserving arrows of the category.
+
+display_math:
+  - latex: |
+      \mathrm{Hom}_{\mathcal{C}}(A,B)
+    description: The collection of morphisms from $A$ to $B$ in $\mathcal{C}$.
+
+source_refs:
+  - source: source.leinster-basic-category-theory
+    locator: Chapter 1
+    note: Morphisms are the arrows of a category.

@@ -1,0 +1,50 @@
+id: foundations.zermelo-fraenkel-set-theory.history.replacement-and-first-order-form
+kind: historical_note
+title: Replacement and first-order formulation
+
+date_label: Fraenkel and Skolem's 1922 refinements
+event_type: formalization
+start_year: 1922
+end_year: 1922
+
+description: |
+  Fraenkel identified limitations in Zermelo's original system and introduced replacement, which asserts that definable images of sets are again set-sized. Skolem independently clarified the role of first-order formulas in making "definite property" precise. These refinements helped turn Zermelo's theory into the modern Zermelo-Fraenkel framework.
+
+summary: Replacement and first-order definiteness transformed Zermelo set theory into the modern ZF framework.
+
+prior_formulation: Zermelo's axiom of separation referred to definite properties, and the original system lacked replacement.
+
+conceptual_change: Definability was tied to formal first-order formulas, and set existence was strengthened by replacement for definable functional images.
+
+resulting_formulation: ZF uses first-order axiom schemas for separation and replacement alongside the other set-existence axioms.
+
+enabled_developments:
+  - Iterated set constructions beyond Zermelo's original system became available.
+  - Metatheoretic study of set theory could use a more precise first-order formalism.
+
+display_math:
+  - latex: |
+      \forall x\in A\,\exists!y\,\varphi(x,y)
+      \quad\leadsto\quad
+      \{y:\exists x\in A\,\varphi(x,y)\}\text{ is set-sized}
+    description: Replacement as a set-sized image principle.
+
+subjects:
+  - foundations.zermelo-fraenkel-set-theory
+  - foundations.set
+  - foundations.function
+  - foundations.mathematical-logic
+
+developed_from:
+  - foundations.zermelo-fraenkel-set-theory.history.zermelo-axiomatization
+
+developed_into:
+  - foundations.zermelo-fraenkel-set-theory
+
+source_refs:
+  - source: source.fraenkel-1922-cantor-zermelo-mengenlehre
+    locator: Mathematische Annalen 86
+    note: Primary source for Fraenkel's replacement principle.
+  - source: source.skolem-1922-axiomatized-set-theory
+    locator: 1922 lecture
+    note: Primary source for Skolem's clarification of definiteness and axiomatization.

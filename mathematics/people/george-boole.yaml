@@ -1,0 +1,12 @@
+id: person.george-boole
+kind: person
+title: George Boole
+
+sort_name: Boole, George
+birth_year: 1815
+death_year: 1864
+
+source_refs:
+  - source: source.boole-1854-laws-of-thought
+    locator: Author metadata
+    note: Source authored by George Boole.

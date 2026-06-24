@@ -10,6 +10,7 @@ export const EntityKindSchema = z.enum([
   "question",
   "historical_note",
   "source",
+  "person",
 ]);
 
 export type EntityKind = z.infer<typeof EntityKindSchema>;

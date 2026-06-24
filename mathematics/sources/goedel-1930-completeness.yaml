@@ -3,6 +3,6 @@ kind: source
 title: Die Vollständigkeit der Axiome des logischen Funktionenkalküls
 
 source_type: paper
-authors:
-  - Kurt Gödel
+author_refs:
+  - person.kurt-goedel
 year: 1930

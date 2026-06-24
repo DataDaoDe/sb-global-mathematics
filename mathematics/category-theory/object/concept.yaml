@@ -1,0 +1,16 @@
+id: category-theory.object
+kind: concept
+title: Object
+
+summary: An object of a category is a node of the category; its internal nature is understood through the morphisms to and from it.
+
+display_math:
+  - latex: |
+      A\in\mathrm{Ob}(\mathcal{C})
+    description: An object $A$ of a category $\mathcal{C}$.
+
+defined_by:
+  - category-theory.object.definition
+
+broader_concepts:
+  - category-theory.category

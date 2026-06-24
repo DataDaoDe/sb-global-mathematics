@@ -1,0 +1,12 @@
+id: person.aristotle
+kind: person
+title: Aristotle
+
+sort_name: Aristotle
+birth_year: -384
+death_year: -322
+
+source_refs:
+  - source: source.aristotle-prior-analytics
+    locator: Author metadata
+    note: Source authored by Aristotle.

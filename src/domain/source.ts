@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 import { EntityBaseSchema } from "./entity-base.js";
+import { EntityIdSchema } from "./entity-id.js";
 
 export const SourceTypeSchema = z.enum([
   "book",
@@ -11,12 +12,6 @@ export const SourceTypeSchema = z.enum([
   "encyclopedia",
   "web-page",
 ]);
-
-export const SourceAuthorSchema = z
-  .string()
-  .trim()
-  .min(1, "Source author cannot be empty")
-  .max(200, "Source author cannot exceed 200 characters");
 
 export const SourceDoiSchema = z
   .string()
@@ -36,8 +31,8 @@ export const SourceSchema = EntityBaseSchema.extend({
 
   source_type: SourceTypeSchema,
 
-  authors: z
-    .array(SourceAuthorSchema)
+  author_refs: z
+    .array(EntityIdSchema)
     .default([]),
 
   year: z

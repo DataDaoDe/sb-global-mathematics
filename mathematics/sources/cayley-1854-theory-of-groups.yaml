@@ -3,7 +3,7 @@ kind: source
 title: On the Theory of Groups, as Depending on the Symbolic Equation theta^n = 1
 
 source_type: paper
-authors:
-  - Arthur Cayley
+author_refs:
+  - person.arthur-cayley
 year: 1854
 locator: Philosophical Magazine, Series 4, Volume 7

@@ -1,0 +1,52 @@
+id: category-theory.category.history.eilenberg-mac-lane-natural-equivalences
+kind: historical_note
+title: Categories from natural equivalences
+
+date_label: Eilenberg and Mac Lane's 1945 paper
+event_type: publication
+start_year: 1945
+end_year: 1945
+
+description: |
+  Eilenberg and Mac Lane introduced categories, functors, and natural transformations to make precise a recurring phenomenon: mathematical constructions often correspond not by arbitrary isomorphisms, but by transformations that are compatible with every relevant map. Category theory began as language for this compatibility.
+
+summary: Categories, functors, and natural transformations were introduced to formalize natural equivalence between mathematical constructions.
+
+prior_formulation: Mathematicians used many structure-preserving maps and isomorphisms, but lacked a general language for transformations between constructions.
+
+conceptual_change: Objects and maps became organized into categories, constructions became functors, and compatibility between constructions became natural transformation.
+
+resulting_formulation: Category theory studies objects through morphisms, functors between categories, and natural transformations between functors.
+
+enabled_developments:
+  - Algebraic topology could compare constructions functorially.
+  - Universal constructions and diagrammatic reasoning became reusable across fields.
+
+display_math:
+  - latex: |
+      \mathcal{C}\xrightarrow{F,G}\mathcal{D},
+      \qquad \eta:F\Rightarrow G
+    description: Functors and a natural transformation between them.
+
+subjects:
+  - category-theory.category
+  - category-theory.object
+  - category-theory.morphism
+  - category-theory.identity-morphism
+  - category-theory.morphism-composition
+  - category-theory.functor
+  - category-theory.natural-transformation
+
+developed_from:
+  - foundations.function
+  - foundations.relation
+
+developed_into:
+  - category-theory.category
+  - category-theory.functor
+  - category-theory.natural-transformation
+
+source_refs:
+  - source: source.eilenberg-mac-lane-1945-natural-equivalences
+    locator: Transactions of the American Mathematical Society 58
+    note: Primary source introducing categories, functors, and natural equivalence.

@@ -3,6 +3,6 @@ kind: source
 title: Untersuchungen über das logische Schließen
 
 source_type: paper
-authors:
-  - Gerhard Gentzen
+author_refs:
+  - person.gerhard-gentzen
 year: 1935

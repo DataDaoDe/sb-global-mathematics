@@ -1,0 +1,25 @@
+id: category-theory.morphism-composition.definition
+kind: definition
+title: Definition of morphism composition
+
+defines:
+  - category-theory.morphism-composition
+
+depends_on:
+  - category-theory.category
+  - category-theory.morphism
+
+statement: |
+  In a category $\mathcal{C}$, morphism composition assigns to each pair $f:A\to B$ and $g:B\to C$ a morphism $g\circ f:A\to C$. This composition must be associative and must respect identity morphisms.
+
+display_math:
+  - latex: |
+      \circ:\mathrm{Hom}_{\mathcal{C}}(B,C)\times
+      \mathrm{Hom}_{\mathcal{C}}(A,B)\to
+      \mathrm{Hom}_{\mathcal{C}}(A,C)
+    description: Composition as an operation on hom-collections.
+
+source_refs:
+  - source: source.leinster-basic-category-theory
+    locator: Chapter 1
+    note: Composition of arrows is part of the categorical structure.

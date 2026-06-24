@@ -149,7 +149,17 @@ export type {
 } from "./domain/question.js";
 
 export {
-  SourceAuthorSchema,
+  PersonSchema,
+  PersonSortNameSchema,
+  isPerson,
+  parsePerson,
+} from "./domain/person.js";
+
+export type {
+  Person,
+} from "./domain/person.js";
+
+export {
   SourceDoiSchema,
   SourceIsbnSchema,
   SourceSchema,

@@ -1,0 +1,25 @@
+id: category-theory.category.proposition.set-is-category
+kind: proposition
+title: Sets and functions form a category
+
+proposition_type: theorem
+
+claim: |
+  The collection of sets as objects and functions as morphisms forms a category $\mathbf{Set}$ under ordinary identity functions and function composition.
+
+display_math:
+  - latex: |
+      \mathbf{Set}
+    description: The category of sets and functions.
+
+depends_on:
+  - category-theory.category
+  - category-theory.identity-morphism
+  - category-theory.morphism-composition
+  - foundations.set
+  - foundations.function
+
+source_refs:
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter I
+    note: Sets and functions are a standard example of a category.

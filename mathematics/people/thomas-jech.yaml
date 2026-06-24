@@ -1,0 +1,11 @@
+id: person.thomas-jech
+kind: person
+title: Thomas Jech
+
+sort_name: Jech, Thomas
+birth_year: 1944
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Author metadata
+    note: Source authored by Thomas Jech.

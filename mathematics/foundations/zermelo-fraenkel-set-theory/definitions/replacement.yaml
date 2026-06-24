@@ -1,0 +1,37 @@
+id: foundations.zermelo-fraenkel-set-theory.definition.replacement
+kind: definition
+title: Replacement schema
+
+definition_role: contextual
+definition_style: axiomatic
+scope: ZF axiom schema
+
+defines:
+  - foundations.zermelo-fraenkel-set-theory
+
+depends_on:
+  - foundations.set
+  - foundations.function
+  - foundations.mathematical-logic
+
+statement: |
+  The replacement schema says that the image of a set under a definable functional relation is contained in a set. If each $x\in A$ determines a unique $y$ by a formula, then the corresponding values form a set.
+
+display_math:
+  - latex: |
+      \forall A\,
+      \bigl(\forall x\in A\,\exists!y\,\varphi(x,y)
+      \Rightarrow
+      \exists B\,\forall x\in A\,\exists y\in B\,\varphi(x,y)\bigr)
+    description: Replacement for a definable functional relation $\varphi$.
+
+source_refs:
+  - source: source.fraenkel-1922-cantor-zermelo-mengenlehre
+    locator: Mathematische Annalen 86
+    note: Fraenkel introduced replacement to repair limitations of Zermelo's original axiom system.
+  - source: source.skolem-1922-axiomatized-set-theory
+    locator: 1922 lecture
+    note: Skolem independently identified replacement and first-order definiteness as central issues.
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Modern schema formulation of replacement.

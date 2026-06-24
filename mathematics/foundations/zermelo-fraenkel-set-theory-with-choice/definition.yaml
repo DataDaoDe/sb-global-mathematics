@@ -1,0 +1,27 @@
+id: foundations.zermelo-fraenkel-set-theory-with-choice.definition
+kind: definition
+title: Definition of ZFC
+
+definition_style: axiomatic
+scope: First-order axiomatic set theory with choice
+
+defines:
+  - foundations.zermelo-fraenkel-set-theory-with-choice
+
+depends_on:
+  - foundations.zermelo-fraenkel-set-theory
+  - foundations.set
+  - foundations.function
+
+statement: |
+  Zermelo-Fraenkel set theory with Choice, abbreviated $\mathrm{ZFC}$, is obtained from $\mathrm{ZF}$ by adding the axiom of choice.
+
+display_math:
+  - latex: |
+      \mathrm{ZFC}=\mathrm{ZF}+\mathrm{AC}
+    description: ZFC as ZF plus the axiom of choice.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Standard modern reference for ZF and ZFC.

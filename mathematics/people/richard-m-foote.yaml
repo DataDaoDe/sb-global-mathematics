@@ -1,0 +1,10 @@
+id: person.richard-m-foote
+kind: person
+title: Richard M. Foote
+
+sort_name: Foote, Richard M.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Author metadata
+    note: Source authored by Richard M. Foote.

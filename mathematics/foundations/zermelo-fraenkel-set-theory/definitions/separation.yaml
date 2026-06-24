@@ -1,0 +1,34 @@
+id: foundations.zermelo-fraenkel-set-theory.definition.separation
+kind: definition
+title: Separation schema
+
+definition_role: contextual
+definition_style: axiomatic
+scope: ZF axiom schema
+
+defines:
+  - foundations.zermelo-fraenkel-set-theory
+
+depends_on:
+  - foundations.set
+  - foundations.mathematical-logic
+
+statement: |
+  The separation schema says that a definable subcollection of an already given set is a set. It does not assert that every definable collection is a set.
+
+display_math:
+  - latex: |
+      \forall A\,\exists B\,\forall x\,
+      (x\in B\iff x\in A\wedge \varphi(x))
+    description: Separation for a formula $\varphi$ in the language of set theory.
+
+source_refs:
+  - source: source.zermelo-1908-grundlagen-mengenlehre
+    locator: Axiom III
+    note: Zermelo restricted comprehension to separation from an existing set.
+  - source: source.skolem-1922-axiomatized-set-theory
+    locator: 1922 lecture
+    note: Skolem sharpened the meaning of definite property through first-order formulas.
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Modern first-order schema formulation.

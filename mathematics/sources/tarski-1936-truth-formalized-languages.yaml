@@ -3,6 +3,6 @@ kind: source
 title: Der Wahrheitsbegriff in den formalisierten Sprachen
 
 source_type: paper
-authors:
-  - Alfred Tarski
+author_refs:
+  - person.alfred-tarski
 year: 1936

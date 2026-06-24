@@ -1,0 +1,9 @@
+id: source.jech-set-theory-third-millennium
+kind: source
+title: "Set Theory: The Third Millennium Edition, Revised and Expanded"
+
+source_type: book
+author_refs:
+  - person.thomas-jech
+year: 2003
+isbn: "9783540440857"

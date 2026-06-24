@@ -1,0 +1,30 @@
+id: category-theory.category.proposition.set-is-category.proof.direct
+kind: proof
+title: Direct proof that sets and functions form a category
+
+proves:
+  - category-theory.category.proposition.set-is-category
+
+method: direct verification
+
+argument: |
+  Take sets as objects and functions as morphisms. For each set $A$, the identity function $\mathrm{id}_A:A\to A$ is a morphism. If $f:A\to B$ and $g:B\to C$ are functions, then their ordinary composite $g\circ f:A\to C$ is again a function. Function composition is associative, and identity functions are left and right units for composition. Therefore the data satisfy the axioms of a category.
+
+display_math:
+  - latex: |
+      h\circ(g\circ f)=(h\circ g)\circ f,\qquad
+      f\circ\mathrm{id}_A=f=\mathrm{id}_B\circ f
+    description: Associativity and identity laws for ordinary functions.
+
+depends_on:
+  - category-theory.category.proposition.set-is-category
+  - category-theory.category.definition
+  - category-theory.identity-morphism.definition
+  - category-theory.morphism-composition.definition
+  - foundations.function
+  - foundations.set
+
+source_refs:
+  - source: source.leinster-basic-category-theory
+    locator: Chapter 1
+    note: The category of sets is verified using ordinary identity functions and composition.

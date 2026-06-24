@@ -1,0 +1,49 @@
+id: foundations.zermelo-fraenkel-set-theory-with-choice.history.zermelo-choice-and-well-ordering
+kind: historical_note
+title: Choice and well-ordering in Zermelo's set theory
+
+date_label: Zermelo's choice principle
+event_type: formalization
+start_year: 1908
+end_year: 1908
+
+description: |
+  Zermelo included a choice principle in his axiomatization because it supported the well-ordering theorem: every set can be well-ordered. The principle turned an apparently local act of selecting elements from nonempty sets into a global existence assertion about arbitrary families. This made choice powerful but philosophically controversial.
+
+summary: Zermelo connected arbitrary simultaneous choice with the well-ordering of every set.
+
+prior_formulation: Mathematicians often made finite or rule-governed choices without isolating a general axiom for arbitrary families.
+
+conceptual_change: Simultaneous selection from arbitrary nonempty families became an explicit set-theoretic principle.
+
+resulting_formulation: ZFC treats choice as an added axiom, equivalent over ZF to well-ordering and maximality principles.
+
+enabled_developments:
+  - Well-ordering arguments could be used for arbitrary sets.
+  - Zorn-style maximality proofs became a standard tool across algebra, topology, and analysis.
+
+display_math:
+  - latex: |
+      \mathrm{AC}\iff\text{every set can be well-ordered}
+    description: The central equivalence motivating the choice principle.
+
+subjects:
+  - foundations.zermelo-fraenkel-set-theory-with-choice
+  - foundations.zermelo-fraenkel-set-theory
+  - foundations.function
+  - foundations.relation
+
+developed_from:
+  - foundations.zermelo-fraenkel-set-theory.history.zermelo-axiomatization
+
+developed_into:
+  - foundations.zermelo-fraenkel-set-theory-with-choice
+  - foundations.zermelo-fraenkel-set-theory-with-choice.proposition.well-ordering-equivalent-choice
+
+source_refs:
+  - source: source.zermelo-1908-grundlagen-mengenlehre
+    locator: Axiom VI
+    note: Primary source for choice in Zermelo's axiom system.
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Secondary source for the modern equivalence with well-ordering.

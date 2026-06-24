@@ -3,7 +3,7 @@ kind: source
 title: Idealtheorie in Ringbereichen
 
 source_type: paper
-authors:
-  - Emmy Noether
+author_refs:
+  - person.emmy-noether
 year: 1921
 locator: Mathematische Annalen, Volume 83

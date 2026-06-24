@@ -1,0 +1,48 @@
+id: foundations.unrestricted-comprehension.history.russell-paradox
+kind: historical_note
+title: Russell's paradox and naive comprehension
+
+date_label: Russell's paradox
+event_type: publication
+start_year: 1903
+end_year: 1903
+
+description: |
+  Russell's paradox exposed a contradiction in the naive idea that every definite property forms a set or class. The collection of all objects that are not members of themselves cannot consistently be treated as a set. This helped force the shift from naive comprehension to axiomatic restrictions such as Zermelo's separation schema.
+
+summary: Russell showed that unrestricted property-based set formation leads to contradiction.
+
+prior_formulation: Naive set language treated definable collections as if they could generally be gathered into sets.
+
+conceptual_change: Set existence had to be separated from mere definability of a property.
+
+resulting_formulation: ZF permits definable subcollections only relative to an already given set through separation.
+
+enabled_developments:
+  - Axiomatic set theory could block paradoxical totalities.
+  - The distinction between definable class and set became foundational.
+
+display_math:
+  - latex: |
+      \{x:x\notin x\}
+    description: The Russell collection.
+
+subjects:
+  - foundations.unrestricted-comprehension
+  - foundations.zermelo-fraenkel-set-theory
+  - foundations.set
+
+developed_from:
+  - foundations.set
+
+developed_into:
+  - foundations.zermelo-fraenkel-set-theory.history.zermelo-axiomatization
+  - foundations.zermelo-fraenkel-set-theory
+
+source_refs:
+  - source: source.russell-1903-principles-of-mathematics
+    locator: Chapter X
+    note: Primary published source discussing the contradiction.
+  - source: source.zermelo-1908-grundlagen-mengenlehre
+    locator: Introduction
+    note: Zermelo's axiomatization responds to set-theoretic paradoxes by restricting set formation.

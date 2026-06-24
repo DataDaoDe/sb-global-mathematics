@@ -1,0 +1,29 @@
+id: foundations.zermelo-fraenkel-set-theory-with-choice.proposition.zorn-equivalent-choice
+kind: proposition
+title: Zorn's lemma is equivalent to Choice over ZF
+
+proposition_type: theorem
+
+claim: |
+  Over $\mathrm{ZF}$, the axiom of choice is equivalent to Zorn's lemma: if every chain in a partially ordered set has an upper bound, then the partially ordered set has a maximal element.
+
+display_math:
+  - latex: |
+      \mathrm{AC}\iff
+      \bigl(\forall P\,((\text{each chain in }P\text{ has an upper bound})
+      \Rightarrow P\text{ has a maximal element})\bigr)
+    description: Equivalence of choice and Zorn's lemma over ZF.
+
+depends_on:
+  - foundations.zermelo-fraenkel-set-theory-with-choice
+  - foundations.zermelo-fraenkel-set-theory-with-choice.definition.axiom-of-choice
+  - foundations.zermelo-fraenkel-set-theory
+  - foundations.relation
+
+source_refs:
+  - source: source.zorn-1935-transfinite-algebra
+    locator: Bulletin of the American Mathematical Society 41
+    note: Zorn introduced the maximal principle now called Zorn's lemma.
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Standard reference for the equivalence of Zorn's lemma and choice.

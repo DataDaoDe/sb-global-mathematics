@@ -1,0 +1,30 @@
+id: category-theory.functor.definition
+kind: definition
+title: Definition of functor
+
+defines:
+  - category-theory.functor
+
+depends_on:
+  - category-theory.category
+  - category-theory.object
+  - category-theory.morphism
+  - category-theory.identity-morphism
+  - category-theory.morphism-composition
+
+statement: |
+  A functor $F:\mathcal{C}\to\mathcal{D}$ assigns to each object $A$ of $\mathcal{C}$ an object $F(A)$ of $\mathcal{D}$ and to each morphism $f:A\to B$ a morphism $F(f):F(A)\to F(B)$, preserving identity morphisms and composition.
+
+display_math:
+  - latex: |
+      F(\mathrm{id}_A)=\mathrm{id}_{F(A)},\qquad
+      F(g\circ f)=F(g)\circ F(f)
+    description: Functorial preservation of identities and composition.
+
+source_refs:
+  - source: source.eilenberg-mac-lane-1945-natural-equivalences
+    locator: Section 1
+    note: The paper introduces categories and functors in service of natural equivalence.
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter I
+    note: Standard definition of functor.

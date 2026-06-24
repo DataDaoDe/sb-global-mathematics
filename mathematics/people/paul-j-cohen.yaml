@@ -1,0 +1,12 @@
+id: person.paul-j-cohen
+kind: person
+title: Paul J. Cohen
+
+sort_name: Cohen, Paul J.
+birth_year: 1934
+death_year: 2007
+
+source_refs:
+  - source: source.cohen-1963-independence-continuum-hypothesis-i
+    locator: Author metadata
+    note: Source authored by Paul J. Cohen.

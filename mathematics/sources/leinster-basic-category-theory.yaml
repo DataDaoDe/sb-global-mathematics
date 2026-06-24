@@ -1,0 +1,9 @@
+id: source.leinster-basic-category-theory
+kind: source
+title: Basic Category Theory
+
+source_type: book
+author_refs:
+  - person.tom-leinster
+year: 2014
+isbn: "9781107044241"

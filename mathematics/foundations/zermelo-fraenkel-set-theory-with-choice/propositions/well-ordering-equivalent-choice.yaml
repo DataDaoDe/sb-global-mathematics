@@ -1,0 +1,26 @@
+id: foundations.zermelo-fraenkel-set-theory-with-choice.proposition.well-ordering-equivalent-choice
+kind: proposition
+title: Choice is equivalent to well-ordering over ZF
+
+proposition_type: theorem
+
+claim: |
+  Over $\mathrm{ZF}$, the axiom of choice is equivalent to the well-ordering theorem, which says that every set admits a well-ordering.
+
+display_math:
+  - latex: |
+      \mathrm{ZF}\vdash
+      \mathrm{AC}\iff
+      \forall A\,\exists R\,(R\text{ well-orders }A)
+    description: Equivalence of choice and the well-ordering theorem over ZF.
+
+depends_on:
+  - foundations.zermelo-fraenkel-set-theory-with-choice
+  - foundations.zermelo-fraenkel-set-theory-with-choice.definition.axiom-of-choice
+  - foundations.zermelo-fraenkel-set-theory
+  - foundations.relation
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Standard development of equivalent forms of choice.

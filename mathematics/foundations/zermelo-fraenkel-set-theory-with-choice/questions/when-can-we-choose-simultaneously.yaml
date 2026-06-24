@@ -1,0 +1,34 @@
+id: foundations.zermelo-fraenkel-set-theory-with-choice.question.when-can-we-choose-simultaneously
+kind: question
+title: When can choices be made simultaneously?
+
+asks: |
+  Given a family of nonempty sets, when may we assert that there is a function selecting one element from each set, even when no explicit selection rule is known?
+
+display_math:
+  - latex: |
+      \{X_i:i\in I\},\quad X_i\neq\varnothing
+      \quad\Longrightarrow\quad
+      \exists f\,\forall i\,(f(i)\in X_i)\ ?
+    description: The guiding question behind the axiom of choice.
+
+motivates:
+  - foundations.zermelo-fraenkel-set-theory-with-choice
+  - foundations.function
+  - foundations.relation
+
+related_concepts:
+  - foundations.zermelo-fraenkel-set-theory-with-choice
+  - foundations.zermelo-fraenkel-set-theory
+  - foundations.function
+  - foundations.relation
+
+prerequisite_questions:
+  - foundations.zermelo-fraenkel-set-theory.question.which-collections-exist
+
+successor_questions: []
+
+source_refs:
+  - source: source.zermelo-1908-grundlagen-mengenlehre
+    locator: Axiom VI
+    note: Zermelo used a choice principle in the axiomatization of set theory.

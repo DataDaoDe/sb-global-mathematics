@@ -1,0 +1,19 @@
+id: foundations.unrestricted-comprehension.example.universal-collection
+kind: example
+title: The universal collection suggested by unrestricted comprehension
+
+example_of:
+  - foundations.unrestricted-comprehension
+
+description: |
+  If unrestricted comprehension were allowed, the property $x=x$ would determine a universal set containing every object. ZF does not include such a universal set; separation only forms subsets of an already given set.
+
+display_math:
+  - latex: |
+      V=\{x:x=x\}
+    description: The universal collection suggested by unrestricted comprehension.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: ZF avoids unrestricted universal set formation.

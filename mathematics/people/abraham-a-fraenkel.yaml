@@ -1,0 +1,12 @@
+id: person.abraham-a-fraenkel
+kind: person
+title: Abraham A. Fraenkel
+
+sort_name: Fraenkel, Abraham A.
+birth_year: 1891
+death_year: 1965
+
+source_refs:
+  - source: source.fraenkel-1922-cantor-zermelo-mengenlehre
+    locator: Author metadata
+    note: Source authored by Abraham A. Fraenkel.

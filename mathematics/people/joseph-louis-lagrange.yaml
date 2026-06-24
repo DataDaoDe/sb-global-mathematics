@@ -1,0 +1,12 @@
+id: person.joseph-louis-lagrange
+kind: person
+title: Joseph-Louis Lagrange
+
+sort_name: Lagrange, Joseph-Louis
+birth_year: 1736
+death_year: 1813
+
+source_refs:
+  - source: source.lagrange-1771-resolution-equations
+    locator: Author metadata
+    note: Source authored by Joseph-Louis Lagrange.

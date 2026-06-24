@@ -1,0 +1,20 @@
+id: category-theory.functor.example.identity-functor
+kind: example
+title: Identity functor
+
+example_of:
+  - category-theory.functor
+
+description: |
+  For any category $\mathcal{C}$, the identity functor $1_{\mathcal{C}}:\mathcal{C}\to\mathcal{C}$ sends every object and every morphism to itself. It preserves identities and composition because it changes nothing.
+
+display_math:
+  - latex: |
+      1_{\mathcal{C}}(A)=A,\qquad
+      1_{\mathcal{C}}(f)=f
+    description: The identity functor on a category.
+
+source_refs:
+  - source: source.leinster-basic-category-theory
+    locator: Chapter 1
+    note: Identity functors are basic examples of functors.

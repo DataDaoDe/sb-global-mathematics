@@ -1,0 +1,12 @@
+id: person.david-hilbert
+kind: person
+title: David Hilbert
+
+sort_name: Hilbert, David
+birth_year: 1862
+death_year: 1943
+
+source_refs:
+  - source: source.hilbert-ackermann-1928-grundzuge-theoretische-logik
+    locator: Author metadata
+    note: Source authored by David Hilbert.

@@ -3,7 +3,7 @@ kind: source
 title: Was sind und was sollen die Zahlen?
 
 source_type: book
-authors:
-  - Richard Dedekind
+author_refs:
+  - person.richard-dedekind
 year: 1888
 locator: Vieweg

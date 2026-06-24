@@ -3,6 +3,6 @@ kind: source
 title: An Investigation of the Laws of Thought
 
 source_type: book
-authors:
-  - George Boole
+author_refs:
+  - person.george-boole
 year: 1854

@@ -1,0 +1,10 @@
+id: source.eilenberg-mac-lane-1945-natural-equivalences
+kind: source
+title: General Theory of Natural Equivalences
+
+source_type: paper
+author_refs:
+  - person.samuel-eilenberg
+  - person.saunders-mac-lane
+year: 1945
+locator: Transactions of the American Mathematical Society 58, 231-294

@@ -1,0 +1,12 @@
+id: person.ernst-zermelo
+kind: person
+title: Ernst Zermelo
+
+sort_name: Zermelo, Ernst
+birth_year: 1871
+death_year: 1953
+
+source_refs:
+  - source: source.zermelo-1908-grundlagen-mengenlehre
+    locator: Author metadata
+    note: Source authored by Ernst Zermelo.

@@ -1,0 +1,9 @@
+id: source.russell-1903-principles-of-mathematics
+kind: source
+title: The Principles of Mathematics
+
+source_type: book
+author_refs:
+  - person.bertrand-russell
+year: 1903
+locator: Cambridge University Press

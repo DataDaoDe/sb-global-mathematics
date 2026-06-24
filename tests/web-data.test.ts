@@ -32,15 +32,16 @@ describe("web data builder", () => {
       ]),
     );
     expect(webData.tree.root.counts).toEqual({
-      concept: 47,
-      counterexample: 10,
-      definition: 48,
-      example: 66,
-      historical_note: 17,
-      proof: 9,
-      proposition: 9,
-      question: 14,
-      source: 15,
+      concept: 57,
+      counterexample: 11,
+      definition: 68,
+      example: 73,
+      historical_note: 23,
+      person: 26,
+      proof: 12,
+      proposition: 12,
+      question: 18,
+      source: 26,
     });
     expect(webData.timeline).toEqual(
       expect.arrayContaining([

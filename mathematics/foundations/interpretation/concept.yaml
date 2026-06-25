@@ -1,0 +1,16 @@
+id: foundations.interpretation
+kind: concept
+title: Interpretation
+
+summary: An interpretation assigns meanings in a structure to the symbols of a formal language.
+
+display_math:
+  - latex: |
+      R\mapsto R^\mathcal{M}
+    description: Interpreting a relation symbol as a relation in a structure.
+
+defined_by:
+  - foundations.interpretation.definition
+
+broader_concepts:
+  - foundations.structure

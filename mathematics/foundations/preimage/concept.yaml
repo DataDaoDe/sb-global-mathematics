@@ -1,0 +1,16 @@
+id: foundations.preimage
+kind: concept
+title: Preimage
+
+summary: The preimage of a set under a function is the set of inputs whose function values lie in that set.
+
+display_math:
+  - latex: |
+      f^{-1}(B)
+    description: Preimage of $B$ under function $f$.
+
+defined_by:
+  - foundations.preimage.definition
+
+broader_concepts:
+  - foundations.function

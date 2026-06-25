@@ -1,0 +1,20 @@
+id: foundations.first-order-language.example.ordered-arithmetic
+kind: example
+title: Language of ordered arithmetic
+
+example_of:
+  - foundations.first-order-language
+  - foundations.signature
+
+description: |
+  A simple language for ordered arithmetic may include a constant symbol $0$, a unary successor function symbol $S$, and a binary relation symbol $<$.
+
+display_math:
+  - latex: |
+      \mathcal{L}=\{0,\ S,\ <\}
+    description: A first-order language for ordered arithmetic.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.1
+    note: First-order languages specify nonlogical symbols and arities.

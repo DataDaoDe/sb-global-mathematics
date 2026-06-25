@@ -1,0 +1,16 @@
+id: foundations.membership
+kind: concept
+title: Membership
+
+summary: Membership is the relation between an object and a set when the object is one of the set's elements.
+
+display_math:
+  - latex: |
+      x\in A
+    description: Object $x$ is an element of set $A$.
+
+defined_by:
+  - foundations.membership.definition
+
+broader_concepts:
+  - foundations.set

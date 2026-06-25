@@ -1,0 +1,23 @@
+id: foundations.subset.definition
+kind: definition
+title: Definition of subset
+
+defines:
+  - foundations.subset
+
+depends_on:
+  - foundations.set
+  - foundations.membership
+
+statement: |
+  A set $A$ is a subset of a set $B$, written $A\subseteq B$, if every element of $A$ is an element of $B$.
+
+display_math:
+  - latex: |
+      A\subseteq B\iff \forall x\,(x\in A\Rightarrow x\in B)
+    description: Subset inclusion by membership.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Subsets are basic set-theoretic notation.

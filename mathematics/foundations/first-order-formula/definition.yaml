@@ -1,0 +1,26 @@
+id: foundations.first-order-formula.definition
+kind: definition
+title: Definition of first-order formula
+
+defines:
+  - foundations.first-order-formula
+
+depends_on:
+  - foundations.term
+  - foundations.predicate
+  - foundations.logical-connective
+  - foundations.quantifier
+
+statement: |
+  A first-order formula is built from atomic formulas such as $R(t_1,\ldots,t_n)$ and $t_1=t_2$ using logical connectives and quantifiers over variables.
+
+display_math:
+  - latex: |
+      \varphi ::= R(t_1,\ldots,t_n)\mid t_1=t_2
+      \mid \neg\varphi\mid(\varphi\wedge\psi)\mid\forall x\,\varphi
+    description: A schematic grammar for first-order formulas.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.1
+    note: First-order formulas are defined recursively from terms, atomic formulas, connectives, and quantifiers.

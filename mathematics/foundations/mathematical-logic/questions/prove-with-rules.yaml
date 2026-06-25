@@ -31,7 +31,7 @@ related_concepts:
   - foundations.proof-by-contrapositive
 
 prerequisite_questions:
-  - foundations.mathematical-logic.question.express-general-claims
+  - foundations.mathematical-logic.question.how-can-logic-express-objects-and-relations
 
 successor_questions:
   - foundations.mathematical-logic.question.distinguish-proof-from-truth

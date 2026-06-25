@@ -1,0 +1,23 @@
+id: foundations.quantifier.definition
+kind: definition
+title: Definition of quantifier
+
+defines:
+  - foundations.quantifier
+
+depends_on:
+  - foundations.variable
+  - foundations.first-order-formula
+
+statement: |
+  A quantifier is a logical operator that binds a variable in a formula. The universal quantifier $\forall x$ asserts that the formula holds for every object in the domain, while the existential quantifier $\exists x$ asserts that it holds for at least one object in the domain.
+
+display_math:
+  - latex: |
+      \forall x\,\varphi(x),\qquad \exists x\,\varphi(x)
+    description: Universal and existential quantification.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.1
+    note: Quantifiers bind variables in first-order formulas.

@@ -1,0 +1,29 @@
+id: foundations.conjunction.definition
+kind: definition
+title: Definition of conjunction
+
+defines:
+  - foundations.conjunction
+
+depends_on:
+  - foundations.logical-connective
+  - foundations.proposition
+
+statement: |
+  The conjunction $P\wedge Q$ is true exactly when both $P$ and $Q$ are true.
+
+display_math:
+  - latex: |
+      \begin{array}{c c|c}
+      P&Q&P\wedge Q\\
+      T&T&T\\
+      T&F&F\\
+      F&T&F\\
+      F&F&F
+      \end{array}
+    description: Truth table for conjunction.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Conjunction is introduced by its truth table.

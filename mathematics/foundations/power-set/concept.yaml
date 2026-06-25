@@ -1,0 +1,16 @@
+id: foundations.power-set
+kind: concept
+title: Power set
+
+summary: The power set of a set is the set of all subsets of that set.
+
+display_math:
+  - latex: |
+      \mathcal{P}(A)
+    description: The power set of $A$.
+
+defined_by:
+  - foundations.power-set.definition
+
+broader_concepts:
+  - foundations.set

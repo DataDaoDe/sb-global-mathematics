@@ -1,0 +1,27 @@
+id: foundations.negation.definition
+kind: definition
+title: Definition of negation
+
+defines:
+  - foundations.negation
+
+depends_on:
+  - foundations.logical-connective
+  - foundations.proposition
+
+statement: |
+  The negation $\neg P$ of a proposition $P$ is true exactly when $P$ is false, and false exactly when $P$ is true.
+
+display_math:
+  - latex: |
+      \begin{array}{c|c}
+      P&\neg P\\
+      T&F\\
+      F&T
+      \end{array}
+    description: Truth table for negation.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Negation is introduced by its truth table.

@@ -1,0 +1,26 @@
+id: foundations.logical-equivalence.definition
+kind: definition
+title: Definition of logical equivalence
+
+defines:
+  - foundations.logical-equivalence
+
+depends_on:
+  - foundations.truth-table
+  - foundations.logical-validity
+  - foundations.biconditional
+
+statement: |
+  Two formulas $\varphi$ and $\psi$ are logically equivalent when they have the same truth value under every valuation. Equivalently, the biconditional $\varphi\Leftrightarrow\psi$ is a tautology.
+
+display_math:
+  - latex: |
+      \varphi\equiv\psi
+      \quad\Longleftrightarrow\quad
+      \models(\varphi\Leftrightarrow\psi)
+    description: Logical equivalence characterized by a tautological biconditional.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Truth tables are used to show when statements are logically equivalent.

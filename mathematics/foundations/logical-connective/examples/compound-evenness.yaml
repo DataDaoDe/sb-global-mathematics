@@ -1,0 +1,23 @@
+id: foundations.logical-connective.example.compound-evenness
+kind: example
+title: Compound proposition from connectives
+
+example_of:
+  - foundations.logical-connective
+  - foundations.negation
+  - foundations.conjunction
+  - foundations.disjunction
+
+description: |
+  If $P$ is "$4$ is even" and $Q$ is "$5$ is even," then $P\wedge\neg Q$ is true and $P\vee Q$ is true. The truth of the compound statements is determined only by the truth values of $P$ and $Q$ and by the connectives used.
+
+display_math:
+  - latex: |
+      v(P)=T,\quad v(Q)=F,\quad
+      v(P\wedge\neg Q)=T,\quad v(P\vee Q)=T
+    description: Evaluating compound propositions from truth values.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Connectives determine truth values of compound statements.

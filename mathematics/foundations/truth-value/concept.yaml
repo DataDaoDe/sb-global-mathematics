@@ -1,0 +1,16 @@
+id: foundations.truth-value
+kind: concept
+title: Truth value
+
+summary: A truth value records whether a proposition is true or false in a given valuation or interpretation.
+
+display_math:
+  - latex: |
+      T,\ F
+    description: The two truth values used in classical propositional logic.
+
+defined_by:
+  - foundations.truth-value.definition
+
+broader_concepts:
+  - foundations.mathematical-logic

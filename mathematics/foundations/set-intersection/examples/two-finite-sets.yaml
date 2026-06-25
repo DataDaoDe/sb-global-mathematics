@@ -1,0 +1,19 @@
+id: foundations.set-intersection.example.two-finite-sets
+kind: example
+title: Intersection of two finite sets
+
+example_of:
+  - foundations.set-intersection
+
+description: |
+  The intersection of $\{1,2\}$ and $\{2,3\}$ is $\{2\}$ because $2$ is the only common element.
+
+display_math:
+  - latex: |
+      \{1,2\}\cap\{2,3\}=\{2\}
+    description: Intersection of overlapping finite sets.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Finite sets illustrate intersection directly.

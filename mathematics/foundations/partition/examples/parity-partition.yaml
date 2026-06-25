@@ -1,0 +1,20 @@
+id: foundations.partition.example.parity-partition
+kind: example
+title: Parity partition of the integers
+
+example_of:
+  - foundations.partition
+  - foundations.equivalence-relation
+
+description: |
+  The even integers and odd integers form a partition of $\mathbb{Z}$: both parts are nonempty, they are disjoint, and every integer is either even or odd.
+
+display_math:
+  - latex: |
+      \mathbb{Z}=\{n:2\mid n\}\sqcup\{n:2\nmid n\}
+    description: Integers partitioned by parity.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Congruence classes provide standard partition examples.

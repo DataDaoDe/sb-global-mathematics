@@ -1,0 +1,16 @@
+id: foundations.term
+kind: concept
+title: Term
+
+summary: A term is a first-order expression that denotes an object, built from variables, constants, and function symbols.
+
+display_math:
+  - latex: |
+      x,\ c,\ f(x),\ g(x,y)
+    description: Typical first-order terms.
+
+defined_by:
+  - foundations.term.definition
+
+broader_concepts:
+  - foundations.mathematical-logic

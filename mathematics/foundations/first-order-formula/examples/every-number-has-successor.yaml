@@ -1,0 +1,21 @@
+id: foundations.first-order-formula.example.every-number-has-successor
+kind: example
+title: Every number has a successor
+
+example_of:
+  - foundations.first-order-formula
+  - foundations.universal-quantifier
+  - foundations.existential-quantifier
+
+description: |
+  The formula $\forall x\,\exists y\,(x<y)$ says that every object has a larger object. It is true in the natural numbers with the usual less-than relation.
+
+display_math:
+  - latex: |
+      \forall x\,\exists y\,(x<y)
+    description: A first-order formula with nested quantifiers.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.2
+    note: Quantified formulas are evaluated in structures.

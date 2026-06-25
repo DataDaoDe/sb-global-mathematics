@@ -1,0 +1,22 @@
+id: foundations.proper-subset.definition
+kind: definition
+title: Definition of proper subset
+
+defines:
+  - foundations.proper-subset
+
+depends_on:
+  - foundations.subset
+
+statement: |
+  A set $A$ is a proper subset of $B$, written $A\subsetneq B$, if $A\subseteq B$ and $A\neq B$.
+
+display_math:
+  - latex: |
+      A\subsetneq B\iff A\subseteq B\wedge A\neq B
+    description: Proper subset as strict inclusion.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Proper subset notation distinguishes strict containment from equality.

@@ -1,0 +1,18 @@
+id: foundations.truth-table
+kind: concept
+title: Truth table
+
+summary: A truth table lists the truth value of a compound proposition under every assignment of truth values to its component propositions.
+
+display_math:
+  - latex: |
+      \begin{array}{c c|c}
+      P&Q&\varphi(P,Q)
+      \end{array}
+    description: A schematic truth table for a formula in $P$ and $Q$.
+
+defined_by:
+  - foundations.truth-table.definition
+
+broader_concepts:
+  - foundations.mathematical-logic

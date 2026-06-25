@@ -1,0 +1,16 @@
+id: foundations.quantifier
+kind: concept
+title: Quantifier
+
+summary: A quantifier binds a variable and states that a formula holds for all objects or for at least one object in the domain.
+
+display_math:
+  - latex: |
+      \forall x,\quad \exists x
+    description: Universal and existential quantifiers.
+
+defined_by:
+  - foundations.quantifier.definition
+
+broader_concepts:
+  - foundations.mathematical-logic

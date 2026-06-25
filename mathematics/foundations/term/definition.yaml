@@ -1,0 +1,23 @@
+id: foundations.term.definition
+kind: definition
+title: Definition of term
+
+defines:
+  - foundations.term
+
+depends_on:
+  - foundations.variable
+  - foundations.first-order-language
+
+statement: |
+  A term of a first-order language is built recursively from variables, constant symbols, and function symbols. Under an interpretation and variable assignment, a term denotes an element of the structure's domain.
+
+display_math:
+  - latex: |
+      t ::= x\mid c\mid f(t_1,\ldots,t_n)
+    description: Recursive grammar for first-order terms.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.1
+    note: Terms are the expressions that denote objects in first-order semantics.

@@ -1,0 +1,20 @@
+id: foundations.predicate.example.less-than
+kind: example
+title: Less-than as a binary predicate
+
+example_of:
+  - foundations.predicate
+  - foundations.relation
+
+description: |
+  In the language of ordered arithmetic, the symbol $<$ is a binary predicate. In the natural-number structure it is interpreted as the usual less-than relation on $\mathbb{N}$.
+
+display_math:
+  - latex: |
+      <^\mathbb{N}\ =\ \{(m,n)\in\mathbb{N}^2:m<n\}
+    description: Interpreting the less-than predicate as a relation.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.2
+    note: Relation symbols are interpreted as relations on the domain.

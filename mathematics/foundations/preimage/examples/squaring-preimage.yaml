@@ -1,0 +1,20 @@
+id: foundations.preimage.example.squaring-preimage
+kind: example
+title: Preimage under the squaring function
+
+example_of:
+  - foundations.preimage
+  - foundations.function
+
+description: |
+  If $f:\mathbb{Z}\to\mathbb{Z}$ is defined by $f(n)=n^2$, then the preimage of $\{4\}$ is $\{-2,2\}$.
+
+display_math:
+  - latex: |
+      f^{-1}(\{4\})=\{-2,2\}
+    description: Inputs whose squares equal $4$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Preimages record inputs whose values land in a specified set.

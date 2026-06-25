@@ -1,0 +1,16 @@
+id: foundations.conjunction
+kind: concept
+title: Conjunction
+
+summary: A conjunction is a compound proposition asserting that two propositions are both true.
+
+display_math:
+  - latex: |
+      P\wedge Q
+    description: The conjunction of $P$ and $Q$.
+
+defined_by:
+  - foundations.conjunction.definition
+
+broader_concepts:
+  - foundations.logical-connective

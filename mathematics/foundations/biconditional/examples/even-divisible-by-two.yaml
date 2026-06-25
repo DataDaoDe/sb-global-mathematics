@@ -1,0 +1,20 @@
+id: foundations.biconditional.example.even-divisible-by-two
+kind: example
+title: Even if and only if divisible by two
+
+example_of:
+  - foundations.biconditional
+  - foundations.conditional-statement
+
+description: |
+  For an integer $n$, the statement "$n$ is even if and only if $2$ divides $n$" is a biconditional: each side implies the other, and the two sides have the same truth value.
+
+display_math:
+  - latex: |
+      n\text{ is even}\ \Leftrightarrow\ 2\mid n
+    description: A mathematical biconditional.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Biconditional statements express if-and-only-if relationships.

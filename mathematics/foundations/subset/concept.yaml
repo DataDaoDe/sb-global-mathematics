@@ -1,0 +1,16 @@
+id: foundations.subset
+kind: concept
+title: Subset
+
+summary: A subset is a set whose every element is also an element of another set.
+
+display_math:
+  - latex: |
+      A\subseteq B
+    description: Set $A$ is a subset of set $B$.
+
+defined_by:
+  - foundations.subset.definition
+
+broader_concepts:
+  - foundations.set

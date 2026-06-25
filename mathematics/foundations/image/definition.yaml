@@ -1,0 +1,23 @@
+id: foundations.image.definition
+kind: definition
+title: Definition of image
+
+defines:
+  - foundations.image
+
+depends_on:
+  - foundations.function
+  - foundations.set
+
+statement: |
+  If $f:X\to Y$ is a function and $A\subseteq X$, the image of $A$ under $f$ is the set of all values $f(a)$ with $a\in A$.
+
+display_math:
+  - latex: |
+      f(A)=\{f(a):a\in A\}
+    description: Image of a subset under a function.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Images of subsets under functions are standard set-theoretic notation.

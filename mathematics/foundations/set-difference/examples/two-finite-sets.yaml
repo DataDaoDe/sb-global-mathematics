@@ -1,0 +1,19 @@
+id: foundations.set-difference.example.two-finite-sets
+kind: example
+title: Difference of two finite sets
+
+example_of:
+  - foundations.set-difference
+
+description: |
+  The difference $\{1,2,3\}\setminus\{2,3,4\}$ is $\{1\}$ because $1$ is the only element of the first set not removed by the second.
+
+display_math:
+  - latex: |
+      \{1,2,3\}\setminus\{2,3,4\}=\{1\}
+    description: Difference of finite sets.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Finite sets illustrate set difference directly.

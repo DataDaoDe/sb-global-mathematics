@@ -1,0 +1,23 @@
+id: foundations.set-difference.definition
+kind: definition
+title: Definition of set difference
+
+defines:
+  - foundations.set-difference
+
+depends_on:
+  - foundations.set
+  - foundations.membership
+
+statement: |
+  The set difference $A\setminus B$ is the set of elements of $A$ that are not elements of $B$.
+
+display_math:
+  - latex: |
+      x\in A\setminus B\iff (x\in A\wedge x\notin B)
+    description: Membership condition for set difference.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Difference is a standard set operation.

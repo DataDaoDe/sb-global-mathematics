@@ -1,0 +1,19 @@
+id: foundations.proper-subset.example.small-finite-set
+kind: example
+title: A finite proper subset
+
+example_of:
+  - foundations.proper-subset
+
+description: |
+  The set $\{1,2\}$ is a proper subset of $\{1,2,3\}$ because every element of $\{1,2\}$ is in $\{1,2,3\}$, but $3$ is missing from $\{1,2\}$.
+
+display_math:
+  - latex: |
+      \{1,2\}\subsetneq\{1,2,3\}
+    description: A strict inclusion of finite sets.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Finite sets give direct examples of proper subset inclusion.

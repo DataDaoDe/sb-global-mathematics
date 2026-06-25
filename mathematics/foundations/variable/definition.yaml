@@ -1,0 +1,22 @@
+id: foundations.variable.definition
+kind: definition
+title: Definition of variable
+
+defines:
+  - foundations.variable
+
+depends_on:
+  - foundations.mathematical-logic
+
+statement: |
+  In first-order logic, a variable is a symbol that may be assigned an object from the domain of a structure. Variables occur in terms and formulas and may be free or bound by quantifiers.
+
+display_math:
+  - latex: |
+      s(x)=a
+    description: An assignment $s$ sends variable $x$ to object $a$.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.1
+    note: First-order languages use variables to range over individuals in a structure.

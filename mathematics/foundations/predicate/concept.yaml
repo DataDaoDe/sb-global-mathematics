@@ -1,0 +1,16 @@
+id: foundations.predicate
+kind: concept
+title: Predicate
+
+summary: A predicate is a relation symbol or open condition that becomes true or false when its variables are assigned objects.
+
+display_math:
+  - latex: |
+      P(x),\ R(x,y)
+    description: Unary and binary predicate notation.
+
+defined_by:
+  - foundations.predicate.definition
+
+broader_concepts:
+  - foundations.mathematical-logic

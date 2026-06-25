@@ -1,0 +1,23 @@
+id: foundations.set-union.definition
+kind: definition
+title: Definition of union
+
+defines:
+  - foundations.set-union
+
+depends_on:
+  - foundations.set
+  - foundations.membership
+
+statement: |
+  The union $A\cup B$ is the set whose elements are exactly the objects that belong to $A$ or belong to $B$.
+
+display_math:
+  - latex: |
+      x\in A\cup B\iff (x\in A\vee x\in B)
+    description: Membership condition for binary union.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Union is a standard set operation.

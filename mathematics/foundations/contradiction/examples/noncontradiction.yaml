@@ -1,0 +1,25 @@
+id: foundations.contradiction.example.noncontradiction
+kind: example
+title: A statement and its negation form a contradiction
+
+example_of:
+  - foundations.contradiction
+  - foundations.negation
+  - foundations.conjunction
+
+description: |
+  The formula $P\wedge\neg P$ is false whether $P$ is true or false, so it is a contradiction.
+
+display_math:
+  - latex: |
+      \begin{array}{c|c}
+      P&P\wedge\neg P\\
+      T&F\\
+      F&F
+      \end{array}
+    description: Truth table showing that $P\wedge\neg P$ is always false.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 1.2
+    note: Contradictions are formulas false under every truth assignment.

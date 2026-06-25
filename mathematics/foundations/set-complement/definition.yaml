@@ -1,0 +1,23 @@
+id: foundations.set-complement.definition
+kind: definition
+title: Definition of complement
+
+defines:
+  - foundations.set-complement
+
+depends_on:
+  - foundations.set
+  - foundations.set-difference
+
+statement: |
+  If $A\subseteq X$, the complement of $A$ relative to $X$ is $X\setminus A$, the set of elements of $X$ that are not in $A$.
+
+display_math:
+  - latex: |
+      A^c=X\setminus A
+    description: Relative complement notation when the ambient set $X$ is understood.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Complements are set differences relative to an ambient set.

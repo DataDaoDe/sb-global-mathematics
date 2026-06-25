@@ -1,0 +1,20 @@
+id: foundations.logical-equivalence.example.double-negation
+kind: example
+title: Double negation equivalence
+
+example_of:
+  - foundations.logical-equivalence
+  - foundations.negation
+
+description: |
+  The formulas $P$ and $\neg\neg P$ have the same truth value under every valuation, so they are logically equivalent in classical propositional logic.
+
+display_math:
+  - latex: |
+      P\equiv \neg\neg P
+    description: Double negation equivalence.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Truth tables establish logical equivalences.

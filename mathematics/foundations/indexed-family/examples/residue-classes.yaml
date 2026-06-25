@@ -1,0 +1,21 @@
+id: foundations.indexed-family.example.residue-classes
+kind: example
+title: Residue classes as an indexed family
+
+example_of:
+  - foundations.indexed-family
+  - foundations.quotient-set
+
+description: |
+  The residue classes modulo $3$ can be indexed by $i\in\{0,1,2\}$, where $A_i$ is the set of integers congruent to $i$ modulo $3$.
+
+display_math:
+  - latex: |
+      (A_i)_{i\in\{0,1,2\}},\qquad
+      A_i=\{n\in\mathbb{Z}:n\equiv i\pmod 3\}
+    description: An indexed family of congruence classes.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Indexed families organize repeated set constructions.

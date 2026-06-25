@@ -1,0 +1,23 @@
+id: foundations.indexed-family.definition
+kind: definition
+title: Definition of indexed family
+
+defines:
+  - foundations.indexed-family
+
+depends_on:
+  - foundations.set
+  - foundations.function
+
+statement: |
+  An indexed family $(A_i)_{i\in I}$ is a function whose domain is an index set $I$; for each $i\in I$, the value $A_i$ is the object labeled by $i$.
+
+display_math:
+  - latex: |
+      i\mapsto A_i
+    description: An indexed family as a function from an index set.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Indexed collections are standard notation for families of sets and objects.

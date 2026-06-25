@@ -1,0 +1,25 @@
+id: foundations.structure.definition
+kind: definition
+title: Definition of first-order structure
+
+defines:
+  - foundations.structure
+
+depends_on:
+  - foundations.first-order-language
+  - foundations.set
+  - foundations.relation
+  - foundations.function
+
+statement: |
+  A structure $\mathcal{M}$ for a first-order language $\mathcal{L}$ consists of a nonempty domain $M$ and interpretations of the constant, function, and relation symbols of $\mathcal{L}$ on that domain.
+
+display_math:
+  - latex: |
+      \mathcal{M}=(M,\ c^\mathcal{M},\ f^\mathcal{M},\ R^\mathcal{M})
+    description: A structure with domain and interpreted symbols.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.2
+    note: Structures give semantics to first-order languages.

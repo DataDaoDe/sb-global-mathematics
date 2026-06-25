@@ -1,0 +1,16 @@
+id: foundations.set-intersection
+kind: concept
+title: Intersection
+
+summary: The intersection of sets contains exactly the elements common to all of them.
+
+display_math:
+  - latex: |
+      A\cap B
+    description: Intersection of two sets.
+
+defined_by:
+  - foundations.set-intersection.definition
+
+broader_concepts:
+  - foundations.set

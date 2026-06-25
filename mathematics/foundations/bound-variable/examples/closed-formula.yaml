@@ -1,0 +1,20 @@
+id: foundations.bound-variable.example.closed-formula
+kind: example
+title: A quantifier binds a variable
+
+example_of:
+  - foundations.bound-variable
+  - foundations.first-order-formula
+
+description: |
+  In $\forall x\,(x=x)$, the occurrences of $x$ are bound by the universal quantifier. The formula has no free variables and is therefore a sentence.
+
+display_math:
+  - latex: |
+      \forall x\,(x=x)
+    description: Formula whose variable occurrences are bound.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.1
+    note: Sentences are formulas with no free variables.

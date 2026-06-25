@@ -1,0 +1,16 @@
+id: foundations.partition
+kind: concept
+title: Partition
+
+summary: A partition of a set is a collection of nonempty, pairwise disjoint subsets whose union is the whole set.
+
+display_math:
+  - latex: |
+      X=\bigsqcup_{i\in I}A_i
+    description: Set $X$ partitioned into disjoint parts.
+
+defined_by:
+  - foundations.partition.definition
+
+broader_concepts:
+  - foundations.set

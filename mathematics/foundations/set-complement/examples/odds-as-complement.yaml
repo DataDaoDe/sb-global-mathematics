@@ -1,0 +1,21 @@
+id: foundations.set-complement.example.odds-as-complement
+kind: example
+title: Odd naturals as a complement
+
+example_of:
+  - foundations.set-complement
+
+description: |
+  Relative to $\mathbb{N}$, the complement of the even natural numbers is the set of odd natural numbers.
+
+display_math:
+  - latex: |
+      \mathbb{N}\setminus\{n\in\mathbb{N}:2\mid n\}
+      =
+      \{n\in\mathbb{N}:2\nmid n\}
+    description: Odd natural numbers as a relative complement.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Complements are computed relative to a specified ambient set.

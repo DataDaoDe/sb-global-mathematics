@@ -1,0 +1,26 @@
+id: foundations.truth-table.example.conditional
+kind: example
+title: Truth table for a conditional
+
+example_of:
+  - foundations.truth-table
+  - foundations.conditional-statement
+
+description: |
+  The conditional $P\Rightarrow Q$ is false only in the case where $P$ is true and $Q$ is false. This is why a conditional with a false antecedent is true in classical propositional logic.
+
+display_math:
+  - latex: |
+      \begin{array}{c c|c}
+      P&Q&P\Rightarrow Q\\
+      T&T&T\\
+      T&F&F\\
+      F&T&T\\
+      F&F&T
+      \end{array}
+    description: Truth table for the conditional connective.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Conditional statements are evaluated by truth table.

@@ -1,0 +1,16 @@
+id: foundations.variable
+kind: concept
+title: Variable
+
+summary: A variable is a symbol that can stand for an object in a domain of discourse.
+
+display_math:
+  - latex: |
+      x,\ y,\ z
+    description: Common variable symbols.
+
+defined_by:
+  - foundations.variable.definition
+
+broader_concepts:
+  - foundations.mathematical-logic

@@ -1,0 +1,26 @@
+id: foundations.power-set.definition
+kind: definition
+title: Definition of power set
+
+defines:
+  - foundations.power-set
+
+depends_on:
+  - foundations.set
+  - foundations.subset
+
+statement: |
+  The power set $\mathcal{P}(A)$ of a set $A$ is the set whose elements are exactly the subsets of $A$.
+
+display_math:
+  - latex: |
+      \mathcal{P}(A)=\{B:B\subseteq A\}
+    description: Power set as the collection of all subsets.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: The power set operation collects all subsets of a set.
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Power set notation is standard preliminary set language.

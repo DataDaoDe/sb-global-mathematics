@@ -1,0 +1,16 @@
+id: foundations.existential-quantifier
+kind: concept
+title: Existential quantifier
+
+summary: The existential quantifier asserts that a formula holds for at least one object in the domain.
+
+display_math:
+  - latex: |
+      \exists x\,\varphi(x)
+    description: Existential quantification.
+
+defined_by:
+  - foundations.existential-quantifier.definition
+
+broader_concepts:
+  - foundations.quantifier

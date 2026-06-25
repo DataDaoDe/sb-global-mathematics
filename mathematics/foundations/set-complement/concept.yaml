@@ -1,0 +1,16 @@
+id: foundations.set-complement
+kind: concept
+title: Complement
+
+summary: The complement of a set, relative to a chosen ambient set, contains the ambient elements not in the set.
+
+display_math:
+  - latex: |
+      X\setminus A
+    description: Complement of $A$ relative to ambient set $X$.
+
+defined_by:
+  - foundations.set-complement.definition
+
+broader_concepts:
+  - foundations.set-difference

@@ -1,0 +1,17 @@
+id: foundations.cardinality
+kind: concept
+title: Cardinality
+
+summary: Cardinality measures the size of a set by comparing sets through bijections.
+
+display_math:
+  - latex: |
+      |A|
+    description: Cardinality of set $A$.
+
+defined_by:
+  - foundations.cardinality.definition
+
+broader_concepts:
+  - foundations.set
+  - foundations.bijection

@@ -1,0 +1,23 @@
+id: foundations.truth-value.definition
+kind: definition
+title: Definition of truth value
+
+defines:
+  - foundations.truth-value
+
+depends_on:
+  - foundations.proposition
+  - foundations.mathematical-logic
+
+statement: |
+  In classical propositional logic, a truth value is one of the two values true and false assigned to a proposition by a valuation.
+
+display_math:
+  - latex: |
+      v(P)=T\quad\text{or}\quad v(P)=F
+    description: A proposition evaluated as true or false.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Truth values underlie truth tables for compound statements.

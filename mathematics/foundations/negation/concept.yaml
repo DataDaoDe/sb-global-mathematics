@@ -1,0 +1,16 @@
+id: foundations.negation
+kind: concept
+title: Negation
+
+summary: Negation reverses the truth value of a proposition.
+
+display_math:
+  - latex: |
+      \neg P
+    description: The negation of proposition $P$.
+
+defined_by:
+  - foundations.negation.definition
+
+broader_concepts:
+  - foundations.logical-connective

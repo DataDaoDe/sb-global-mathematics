@@ -1,0 +1,16 @@
+id: foundations.logical-connective
+kind: concept
+title: Logical connective
+
+summary: A logical connective forms compound propositions from simpler propositions and determines the truth value of the compound from the truth values of its parts.
+
+display_math:
+  - latex: |
+      \neg,\ \wedge,\ \vee,\ \Rightarrow,\ \Leftrightarrow
+    description: Standard propositional connectives.
+
+defined_by:
+  - foundations.logical-connective.definition
+
+broader_concepts:
+  - foundations.mathematical-logic

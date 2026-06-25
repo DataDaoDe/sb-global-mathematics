@@ -1,0 +1,16 @@
+id: foundations.signature
+kind: concept
+title: Signature
+
+summary: A signature is the list of nonlogical symbols of a formal language together with their arities.
+
+display_math:
+  - latex: |
+      (+^{(2)},\ 0,\ <^{(2)})
+    description: A sample signature with binary function, constant, and binary relation symbols.
+
+defined_by:
+  - foundations.signature.definition
+
+broader_concepts:
+  - foundations.first-order-language

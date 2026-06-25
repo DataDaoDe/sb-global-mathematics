@@ -1,0 +1,20 @@
+id: foundations.free-variable.example.open-formula
+kind: example
+title: An open formula has a free variable
+
+example_of:
+  - foundations.free-variable
+  - foundations.first-order-formula
+
+description: |
+  The formula $x<5$ has $x$ free. It is not a sentence by itself; its truth depends on the value assigned to $x$.
+
+display_math:
+  - latex: |
+      x<5
+    description: Formula with $x$ free.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.1
+    note: Formulas with free variables are evaluated relative to assignments.

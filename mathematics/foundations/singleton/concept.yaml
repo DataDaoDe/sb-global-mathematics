@@ -1,0 +1,16 @@
+id: foundations.singleton
+kind: concept
+title: Singleton
+
+summary: A singleton is a set with exactly one element.
+
+display_math:
+  - latex: |
+      \{a\}
+    description: The singleton containing $a$.
+
+defined_by:
+  - foundations.singleton.definition
+
+broader_concepts:
+  - foundations.set

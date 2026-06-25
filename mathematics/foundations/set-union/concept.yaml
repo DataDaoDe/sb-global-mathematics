@@ -1,0 +1,16 @@
+id: foundations.set-union
+kind: concept
+title: Union
+
+summary: The union of sets contains exactly the elements that belong to at least one of the sets.
+
+display_math:
+  - latex: |
+      A\cup B
+    description: Union of two sets.
+
+defined_by:
+  - foundations.set-union.definition
+
+broader_concepts:
+  - foundations.set

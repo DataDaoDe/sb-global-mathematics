@@ -23,6 +23,11 @@ motivates:
 related_concepts:
   - foundations.function
 
+prerequisite_questions:
+  - foundations.set.question.how-do-we-build-and-compare-sets
+
+successor_questions: []
+
 source_refs:
   - source: source.dummit-foote-abstract-algebra-third-edition
     locator: Section 0.1

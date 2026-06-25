@@ -18,6 +18,7 @@ motivates:
 related_concepts: []
 
 successor_questions:
+  - foundations.set.question.how-do-we-build-and-compare-sets
   - category-theory.category.question.structure-preserving-composition
   - foundations.unrestricted-comprehension.question.why-not-every-definable-collection
 

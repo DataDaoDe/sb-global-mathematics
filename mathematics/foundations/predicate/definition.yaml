@@ -1,0 +1,24 @@
+id: foundations.predicate.definition
+kind: definition
+title: Definition of predicate
+
+defines:
+  - foundations.predicate
+
+depends_on:
+  - foundations.variable
+  - foundations.relation
+  - foundations.first-order-language
+
+statement: |
+  A predicate is an expression with one or more argument places that yields a truth value once objects are supplied for those places. In a first-order structure, an $n$-ary predicate symbol is interpreted as an $n$-ary relation on the domain.
+
+display_math:
+  - latex: |
+      R^\mathcal{M}\subseteq M^n
+    description: Interpretation of an $n$-ary predicate symbol as a relation.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.2
+    note: Relation symbols receive relations as interpretations in structures.

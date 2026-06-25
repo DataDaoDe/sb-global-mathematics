@@ -1,0 +1,29 @@
+id: foundations.disjunction.definition
+kind: definition
+title: Definition of disjunction
+
+defines:
+  - foundations.disjunction
+
+depends_on:
+  - foundations.logical-connective
+  - foundations.proposition
+
+statement: |
+  The disjunction $P\vee Q$ is true exactly when at least one of $P$ and $Q$ is true. This is inclusive "or."
+
+display_math:
+  - latex: |
+      \begin{array}{c c|c}
+      P&Q&P\vee Q\\
+      T&T&T\\
+      T&F&T\\
+      F&T&T\\
+      F&F&F
+      \end{array}
+    description: Truth table for inclusive disjunction.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Disjunction is introduced as inclusive or.

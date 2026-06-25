@@ -1,0 +1,17 @@
+id: foundations.indexed-family
+kind: concept
+title: Indexed family
+
+summary: An indexed family is a collection of objects labeled by elements of an index set.
+
+display_math:
+  - latex: |
+      (A_i)_{i\in I}
+    description: A family of sets indexed by $I$.
+
+defined_by:
+  - foundations.indexed-family.definition
+
+broader_concepts:
+  - foundations.function
+  - foundations.set

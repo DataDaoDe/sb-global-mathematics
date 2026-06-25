@@ -13,16 +13,26 @@ display_math:
 motivates:
   - foundations.mathematical-logic
   - foundations.deduction
+  - foundations.variable
+  - foundations.predicate
+  - foundations.quantifier
+  - foundations.first-order-formula
+  - foundations.first-order-language
 
 related_concepts:
   - foundations.mathematical-logic
   - foundations.deduction
+  - foundations.variable
+  - foundations.predicate
+  - foundations.quantifier
+  - foundations.first-order-formula
+  - foundations.first-order-language
 
 prerequisite_questions:
   - foundations.mathematical-logic.question.represent-validity-symbolically
 
 successor_questions:
-  - foundations.mathematical-logic.question.prove-with-rules
+  - foundations.mathematical-logic.question.how-can-logic-express-objects-and-relations
 
 source_refs:
   - source: source.frege-1879-begriffsschrift

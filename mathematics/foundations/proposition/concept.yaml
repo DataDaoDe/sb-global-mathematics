@@ -1,0 +1,16 @@
+id: foundations.proposition
+kind: concept
+title: Proposition
+
+summary: A proposition is a statement that has a truth value, true or false, and can be combined with other propositions by logical connectives.
+
+display_math:
+  - latex: |
+      P,\ Q,\ R
+    description: Propositional variables standing for propositions.
+
+defined_by:
+  - foundations.proposition.definition
+
+broader_concepts:
+  - foundations.mathematical-logic

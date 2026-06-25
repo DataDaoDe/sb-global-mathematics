@@ -1,0 +1,23 @@
+id: foundations.tautology.definition
+kind: definition
+title: Definition of tautology
+
+defines:
+  - foundations.tautology
+
+depends_on:
+  - foundations.truth-table
+  - foundations.logical-validity
+
+statement: |
+  A tautology is a propositional formula that evaluates to true on every row of its truth table.
+
+display_math:
+  - latex: |
+      P\vee\neg P
+    description: The law of excluded middle as a tautology.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 1.2
+    note: Tautologies are propositional formulas true under every truth assignment.

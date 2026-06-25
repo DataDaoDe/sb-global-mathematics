@@ -1,0 +1,21 @@
+id: foundations.structure.example.natural-numbers-with-order
+kind: example
+title: Natural numbers as a first-order structure
+
+example_of:
+  - foundations.structure
+  - foundations.interpretation
+  - foundations.satisfaction
+
+description: |
+  The natural numbers with $0$, successor, and less-than form a structure for the language $\{0,S,<\}$. The domain is $\mathbb{N}$, $0$ is interpreted as zero, $S$ as the successor function, and $<$ as the usual order.
+
+display_math:
+  - latex: |
+      \mathcal{N}=(\mathbb{N},0,S,<)
+    description: The natural-number structure for ordered arithmetic.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.2
+    note: Structures interpret the symbols of first-order languages.

@@ -1,0 +1,30 @@
+id: foundations.truth-table.definition
+kind: definition
+title: Definition of truth table
+
+defines:
+  - foundations.truth-table
+
+depends_on:
+  - foundations.proposition
+  - foundations.truth-value
+  - foundations.logical-connective
+
+statement: |
+  A truth table for a propositional formula records the formula's truth value for each possible assignment of truth values to the propositional variables occurring in the formula.
+
+display_math:
+  - latex: |
+      \begin{array}{c c|c}
+      P&Q&P\Rightarrow Q\\
+      T&T&T\\
+      T&F&F\\
+      F&T&T\\
+      F&F&T
+      \end{array}
+    description: A truth table for a conditional.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Truth tables are used to evaluate compound statements and argument forms.

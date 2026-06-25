@@ -1,0 +1,19 @@
+id: foundations.term.example.successor-term
+kind: example
+title: Successor term
+
+example_of:
+  - foundations.term
+
+description: |
+  In a language with a constant symbol $0$ and unary function symbol $S$, the expression $S(S(0))$ is a term. In the natural-number structure, it denotes the number $2$.
+
+display_math:
+  - latex: |
+      S(S(0))^\mathbb{N}=2
+    description: Interpreting a term in the natural numbers.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.1
+    note: Terms are built from variables, constants, and function symbols.

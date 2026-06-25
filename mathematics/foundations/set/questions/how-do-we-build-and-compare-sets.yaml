@@ -1,0 +1,55 @@
+id: foundations.set.question.how-do-we-build-and-compare-sets
+kind: question
+title: How do we build and compare sets?
+
+asks: |
+  Once sets and membership are available, which operations let us form new sets, track elements through functions, split sets into parts, and compare sizes?
+
+display_math:
+  - latex: |
+      A\subseteq B,\quad A\cup B,\quad A\cap B,\quad
+      f(A),\quad f^{-1}(B),\quad |A|
+    description: Basic set operations, function images, preimages, and cardinality.
+
+motivates:
+  - foundations.membership
+  - foundations.subset
+  - foundations.proper-subset
+  - foundations.singleton
+  - foundations.set-union
+  - foundations.set-intersection
+  - foundations.set-difference
+  - foundations.set-complement
+  - foundations.power-set
+  - foundations.image
+  - foundations.preimage
+  - foundations.indexed-family
+  - foundations.partition
+  - foundations.cardinality
+
+related_concepts:
+  - foundations.membership
+  - foundations.subset
+  - foundations.proper-subset
+  - foundations.singleton
+  - foundations.set-union
+  - foundations.set-intersection
+  - foundations.set-difference
+  - foundations.set-complement
+  - foundations.power-set
+  - foundations.image
+  - foundations.preimage
+  - foundations.indexed-family
+  - foundations.partition
+  - foundations.cardinality
+
+prerequisite_questions:
+  - foundations.set.question.describe-reversible-structure
+
+successor_questions:
+  - foundations.relation.question.encode-relationships
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Preliminary set operations support later definitions of relations, functions, quotients, and algebraic structures.

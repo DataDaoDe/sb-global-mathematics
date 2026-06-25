@@ -1,0 +1,19 @@
+id: foundations.singleton.example.singleton-zero
+kind: example
+title: Singleton containing zero
+
+example_of:
+  - foundations.singleton
+
+description: |
+  The set $\{0\}$ has one element, namely $0$. It is not the same object as $0$ itself.
+
+display_math:
+  - latex: |
+      0\in\{0\}
+    description: Zero is the unique element of its singleton.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Singleton sets are basic finite set examples.

@@ -1,0 +1,16 @@
+id: foundations.contradiction
+kind: concept
+title: Contradiction
+
+summary: A contradiction is a propositional formula that is false under every truth-value assignment.
+
+display_math:
+  - latex: |
+      P\wedge\neg P
+    description: A standard contradictory form.
+
+defined_by:
+  - foundations.contradiction.definition
+
+broader_concepts:
+  - foundations.logical-validity

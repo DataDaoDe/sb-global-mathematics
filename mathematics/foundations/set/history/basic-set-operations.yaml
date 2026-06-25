@@ -1,0 +1,68 @@
+id: foundations.set.history.basic-set-operations
+kind: historical_note
+title: Basic set operations as mathematical language
+
+date_label: Set operations in modern mathematical notation
+event_type: synthesis
+start_year: 1888
+end_year: 1930
+
+description: |
+  Modern mathematics treats membership, subset inclusion, union, intersection, difference, power set, image, preimage, partitions, and cardinal comparison as reusable language. Dedekind's systems and mappings helped emphasize comparison by functions, while later axiomatic set theory clarified which set-forming operations are legitimate. This ordinary set language became the substrate for relations, functions, quotient constructions, algebraic structures, topology, and category theory.
+
+summary: Basic set operations became reusable language for building and comparing mathematical structures.
+
+prior_formulation: Collections and correspondences were often handled in context-specific ways before set operations and mappings became standardized.
+
+conceptual_change: Sets could be manipulated through a stable toolkit of membership, inclusion, operations, indexed families, partitions, images, preimages, and cardinal comparisons.
+
+resulting_formulation: Modern definitions routinely build structures from sets, subsets, products, relations, functions, quotients, and cardinal comparisons.
+
+enabled_developments:
+  - Relations and functions could be defined set-theoretically.
+  - Quotient sets and algebraic structures could be specified with uniform notation.
+  - Cardinality could compare set sizes through bijections.
+
+display_math:
+  - latex: |
+      x\in A,\quad A\subseteq B,\quad A\cup B,\quad
+      A\cap B,\quad f(A),\quad f^{-1}(B),\quad |A|
+    description: Core notation for basic set operations and comparisons.
+
+subjects:
+  - foundations.membership
+  - foundations.subset
+  - foundations.proper-subset
+  - foundations.singleton
+  - foundations.set-union
+  - foundations.set-intersection
+  - foundations.set-difference
+  - foundations.set-complement
+  - foundations.power-set
+  - foundations.image
+  - foundations.preimage
+  - foundations.indexed-family
+  - foundations.partition
+  - foundations.cardinality
+  - foundations.set
+
+developed_from:
+  - foundations.set
+  - foundations.function
+
+developed_into:
+  - foundations.relation
+  - foundations.function
+  - foundations.quotient-set
+  - category-theory.category
+
+source_refs:
+  - source: source.dedekind-1888-was-sind-zahlen
+    locator: 1888 monograph
+    note: Dedekind emphasized systems and mappings in foundational arithmetic.
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Modern algebra uses basic set operations as preliminary language.
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Axiomatic set theory clarifies set formation and operations.

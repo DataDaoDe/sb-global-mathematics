@@ -23,7 +23,7 @@ related_concepts:
 prerequisite_questions: []
 
 successor_questions:
-  - foundations.mathematical-logic.question.represent-validity-symbolically
+  - foundations.mathematical-logic.question.how-do-truth-values-combine
 
 source_refs:
   - source: source.aristotle-prior-analytics

@@ -1,0 +1,57 @@
+id: foundations.mathematical-logic.question.how-can-logic-express-objects-and-relations
+kind: question
+title: How can logic express objects and relations?
+
+asks: |
+  How can a formal language talk about objects, functions, relations, and general claims about all or some objects?
+
+display_math:
+  - latex: |
+      \forall x\,\exists y\,R(x,y)
+    description: A first-order pattern expressing a general relational claim.
+
+motivates:
+  - foundations.variable
+  - foundations.term
+  - foundations.predicate
+  - foundations.first-order-formula
+  - foundations.quantifier
+  - foundations.universal-quantifier
+  - foundations.existential-quantifier
+  - foundations.free-variable
+  - foundations.bound-variable
+  - foundations.first-order-language
+  - foundations.signature
+  - foundations.structure
+  - foundations.interpretation
+  - foundations.satisfaction
+
+related_concepts:
+  - foundations.variable
+  - foundations.term
+  - foundations.predicate
+  - foundations.first-order-formula
+  - foundations.quantifier
+  - foundations.universal-quantifier
+  - foundations.existential-quantifier
+  - foundations.free-variable
+  - foundations.bound-variable
+  - foundations.first-order-language
+  - foundations.signature
+  - foundations.structure
+  - foundations.interpretation
+  - foundations.satisfaction
+
+prerequisite_questions:
+  - foundations.mathematical-logic.question.express-general-claims
+
+successor_questions:
+  - foundations.mathematical-logic.question.prove-with-rules
+
+source_refs:
+  - source: source.hilbert-ackermann-1928-grundzuge-theoretische-logik
+    locator: Chapters 1-2
+    note: First-order logic organizes variables, predicates, quantifiers, formulas, and structures.
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Chapter 2
+    note: Modern presentation of first-order syntax and semantics.

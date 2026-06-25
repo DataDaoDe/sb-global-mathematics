@@ -1,0 +1,16 @@
+id: foundations.image
+kind: concept
+title: Image
+
+summary: The image of a set under a function is the set of values attained by the function on that set.
+
+display_math:
+  - latex: |
+      f(A)
+    description: Image of $A$ under function $f$.
+
+defined_by:
+  - foundations.image.definition
+
+broader_concepts:
+  - foundations.function

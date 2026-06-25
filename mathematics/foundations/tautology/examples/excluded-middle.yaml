@@ -1,0 +1,25 @@
+id: foundations.tautology.example.excluded-middle
+kind: example
+title: Law of excluded middle as a tautology
+
+example_of:
+  - foundations.tautology
+  - foundations.negation
+  - foundations.disjunction
+
+description: |
+  The formula $P\vee\neg P$ is true whether $P$ is true or false, so it is a tautology.
+
+display_math:
+  - latex: |
+      \begin{array}{c|c}
+      P&P\vee\neg P\\
+      T&T\\
+      F&T
+      \end{array}
+    description: Truth table showing that $P\vee\neg P$ is always true.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 1.2
+    note: Tautologies are formulas true under every truth assignment.

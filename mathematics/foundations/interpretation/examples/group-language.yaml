@@ -1,0 +1,22 @@
+id: foundations.interpretation.example.group-language
+kind: example
+title: Interpreting the group language
+
+example_of:
+  - foundations.interpretation
+  - foundations.structure
+
+description: |
+  In the language with a binary operation symbol $\cdot$, constant symbol $e$, and unary function symbol ${}^{-1}$, a group interprets these symbols as its multiplication, identity element, and inverse operation.
+
+display_math:
+  - latex: |
+      \cdot^\mathcal{G}:G^2\to G,\qquad
+      e^\mathcal{G}\in G,\qquad
+      ({}^{-1})^\mathcal{G}:G\to G
+    description: Interpretation of the group-language symbols in a group.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.2
+    note: Function and constant symbols receive interpretations in a structure.

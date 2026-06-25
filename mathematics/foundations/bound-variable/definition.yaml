@@ -1,0 +1,24 @@
+id: foundations.bound-variable.definition
+kind: definition
+title: Definition of bound variable
+
+defines:
+  - foundations.bound-variable
+
+depends_on:
+  - foundations.variable
+  - foundations.quantifier
+  - foundations.first-order-formula
+
+statement: |
+  A variable occurrence is bound in a formula when it lies within the scope of a quantifier for that variable.
+
+display_math:
+  - latex: |
+      \forall x\,P(x)
+    description: The quantifier $\forall x$ binds $x$ in $P(x)$.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.1
+    note: Bound variables are governed by quantifiers.

@@ -1,0 +1,16 @@
+id: foundations.proper-subset
+kind: concept
+title: Proper subset
+
+summary: A proper subset is a subset that is not equal to the containing set.
+
+display_math:
+  - latex: |
+      A\subsetneq B
+    description: Set $A$ is a proper subset of set $B$.
+
+defined_by:
+  - foundations.proper-subset.definition
+
+broader_concepts:
+  - foundations.subset

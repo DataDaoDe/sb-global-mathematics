@@ -70,10 +70,15 @@ describe("graph builder", () => {
         {
           from: "foundations.mathematical-logic.question.represent-validity-symbolically",
           relation: "prerequisite_question",
+          to: "foundations.mathematical-logic.question.how-do-truth-values-combine",
+        },
+        {
+          from: "foundations.mathematical-logic.question.how-do-truth-values-combine",
+          relation: "prerequisite_question",
           to: "foundations.mathematical-logic.question.what-makes-argument-valid",
         },
         {
-          from: "foundations.mathematical-logic.question.what-makes-argument-valid",
+          from: "foundations.mathematical-logic.question.how-do-truth-values-combine",
           relation: "successor_question",
           to: "foundations.mathematical-logic.question.represent-validity-symbolically",
         },

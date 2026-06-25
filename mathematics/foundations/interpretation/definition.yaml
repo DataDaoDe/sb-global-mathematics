@@ -1,0 +1,25 @@
+id: foundations.interpretation.definition
+kind: definition
+title: Definition of interpretation
+
+defines:
+  - foundations.interpretation
+
+depends_on:
+  - foundations.first-order-language
+  - foundations.structure
+
+statement: |
+  An interpretation assigns to each constant symbol an element of the domain, to each function symbol a function on the domain, and to each relation symbol a relation on the domain.
+
+display_math:
+  - latex: |
+      c^\mathcal{M}\in M,\qquad
+      f^\mathcal{M}:M^n\to M,\qquad
+      R^\mathcal{M}\subseteq M^n
+    description: Interpreting constants, function symbols, and relation symbols.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.2
+    note: Interpretations assign semantic objects to nonlogical symbols.

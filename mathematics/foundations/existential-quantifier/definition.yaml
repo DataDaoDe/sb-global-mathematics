@@ -1,0 +1,25 @@
+id: foundations.existential-quantifier.definition
+kind: definition
+title: Definition of existential quantifier
+
+defines:
+  - foundations.existential-quantifier
+
+depends_on:
+  - foundations.quantifier
+  - foundations.first-order-formula
+
+statement: |
+  The formula $\exists x\,\varphi(x)$ is true in a structure when $\varphi(x)$ is true for at least one object that can be assigned to $x$ in the domain.
+
+display_math:
+  - latex: |
+      \mathcal{M}\models \exists x\,\varphi(x)
+      \quad\Longleftrightarrow\quad
+      \text{for some }a\in M,\ \mathcal{M}\models\varphi(a)
+    description: Semantic condition for existential quantification.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.2
+    note: Satisfaction for existential formulas is defined by some assignment of the bound variable.

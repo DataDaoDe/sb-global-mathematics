@@ -1,0 +1,16 @@
+id: foundations.satisfaction
+kind: concept
+title: Satisfaction
+
+summary: Satisfaction is the semantic relation saying that a structure, often with a variable assignment, makes a formula true.
+
+display_math:
+  - latex: |
+      \mathcal{M}\models\varphi
+    description: Structure $\mathcal{M}$ satisfies formula $\varphi$.
+
+defined_by:
+  - foundations.satisfaction.definition
+
+broader_concepts:
+  - foundations.logical-validity

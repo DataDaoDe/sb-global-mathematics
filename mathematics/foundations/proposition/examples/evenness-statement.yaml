@@ -1,0 +1,20 @@
+id: foundations.proposition.example.evenness-statement
+kind: example
+title: An evenness statement as a proposition
+
+example_of:
+  - foundations.proposition
+  - foundations.truth-value
+
+description: |
+  The statement "$4$ is even" is a proposition because it has a truth value. In classical logic its truth value is true.
+
+display_math:
+  - latex: |
+      P:\ 4\text{ is even},\qquad v(P)=T
+    description: A true proposition.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Concrete mathematical statements serve as examples of propositions.

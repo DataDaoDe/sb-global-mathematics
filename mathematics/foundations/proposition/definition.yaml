@@ -1,0 +1,25 @@
+id: foundations.proposition.definition
+kind: definition
+title: Definition of proposition
+
+defines:
+  - foundations.proposition
+
+depends_on:
+  - foundations.mathematical-logic
+
+statement: |
+  A proposition is a declarative statement to which one can assign a truth value. In propositional logic, propositions are treated by their truth values and by how their truth values combine under logical connectives.
+
+display_math:
+  - latex: |
+      v(P)\in\{T,F\}
+    description: A valuation assigns a truth value to a proposition.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Introduces statements and truth values as the basis for propositional logic.
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 1.1
+    note: Propositional logic begins with sentence letters and truth assignments.

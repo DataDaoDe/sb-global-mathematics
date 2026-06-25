@@ -1,0 +1,16 @@
+id: foundations.first-order-formula
+kind: concept
+title: First-order formula
+
+summary: A first-order formula is a well-formed logical expression built from atomic formulas, connectives, and quantifiers.
+
+display_math:
+  - latex: |
+      \forall x\,(P(x)\Rightarrow Q(x))
+    description: A first-order formula with a universal quantifier.
+
+defined_by:
+  - foundations.first-order-formula.definition
+
+broader_concepts:
+  - foundations.mathematical-logic

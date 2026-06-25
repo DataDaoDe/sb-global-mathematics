@@ -1,0 +1,16 @@
+id: foundations.set-difference
+kind: concept
+title: Set difference
+
+summary: The difference of two sets contains the elements of the first set that are not elements of the second.
+
+display_math:
+  - latex: |
+      A\setminus B
+    description: Difference of set $A$ by set $B$.
+
+defined_by:
+  - foundations.set-difference.definition
+
+broader_concepts:
+  - foundations.set

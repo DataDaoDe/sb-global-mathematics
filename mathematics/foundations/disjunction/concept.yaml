@@ -1,0 +1,16 @@
+id: foundations.disjunction
+kind: concept
+title: Disjunction
+
+summary: A disjunction is a compound proposition asserting that at least one of two propositions is true.
+
+display_math:
+  - latex: |
+      P\vee Q
+    description: The inclusive disjunction of $P$ and $Q$.
+
+defined_by:
+  - foundations.disjunction.definition
+
+broader_concepts:
+  - foundations.logical-connective

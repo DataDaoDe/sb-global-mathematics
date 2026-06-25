@@ -1,0 +1,16 @@
+id: foundations.biconditional
+kind: concept
+title: Biconditional
+
+summary: A biconditional is true exactly when two propositions have the same truth value.
+
+display_math:
+  - latex: |
+      P\Leftrightarrow Q
+    description: The biconditional of $P$ and $Q$.
+
+defined_by:
+  - foundations.biconditional.definition
+
+broader_concepts:
+  - foundations.logical-connective

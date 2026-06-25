@@ -1,0 +1,16 @@
+id: foundations.logical-equivalence
+kind: concept
+title: Logical equivalence
+
+summary: Logical equivalence holds when two formulas have the same truth value under every valuation or interpretation.
+
+display_math:
+  - latex: |
+      \varphi\equiv\psi
+    description: Logical equivalence of formulas.
+
+defined_by:
+  - foundations.logical-equivalence.definition
+
+broader_concepts:
+  - foundations.logical-validity

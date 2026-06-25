@@ -1,0 +1,22 @@
+id: foundations.membership.definition
+kind: definition
+title: Definition of membership
+
+defines:
+  - foundations.membership
+
+depends_on:
+  - foundations.set
+
+statement: |
+  Membership, written $x\in A$, means that the object $x$ is an element of the set $A$. The negation $x\notin A$ means that $x$ is not an element of $A$.
+
+display_math:
+  - latex: |
+      x\in A,\qquad x\notin A
+    description: Membership and non-membership notation.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Preliminary set notation uses membership as the basic relation between elements and sets.

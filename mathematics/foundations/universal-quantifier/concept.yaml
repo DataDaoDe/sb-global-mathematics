@@ -1,0 +1,16 @@
+id: foundations.universal-quantifier
+kind: concept
+title: Universal quantifier
+
+summary: The universal quantifier asserts that a formula holds for every object in the domain.
+
+display_math:
+  - latex: |
+      \forall x\,\varphi(x)
+    description: Universal quantification.
+
+defined_by:
+  - foundations.universal-quantifier.definition
+
+broader_concepts:
+  - foundations.quantifier

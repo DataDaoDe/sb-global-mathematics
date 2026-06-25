@@ -1,0 +1,27 @@
+id: foundations.partition.definition
+kind: definition
+title: Definition of partition
+
+defines:
+  - foundations.partition
+
+depends_on:
+  - foundations.set
+  - foundations.indexed-family
+  - foundations.set-union
+  - foundations.set-intersection
+
+statement: |
+  A partition of a set $X$ is a family of nonempty subsets of $X$ that are pairwise disjoint and whose union is $X$.
+
+display_math:
+  - latex: |
+      A_i\neq\varnothing,\quad
+      A_i\cap A_j=\varnothing\ (i\neq j),\quad
+      \bigcup_{i\in I}A_i=X
+    description: Conditions for a family to partition $X$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Equivalence classes form partitions, making partitions basic set-theoretic structure.

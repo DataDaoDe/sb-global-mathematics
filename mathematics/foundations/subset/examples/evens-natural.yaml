@@ -1,0 +1,20 @@
+id: foundations.subset.example.evens-natural
+kind: example
+title: Even natural numbers form a subset
+
+example_of:
+  - foundations.subset
+  - foundations.membership
+
+description: |
+  The set of even natural numbers is a subset of $\mathbb{N}$ because every even natural number is a natural number.
+
+display_math:
+  - latex: |
+      \{n\in\mathbb{N}:2\mid n\}\subseteq\mathbb{N}
+    description: Even natural numbers as a subset of the natural numbers.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Set-builder notation is used for subsets defined by a property.

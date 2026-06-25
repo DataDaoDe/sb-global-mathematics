@@ -1,0 +1,29 @@
+id: foundations.biconditional.definition
+kind: definition
+title: Definition of biconditional
+
+defines:
+  - foundations.biconditional
+
+depends_on:
+  - foundations.logical-connective
+  - foundations.conditional-statement
+
+statement: |
+  The biconditional $P\Leftrightarrow Q$ is true exactly when $P$ and $Q$ have the same truth value. It is read "$P$ if and only if $Q$."
+
+display_math:
+  - latex: |
+      \begin{array}{c c|c}
+      P&Q&P\Leftrightarrow Q\\
+      T&T&T\\
+      T&F&F\\
+      F&T&F\\
+      F&F&T
+      \end{array}
+    description: Truth table for biconditional.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Biconditional statements are introduced through truth tables and if-and-only-if reasoning.

@@ -1,0 +1,16 @@
+id: foundations.first-order-language
+kind: concept
+title: First-order language
+
+summary: A first-order language specifies the nonlogical symbols used to form terms and formulas, such as constant, function, and relation symbols.
+
+display_math:
+  - latex: |
+      \mathcal{L}
+    description: A first-order language.
+
+defined_by:
+  - foundations.first-order-language.definition
+
+broader_concepts:
+  - foundations.mathematical-logic

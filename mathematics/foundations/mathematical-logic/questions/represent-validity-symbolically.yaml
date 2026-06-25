@@ -21,7 +21,7 @@ related_concepts:
   - foundations.conditional-statement
 
 prerequisite_questions:
-  - foundations.mathematical-logic.question.what-makes-argument-valid
+  - foundations.mathematical-logic.question.how-do-truth-values-combine
 
 successor_questions:
   - foundations.mathematical-logic.question.express-general-claims

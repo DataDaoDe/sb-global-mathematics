@@ -1,0 +1,26 @@
+id: foundations.cardinality.definition
+kind: definition
+title: Definition of cardinality
+
+defines:
+  - foundations.cardinality
+
+depends_on:
+  - foundations.set
+  - foundations.bijection
+
+statement: |
+  Two sets have the same cardinality when there exists a bijection between them. For finite sets, cardinality agrees with the number of elements.
+
+display_math:
+  - latex: |
+      |A|=|B|\iff \exists\text{ a bijection }f:A\to B
+    description: Equal cardinality by bijection.
+
+source_refs:
+  - source: source.dedekind-1888-was-sind-zahlen
+    locator: 1888 monograph
+    note: Dedekind used mappings to compare systems and characterize infinite sets.
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Cardinal comparison is based on injections and bijections.

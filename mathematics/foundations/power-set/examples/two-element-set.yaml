@@ -1,0 +1,20 @@
+id: foundations.power-set.example.two-element-set
+kind: example
+title: Power set of a two-element set
+
+example_of:
+  - foundations.power-set
+  - foundations.subset
+
+description: |
+  The set $\{a,b\}$ has four subsets: the empty set, the two singletons, and the whole set.
+
+display_math:
+  - latex: |
+      \mathcal{P}(\{a,b\})=\{\varnothing,\{a\},\{b\},\{a,b\}\}
+    description: Power set of a two-element set.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Small finite sets make power sets explicit.

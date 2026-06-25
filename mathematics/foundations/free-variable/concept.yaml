@@ -1,0 +1,16 @@
+id: foundations.free-variable
+kind: concept
+title: Free variable
+
+summary: A free variable is an occurrence of a variable not bound by a quantifier, so its value must be supplied by an assignment or context.
+
+display_math:
+  - latex: |
+      P(x)
+    description: The variable $x$ occurs free in $P(x)$.
+
+defined_by:
+  - foundations.free-variable.definition
+
+broader_concepts:
+  - foundations.variable

@@ -1,0 +1,25 @@
+id: foundations.contradiction.definition
+kind: definition
+title: Definition of contradiction
+
+defines:
+  - foundations.contradiction
+
+depends_on:
+  - foundations.truth-table
+  - foundations.logical-validity
+  - foundations.negation
+  - foundations.conjunction
+
+statement: |
+  A contradiction is a propositional formula that evaluates to false on every row of its truth table.
+
+display_math:
+  - latex: |
+      P\wedge\neg P
+    description: A formula that is always false.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 1.2
+    note: Contradictory formulas are false under every truth assignment.

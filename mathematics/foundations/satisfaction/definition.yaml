@@ -1,0 +1,25 @@
+id: foundations.satisfaction.definition
+kind: definition
+title: Definition of satisfaction
+
+defines:
+  - foundations.satisfaction
+
+depends_on:
+  - foundations.structure
+  - foundations.first-order-formula
+  - foundations.interpretation
+  - foundations.truth-value
+
+statement: |
+  Satisfaction is the relation $\mathcal{M}\models\varphi[s]$ saying that formula $\varphi$ is true in structure $\mathcal{M}$ under variable assignment $s$. For a sentence with no free variables, one writes $\mathcal{M}\models\varphi$.
+
+display_math:
+  - latex: |
+      \mathcal{M}\models\varphi[s]
+    description: Satisfaction relative to a variable assignment.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.2
+    note: Satisfaction defines truth of formulas in structures under assignments.

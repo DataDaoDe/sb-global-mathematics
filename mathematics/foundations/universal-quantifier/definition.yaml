@@ -1,0 +1,25 @@
+id: foundations.universal-quantifier.definition
+kind: definition
+title: Definition of universal quantifier
+
+defines:
+  - foundations.universal-quantifier
+
+depends_on:
+  - foundations.quantifier
+  - foundations.first-order-formula
+
+statement: |
+  The formula $\forall x\,\varphi(x)$ is true in a structure when $\varphi(x)$ is true for every object that can be assigned to $x$ in the domain.
+
+display_math:
+  - latex: |
+      \mathcal{M}\models \forall x\,\varphi(x)
+      \quad\Longleftrightarrow\quad
+      \text{for every }a\in M,\ \mathcal{M}\models\varphi(a)
+    description: Semantic condition for universal quantification.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.2
+    note: Satisfaction for universal formulas is defined by all assignments of the bound variable.

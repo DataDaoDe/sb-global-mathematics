@@ -1,0 +1,24 @@
+id: foundations.free-variable.definition
+kind: definition
+title: Definition of free variable
+
+defines:
+  - foundations.free-variable
+
+depends_on:
+  - foundations.variable
+  - foundations.quantifier
+  - foundations.first-order-formula
+
+statement: |
+  A variable occurrence is free in a formula if it is not within the scope of a quantifier binding that variable. A formula with free variables is evaluated relative to an assignment of values to those variables.
+
+display_math:
+  - latex: |
+      x\text{ is free in }P(x)
+    description: A free occurrence of $x$.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.1
+    note: Free variables are distinguished from bound variables in the syntax of formulas.

@@ -1,0 +1,16 @@
+id: foundations.tautology
+kind: concept
+title: Tautology
+
+summary: A tautology is a propositional formula that is true under every truth-value assignment.
+
+display_math:
+  - latex: |
+      \models \varphi
+    description: A formula true under every valuation.
+
+defined_by:
+  - foundations.tautology.definition
+
+broader_concepts:
+  - foundations.logical-validity

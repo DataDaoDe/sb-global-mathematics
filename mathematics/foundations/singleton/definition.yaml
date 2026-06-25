@@ -1,0 +1,26 @@
+id: foundations.singleton.definition
+kind: definition
+title: Definition of singleton
+
+defines:
+  - foundations.singleton
+
+depends_on:
+  - foundations.set
+  - foundations.membership
+
+statement: |
+  The singleton $\{a\}$ is the set whose only element is $a$.
+
+display_math:
+  - latex: |
+      x\in\{a\}\iff x=a
+    description: Membership condition for a singleton.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Singletons are obtained from elementary set formation principles.
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Singleton notation is part of standard set language.

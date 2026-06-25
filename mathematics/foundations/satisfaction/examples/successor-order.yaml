@@ -1,0 +1,21 @@
+id: foundations.satisfaction.example.successor-order
+kind: example
+title: Satisfaction in the natural numbers
+
+example_of:
+  - foundations.satisfaction
+  - foundations.structure
+  - foundations.first-order-formula
+
+description: |
+  The natural-number structure satisfies $\forall x\,(x<S(x))$ because every natural number is less than its successor.
+
+display_math:
+  - latex: |
+      (\mathbb{N},0,S,<)\models \forall x\,(x<S(x))
+    description: A first-order sentence satisfied by the natural-number structure.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.2
+    note: Satisfaction relates structures to formulas.

@@ -1,0 +1,19 @@
+id: foundations.cardinality.example.three-element-set
+kind: example
+title: Cardinality of a three-element set
+
+example_of:
+  - foundations.cardinality
+
+description: |
+  The set $\{a,b,c\}$ has cardinality $3$ because it has exactly three elements.
+
+display_math:
+  - latex: |
+      |\{a,b,c\}|=3
+    description: Cardinality of a finite set.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Finite cardinalities count elements of finite sets.

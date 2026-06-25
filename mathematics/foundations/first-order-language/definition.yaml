@@ -1,0 +1,22 @@
+id: foundations.first-order-language.definition
+kind: definition
+title: Definition of first-order language
+
+defines:
+  - foundations.first-order-language
+
+depends_on:
+  - foundations.mathematical-logic
+
+statement: |
+  A first-order language $\mathcal{L}$ consists of logical symbols together with specified nonlogical symbols: constant symbols, function symbols, and relation symbols, each with its arity.
+
+display_math:
+  - latex: |
+      \mathcal{L}=\{c_i,\ f_j^{(n)},\ R_k^{(m)}\}
+    description: Schematic nonlogical symbols of a first-order language.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.1
+    note: First-order languages specify relation, function, and constant symbols.

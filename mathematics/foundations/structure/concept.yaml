@@ -1,0 +1,16 @@
+id: foundations.structure
+kind: concept
+title: Structure
+
+summary: A structure interprets a first-order language by providing a domain and meanings for its nonlogical symbols.
+
+display_math:
+  - latex: |
+      \mathcal{M}
+    description: A first-order structure.
+
+defined_by:
+  - foundations.structure.definition
+
+broader_concepts:
+  - foundations.mathematical-logic

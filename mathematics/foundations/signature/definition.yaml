@@ -1,0 +1,22 @@
+id: foundations.signature.definition
+kind: definition
+title: Definition of signature
+
+defines:
+  - foundations.signature
+
+depends_on:
+  - foundations.first-order-language
+
+statement: |
+  A signature records the nonlogical symbols available in a first-order language and the arity of each function and relation symbol.
+
+display_math:
+  - latex: |
+      \sigma=(\mathrm{Const},\mathrm{Func},\mathrm{Rel},\mathrm{arity})
+    description: A schematic signature.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.1
+    note: Languages are specified by their nonlogical symbols and arities.

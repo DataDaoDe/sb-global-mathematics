@@ -1,0 +1,23 @@
+id: foundations.set-intersection.definition
+kind: definition
+title: Definition of intersection
+
+defines:
+  - foundations.set-intersection
+
+depends_on:
+  - foundations.set
+  - foundations.membership
+
+statement: |
+  The intersection $A\cap B$ is the set whose elements are exactly the objects that belong to both $A$ and $B$.
+
+display_math:
+  - latex: |
+      x\in A\cap B\iff (x\in A\wedge x\in B)
+    description: Membership condition for binary intersection.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Intersection is a standard set operation.

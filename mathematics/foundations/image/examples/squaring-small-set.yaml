@@ -1,0 +1,20 @@
+id: foundations.image.example.squaring-small-set
+kind: example
+title: Image under the squaring function
+
+example_of:
+  - foundations.image
+  - foundations.function
+
+description: |
+  If $f:\mathbb{Z}\to\mathbb{Z}$ is defined by $f(n)=n^2$, then the image of $\{-2,-1,0,1,2\}$ is $\{0,1,4\}$.
+
+display_math:
+  - latex: |
+      f(\{-2,-1,0,1,2\})=\{0,1,4\}
+    description: Image of a finite set under squaring.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Images record values attained by functions.

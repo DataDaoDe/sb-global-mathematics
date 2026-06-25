@@ -1,0 +1,19 @@
+id: foundations.membership.example.two-in-finite-set
+kind: example
+title: Two is an element of a finite set
+
+example_of:
+  - foundations.membership
+
+description: |
+  If $A=\{1,2,3\}$, then $2\in A$ and $5\notin A$.
+
+display_math:
+  - latex: |
+      2\in\{1,2,3\},\qquad 5\notin\{1,2,3\}
+    description: Membership and non-membership in a finite set.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Finite listed sets are standard introductory examples for membership.

@@ -1,0 +1,61 @@
+id: foundations.mathematical-logic.history.truth-functional-propositional-logic
+kind: historical_note
+title: Truth-functional propositional logic
+
+date_label: Modern truth-table treatment
+event_type: formalization
+start_year: 1879
+end_year: 1930
+
+description: |
+  Modern propositional logic separates a statement's internal subject matter from the way its truth value combines with other statements. Frege's formal language, later textbook presentations of propositional calculi, and truth-table methods made connectives such as negation, conjunction, disjunction, implication, and biconditional precise enough to test tautology, contradiction, validity, and equivalence mechanically.
+
+summary: Propositional logic made compound statements analyzable by truth values and truth tables.
+
+prior_formulation: Valid reasoning had been classified by argument patterns, but compound statement forms were not yet treated with uniform truth-functional tables.
+
+conceptual_change: Logical connectives were treated as operations whose meanings are fixed by their effects on truth values.
+
+resulting_formulation: Truth tables provide a finite method for evaluating propositional formulas, tautologies, contradictions, and logical equivalences.
+
+enabled_developments:
+  - Argument forms could be tested by checking all truth-value assignments.
+  - Later first-order logic could separate propositional connectives from quantifier structure.
+
+display_math:
+  - latex: |
+      v(\varphi)\in\{T,F\}
+      \quad\leadsto\quad
+      v(\neg\varphi),\ v(\varphi\wedge\psi),\ v(\varphi\vee\psi)
+    description: Truth-functional evaluation of compound formulas.
+
+subjects:
+  - foundations.proposition
+  - foundations.truth-value
+  - foundations.logical-connective
+  - foundations.negation
+  - foundations.conjunction
+  - foundations.disjunction
+  - foundations.conditional-statement
+  - foundations.biconditional
+  - foundations.truth-table
+  - foundations.tautology
+  - foundations.contradiction
+  - foundations.logical-equivalence
+  - foundations.logical-validity
+
+developed_from:
+  - foundations.mathematical-logic.history.aristotle-syllogistic
+  - foundations.mathematical-logic.history.frege-quantification
+
+developed_into:
+  - foundations.mathematical-logic.history.hilbert-ackermann-first-order-logic
+  - foundations.mathematical-logic.history.formal-deduction-and-semantics
+
+source_refs:
+  - source: source.frege-1879-begriffsschrift
+    locator: 1879 monograph
+    note: Frege introduced a formal language for logical reasoning.
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Chapter 1
+    note: Modern textbook treatment of truth assignments, connectives, and tautologies.

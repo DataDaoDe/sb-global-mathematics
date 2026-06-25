@@ -1,0 +1,16 @@
+id: foundations.bound-variable
+kind: concept
+title: Bound variable
+
+summary: A bound variable is an occurrence of a variable governed by a quantifier.
+
+display_math:
+  - latex: |
+      \forall x\,P(x)
+    description: The occurrences of $x$ are bound by $\forall x$.
+
+defined_by:
+  - foundations.bound-variable.definition
+
+broader_concepts:
+  - foundations.variable

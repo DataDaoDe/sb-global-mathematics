@@ -1,0 +1,19 @@
+id: foundations.variable.example.natural-number-variable
+kind: example
+title: A variable ranging over natural numbers
+
+example_of:
+  - foundations.variable
+
+description: |
+  In a structure whose domain is $\mathbb{N}$, the variable $x$ may be assigned any natural number. The formula $x<5$ has a truth value only after such an assignment is supplied.
+
+display_math:
+  - latex: |
+      s(x)=3,\qquad x<5
+    description: A variable assignment making $x<5$ true in $\mathbb{N}$.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.2
+    note: Assignments give variables values from the domain.

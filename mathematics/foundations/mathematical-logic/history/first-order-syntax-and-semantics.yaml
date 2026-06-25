@@ -1,0 +1,65 @@
+id: foundations.mathematical-logic.history.first-order-syntax-and-semantics
+kind: historical_note
+title: First-order syntax and semantics
+
+date_label: Stabilization of first-order logic
+event_type: formalization
+start_year: 1879
+end_year: 1936
+
+description: |
+  Frege's formal language introduced quantifier structure capable of expressing general mathematical claims. Hilbert and Ackermann helped stabilize first-order logic as a central formal system, while Tarski's semantic work clarified truth and satisfaction in structures. The resulting framework separates syntax, formulas, and derivations from semantics, interpretations, and models.
+
+summary: First-order logic separated formal syntax from semantic interpretation in structures.
+
+prior_formulation: Propositional logic handled truth-functional combinations, but mathematics also needed variables, predicates, quantifiers, and interpreted domains.
+
+conceptual_change: General mathematical claims were represented by first-order formulas and evaluated in structures through satisfaction.
+
+resulting_formulation: A first-order language has variables, terms, predicates, formulas, and quantifiers; a structure interprets the language and determines satisfaction.
+
+enabled_developments:
+  - Model theory could study classes of structures satisfying formal sentences.
+  - Soundness, completeness, and compactness could be stated for first-order logic.
+
+display_math:
+  - latex: |
+      \mathcal{M}\models\forall x\,\exists y\,R(x,y)
+    description: A first-order sentence evaluated in a structure.
+
+subjects:
+  - foundations.variable
+  - foundations.term
+  - foundations.predicate
+  - foundations.first-order-formula
+  - foundations.quantifier
+  - foundations.universal-quantifier
+  - foundations.existential-quantifier
+  - foundations.free-variable
+  - foundations.bound-variable
+  - foundations.first-order-language
+  - foundations.signature
+  - foundations.structure
+  - foundations.interpretation
+  - foundations.satisfaction
+  - foundations.mathematical-logic
+
+developed_from:
+  - foundations.mathematical-logic.history.frege-quantification
+  - foundations.mathematical-logic.history.truth-functional-propositional-logic
+
+developed_into:
+  - foundations.mathematical-logic.history.hilbert-ackermann-first-order-logic
+  - foundations.mathematical-logic.history.tarski-semantic-truth
+  - foundations.mathematical-logic.history.goedel-completeness
+
+source_refs:
+  - source: source.frege-1879-begriffsschrift
+    locator: 1879 monograph
+    note: Frege introduced a formal language with quantification.
+  - source: source.hilbert-ackermann-1928-grundzuge-theoretische-logik
+    locator: Chapters 1-2
+    note: Hilbert and Ackermann present first-order logic as a systematic formalism.
+  - source: source.tarski-1936-truth-formalized-languages
+    locator: 1936 paper
+    note: Tarski clarified semantic truth and satisfaction.

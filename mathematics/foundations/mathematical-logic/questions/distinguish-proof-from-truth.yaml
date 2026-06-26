@@ -23,7 +23,7 @@ related_concepts:
   - foundations.deduction
 
 prerequisite_questions:
-  - foundations.mathematical-logic.question.prove-with-rules
+  - foundations.mathematical-logic.question.choose-proof-technique
 
 successor_questions:
   - foundations.mathematical-logic.question.when-is-system-sound-complete

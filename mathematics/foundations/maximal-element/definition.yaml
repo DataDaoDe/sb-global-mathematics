@@ -1,0 +1,24 @@
+id: foundations.maximal-element.definition
+kind: definition
+title: Definition of maximal element
+
+defines:
+  - foundations.maximal-element
+
+depends_on:
+  - foundations.partial-order
+  - foundations.negation
+  - foundations.existential-quantifier
+
+statement: |
+  Let $(P,\leq)$ be a partially ordered set and let $A\subseteq P$. A maximal element of $A$ is an element $m\in A$ such that there is no $a\in A$ with $m<a$.
+
+display_math:
+  - latex: |
+      m\in A,\qquad \neg\exists a\in A,\ m<a
+    description: No strictly larger element lies in $A$.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Maximal elements appear in Zorn's lemma.

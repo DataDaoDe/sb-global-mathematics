@@ -1,0 +1,16 @@
+id: foundations.upper-bound
+kind: concept
+title: Upper bound
+
+summary: An upper bound of a subset of a partially ordered set is an element greater than or equal to every element of that subset.
+
+display_math:
+  - latex: |
+      \forall a\in A,\ a\leq u
+    description: $u$ is an upper bound for $A$.
+
+defined_by:
+  - foundations.upper-bound.definition
+
+broader_concepts:
+  - foundations.partial-order

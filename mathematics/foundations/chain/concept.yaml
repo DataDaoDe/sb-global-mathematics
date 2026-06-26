@@ -1,0 +1,17 @@
+id: foundations.chain
+kind: concept
+title: Chain
+
+summary: A chain in a partially ordered set is a subset whose elements are pairwise comparable.
+
+display_math:
+  - latex: |
+      \forall a,b\in C,\ a\leq b\vee b\leq a
+    description: Pairwise comparability inside a chain.
+
+defined_by:
+  - foundations.chain.definition
+
+broader_concepts:
+  - foundations.partial-order
+  - foundations.total-order

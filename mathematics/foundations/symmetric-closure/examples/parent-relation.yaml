@@ -1,0 +1,19 @@
+id: foundations.symmetric-closure.example.parent-relation
+kind: example
+title: Symmetric closure of parent-of
+
+example_of:
+  - foundations.symmetric-closure
+
+description: |
+  If $P$ is the parent-of relation, then $P\cup P^{-1}$ relates two people when one is a parent of the other. The resulting relation is symmetric because each parent-child pair appears in both directions.
+
+display_math:
+  - latex: |
+      P\cup P^{-1}
+    description: Symmetric parent-child relation.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.2
+    note: Relation closures are formed by adding pairs that force a desired property.

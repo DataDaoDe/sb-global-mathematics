@@ -1,0 +1,17 @@
+id: foundations.proof-by-contradiction
+kind: concept
+title: Proof by contradiction
+
+summary: Proof by contradiction establishes a statement by showing that assuming its negation leads to an impossibility.
+
+display_math:
+  - latex: |
+      \neg P\vdash \bot \quad\Longrightarrow\quad P
+    description: If the negation of a target statement entails contradiction, the target statement follows.
+
+defined_by:
+  - foundations.proof-by-contradiction.definition
+
+broader_concepts:
+  - foundations.deduction
+  - foundations.contradiction

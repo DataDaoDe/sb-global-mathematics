@@ -1,0 +1,19 @@
+id: foundations.well-founded-relation.example.natural-less-than
+kind: example
+title: Less-than on natural numbers is well-founded
+
+example_of:
+  - foundations.well-founded-relation
+
+description: |
+  The strict order $<$ on $\mathbb{N}$ is well-founded because every nonempty subset of natural numbers has a least element, hence an element with no smaller member of the subset below it.
+
+display_math:
+  - latex: |
+      \varnothing\ne A\subseteq\mathbb{N}\Rightarrow \exists m\in A\ \forall a\in A,\ m\leq a
+    description: Least elements make the usual natural-number order well-founded.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Natural-number order is the standard well-founded example.

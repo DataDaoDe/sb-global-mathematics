@@ -1,0 +1,19 @@
+id: foundations.mathematical-induction.example.sum-formula
+kind: example
+title: Induction proof of the first n integers sum formula
+
+example_of:
+  - foundations.mathematical-induction
+
+description: |
+  Let $P(n)$ be the statement $1+2+\cdots+n=n(n+1)/2$. The base case $n=1$ is true because $1=1(2)/2$. If $P(n)$ holds, then adding $n+1$ to both sides gives $1+2+\cdots+n+(n+1)=(n+1)(n+2)/2$, which is $P(n+1)$.
+
+display_math:
+  - latex: |
+      1+2+\cdots+n=\frac{n(n+1)}{2}
+    description: The target formula proved by induction.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 6
+    note: Finite summation identities are standard introductory examples for induction.

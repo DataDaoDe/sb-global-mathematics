@@ -1,0 +1,23 @@
+id: foundations.total-order.definition
+kind: definition
+title: Definition of total order
+
+defines:
+  - foundations.total-order
+
+depends_on:
+  - foundations.partial-order
+  - foundations.total-relation
+
+statement: |
+  A total order on a set $X$ is a partial order $\leq$ on $X$ such that for every $x,y\in X$, either $x\leq y$ or $y\leq x$.
+
+display_math:
+  - latex: |
+      \forall x,y\in X,\ x\leq y\vee y\leq x
+    description: Total comparability condition.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Familiar ordered sets motivate total comparability beyond partial order laws.

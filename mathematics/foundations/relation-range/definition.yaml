@@ -1,0 +1,24 @@
+id: foundations.relation-range.definition
+kind: definition
+title: Definition of range of a relation
+
+defines:
+  - foundations.relation-range
+
+depends_on:
+  - foundations.relation
+  - foundations.ordered-pair
+  - foundations.existential-quantifier
+
+statement: |
+  For a relation $R\subseteq A\times B$, the range of $R$ is the set of all $b\in B$ for which there exists $a\in A$ with $(a,b)\in R$.
+
+display_math:
+  - latex: |
+      \operatorname{ran}(R)=\{b\in B\mid \exists a\in A,\ (a,b)\in R\}
+    description: Range as second-coordinate projection of related pairs.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Relations are treated as subsets of Cartesian products.

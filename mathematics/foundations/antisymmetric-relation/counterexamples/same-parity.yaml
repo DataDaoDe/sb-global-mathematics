@@ -1,0 +1,22 @@
+id: foundations.antisymmetric-relation.counterexample.same-parity
+kind: counterexample
+title: Same parity is not antisymmetric
+
+counterexample_to:
+  - foundations.antisymmetric-relation
+
+demonstrates_necessity_of:
+  - foundations.antisymmetric-relation.definition
+
+description: |
+  Congruence modulo $2$ on $\mathbb{Z}$ is symmetric, but it is not antisymmetric. The integers $1$ and $3$ have the same parity, so $1\sim 3$ and $3\sim 1$, but $1\ne 3$.
+
+display_math:
+  - latex: |
+      1\sim 3,\qquad 3\sim 1,\qquad 1\ne 3
+    description: Failure of antisymmetry for same parity.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Equivalence relations are generally not antisymmetric.

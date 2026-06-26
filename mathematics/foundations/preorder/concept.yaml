@@ -1,0 +1,16 @@
+id: foundations.preorder
+kind: concept
+title: Preorder
+
+summary: A preorder is a relation that is reflexive and transitive.
+
+display_math:
+  - latex: |
+      xRx,\qquad xRy\wedge yRz\Rightarrow xRz
+    description: Reflexivity and transitivity.
+
+defined_by:
+  - foundations.preorder.definition
+
+broader_concepts:
+  - foundations.relation

@@ -1,0 +1,22 @@
+id: foundations.symmetric-relation.example.same-parity
+kind: example
+title: Same parity is symmetric
+
+example_of:
+  - foundations.symmetric-relation
+  - foundations.reflexive-relation
+  - foundations.transitive-relation
+  - foundations.equivalence-relation
+
+description: |
+  On the integers, define $a\sim b$ when $a-b$ is divisible by $2$. If $a$ has the same parity as $b$, then $b$ has the same parity as $a$, so the relation is symmetric. It is also reflexive and transitive.
+
+display_math:
+  - latex: |
+      2\mid(a-b)\quad\Longrightarrow\quad 2\mid(b-a)
+    description: Reversing a same-parity relation.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Congruence modulo an integer is a standard equivalence relation.

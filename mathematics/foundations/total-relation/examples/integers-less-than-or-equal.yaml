@@ -1,0 +1,20 @@
+id: foundations.total-relation.example.integers-less-than-or-equal
+kind: example
+title: Less-than-or-equal is total on the integers
+
+example_of:
+  - foundations.total-relation
+  - foundations.partial-order
+
+description: |
+  On the integers, any two elements are comparable by $\leq$: for all $a,b\in\mathbb{Z}$, either $a\leq b$ or $b\leq a$. Thus $\leq$ is total on $\mathbb{Z}$.
+
+display_math:
+  - latex: |
+      \forall a,b\in\mathbb{Z},\ a\leq b\vee b\leq a
+    description: Total comparability of integers under $\leq$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Integer order is the standard example of a total order relation.

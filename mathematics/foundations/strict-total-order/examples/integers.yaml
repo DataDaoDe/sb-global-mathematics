@@ -1,0 +1,20 @@
+id: foundations.strict-total-order.example.integers
+kind: example
+title: The integers under less-than form a strict total order
+
+example_of:
+  - foundations.strict-total-order
+  - foundations.strict-partial-order
+
+description: |
+  The relation $<$ on $\mathbb{Z}$ is irreflexive and transitive. For any two distinct integers $a$ and $b$, exactly one of $a<b$ or $b<a$ holds, so it is a strict total order.
+
+display_math:
+  - latex: |
+      a\ne b\quad\Longrightarrow\quad a<b\vee b<a
+    description: Strict total comparability on the integers.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Integer strict order is a standard example of strict total order.

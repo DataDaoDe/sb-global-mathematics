@@ -1,0 +1,20 @@
+id: foundations.reflexive-transitive-closure.example.reachability
+kind: example
+title: Reachability as reflexive-transitive closure
+
+example_of:
+  - foundations.reflexive-transitive-closure
+
+description: |
+  If $E$ is the edge relation of a directed graph, then $E^{*}$ is the reachability relation allowing paths of length zero. Every vertex reaches itself, and a vertex reaches another if there is a finite directed path between them.
+
+display_math:
+  - latex: |
+      (u,v)\in E^{*}\quad\Longleftrightarrow\quad
+      \text{there is a directed path from }u\text{ to }v
+    description: Reachability relation.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.2
+    note: Reachability is the canonical intuition for reflexive-transitive closure.

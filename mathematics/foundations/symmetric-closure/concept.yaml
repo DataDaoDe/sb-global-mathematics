@@ -1,0 +1,17 @@
+id: foundations.symmetric-closure
+kind: concept
+title: Symmetric closure
+
+summary: The symmetric closure of a relation is the smallest symmetric relation containing it.
+
+display_math:
+  - latex: |
+      R\cup R^{-1}
+    description: Symmetric closure of a relation.
+
+defined_by:
+  - foundations.symmetric-closure.definition
+
+broader_concepts:
+  - foundations.symmetric-relation
+  - foundations.converse-relation

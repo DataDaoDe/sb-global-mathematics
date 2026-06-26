@@ -1,0 +1,22 @@
+id: foundations.partial-order.example.subset-inclusion
+kind: example
+title: Subset inclusion is a partial order
+
+example_of:
+  - foundations.partial-order
+  - foundations.reflexive-relation
+  - foundations.antisymmetric-relation
+  - foundations.transitive-relation
+
+description: |
+  On the power set $\mathcal{P}(X)$, subset inclusion is reflexive because $A\subseteq A$, antisymmetric because $A\subseteq B$ and $B\subseteq A$ imply $A=B$, and transitive because $A\subseteq B$ and $B\subseteq C$ imply $A\subseteq C$.
+
+display_math:
+  - latex: |
+      A\subseteq B\ \wedge\ B\subseteq A\Rightarrow A=B
+    description: Antisymmetry of subset inclusion.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Subset inclusion on a power set is a standard partial order.

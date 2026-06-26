@@ -1,0 +1,17 @@
+id: foundations.partial-order
+kind: concept
+title: Partial order
+
+summary: A partial order is a relation that is reflexive, antisymmetric, and transitive.
+
+display_math:
+  - latex: |
+      xRx,\qquad xRy\wedge yRx\Rightarrow x=y,\qquad
+      xRy\wedge yRz\Rightarrow xRz
+    description: Reflexivity, antisymmetry, and transitivity.
+
+defined_by:
+  - foundations.partial-order.definition
+
+broader_concepts:
+  - foundations.preorder

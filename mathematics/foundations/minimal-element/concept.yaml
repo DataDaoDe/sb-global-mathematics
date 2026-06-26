@@ -1,0 +1,16 @@
+id: foundations.minimal-element
+kind: concept
+title: Minimal element
+
+summary: A minimal element of a subset has no strictly smaller element of that subset below it.
+
+display_math:
+  - latex: |
+      m\in A,\qquad \neg\exists a\in A,\ a<m
+    description: Minimal element condition.
+
+defined_by:
+  - foundations.minimal-element.definition
+
+broader_concepts:
+  - foundations.partial-order

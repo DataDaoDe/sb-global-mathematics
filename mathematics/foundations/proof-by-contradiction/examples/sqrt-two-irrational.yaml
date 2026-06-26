@@ -1,0 +1,20 @@
+id: foundations.proof-by-contradiction.example.sqrt-two-irrational
+kind: example
+title: Proving sqrt(2) is irrational by contradiction
+
+example_of:
+  - foundations.proof-by-contradiction
+
+description: |
+  To prove that $\sqrt{2}$ is irrational, assume the opposite: $\sqrt{2}=a/b$ in lowest terms for integers $a$ and $b\ne 0$. Squaring gives $a^2=2b^2$, so $a$ is even. Then $a=2k$, so $4k^2=2b^2$ and $b$ is even too. This contradicts the assumption that $a/b$ was in lowest terms.
+
+display_math:
+  - latex: |
+      \sqrt{2}=\frac{a}{b}\quad\Longrightarrow\quad
+      2\mid a\ \text{and}\ 2\mid b
+    description: The contradiction in the lowest-terms assumption.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 3
+    note: Irrationality of square root of 2 is a standard contradiction-proof example.

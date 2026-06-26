@@ -19,6 +19,7 @@ depends_on:
   - foundations.zermelo-fraenkel-set-theory-with-choice.definition.axiom-of-choice
   - foundations.zermelo-fraenkel-set-theory
   - foundations.relation
+  - foundations.well-order
 
 source_refs:
   - source: source.jech-set-theory-third-millennium

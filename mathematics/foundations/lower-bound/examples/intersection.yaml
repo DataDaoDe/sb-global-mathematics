@@ -1,0 +1,19 @@
+id: foundations.lower-bound.example.intersection
+kind: example
+title: An intersection as a lower bound
+
+example_of:
+  - foundations.lower-bound
+
+description: |
+  In a power set ordered by inclusion, the intersection $A\cap B$ is a lower bound for $\{A,B\}$ because $A\cap B\subseteq A$ and $A\cap B\subseteq B$.
+
+display_math:
+  - latex: |
+      A\cap B\subseteq A,\qquad A\cap B\subseteq B
+    description: Intersection as a lower bound under inclusion.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Inclusion orders make lower bounds concrete.

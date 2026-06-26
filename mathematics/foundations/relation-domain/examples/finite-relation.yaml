@@ -1,0 +1,19 @@
+id: foundations.relation-domain.example.finite-relation
+kind: example
+title: Domain of a finite relation
+
+example_of:
+  - foundations.relation-domain
+
+description: |
+  If $R=\{(1,a),(1,b),(2,b)\}$, then the domain is $\{1,2\}$ because only $1$ and $2$ occur as first coordinates.
+
+display_math:
+  - latex: |
+      \operatorname{dom}(R)=\{1,2\}
+    description: Domain of the finite relation.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Finite subsets of products provide concrete relation examples.

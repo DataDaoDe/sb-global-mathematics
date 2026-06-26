@@ -1,0 +1,19 @@
+id: foundations.transitive-closure.example.ancestor-relation
+kind: example
+title: Ancestor as transitive closure of parent-of
+
+example_of:
+  - foundations.transitive-closure
+
+description: |
+  If $P$ is the parent-of relation, then its transitive closure $P^{+}$ is the ancestor-of relation: it relates a person to their child, grandchild, great-grandchild, and so on.
+
+display_math:
+  - latex: |
+      P^{+}=P\cup P^2\cup P^3\cup\cdots
+    description: Ancestor relation as repeated parent steps.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.2
+    note: Finite paths give an intuitive model for transitive closure.

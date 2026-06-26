@@ -1,0 +1,52 @@
+id: foundations.proof-by-contradiction.history.classical-indirect-proof
+kind: historical_note
+title: Proof by contradiction in classical reasoning
+
+date_label: Indirect proof as a classical proof method
+event_type: synthesis
+start_year: -350
+end_year: 1935
+
+description: |
+  Indirect proof has ancient roots and became part of the ordinary toolkit of classical mathematics. Modern formal logic clarifies the rule behind the method: in a classical setting, deriving an impossibility from $\neg P$ licenses the conclusion $P$. Proof theory later separated this classical principle from constructive systems that do not generally accept every use of double-negation elimination.
+
+summary: Proof by contradiction became a standard classical proof technique, later distinguished from constructive proof principles.
+
+prior_formulation: Reductio arguments were used in mathematical practice before proof systems isolated their exact logical commitments.
+
+conceptual_change: The method could be described as a rule connecting negation, contradiction, and classical consequence.
+
+resulting_formulation: Modern proof education treats contradiction proof as a standard indirect technique, while logic distinguishes its classical assumptions.
+
+enabled_developments:
+  - Irrationality and nonexistence theorems could be proved by assuming the opposite.
+  - Formal proof systems could compare classical and constructive reasoning.
+  - Learners could choose contradiction proof when a direct construction is not apparent.
+
+display_math:
+  - latex: |
+      \neg P\Rightarrow \bot \quad\therefore\quad P
+    description: Classical reductio schema.
+
+subjects:
+  - foundations.proof-by-contradiction
+  - foundations.contradiction
+  - foundations.deduction
+
+developed_from:
+  - foundations.contradiction
+  - foundations.deduction
+
+developed_into:
+  - foundations.proof-by-contradiction.proposition.irrationality-of-square-root-two
+
+source_refs:
+  - source: source.aristotle-prior-analytics
+    locator: Prior Analytics
+    note: Ancient source for systematic analysis of deduction.
+  - source: source.gentzen-1935-logical-deduction
+    locator: 1935 papers
+    note: Modern proof systems make assumptions and rules explicit.
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 3
+    note: Modern proof-oriented presentation of contradiction proof.

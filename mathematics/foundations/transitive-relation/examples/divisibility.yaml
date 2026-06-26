@@ -1,0 +1,22 @@
+id: foundations.transitive-relation.example.divisibility
+kind: example
+title: Divisibility is transitive
+
+example_of:
+  - foundations.transitive-relation
+  - foundations.reflexive-relation
+  - foundations.antisymmetric-relation
+  - foundations.partial-order
+
+description: |
+  Divisibility on positive integers is transitive: if $a\mid b$ and $b\mid c$, then $a\mid c$. It is also reflexive and antisymmetric, so it is a partial order on positive integers.
+
+display_math:
+  - latex: |
+      a\mid b\ \wedge\ b\mid c\quad\Longrightarrow\quad a\mid c
+    description: Transitivity of divisibility.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Divisibility is a standard order-like relation.

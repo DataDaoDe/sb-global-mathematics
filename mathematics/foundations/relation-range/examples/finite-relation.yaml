@@ -1,0 +1,19 @@
+id: foundations.relation-range.example.finite-relation
+kind: example
+title: Range of a finite relation
+
+example_of:
+  - foundations.relation-range
+
+description: |
+  If $R=\{(1,a),(1,b),(2,b)\}$, then the range is $\{a,b\}$ because only $a$ and $b$ occur as second coordinates.
+
+display_math:
+  - latex: |
+      \operatorname{ran}(R)=\{a,b\}
+    description: Range of the finite relation.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Finite subsets of products provide concrete relation examples.

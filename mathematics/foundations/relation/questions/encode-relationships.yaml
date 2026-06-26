@@ -14,7 +14,13 @@ motivates:
   - foundations.ordered-pair
   - foundations.cartesian-product
   - foundations.relation
+  - foundations.reflexive-relation
+  - foundations.symmetric-relation
+  - foundations.antisymmetric-relation
+  - foundations.transitive-relation
   - foundations.equivalence-relation
+  - foundations.preorder
+  - foundations.partial-order
   - foundations.quotient-set
   - foundations.function.injective
   - foundations.function.surjective
@@ -26,7 +32,8 @@ related_concepts:
 prerequisite_questions:
   - foundations.set.question.how-do-we-build-and-compare-sets
 
-successor_questions: []
+successor_questions:
+  - foundations.relation.question.classify-relation-properties
 
 source_refs:
   - source: source.dummit-foote-abstract-algebra-third-edition

@@ -1,0 +1,23 @@
+id: foundations.proof-by-contradiction.proposition.irrationality-of-square-root-two
+kind: proposition
+title: The square root of 2 is irrational
+
+proposition_type: theorem
+
+claim: |
+  There are no integers $a$ and $b\ne 0$ such that $\sqrt{2}=a/b$.
+
+display_math:
+  - latex: |
+      \sqrt{2}\notin\mathbb{Q}
+    description: Irrationality of the square root of 2.
+
+depends_on:
+  - foundations.proof-by-contradiction
+  - foundations.direct-proof
+  - foundations.contradiction
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 3
+    note: Used as a canonical example of contradiction proof.

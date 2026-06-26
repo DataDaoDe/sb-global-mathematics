@@ -1,0 +1,20 @@
+id: foundations.equivalence-class.example.parity-class
+kind: example
+title: The parity class of an integer
+
+example_of:
+  - foundations.equivalence-class
+
+description: |
+  Under congruence modulo $2$ on $\mathbb{Z}$, the equivalence class $[0]$ is the set of even integers and the equivalence class $[1]$ is the set of odd integers.
+
+display_math:
+  - latex: |
+      [0]=\{n\in\mathbb{Z}\mid 2\mid n\},\qquad
+      [1]=\{n\in\mathbb{Z}\mid 2\nmid n\}
+    description: Equivalence classes for congruence modulo two.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Congruence modulo an integer gives standard equivalence classes.

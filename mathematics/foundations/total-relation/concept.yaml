@@ -1,0 +1,16 @@
+id: foundations.total-relation
+kind: concept
+title: Total relation
+
+summary: A total relation compares every pair of elements in at least one direction.
+
+display_math:
+  - latex: |
+      \forall x,y\in X,\ xRy\ \vee\ yRx
+    description: Totality, also called connexity, of a relation.
+
+defined_by:
+  - foundations.total-relation.definition
+
+broader_concepts:
+  - foundations.relation

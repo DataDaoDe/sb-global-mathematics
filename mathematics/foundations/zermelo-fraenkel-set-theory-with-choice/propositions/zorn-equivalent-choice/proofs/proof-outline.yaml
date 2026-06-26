@@ -22,6 +22,9 @@ depends_on:
   - foundations.zermelo-fraenkel-set-theory-with-choice.definition.axiom-of-choice
   - foundations.function
   - foundations.relation
+  - foundations.chain
+  - foundations.upper-bound
+  - foundations.maximal-element
 
 source_refs:
   - source: source.jech-set-theory-third-millennium

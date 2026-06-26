@@ -1,0 +1,24 @@
+id: foundations.asymmetric-relation.definition
+kind: definition
+title: Definition of asymmetric relation
+
+defines:
+  - foundations.asymmetric-relation
+
+depends_on:
+  - foundations.relation
+  - foundations.negation
+  - foundations.conditional-statement
+
+statement: |
+  A relation $R$ on a set $X$ is asymmetric if for all $x,y\in X$, $xRy$ implies that $yRx$ is false.
+
+display_math:
+  - latex: |
+      \forall x,y\in X,\ xRy\Rightarrow \neg(yRx)
+    description: Asymmetry condition.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Strict order-like relations illustrate asymmetry.

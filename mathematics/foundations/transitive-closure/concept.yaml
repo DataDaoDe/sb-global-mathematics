@@ -1,0 +1,17 @@
+id: foundations.transitive-closure
+kind: concept
+title: Transitive closure
+
+summary: The transitive closure of a relation is the smallest transitive relation containing it.
+
+display_math:
+  - latex: |
+      R^{+}
+    description: Transitive closure notation.
+
+defined_by:
+  - foundations.transitive-closure.definition
+
+broader_concepts:
+  - foundations.transitive-relation
+  - foundations.relation-composition

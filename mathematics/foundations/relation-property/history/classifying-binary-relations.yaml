@@ -1,0 +1,67 @@
+id: foundations.relation-property.history.classifying-binary-relations
+kind: historical_note
+title: Classifying binary relations by structural laws
+
+date_label: Relation laws in modern set-theoretic language
+event_type: synthesis
+start_year: 1870
+end_year: 1930
+
+description: |
+  Once relations were represented as subsets of Cartesian products, mathematicians could classify them by reusable laws: reflexivity, irreflexivity, symmetry, asymmetry, antisymmetry, transitivity, and totality. These laws separate equality-like relations from order-like relations and explain why equivalence relations form quotient sets, partial orders organize comparison without forcing every pair to be comparable, and total or well-orders add stronger comparison principles.
+
+summary: Binary relations became classifiable by structural laws that distinguish equivalence, preorder, partial order, and strict comparison behavior.
+
+prior_formulation: Relations such as equality, divisibility, and order were often understood in their own contexts before their shared laws were abstracted.
+
+conceptual_change: Relation properties became reusable predicates on subsets of $X\times X$.
+
+resulting_formulation: Modern foundations classifies relations through laws such as reflexive, symmetric, antisymmetric, transitive, and total.
+
+enabled_developments:
+  - Equivalence relations could be specified as reflexive, symmetric, and transitive relations.
+  - Preorders and partial orders could be specified from relation laws.
+  - Strict and non-strict comparisons could be distinguished by irreflexivity, asymmetry, and antisymmetry.
+  - Total orders and well-orders could be located as stronger order structures.
+
+display_math:
+  - latex: |
+      R\subseteq X\times X,\qquad
+      \forall x,y,z\in X
+    description: Binary relation laws are stated over a relation on one set.
+
+subjects:
+  - foundations.reflexive-relation
+  - foundations.irreflexive-relation
+  - foundations.symmetric-relation
+  - foundations.asymmetric-relation
+  - foundations.antisymmetric-relation
+  - foundations.transitive-relation
+  - foundations.total-relation
+  - foundations.preorder
+  - foundations.partial-order
+  - foundations.total-order
+  - foundations.strict-partial-order
+  - foundations.strict-total-order
+  - foundations.well-order
+  - foundations.equivalence-relation
+
+developed_from:
+  - foundations.relation
+  - foundations.cartesian-product
+
+developed_into:
+  - foundations.equivalence-relation
+  - foundations.preorder
+  - foundations.partial-order
+  - foundations.total-order
+  - foundations.well-order
+  - foundations.quotient-set
+
+source_refs:
+  - source: source.dedekind-1888-was-sind-zahlen
+    locator: 1888 monograph
+    note: Foundational use of systems and mappings helped support relation-based abstraction.
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Modern preliminary set theory presents relations, equivalence relations, and order-like examples.

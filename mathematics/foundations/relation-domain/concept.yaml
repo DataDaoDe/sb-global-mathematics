@@ -1,0 +1,16 @@
+id: foundations.relation-domain
+kind: concept
+title: Domain of a relation
+
+summary: The domain of a relation is the set of first coordinates that occur in some related pair.
+
+display_math:
+  - latex: |
+      \operatorname{dom}(R)=\{a\in A\mid \exists b\in B,\ (a,b)\in R\}
+    description: Domain of a relation $R\subseteq A\times B$.
+
+defined_by:
+  - foundations.relation-domain.definition
+
+broader_concepts:
+  - foundations.relation

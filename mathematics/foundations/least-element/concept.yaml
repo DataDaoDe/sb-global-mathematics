@@ -1,0 +1,16 @@
+id: foundations.least-element
+kind: concept
+title: Least element
+
+summary: A least element of a subset is an element of the subset that is less than or equal to every element of the subset.
+
+display_math:
+  - latex: |
+      m\in A,\qquad \forall a\in A,\ m\leq a
+    description: Least element condition.
+
+defined_by:
+  - foundations.least-element.definition
+
+broader_concepts:
+  - foundations.lower-bound

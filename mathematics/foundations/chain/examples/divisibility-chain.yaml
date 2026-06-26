@@ -1,0 +1,19 @@
+id: foundations.chain.example.divisibility-chain
+kind: example
+title: Powers of two form a chain under divisibility
+
+example_of:
+  - foundations.chain
+
+description: |
+  In the positive integers ordered by divisibility, the subset $\{1,2,4,8,\ldots\}$ is a chain because any two powers of two are comparable by divisibility.
+
+display_math:
+  - latex: |
+      1\mid 2\mid 4\mid 8\mid\cdots
+    description: A divisibility chain.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Chains are linearly ordered subsets of partially ordered sets.

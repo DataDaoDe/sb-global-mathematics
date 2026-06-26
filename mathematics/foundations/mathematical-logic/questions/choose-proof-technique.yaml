@@ -1,0 +1,35 @@
+id: foundations.mathematical-logic.question.choose-proof-technique
+kind: question
+title: Which proof technique fits the statement?
+
+asks: |
+  How should the logical form of a target statement guide the choice between direct proof, contrapositive proof, contradiction, and induction?
+
+display_math:
+  - latex: |
+      P\Rightarrow Q,\qquad \neg P\vdash\bot,\qquad
+      P(1),\ P(n)\Rightarrow P(n+1)
+    description: Common proof shapes matched to statement form.
+
+motivates:
+  - foundations.direct-proof
+  - foundations.proof-by-contrapositive
+  - foundations.proof-by-contradiction
+  - foundations.mathematical-induction
+
+related_concepts:
+  - foundations.deduction
+  - foundations.conditional-statement
+  - foundations.contradiction
+  - foundations.natural-number
+
+prerequisite_questions:
+  - foundations.mathematical-logic.question.prove-with-rules
+
+successor_questions:
+  - foundations.mathematical-logic.question.distinguish-proof-from-truth
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapters 3 and 6
+    note: Proof strategy is organized around the logical form of the statement being proved.

@@ -1,0 +1,25 @@
+id: foundations.strict-partial-order.definition
+kind: definition
+title: Definition of strict partial order
+
+defines:
+  - foundations.strict-partial-order
+
+depends_on:
+  - foundations.irreflexive-relation
+  - foundations.transitive-relation
+  - foundations.asymmetric-relation
+
+statement: |
+  A strict partial order on a set $X$ is a relation $<$ on $X$ that is irreflexive and transitive. Such a relation is automatically asymmetric.
+
+display_math:
+  - latex: |
+      \forall x\in X,\ \neg(x<x),\qquad
+      x<y\wedge y<z\Rightarrow x<z
+    description: Strict partial order laws.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Strict order relations illustrate irreflexive and transitive comparison.

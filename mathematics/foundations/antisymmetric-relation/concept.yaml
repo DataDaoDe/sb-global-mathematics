@@ -1,0 +1,16 @@
+id: foundations.antisymmetric-relation
+kind: concept
+title: Antisymmetric relation
+
+summary: An antisymmetric relation allows two-way relatedness only when the two elements are equal.
+
+display_math:
+  - latex: |
+      xRy\ \wedge\ yRx\Rightarrow x=y
+    description: Antisymmetry of a relation.
+
+defined_by:
+  - foundations.antisymmetric-relation.definition
+
+broader_concepts:
+  - foundations.relation

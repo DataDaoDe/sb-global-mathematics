@@ -1,0 +1,16 @@
+id: foundations.irreflexive-relation
+kind: concept
+title: Irreflexive relation
+
+summary: An irreflexive relation relates no element of its underlying set to itself.
+
+display_math:
+  - latex: |
+      \forall x\in X,\ \neg xRx
+    description: Irreflexivity of a relation $R$ on $X$.
+
+defined_by:
+  - foundations.irreflexive-relation.definition
+
+broader_concepts:
+  - foundations.relation

@@ -1,0 +1,25 @@
+id: foundations.antichain.definition
+kind: definition
+title: Definition of antichain
+
+defines:
+  - foundations.antichain
+
+depends_on:
+  - foundations.partial-order
+  - foundations.negation
+  - foundations.conjunction
+
+statement: |
+  Let $(P,\leq)$ be a partially ordered set. An antichain in $P$ is a subset $A\subseteq P$ such that no two distinct elements of $A$ are comparable.
+
+display_math:
+  - latex: |
+      \forall a,b\in A,\ a\ne b\Rightarrow
+      \neg(a\leq b)\wedge\neg(b\leq a)
+    description: Antichain condition.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Antichains contrast with chains in partially ordered sets.

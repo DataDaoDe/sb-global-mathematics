@@ -1,0 +1,23 @@
+id: foundations.converse-relation.definition
+kind: definition
+title: Definition of converse relation
+
+defines:
+  - foundations.converse-relation
+
+depends_on:
+  - foundations.relation
+  - foundations.ordered-pair
+
+statement: |
+  For a relation $R\subseteq A\times B$, the converse relation $R^{-1}\subseteq B\times A$ is defined by $(b,a)\in R^{-1}$ exactly when $(a,b)\in R$.
+
+display_math:
+  - latex: |
+      R^{-1}=\{(b,a)\in B\times A\mid (a,b)\in R\}
+    description: Converse relation as pair reversal.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Inverses of relations and functions are expressed by reversing ordered pairs.

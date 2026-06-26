@@ -1,0 +1,49 @@
+id: foundations.equivalence-relation.history.equivalence-classes-and-partitions
+kind: historical_note
+title: Equivalence classes and partitions
+
+date_label: Equivalence as controlled identification
+event_type: synthesis
+start_year: 1870
+end_year: 1930
+
+description: |
+  Equivalence relations made the act of identifying objects mathematically precise. Instead of saying informally that objects should be treated as the same, one specifies a reflexive, symmetric, and transitive relation; the resulting equivalence classes partition the original set. Conversely, any partition determines an equivalence relation by declaring two elements equivalent exactly when they lie in the same part.
+
+summary: Equivalence relations and partitions became two interchangeable ways to describe controlled grouping.
+
+prior_formulation: Identification was often handled in examples such as congruence classes before the abstract relation-partition correspondence was isolated.
+
+conceptual_change: Mutual substitutability could be represented either by a relation or by the partition into its classes.
+
+resulting_formulation: Modern foundations moves freely between equivalence relations, equivalence classes, partitions, and quotient sets.
+
+enabled_developments:
+  - Quotient constructions could be defined as sets of equivalence classes.
+  - Congruence modulo an integer became a model example for partitioning a set.
+  - Algebraic quotients could be phrased as controlled identification of elements.
+
+display_math:
+  - latex: |
+      x\sim y\quad\Longleftrightarrow\quad [x]=[y]
+    description: Equivalent elements determine the same class.
+
+subjects:
+  - foundations.equivalence-relation
+  - foundations.equivalence-class
+  - foundations.partition
+  - foundations.quotient-set
+  - foundations.equivalence-relation.proposition.corresponds-to-partition
+
+developed_from:
+  - foundations.relation
+  - foundations.partition
+
+developed_into:
+  - foundations.quotient-set
+  - algebra.group.quotient
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Modern abstract algebra uses equivalence classes and quotient sets as preliminary set-theoretic language.

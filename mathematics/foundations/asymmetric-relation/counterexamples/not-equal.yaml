@@ -1,0 +1,22 @@
+id: foundations.asymmetric-relation.counterexample.not-equal
+kind: counterexample
+title: Not-equal is irreflexive but not asymmetric
+
+counterexample_to:
+  - foundations.asymmetric-relation
+
+demonstrates_necessity_of:
+  - foundations.asymmetric-relation.definition
+
+description: |
+  The relation $\ne$ on $\mathbb{Z}$ is irreflexive because no integer is unequal to itself. It is not asymmetric: $1\ne 2$ and $2\ne 1$ both hold.
+
+display_math:
+  - latex: |
+      1\ne 2,\qquad 2\ne 1
+    description: Two-way relatedness violates asymmetry.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Irreflexivity alone does not imply asymmetry.

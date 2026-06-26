@@ -19,6 +19,8 @@ motivates:
   - foundations.conditional-statement
   - foundations.contrapositive
   - foundations.proof-by-contrapositive
+  - foundations.proof-by-contradiction
+  - foundations.mathematical-induction
 
 related_concepts:
   - foundations.mathematical-logic
@@ -29,12 +31,14 @@ related_concepts:
   - foundations.conditional-statement
   - foundations.contrapositive
   - foundations.proof-by-contrapositive
+  - foundations.proof-by-contradiction
+  - foundations.mathematical-induction
 
 prerequisite_questions:
   - foundations.mathematical-logic.question.how-can-logic-express-objects-and-relations
 
 successor_questions:
-  - foundations.mathematical-logic.question.distinguish-proof-from-truth
+  - foundations.mathematical-logic.question.choose-proof-technique
 
 source_refs:
   - source: source.enderton-mathematical-introduction-to-logic-second-edition

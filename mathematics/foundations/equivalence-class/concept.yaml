@@ -1,0 +1,17 @@
+id: foundations.equivalence-class
+kind: concept
+title: Equivalence class
+
+summary: An equivalence class is the set of all elements equivalent to a chosen representative under an equivalence relation.
+
+display_math:
+  - latex: |
+      [x]=\{y\in X\mid y\sim x\}
+    description: Equivalence class of $x$.
+
+defined_by:
+  - foundations.equivalence-class.definition
+
+broader_concepts:
+  - foundations.set
+  - foundations.equivalence-relation

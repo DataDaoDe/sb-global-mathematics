@@ -1,0 +1,24 @@
+id: foundations.greatest-element.definition
+kind: definition
+title: Definition of greatest element
+
+defines:
+  - foundations.greatest-element
+
+depends_on:
+  - foundations.partial-order
+  - foundations.upper-bound
+  - foundations.universal-quantifier
+
+statement: |
+  Let $(P,\leq)$ be a partially ordered set and let $A\subseteq P$. A greatest element of $A$ is an element $g\in A$ such that $a\leq g$ for every $a\in A$.
+
+display_math:
+  - latex: |
+      g\in A,\qquad \forall a\in A,\ a\leq g
+    description: Greatest element of $A$.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Greatest elements are dual to least elements.

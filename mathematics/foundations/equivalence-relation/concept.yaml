@@ -14,3 +14,6 @@ defined_by:
 
 broader_concepts:
   - foundations.relation
+  - foundations.reflexive-relation
+  - foundations.symmetric-relation
+  - foundations.transitive-relation

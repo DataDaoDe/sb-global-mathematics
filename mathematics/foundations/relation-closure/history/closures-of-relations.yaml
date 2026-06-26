@@ -1,0 +1,51 @@
+id: foundations.relation-closure.history.closures-of-relations
+kind: historical_note
+title: Closures of relations
+
+date_label: Closure constructions for relation properties
+event_type: synthesis
+start_year: 1900
+end_year: 1930
+
+description: |
+  Once relation properties such as reflexivity, symmetry, and transitivity were isolated, mathematicians could ask for the smallest relation containing a given relation that has a desired property. Reflexive, symmetric, transitive, and reflexive-transitive closures made this precise. These constructions are especially important for reachability, generated equivalence relations, formal deduction, and rewriting systems.
+
+summary: Relation closures generate the smallest relation with a specified structural property.
+
+prior_formulation: Mathematicians often extended relations informally until desired consequences were included.
+
+conceptual_change: Closure became a minimality construction over relations ordered by inclusion.
+
+resulting_formulation: Modern foundations defines reflexive, symmetric, transitive, and reflexive-transitive closure as least relations containing a given relation and satisfying specified laws.
+
+enabled_developments:
+  - Reachability could be represented as reflexive-transitive closure.
+  - Generated equivalence relations could be built from smaller relations.
+  - Formal derivability could be modeled as closure under inference steps.
+
+display_math:
+  - latex: |
+      R\subseteq \overline{R},\qquad
+      \overline{R}\text{ has the required property}
+    description: Closure as a least extension with a property.
+
+subjects:
+  - foundations.reflexive-closure
+  - foundations.symmetric-closure
+  - foundations.transitive-closure
+  - foundations.reflexive-transitive-closure
+
+developed_from:
+  - foundations.relation
+  - foundations.reflexive-relation
+  - foundations.symmetric-relation
+  - foundations.transitive-relation
+
+developed_into:
+  - foundations.equivalence-relation
+  - foundations.deduction
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Chapter 2
+    note: Relation closure constructions support formal treatments of relations and deduction.

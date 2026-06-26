@@ -1,0 +1,17 @@
+id: foundations.reflexive-transitive-closure
+kind: concept
+title: Reflexive-transitive closure
+
+summary: The reflexive-transitive closure of a relation is the smallest relation containing it that is both reflexive and transitive.
+
+display_math:
+  - latex: |
+      R^{*}
+    description: Reflexive-transitive closure notation.
+
+defined_by:
+  - foundations.reflexive-transitive-closure.definition
+
+broader_concepts:
+  - foundations.reflexive-closure
+  - foundations.transitive-closure

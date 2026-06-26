@@ -1,0 +1,29 @@
+id: foundations.equivalence-relation.proposition.corresponds-to-partition.proof.equivalence-classes-partition
+kind: proof
+title: Proof that equivalence classes form a partition
+
+proves:
+  - foundations.equivalence-relation.proposition.corresponds-to-partition
+
+method: direct proof
+
+argument: |
+  Let $\sim$ be an equivalence relation on $X$. Each $x\in X$ lies in its own class $[x]$ by reflexivity, so the union of all classes is $X$. Each class is nonempty for the same reason. If two classes overlap, choose $z\in[x]\cap[y]$. Then $z\sim x$ and $z\sim y$; by symmetry and transitivity, every element equivalent to $x$ is equivalent to $y$, and conversely. Hence $[x]=[y]$. Therefore distinct equivalence classes are disjoint and the classes partition $X$. Conversely, given a partition $\mathcal{P}$ of $X$, define $x\sim y$ when $x$ and $y$ lie in the same part of $\mathcal{P}$. Every element lies in the same part as itself, same-part membership is symmetric, and chaining same-part membership is transitive because parts are disjoint. Thus this relation is an equivalence relation.
+
+display_math:
+  - latex: |
+      [x]\cap[y]\ne\varnothing\quad\Longrightarrow\quad [x]=[y]
+    description: Equivalence classes are either disjoint or equal.
+
+depends_on:
+  - foundations.equivalence-relation.proposition.corresponds-to-partition
+  - foundations.equivalence-class
+  - foundations.partition
+  - foundations.reflexive-relation
+  - foundations.symmetric-relation
+  - foundations.transitive-relation
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Standard proof of the partition theorem for equivalence relations.

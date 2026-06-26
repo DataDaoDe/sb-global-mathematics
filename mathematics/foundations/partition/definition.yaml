@@ -10,6 +10,7 @@ depends_on:
   - foundations.indexed-family
   - foundations.set-union
   - foundations.set-intersection
+  - foundations.equivalence-class
 
 statement: |
   A partition of a set $X$ is a family of nonempty subsets of $X$ that are pairwise disjoint and whose union is $X$.

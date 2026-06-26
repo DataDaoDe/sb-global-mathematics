@@ -1,0 +1,16 @@
+id: foundations.natural-number
+kind: concept
+title: Natural number
+
+summary: Natural numbers are the counting numbers organized by an initial element and a successor operation.
+
+display_math:
+  - latex: |
+      0,\ 1,\ 2,\ 3,\ldots
+    description: The natural numbers as the basic counting sequence.
+
+defined_by:
+  - foundations.natural-number.definition
+
+broader_concepts:
+  - foundations.set

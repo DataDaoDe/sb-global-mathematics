@@ -1,0 +1,22 @@
+id: foundations.symmetric-relation.counterexample.less-than-or-equal
+kind: counterexample
+title: Less-than-or-equal is not symmetric
+
+counterexample_to:
+  - foundations.symmetric-relation
+
+demonstrates_necessity_of:
+  - foundations.symmetric-relation.definition
+
+description: |
+  The relation $\leq$ on $\mathbb{Z}$ is antisymmetric and transitive, but it is not symmetric because $1\leq 2$ while $2\leq 1$ is false.
+
+display_math:
+  - latex: |
+      1\leq 2,\qquad \neg(2\leq 1)
+    description: Failure of symmetry.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Usual order distinguishes symmetry from antisymmetry.

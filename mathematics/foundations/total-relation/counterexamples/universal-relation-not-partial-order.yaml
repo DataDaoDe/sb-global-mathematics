@@ -1,0 +1,22 @@
+id: foundations.total-relation.counterexample.universal-relation-not-partial-order
+kind: counterexample
+title: A total relation need not be a partial order
+
+counterexample_to:
+  - foundations.partial-order
+
+demonstrates_necessity_of:
+  - foundations.antisymmetric-relation.definition
+
+description: |
+  On $X=\{1,2\}$, the universal relation $R=X\times X$ is total and transitive, but it is not antisymmetric because $1R2$ and $2R1$ while $1\ne 2$.
+
+display_math:
+  - latex: |
+      R=X\times X,\qquad 1R2,\qquad 2R1,\qquad 1\ne 2
+    description: Total relation failing antisymmetry.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Total comparability does not by itself give a partial order.

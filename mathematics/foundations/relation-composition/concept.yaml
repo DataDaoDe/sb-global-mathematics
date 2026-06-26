@@ -1,0 +1,16 @@
+id: foundations.relation-composition
+kind: concept
+title: Relation composition
+
+summary: Relation composition relates an input to an output when there is an intermediate object connecting them through two relations.
+
+display_math:
+  - latex: |
+      S\circ R=\{(a,c)\mid \exists b,\ (a,b)\in R\ \wedge\ (b,c)\in S\}
+    description: Composition of relations $R$ and $S$.
+
+defined_by:
+  - foundations.relation-composition.definition
+
+broader_concepts:
+  - foundations.relation

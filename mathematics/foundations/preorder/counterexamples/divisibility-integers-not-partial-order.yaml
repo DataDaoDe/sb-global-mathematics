@@ -1,0 +1,22 @@
+id: foundations.preorder.counterexample.divisibility-integers-not-partial-order
+kind: counterexample
+title: Divisibility on integers is not a partial order
+
+counterexample_to:
+  - foundations.partial-order
+
+demonstrates_necessity_of:
+  - foundations.antisymmetric-relation.definition
+
+description: |
+  Divisibility on all integers is reflexive and transitive, so it is a preorder. It is not a partial order because $1\mid -1$ and $-1\mid 1$, but $1\ne -1$.
+
+display_math:
+  - latex: |
+      1\mid -1,\qquad -1\mid 1,\qquad 1\ne -1
+    description: Failure of antisymmetry.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Divisibility on all integers is a preorder that fails antisymmetry.

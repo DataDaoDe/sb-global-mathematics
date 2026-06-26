@@ -1,0 +1,16 @@
+id: foundations.symmetric-relation
+kind: concept
+title: Symmetric relation
+
+summary: A symmetric relation permits every related pair to be reversed.
+
+display_math:
+  - latex: |
+      xRy\Rightarrow yRx
+    description: Symmetry of a relation.
+
+defined_by:
+  - foundations.symmetric-relation.definition
+
+broader_concepts:
+  - foundations.relation

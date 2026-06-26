@@ -1,0 +1,19 @@
+id: foundations.least-element.example.natural-subset
+kind: example
+title: Least element of a subset of natural numbers
+
+example_of:
+  - foundations.least-element
+
+description: |
+  In the usual order on $\mathbb{N}$, the subset $\{3,4,5,\ldots\}$ has least element $3$.
+
+display_math:
+  - latex: |
+      \min\{3,4,5,\ldots\}=3
+    description: Least element of a subset of natural numbers.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Well-orders are characterized by least elements of nonempty subsets.

@@ -1,0 +1,16 @@
+id: foundations.asymmetric-relation
+kind: concept
+title: Asymmetric relation
+
+summary: An asymmetric relation never allows a related pair to be related back in the reverse direction.
+
+display_math:
+  - latex: |
+      xRy\Rightarrow \neg yRx
+    description: Asymmetry of a relation.
+
+defined_by:
+  - foundations.asymmetric-relation.definition
+
+broader_concepts:
+  - foundations.relation

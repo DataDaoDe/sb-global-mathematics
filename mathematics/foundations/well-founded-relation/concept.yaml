@@ -1,0 +1,18 @@
+id: foundations.well-founded-relation
+kind: concept
+title: Well-founded relation
+
+summary: A well-founded relation is one in which every nonempty subset has a minimal element.
+
+display_math:
+  - latex: |
+      \varnothing\ne A\subseteq X\Rightarrow
+      \exists m\in A\ \neg\exists a\in A,\ aRm
+    description: Every nonempty subset has an $R$-minimal element.
+
+defined_by:
+  - foundations.well-founded-relation.definition
+
+broader_concepts:
+  - foundations.relation
+  - foundations.minimal-element

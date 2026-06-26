@@ -1,0 +1,23 @@
+id: foundations.mathematical-induction.proposition.sum-of-first-n-natural-numbers
+kind: proposition
+title: Sum of the first n natural numbers
+
+proposition_type: theorem
+
+claim: |
+  For every natural number $n\ge 1$, the sum of the first $n$ positive integers is $n(n+1)/2$.
+
+display_math:
+  - latex: |
+      \sum_{k=1}^{n} k=\frac{n(n+1)}{2}
+    description: Closed form for the first $n$ positive integers.
+
+depends_on:
+  - foundations.mathematical-induction
+  - foundations.direct-proof
+  - foundations.natural-number
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 6
+    note: Used as a standard induction theorem.

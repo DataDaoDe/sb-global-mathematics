@@ -19,6 +19,9 @@ depends_on:
   - foundations.zermelo-fraenkel-set-theory-with-choice.definition.axiom-of-choice
   - foundations.zermelo-fraenkel-set-theory
   - foundations.relation
+  - foundations.chain
+  - foundations.upper-bound
+  - foundations.maximal-element
 
 source_refs:
   - source: source.zorn-1935-transfinite-algebra

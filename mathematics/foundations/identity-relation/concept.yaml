@@ -1,0 +1,17 @@
+id: foundations.identity-relation
+kind: concept
+title: Identity relation
+
+summary: The identity relation on a set relates each element exactly to itself.
+
+display_math:
+  - latex: |
+      \Delta_X=\{(x,x)\mid x\in X\}
+    description: Identity relation on $X$.
+
+defined_by:
+  - foundations.identity-relation.definition
+
+broader_concepts:
+  - foundations.relation
+  - foundations.reflexive-relation

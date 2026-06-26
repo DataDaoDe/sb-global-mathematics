@@ -1,0 +1,23 @@
+id: foundations.antisymmetric-relation.example.less-than-or-equal
+kind: example
+title: Less-than-or-equal is antisymmetric
+
+example_of:
+  - foundations.antisymmetric-relation
+  - foundations.reflexive-relation
+  - foundations.transitive-relation
+  - foundations.total-relation
+  - foundations.partial-order
+
+description: |
+  The relation $\leq$ on the integers is antisymmetric because if $a\leq b$ and $b\leq a$, then $a=b$. It is also reflexive, transitive, and total.
+
+display_math:
+  - latex: |
+      a\leq b\ \wedge\ b\leq a\quad\Longrightarrow\quad a=b
+    description: Antisymmetry of less-than-or-equal.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Non-strict order relations illustrate antisymmetry and partial order laws.

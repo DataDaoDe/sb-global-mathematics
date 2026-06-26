@@ -1,0 +1,24 @@
+id: foundations.well-order.example.natural-numbers
+kind: example
+title: Natural numbers are well-ordered by less-than-or-equal
+
+example_of:
+  - foundations.well-order
+  - foundations.total-order
+
+description: |
+  The usual order $\leq$ on $\mathbb{N}$ is a well-order: every nonempty subset of natural numbers has a least element. This least-element property is closely related to induction.
+
+display_math:
+  - latex: |
+      \varnothing\ne A\subseteq\mathbb{N}\quad\Longrightarrow\quad
+      \exists m\in A\ \forall a\in A,\ m\leq a
+    description: Least element property for subsets of natural numbers.
+
+source_refs:
+  - source: source.dedekind-1888-was-sind-zahlen
+    locator: 1888 monograph
+    note: Dedekind's account of the natural numbers supports induction and order-theoretic reasoning.
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Standard set-theoretic account of well-ordering.

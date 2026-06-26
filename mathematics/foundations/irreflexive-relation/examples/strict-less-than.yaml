@@ -1,0 +1,21 @@
+id: foundations.irreflexive-relation.example.strict-less-than
+kind: example
+title: Strict less-than is irreflexive and asymmetric
+
+example_of:
+  - foundations.irreflexive-relation
+  - foundations.asymmetric-relation
+  - foundations.transitive-relation
+
+description: |
+  The relation $<$ on the integers is irreflexive because no integer is less than itself. It is asymmetric because $a<b$ rules out $b<a$, and it is transitive because $a<b$ and $b<c$ imply $a<c$.
+
+display_math:
+  - latex: |
+      a<b\quad\Longrightarrow\quad \neg(b<a)
+    description: Asymmetry of strict less-than.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Familiar order relations provide concrete examples of relation properties.

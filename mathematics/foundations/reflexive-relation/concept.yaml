@@ -1,0 +1,16 @@
+id: foundations.reflexive-relation
+kind: concept
+title: Reflexive relation
+
+summary: A reflexive relation relates every element of its underlying set to itself.
+
+display_math:
+  - latex: |
+      \forall x\in X,\ xRx
+    description: Reflexivity of a relation $R$ on $X$.
+
+defined_by:
+  - foundations.reflexive-relation.definition
+
+broader_concepts:
+  - foundations.relation

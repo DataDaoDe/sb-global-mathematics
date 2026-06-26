@@ -22,8 +22,11 @@ related_concepts:
   - foundations.zermelo-fraenkel-set-theory
   - foundations.function
   - foundations.relation
+  - foundations.partial-order
+  - foundations.well-order
 
 prerequisite_questions:
+  - foundations.relation.question.classify-relation-properties
   - foundations.zermelo-fraenkel-set-theory.question.which-collections-exist
 
 successor_questions: []

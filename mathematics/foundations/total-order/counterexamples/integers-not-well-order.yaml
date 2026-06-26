@@ -1,0 +1,22 @@
+id: foundations.total-order.counterexample.integers-not-well-order
+kind: counterexample
+title: The integers are not well-ordered by the usual order
+
+counterexample_to:
+  - foundations.well-order
+
+demonstrates_necessity_of:
+  - foundations.well-order.definition
+
+description: |
+  The usual order $\leq$ on $\mathbb{Z}$ is a total order, but it is not a well-order. The nonempty subset $\mathbb{Z}$ itself has no least element because for every integer $n$, the smaller integer $n-1$ is also in $\mathbb{Z}$.
+
+display_math:
+  - latex: |
+      \forall n\in\mathbb{Z},\ n-1<n
+    description: No least integer exists.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Total orders need not be well-orders.

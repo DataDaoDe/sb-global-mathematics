@@ -1,0 +1,17 @@
+id: foundations.mathematical-induction
+kind: concept
+title: Mathematical induction
+
+summary: Mathematical induction proves a statement for every natural number by proving a base case and a step from each case to the next.
+
+display_math:
+  - latex: |
+      P(0),\quad \forall n(P(n)\Rightarrow P(n+1))\quad\Longrightarrow\quad \forall n\,P(n)
+    description: The basic induction principle over natural numbers.
+
+defined_by:
+  - foundations.mathematical-induction.definition
+
+broader_concepts:
+  - foundations.deduction
+  - foundations.natural-number

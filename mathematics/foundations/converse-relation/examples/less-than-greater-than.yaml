@@ -1,0 +1,19 @@
+id: foundations.converse-relation.example.less-than-greater-than
+kind: example
+title: The converse of less-than is greater-than
+
+example_of:
+  - foundations.converse-relation
+
+description: |
+  On the integers, the converse of the relation $<$ is the relation $>$ because $(b,a)$ belongs to the converse exactly when $a<b$.
+
+display_math:
+  - latex: |
+      (<)^{-1}=>
+    description: Converse of strict less-than on the integers.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Order relations provide simple examples of converse relations.

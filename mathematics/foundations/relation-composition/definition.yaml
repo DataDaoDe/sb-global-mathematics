@@ -1,0 +1,24 @@
+id: foundations.relation-composition.definition
+kind: definition
+title: Definition of relation composition
+
+defines:
+  - foundations.relation-composition
+
+depends_on:
+  - foundations.relation
+  - foundations.existential-quantifier
+  - foundations.conjunction
+
+statement: |
+  If $R\subseteq A\times B$ and $S\subseteq B\times C$, then the composition $S\circ R$ is the relation from $A$ to $C$ where $a(S\circ R)c$ holds exactly when there exists $b\in B$ such that $aRb$ and $bSc$.
+
+display_math:
+  - latex: |
+      S\circ R=\{(a,c)\in A\times C\mid \exists b\in B,\ (a,b)\in R\wedge(b,c)\in S\}
+    description: Relation composition through an intermediate element.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Function composition is a special case of relation composition.

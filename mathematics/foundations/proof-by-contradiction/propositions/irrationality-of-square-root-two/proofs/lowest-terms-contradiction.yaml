@@ -1,0 +1,26 @@
+id: foundations.proof-by-contradiction.proposition.irrationality-of-square-root-two.proof.lowest-terms-contradiction
+kind: proof
+title: Lowest-terms proof that sqrt(2) is irrational
+
+proves:
+  - foundations.proof-by-contradiction.proposition.irrationality-of-square-root-two
+
+method: proof by contradiction
+
+argument: |
+  Assume, for contradiction, that $\sqrt{2}=a/b$ for integers $a$ and $b\ne 0$, with $a/b$ written in lowest terms. Then $a^2=2b^2$, so $a^2$ is even and hence $a$ is even. Write $a=2k$. Substitution gives $4k^2=2b^2$, so $b^2=2k^2$ and $b$ is even. Thus both $a$ and $b$ are divisible by $2$, contradicting that $a/b$ was in lowest terms. Therefore $\sqrt{2}$ is irrational.
+
+display_math:
+  - latex: |
+      a^2=2b^2,\quad a=2k,\quad b^2=2k^2
+    description: The parity chain forcing both numerator and denominator to be even.
+
+depends_on:
+  - foundations.proof-by-contradiction.proposition.irrationality-of-square-root-two
+  - foundations.proof-by-contradiction
+  - foundations.contradiction
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 3
+    note: Standard lowest-terms contradiction proof.

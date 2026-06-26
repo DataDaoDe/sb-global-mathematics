@@ -31,7 +31,13 @@ subjects:
   - foundations.ordered-pair
   - foundations.cartesian-product
   - foundations.relation
+  - foundations.reflexive-relation
+  - foundations.symmetric-relation
+  - foundations.antisymmetric-relation
+  - foundations.transitive-relation
   - foundations.equivalence-relation
+  - foundations.preorder
+  - foundations.partial-order
   - foundations.quotient-set
   - foundations.function.injective
   - foundations.function.surjective

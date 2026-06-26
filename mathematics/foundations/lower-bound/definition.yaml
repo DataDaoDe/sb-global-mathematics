@@ -1,0 +1,24 @@
+id: foundations.lower-bound.definition
+kind: definition
+title: Definition of lower bound
+
+defines:
+  - foundations.lower-bound
+
+depends_on:
+  - foundations.partial-order
+  - foundations.universal-quantifier
+  - foundations.subset
+
+statement: |
+  Let $(P,\leq)$ be a partially ordered set and let $A\subseteq P$. An element $\ell\in P$ is a lower bound for $A$ if $\ell\leq a$ for every $a\in A$.
+
+display_math:
+  - latex: |
+      \ell\in P,\qquad \forall a\in A,\ \ell\leq a
+    description: Lower bound condition.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Lower bounds are dual to upper bounds in partially ordered sets.

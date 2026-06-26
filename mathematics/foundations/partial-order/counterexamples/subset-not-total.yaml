@@ -1,0 +1,22 @@
+id: foundations.partial-order.counterexample.subset-not-total
+kind: counterexample
+title: Subset inclusion need not be total
+
+counterexample_to:
+  - foundations.total-order
+
+demonstrates_necessity_of:
+  - foundations.total-relation.definition
+
+description: |
+  Subset inclusion on $\mathcal{P}(\{1,2\})$ is a partial order, but it is not total because $\{1\}$ and $\{2\}$ are incomparable.
+
+display_math:
+  - latex: |
+      \{1\}\nsubseteq\{2\},\qquad \{2\}\nsubseteq\{1\}
+    description: Incomparable subsets.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Inclusion orders are standard partial orders that need not be total.

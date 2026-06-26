@@ -1,0 +1,19 @@
+id: foundations.maximal-element.example.incomparable-singletons
+kind: example
+title: Multiple maximal elements under inclusion
+
+example_of:
+  - foundations.maximal-element
+
+description: |
+  In $\{\{1\},\{2\}\}$ ordered by inclusion, both elements are maximal. There is no greatest element because neither singleton contains the other.
+
+display_math:
+  - latex: |
+      \{1\}\nsubseteq \{2\},\qquad \{2\}\nsubseteq \{1\}
+    description: Incomparable maximal elements.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Partial orders can have several maximal elements.

@@ -1,0 +1,24 @@
+id: foundations.equivalence-relation.proposition.corresponds-to-partition
+kind: proposition
+title: Equivalence relations correspond to partitions
+
+proposition_type: theorem
+
+claim: |
+  Every equivalence relation on a set $X$ determines a partition of $X$ into equivalence classes, and every partition of $X$ determines an equivalence relation whose classes are exactly the parts of the partition.
+
+display_math:
+  - latex: |
+      \sim\quad\longleftrightarrow\quad X/{\sim}=\{[x]\mid x\in X\}
+    description: Equivalence relations and partitions encode the same grouping data.
+
+depends_on:
+  - foundations.equivalence-relation
+  - foundations.equivalence-class
+  - foundations.partition
+  - foundations.quotient-set
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Standard theorem connecting equivalence relations, equivalence classes, and partitions.

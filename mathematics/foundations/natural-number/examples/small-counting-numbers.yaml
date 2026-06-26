@@ -1,0 +1,19 @@
+id: foundations.natural-number.example.small-counting-numbers
+kind: example
+title: Small natural numbers
+
+example_of:
+  - foundations.natural-number
+
+description: |
+  Starting from $0$ and applying the successor operation repeatedly gives $0$, $1$, $2$, $3$, and so on. This sequence is the basic model for counting finite collections.
+
+display_math:
+  - latex: |
+      S(0)=1,\qquad S(1)=2,\qquad S(2)=3
+    description: Early natural numbers as successor iterates.
+
+source_refs:
+  - source: source.dedekind-1888-was-sind-zahlen
+    locator: 1888 monograph
+    note: Successor iteration is central to Dedekind's account of number.

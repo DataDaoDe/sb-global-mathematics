@@ -1,0 +1,16 @@
+id: foundations.well-order
+kind: concept
+title: Well-order
+
+summary: A well-order is a total order in which every nonempty subset has a least element.
+
+display_math:
+  - latex: |
+      \varnothing\ne A\subseteq X\Rightarrow \exists a\in A\ \forall x\in A,\ a\leq x
+    description: Least-element property for every nonempty subset.
+
+defined_by:
+  - foundations.well-order.definition
+
+broader_concepts:
+  - foundations.total-order

@@ -1,0 +1,23 @@
+id: foundations.equivalence-class.definition
+kind: definition
+title: Definition of equivalence class
+
+defines:
+  - foundations.equivalence-class
+
+depends_on:
+  - foundations.equivalence-relation
+  - foundations.set
+
+statement: |
+  Let $\sim$ be an equivalence relation on a set $X$. The equivalence class of $x\in X$ is the set $[x]=\{y\in X\mid y\sim x\}$.
+
+display_math:
+  - latex: |
+      [x]=\{y\in X\mid y\sim x\}
+    description: All elements equivalent to the representative $x$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Equivalence classes are the elements of quotient sets.

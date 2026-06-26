@@ -1,0 +1,19 @@
+id: foundations.upper-bound.example.subset-family
+kind: example
+title: A union as an upper bound
+
+example_of:
+  - foundations.upper-bound
+
+description: |
+  In a power set ordered by inclusion, the union $A\cup B$ is an upper bound for the subset $\{A,B\}$ because $A\subseteq A\cup B$ and $B\subseteq A\cup B$.
+
+display_math:
+  - latex: |
+      A\subseteq A\cup B,\qquad B\subseteq A\cup B
+    description: Union as an upper bound under inclusion.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Inclusion orders make upper bounds concrete.

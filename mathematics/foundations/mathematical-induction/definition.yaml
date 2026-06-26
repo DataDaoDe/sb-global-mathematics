@@ -1,0 +1,29 @@
+id: foundations.mathematical-induction.definition
+kind: definition
+title: Definition of mathematical induction
+
+defines:
+  - foundations.mathematical-induction
+
+depends_on:
+  - foundations.deduction
+  - foundations.natural-number
+  - foundations.universal-quantifier
+  - foundations.conditional-statement
+
+statement: |
+  Mathematical induction is the proof principle that a property $P(n)$ holds for every natural number $n$ once one proves a base case and proves that $P(n)$ implies $P(n+1)$ for each natural number $n$.
+
+display_math:
+  - latex: |
+      P(0)\ \wedge\ \forall n\in\mathbb{N}\,(P(n)\Rightarrow P(n+1))
+      \Rightarrow \forall n\in\mathbb{N}\,P(n)
+    description: Base case plus induction step implies the universal claim.
+
+source_refs:
+  - source: source.dedekind-1888-was-sind-zahlen
+    locator: 1888 monograph
+    note: Dedekind's treatment of simply infinite systems gives a foundational setting for induction.
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 6
+    note: Modern proof text presentation of mathematical induction.

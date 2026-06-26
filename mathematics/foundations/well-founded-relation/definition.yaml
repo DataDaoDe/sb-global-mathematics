@@ -1,0 +1,26 @@
+id: foundations.well-founded-relation.definition
+kind: definition
+title: Definition of well-founded relation
+
+defines:
+  - foundations.well-founded-relation
+
+depends_on:
+  - foundations.relation
+  - foundations.minimal-element
+  - foundations.subset
+  - foundations.existential-quantifier
+
+statement: |
+  A relation $R$ on a set $X$ is well-founded if every nonempty subset $A\subseteq X$ has an $R$-minimal element: an element $m\in A$ such that no $a\in A$ satisfies $aRm$.
+
+display_math:
+  - latex: |
+      \forall A\subseteq X,\ A\ne\varnothing\Rightarrow
+      \exists m\in A\ \neg\exists a\in A,\ aRm
+    description: Well-foundedness by minimal elements.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Well-founded relations underlie induction, recursion, and the foundation axiom.

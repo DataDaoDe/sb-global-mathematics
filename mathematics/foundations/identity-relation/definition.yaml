@@ -1,0 +1,24 @@
+id: foundations.identity-relation.definition
+kind: definition
+title: Definition of identity relation
+
+defines:
+  - foundations.identity-relation
+
+depends_on:
+  - foundations.relation
+  - foundations.ordered-pair
+  - foundations.reflexive-relation
+
+statement: |
+  The identity relation on a set $X$ is the relation $\Delta_X=\{(x,x)\mid x\in X\}$.
+
+display_math:
+  - latex: |
+      \Delta_X=\{(x,x)\in X\times X\mid x\in X\}
+    description: Identity relation as the diagonal subset of $X\times X$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Equality and identity relations are basic examples of relations on a set.

@@ -1,0 +1,31 @@
+id: foundations.partial-order.definition
+kind: definition
+title: Definition of partial order
+
+defines:
+  - foundations.partial-order
+
+depends_on:
+  - foundations.preorder
+  - foundations.reflexive-relation
+  - foundations.antisymmetric-relation
+  - foundations.transitive-relation
+
+statement: |
+  A partial order on a set $X$ is a relation on $X$ that is reflexive, antisymmetric, and transitive.
+
+display_math:
+  - latex: |
+      \forall x\in X,\ xRx
+    description: Reflexivity.
+  - latex: |
+      \forall x,y\in X,\ (xRy\wedge yRx)\Rightarrow x=y
+    description: Antisymmetry.
+  - latex: |
+      \forall x,y,z\in X,\ (xRy\wedge yRz)\Rightarrow xRz
+    description: Transitivity.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Partial orders combine relation laws used throughout algebra and set theory.

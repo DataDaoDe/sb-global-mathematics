@@ -1,0 +1,19 @@
+id: foundations.identity-relation.example.two-element-set
+kind: example
+title: Identity relation on a two-element set
+
+example_of:
+  - foundations.identity-relation
+
+description: |
+  On $X=\{a,b\}$, the identity relation contains exactly $(a,a)$ and $(b,b)$.
+
+display_math:
+  - latex: |
+      \Delta_X=\{(a,a),(b,b)\}
+    description: Identity relation on a two-element set.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Finite examples make the diagonal relation explicit.

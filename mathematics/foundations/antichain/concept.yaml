@@ -1,0 +1,16 @@
+id: foundations.antichain
+kind: concept
+title: Antichain
+
+summary: An antichain in a partially ordered set is a subset whose distinct elements are pairwise incomparable.
+
+display_math:
+  - latex: |
+      a\ne b\Rightarrow \neg(a\leq b)\wedge\neg(b\leq a)
+    description: Incomparability condition for an antichain.
+
+defined_by:
+  - foundations.antichain.definition
+
+broader_concepts:
+  - foundations.partial-order

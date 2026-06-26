@@ -1,0 +1,21 @@
+id: foundations.total-order.example.integers
+kind: example
+title: The integers under less-than-or-equal form a total order
+
+example_of:
+  - foundations.total-order
+  - foundations.partial-order
+  - foundations.total-relation
+
+description: |
+  The relation $\leq$ on $\mathbb{Z}$ is reflexive, antisymmetric, transitive, and total. Any two integers can be compared, so $\mathbb{Z}$ with $\leq$ is a total order.
+
+display_math:
+  - latex: |
+      (\mathbb{Z},\leq)
+    description: Integers ordered by less-than-or-equal.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Integer order is the standard elementary example of a total order.

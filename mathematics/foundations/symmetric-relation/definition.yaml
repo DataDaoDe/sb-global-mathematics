@@ -1,0 +1,24 @@
+id: foundations.symmetric-relation.definition
+kind: definition
+title: Definition of symmetric relation
+
+defines:
+  - foundations.symmetric-relation
+
+depends_on:
+  - foundations.relation
+  - foundations.conditional-statement
+  - foundations.universal-quantifier
+
+statement: |
+  A relation $R$ on a set $X$ is symmetric if whenever $x$ is related to $y$, then $y$ is related to $x$.
+
+display_math:
+  - latex: |
+      \forall x,y\in X,\ xRy\Rightarrow yRx
+    description: Symmetry condition.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Symmetry is one of the defining properties of equivalence relations.

@@ -1,0 +1,62 @@
+id: foundations.order.history.order-relations
+kind: historical_note
+title: Order relations from comparison laws
+
+date_label: Orders as structured binary relations
+event_type: synthesis
+start_year: 1870
+end_year: 1930
+
+description: |
+  After binary relations were treated as set-theoretic objects, order became a family of relation structures rather than one informal idea of comparison. Partial orders captured reflexive, antisymmetric, transitive comparison; total orders added comparability; strict orders used irreflexive and transitive comparison; and well-orders added a least-element principle for every nonempty subset. Chains, antichains, bounds, least or greatest elements, minimal or maximal elements, and well-foundedness then supplied the local vocabulary needed to reason inside partially ordered sets. These distinctions became essential in algebra, topology, order theory, and axiomatic set theory.
+
+summary: Modern foundations distinguishes partial, total, strict, and well orders by precise relation laws.
+
+prior_formulation: Comparison relations such as $<$, $\leq$, divisibility, and subset inclusion were often treated separately.
+
+conceptual_change: Order became classifiable through reusable properties of binary relations.
+
+resulting_formulation: Orders are relations satisfying specified combinations of reflexivity, antisymmetry, transitivity, totality, irreflexivity, and least-element principles.
+
+enabled_developments:
+  - Partial orders could model comparison with incomparable elements.
+  - Total and strict total orders could model linear comparison.
+  - Well-orders could support transfinite recursion and choice principles.
+  - Maximal principles such as Zorn's lemma could be stated using chains, upper bounds, and maximal elements.
+
+display_math:
+  - latex: |
+      \text{partial order}\subseteq\text{total order}\subseteq\text{well-order}
+    description: Increasingly restrictive non-strict order structures.
+
+subjects:
+  - foundations.partial-order
+  - foundations.total-order
+  - foundations.strict-partial-order
+  - foundations.strict-total-order
+  - foundations.well-order
+  - foundations.chain
+  - foundations.antichain
+  - foundations.upper-bound
+  - foundations.lower-bound
+  - foundations.least-element
+  - foundations.greatest-element
+  - foundations.minimal-element
+  - foundations.maximal-element
+  - foundations.well-founded-relation
+
+developed_from:
+  - foundations.relation
+  - foundations.relation-property.history.classifying-binary-relations
+
+developed_into:
+  - foundations.zermelo-fraenkel-set-theory-with-choice.proposition.well-ordering-equivalent-choice
+  - foundations.zermelo-fraenkel-set-theory-with-choice.proposition.zorn-equivalent-choice
+
+source_refs:
+  - source: source.dedekind-1888-was-sind-zahlen
+    locator: 1888 monograph
+    note: Foundational work on number and systems contributed to structural treatments of order.
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Set theory uses well-orders and order relations as central tools.

@@ -1,0 +1,24 @@
+id: foundations.relation-domain.definition
+kind: definition
+title: Definition of domain of a relation
+
+defines:
+  - foundations.relation-domain
+
+depends_on:
+  - foundations.relation
+  - foundations.ordered-pair
+  - foundations.existential-quantifier
+
+statement: |
+  For a relation $R\subseteq A\times B$, the domain of $R$ is the set of all $a\in A$ for which there exists $b\in B$ with $(a,b)\in R$.
+
+display_math:
+  - latex: |
+      \operatorname{dom}(R)=\{a\in A\mid \exists b\in B,\ (a,b)\in R\}
+    description: Domain as first-coordinate projection of related pairs.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Relations are treated as subsets of Cartesian products.

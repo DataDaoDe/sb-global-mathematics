@@ -1,0 +1,17 @@
+id: foundations.total-order
+kind: concept
+title: Total order
+
+summary: A total order is a partial order in which every pair of elements is comparable.
+
+display_math:
+  - latex: |
+      x\leq y\ \vee\ y\leq x
+    description: Total comparability in a non-strict order.
+
+defined_by:
+  - foundations.total-order.definition
+
+broader_concepts:
+  - foundations.partial-order
+  - foundations.total-relation

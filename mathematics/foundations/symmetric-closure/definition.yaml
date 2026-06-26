@@ -1,0 +1,25 @@
+id: foundations.symmetric-closure.definition
+kind: definition
+title: Definition of symmetric closure
+
+defines:
+  - foundations.symmetric-closure
+
+depends_on:
+  - foundations.relation
+  - foundations.symmetric-relation
+  - foundations.converse-relation
+  - foundations.set-union
+
+statement: |
+  For a relation $R$ on $X$, the symmetric closure of $R$ is the smallest symmetric relation on $X$ that contains $R$; it is obtained by adjoining the converse pairs.
+
+display_math:
+  - latex: |
+      R_{\mathrm{sym}}=R\cup R^{-1}
+    description: Add reversed pairs to make a relation symmetric.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.2
+    note: Closures of relations are standard set-theoretic constructions.

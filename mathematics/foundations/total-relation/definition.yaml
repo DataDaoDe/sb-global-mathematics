@@ -1,0 +1,24 @@
+id: foundations.total-relation.definition
+kind: definition
+title: Definition of total relation
+
+defines:
+  - foundations.total-relation
+
+depends_on:
+  - foundations.relation
+  - foundations.disjunction
+  - foundations.universal-quantifier
+
+statement: |
+  A relation $R$ on a set $X$ is total, or connex, if for every $x,y\in X$, either $xRy$ or $yRx$ holds.
+
+display_math:
+  - latex: |
+      \forall x,y\in X,\ xRy\vee yRx
+    description: Totality condition.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Familiar linear orders satisfy total comparability.

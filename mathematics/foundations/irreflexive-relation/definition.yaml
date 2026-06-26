@@ -1,0 +1,24 @@
+id: foundations.irreflexive-relation.definition
+kind: definition
+title: Definition of irreflexive relation
+
+defines:
+  - foundations.irreflexive-relation
+
+depends_on:
+  - foundations.relation
+  - foundations.negation
+  - foundations.universal-quantifier
+
+statement: |
+  A relation $R$ on a set $X$ is irreflexive if no element of $X$ is related to itself.
+
+display_math:
+  - latex: |
+      \forall x\in X,\ (x,x)\notin R
+    description: Set-of-ordered-pairs form of irreflexivity.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Strict comparison relations illustrate irreflexive relation laws.

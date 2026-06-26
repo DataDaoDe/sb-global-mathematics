@@ -1,0 +1,25 @@
+id: foundations.preorder.definition
+kind: definition
+title: Definition of preorder
+
+defines:
+  - foundations.preorder
+
+depends_on:
+  - foundations.relation
+  - foundations.reflexive-relation
+  - foundations.transitive-relation
+
+statement: |
+  A preorder on a set $X$ is a relation on $X$ that is reflexive and transitive.
+
+display_math:
+  - latex: |
+      \forall x\in X,\ xRx,\qquad
+      \forall x,y,z\in X,\ (xRy\wedge yRz)\Rightarrow xRz
+    description: The two preorder laws.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Preorders are relation structures obtained from reflexivity and transitivity.

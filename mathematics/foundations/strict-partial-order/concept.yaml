@@ -1,0 +1,18 @@
+id: foundations.strict-partial-order
+kind: concept
+title: Strict partial order
+
+summary: A strict partial order is an irreflexive and transitive relation.
+
+display_math:
+  - latex: |
+      \neg xRx,\qquad xRy\wedge yRz\Rightarrow xRz
+    description: Irreflexivity and transitivity.
+
+defined_by:
+  - foundations.strict-partial-order.definition
+
+broader_concepts:
+  - foundations.relation
+  - foundations.irreflexive-relation
+  - foundations.transitive-relation

@@ -20,6 +20,7 @@ depends_on:
   - foundations.zermelo-fraenkel-set-theory-with-choice.proposition.well-ordering-equivalent-choice
   - foundations.zermelo-fraenkel-set-theory-with-choice.definition.axiom-of-choice
   - foundations.relation
+  - foundations.well-order
   - foundations.function
 
 source_refs:

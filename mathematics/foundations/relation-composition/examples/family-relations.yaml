@@ -1,0 +1,19 @@
+id: foundations.relation-composition.example.family-relations
+kind: example
+title: Grandparent as a composition of parent relations
+
+example_of:
+  - foundations.relation-composition
+
+description: |
+  If $P$ is the parent-of relation, then $P\circ P$ is the grandparent-of relation: $x$ is related to $z$ when there is some $y$ such that $x$ is a parent of $y$ and $y$ is a parent of $z$.
+
+display_math:
+  - latex: |
+      (x,z)\in P\circ P\iff \exists y\,((x,y)\in P\wedge(y,z)\in P)
+    description: Grandparent relation as parent relation composed with itself.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Composition is a standard operation on relations and functions.

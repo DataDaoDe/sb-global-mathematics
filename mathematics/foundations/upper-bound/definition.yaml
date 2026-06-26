@@ -1,0 +1,24 @@
+id: foundations.upper-bound.definition
+kind: definition
+title: Definition of upper bound
+
+defines:
+  - foundations.upper-bound
+
+depends_on:
+  - foundations.partial-order
+  - foundations.universal-quantifier
+  - foundations.subset
+
+statement: |
+  Let $(P,\leq)$ be a partially ordered set and let $A\subseteq P$. An element $u\in P$ is an upper bound for $A$ if $a\leq u$ for every $a\in A$.
+
+display_math:
+  - latex: |
+      u\in P,\qquad \forall a\in A,\ a\leq u
+    description: Upper bound condition.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Upper bounds appear in maximal principles such as Zorn's lemma.

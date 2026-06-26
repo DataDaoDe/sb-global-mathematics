@@ -1,0 +1,19 @@
+id: foundations.greatest-element.example.finite-chain
+kind: example
+title: Greatest element of a finite chain
+
+example_of:
+  - foundations.greatest-element
+
+description: |
+  In the usual order on $\{1,2,3\}$, the greatest element is $3$ because every element of the set is less than or equal to $3$.
+
+display_math:
+  - latex: |
+      \max\{1,2,3\}=3
+    description: Greatest element of a finite chain.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Finite total orders provide simple greatest-element examples.

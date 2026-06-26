@@ -1,0 +1,68 @@
+id: foundations.relation.question.classify-relation-properties
+kind: question
+title: Which laws can a relation satisfy?
+
+asks: |
+  Once a relation is encoded as a set of ordered pairs, which structural laws determine whether it behaves like equality, a strict comparison, a preorder, a partial order, a total order, or a well-order?
+
+display_math:
+  - latex: |
+      xRx,\qquad xRy\Rightarrow yRx,\qquad
+      xRy\wedge yRz\Rightarrow xRz
+    description: Typical laws used to classify binary relations.
+
+motivates:
+  - foundations.reflexive-relation
+  - foundations.irreflexive-relation
+  - foundations.symmetric-relation
+  - foundations.asymmetric-relation
+  - foundations.antisymmetric-relation
+  - foundations.transitive-relation
+  - foundations.total-relation
+  - foundations.preorder
+  - foundations.partial-order
+  - foundations.total-order
+  - foundations.strict-partial-order
+  - foundations.strict-total-order
+  - foundations.well-order
+  - foundations.chain
+  - foundations.antichain
+  - foundations.upper-bound
+  - foundations.lower-bound
+  - foundations.least-element
+  - foundations.greatest-element
+  - foundations.minimal-element
+  - foundations.maximal-element
+  - foundations.well-founded-relation
+  - foundations.equivalence-relation
+  - foundations.equivalence-class
+  - foundations.partition
+  - foundations.quotient-set
+  - foundations.relation-domain
+  - foundations.relation-range
+  - foundations.converse-relation
+  - foundations.relation-composition
+  - foundations.identity-relation
+  - foundations.reflexive-closure
+  - foundations.symmetric-closure
+  - foundations.transitive-closure
+  - foundations.reflexive-transitive-closure
+
+related_concepts:
+  - foundations.relation
+  - foundations.ordered-pair
+  - foundations.cartesian-product
+  - foundations.set-union
+  - foundations.set-intersection
+  - foundations.zermelo-fraenkel-set-theory-with-choice
+
+prerequisite_questions:
+  - foundations.relation.question.encode-relationships
+
+successor_questions:
+  - foundations.zermelo-fraenkel-set-theory-with-choice.question.when-can-we-choose-simultaneously
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Basic relation laws organize equivalence relations and order-like relations.

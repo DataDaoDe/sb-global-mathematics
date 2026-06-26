@@ -1,0 +1,16 @@
+id: foundations.greatest-element
+kind: concept
+title: Greatest element
+
+summary: A greatest element of a subset is an element of the subset that is greater than or equal to every element of the subset.
+
+display_math:
+  - latex: |
+      g\in A,\qquad \forall a\in A,\ a\leq g
+    description: Greatest element condition.
+
+defined_by:
+  - foundations.greatest-element.definition
+
+broader_concepts:
+  - foundations.upper-bound

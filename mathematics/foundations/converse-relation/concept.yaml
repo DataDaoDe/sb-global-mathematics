@@ -1,0 +1,16 @@
+id: foundations.converse-relation
+kind: concept
+title: Converse relation
+
+summary: The converse of a relation reverses every ordered pair in the relation.
+
+display_math:
+  - latex: |
+      R^{-1}=\{(b,a)\mid (a,b)\in R\}
+    description: Converse relation.
+
+defined_by:
+  - foundations.converse-relation.definition
+
+broader_concepts:
+  - foundations.relation

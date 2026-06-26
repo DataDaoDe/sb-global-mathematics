@@ -1,0 +1,16 @@
+id: foundations.transitive-relation
+kind: concept
+title: Transitive relation
+
+summary: A transitive relation allows relatedness to pass through an intermediate element.
+
+display_math:
+  - latex: |
+      xRy\ \wedge\ yRz\Rightarrow xRz
+    description: Transitivity of a relation.
+
+defined_by:
+  - foundations.transitive-relation.definition
+
+broader_concepts:
+  - foundations.relation

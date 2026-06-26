@@ -1,0 +1,24 @@
+id: foundations.well-order.proposition.implies-well-founded
+kind: proposition
+title: Every well-order is well-founded
+
+proposition_type: theorem
+
+claim: |
+  If $\leq$ is a well-order on $X$, then the associated strict relation $<$ is well-founded.
+
+display_math:
+  - latex: |
+      \text{well-order }(X,\leq)\quad\Longrightarrow\quad <\text{ is well-founded}
+    description: Well-ordering gives well-founded strict comparison.
+
+depends_on:
+  - foundations.well-order
+  - foundations.well-founded-relation
+  - foundations.least-element
+  - foundations.minimal-element
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Well-orders provide canonical well-founded relations.

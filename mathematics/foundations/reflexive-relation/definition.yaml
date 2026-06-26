@@ -1,0 +1,23 @@
+id: foundations.reflexive-relation.definition
+kind: definition
+title: Definition of reflexive relation
+
+defines:
+  - foundations.reflexive-relation
+
+depends_on:
+  - foundations.relation
+  - foundations.universal-quantifier
+
+statement: |
+  A relation $R$ on a set $X$ is reflexive if every element of $X$ is related to itself.
+
+display_math:
+  - latex: |
+      \forall x\in X,\ (x,x)\in R
+    description: Set-of-ordered-pairs form of reflexivity.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Relation properties are part of the preliminary set-theoretic language.

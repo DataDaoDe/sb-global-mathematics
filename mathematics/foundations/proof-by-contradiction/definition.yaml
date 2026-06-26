@@ -1,0 +1,24 @@
+id: foundations.proof-by-contradiction.definition
+kind: definition
+title: Definition of proof by contradiction
+
+defines:
+  - foundations.proof-by-contradiction
+
+depends_on:
+  - foundations.deduction
+  - foundations.contradiction
+  - foundations.negation
+
+statement: |
+  A proof by contradiction of a statement $P$ assumes $\neg P$ and derives a contradiction. In a classical setting, this shows that $P$ must be true.
+
+display_math:
+  - latex: |
+      \frac{\neg P\vdash Q\wedge \neg Q}{P}
+    description: Classical contradiction proof schema.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 3
+    note: Standard introduction to proof by contradiction as an indirect proof technique.

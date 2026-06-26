@@ -1,0 +1,19 @@
+id: foundations.minimal-element.example.incomparable-singletons
+kind: example
+title: Multiple minimal elements under inclusion
+
+example_of:
+  - foundations.minimal-element
+
+description: |
+  In $\mathcal{P}(\{1,2\})\setminus\{\varnothing\}$ ordered by inclusion, both $\{1\}$ and $\{2\}$ are minimal elements. Neither is least, because neither is contained in the other.
+
+display_math:
+  - latex: |
+      \{1\}\nsubseteq \{2\},\qquad \{2\}\nsubseteq \{1\}
+    description: Incomparable minimal elements.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Partial orders can have several minimal elements.

@@ -1,0 +1,17 @@
+id: foundations.reflexive-closure
+kind: concept
+title: Reflexive closure
+
+summary: The reflexive closure of a relation is the smallest reflexive relation containing it.
+
+display_math:
+  - latex: |
+      R\cup\Delta_X
+    description: Reflexive closure of a relation on $X$.
+
+defined_by:
+  - foundations.reflexive-closure.definition
+
+broader_concepts:
+  - foundations.reflexive-relation
+  - foundations.set-union

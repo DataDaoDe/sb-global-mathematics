@@ -1,0 +1,26 @@
+id: foundations.well-order.definition
+kind: definition
+title: Definition of well-order
+
+defines:
+  - foundations.well-order
+
+depends_on:
+  - foundations.total-order
+  - foundations.subset
+  - foundations.existential-quantifier
+  - foundations.universal-quantifier
+
+statement: |
+  A well-order on a set $X$ is a total order $\leq$ on $X$ such that every nonempty subset of $X$ has a least element under $\leq$.
+
+display_math:
+  - latex: |
+      \forall A\subseteq X,\ A\ne\varnothing\Rightarrow
+      \exists a\in A\ \forall x\in A,\ a\leq x
+    description: Every nonempty subset has a least element.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Well-ordering is a central order notion in set theory and choice principles.

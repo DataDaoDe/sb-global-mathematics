@@ -1,0 +1,24 @@
+id: foundations.chain.definition
+kind: definition
+title: Definition of chain
+
+defines:
+  - foundations.chain
+
+depends_on:
+  - foundations.partial-order
+  - foundations.total-relation
+  - foundations.subset
+
+statement: |
+  Let $(P,\leq)$ be a partially ordered set. A chain in $P$ is a subset $C\subseteq P$ such that any two elements of $C$ are comparable under $\leq$.
+
+display_math:
+  - latex: |
+      \forall a,b\in C,\ a\leq b\vee b\leq a
+    description: Chain condition.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Chains are used in maximal principles such as Zorn's lemma.

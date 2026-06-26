@@ -1,0 +1,24 @@
+id: foundations.strict-total-order.definition
+kind: definition
+title: Definition of strict total order
+
+defines:
+  - foundations.strict-total-order
+
+depends_on:
+  - foundations.strict-partial-order
+  - foundations.total-relation
+  - foundations.negation
+
+statement: |
+  A strict total order on a set $X$ is a strict partial order $<$ such that for every distinct $x,y\in X$, either $x<y$ or $y<x$.
+
+display_math:
+  - latex: |
+      \forall x,y\in X,\ x\ne y\Rightarrow (x<y\vee y<x)
+    description: Trichotomy-style comparability for a strict order.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Strict order notation is often paired with the corresponding non-strict total order.

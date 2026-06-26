@@ -1,0 +1,21 @@
+id: foundations.preorder.example.divisibility-integers
+kind: example
+title: Divisibility on integers is a preorder
+
+example_of:
+  - foundations.preorder
+  - foundations.reflexive-relation
+  - foundations.transitive-relation
+
+description: |
+  On the integers, define $aRb$ when $a$ divides $b$. This relation is reflexive and transitive, so it is a preorder. It is not antisymmetric on all integers because $1\mid -1$ and $-1\mid 1$, but $1\ne -1$.
+
+display_math:
+  - latex: |
+      1\mid -1,\qquad -1\mid 1,\qquad 1\ne -1
+    description: Divisibility on all integers is not antisymmetric.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Divisibility illustrates how a preorder can fail to be a partial order without quotienting by associates.

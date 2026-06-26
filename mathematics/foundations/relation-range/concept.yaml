@@ -1,0 +1,16 @@
+id: foundations.relation-range
+kind: concept
+title: Range of a relation
+
+summary: The range of a relation is the set of second coordinates that occur in some related pair.
+
+display_math:
+  - latex: |
+      \operatorname{ran}(R)=\{b\in B\mid \exists a\in A,\ (a,b)\in R\}
+    description: Range of a relation $R\subseteq A\times B$.
+
+defined_by:
+  - foundations.relation-range.definition
+
+broader_concepts:
+  - foundations.relation

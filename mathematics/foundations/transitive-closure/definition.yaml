@@ -1,0 +1,25 @@
+id: foundations.transitive-closure.definition
+kind: definition
+title: Definition of transitive closure
+
+defines:
+  - foundations.transitive-closure
+
+depends_on:
+  - foundations.relation
+  - foundations.transitive-relation
+  - foundations.relation-composition
+  - foundations.set-union
+
+statement: |
+  For a relation $R$ on $X$, the transitive closure $R^{+}$ is the smallest transitive relation on $X$ that contains $R$. It relates $x$ to $y$ when there is a finite nonempty $R$-path from $x$ to $y$.
+
+display_math:
+  - latex: |
+      R^{+}=R\cup R^2\cup R^3\cup\cdots
+    description: Transitive closure as the union of positive relation powers.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.2
+    note: Transitive closure is a standard construction on relations.

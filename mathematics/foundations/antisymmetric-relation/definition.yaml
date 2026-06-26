@@ -1,0 +1,24 @@
+id: foundations.antisymmetric-relation.definition
+kind: definition
+title: Definition of antisymmetric relation
+
+defines:
+  - foundations.antisymmetric-relation
+
+depends_on:
+  - foundations.relation
+  - foundations.conjunction
+  - foundations.conditional-statement
+
+statement: |
+  A relation $R$ on a set $X$ is antisymmetric if for all $x,y\in X$, whenever $xRy$ and $yRx$ both hold, then $x=y$.
+
+display_math:
+  - latex: |
+      \forall x,y\in X,\ (xRy\wedge yRx)\Rightarrow x=y
+    description: Antisymmetry condition.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Antisymmetry is one of the laws that distinguishes order-like relations from equivalence relations.

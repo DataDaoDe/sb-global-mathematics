@@ -1,0 +1,22 @@
+id: foundations.reflexive-relation.example.equality
+kind: example
+title: Equality is reflexive
+
+example_of:
+  - foundations.reflexive-relation
+  - foundations.symmetric-relation
+  - foundations.antisymmetric-relation
+  - foundations.transitive-relation
+
+description: |
+  Equality on a set $X$ is reflexive because $x=x$ for every $x\in X$. It is also symmetric, antisymmetric, and transitive, so it satisfies several relation laws at once.
+
+display_math:
+  - latex: |
+      \forall x\in X,\ x=x
+    description: Reflexivity of equality.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Equality is the diagonal relation and a standard example for relation properties.

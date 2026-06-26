@@ -1,0 +1,27 @@
+id: foundations.well-order.proposition.implies-well-founded.proof.least-element
+kind: proof
+title: Least-element proof that well-orders are well-founded
+
+proves:
+  - foundations.well-order.proposition.implies-well-founded
+
+method: direct proof
+
+argument: |
+  Let $\leq$ be a well-order on $X$, and let $<$ be its associated strict order. Take any nonempty subset $A\subseteq X$. By the definition of well-order, $A$ has a least element $m$. Since $m\leq a$ for every $a\in A$, there is no element $a\in A$ with $a<m$. Thus $m$ is $<$-minimal in $A$. Every nonempty subset has such a minimal element, so $<$ is well-founded.
+
+display_math:
+  - latex: |
+      m=\min A\quad\Longrightarrow\quad \neg\exists a\in A,\ a<m
+    description: A least element is minimal for the strict order.
+
+depends_on:
+  - foundations.well-order.proposition.implies-well-founded
+  - foundations.well-order
+  - foundations.well-founded-relation
+  - foundations.least-element
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Standard argument from least elements to well-foundedness.

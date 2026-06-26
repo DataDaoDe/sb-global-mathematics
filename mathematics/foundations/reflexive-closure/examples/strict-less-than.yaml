@@ -1,0 +1,19 @@
+id: foundations.reflexive-closure.example.strict-less-than
+kind: example
+title: Reflexive closure of strict less-than
+
+example_of:
+  - foundations.reflexive-closure
+
+description: |
+  On the integers, the reflexive closure of $<$ is $\leq$, since adding all pairs $(n,n)$ turns strict comparison into non-strict comparison.
+
+display_math:
+  - latex: |
+      <\ \cup\ \Delta_{\mathbb{Z}}\ =\ \leq
+    description: Reflexive closure of strict less-than on the integers.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Strict and non-strict orders illustrate relation closure operations.

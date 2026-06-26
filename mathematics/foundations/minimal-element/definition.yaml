@@ -1,0 +1,24 @@
+id: foundations.minimal-element.definition
+kind: definition
+title: Definition of minimal element
+
+defines:
+  - foundations.minimal-element
+
+depends_on:
+  - foundations.partial-order
+  - foundations.negation
+  - foundations.existential-quantifier
+
+statement: |
+  Let $(P,\leq)$ be a partially ordered set and let $A\subseteq P$. A minimal element of $A$ is an element $m\in A$ such that there is no $a\in A$ with $a<m$.
+
+display_math:
+  - latex: |
+      m\in A,\qquad \neg\exists a\in A,\ a<m
+    description: No strictly smaller element lies in $A$.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Minimal elements are central to maximal principles and well-foundedness.

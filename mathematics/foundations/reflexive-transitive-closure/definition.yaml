@@ -1,0 +1,25 @@
+id: foundations.reflexive-transitive-closure.definition
+kind: definition
+title: Definition of reflexive-transitive closure
+
+defines:
+  - foundations.reflexive-transitive-closure
+
+depends_on:
+  - foundations.reflexive-closure
+  - foundations.transitive-closure
+  - foundations.identity-relation
+  - foundations.relation-composition
+
+statement: |
+  For a relation $R$ on $X$, the reflexive-transitive closure $R^{*}$ is the smallest relation on $X$ that contains $R$ and is both reflexive and transitive. It relates $x$ to $y$ when there is a finite $R$-path from $x$ to $y$, allowing a path of length zero.
+
+display_math:
+  - latex: |
+      R^{*}=\Delta_X\cup R\cup R^2\cup R^3\cup\cdots
+    description: Reflexive-transitive closure as zero or more relation steps.
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.2
+    note: Reflexive-transitive closure is the reachability relation allowing zero steps.

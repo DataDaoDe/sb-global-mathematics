@@ -1,0 +1,16 @@
+id: foundations.lower-bound
+kind: concept
+title: Lower bound
+
+summary: A lower bound of a subset of a partially ordered set is an element less than or equal to every element of that subset.
+
+display_math:
+  - latex: |
+      \forall a\in A,\ \ell\leq a
+    description: $\ell$ is a lower bound for $A$.
+
+defined_by:
+  - foundations.lower-bound.definition
+
+broader_concepts:
+  - foundations.partial-order

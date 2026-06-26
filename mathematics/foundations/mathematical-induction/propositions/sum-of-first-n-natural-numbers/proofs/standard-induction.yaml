@@ -1,0 +1,29 @@
+id: foundations.mathematical-induction.proposition.sum-of-first-n-natural-numbers.proof.standard-induction
+kind: proof
+title: Induction proof of the first n integers sum formula
+
+proves:
+  - foundations.mathematical-induction.proposition.sum-of-first-n-natural-numbers
+
+method: mathematical induction
+
+argument: |
+  For $n=1$, the formula gives $1=1(1+1)/2$, so the base case holds. Assume for some $n\ge 1$ that $1+2+\cdots+n=n(n+1)/2$. Then
+  $1+2+\cdots+n+(n+1)=n(n+1)/2+(n+1)=(n+1)(n+2)/2$.
+  This is exactly the formula with $n+1$ in place of $n$. By mathematical induction, the formula holds for every $n\ge 1$.
+
+display_math:
+  - latex: |
+      \frac{n(n+1)}{2}+(n+1)
+      =\frac{(n+1)(n+2)}{2}
+    description: The algebraic step from $P(n)$ to $P(n+1)$.
+
+depends_on:
+  - foundations.mathematical-induction.proposition.sum-of-first-n-natural-numbers
+  - foundations.mathematical-induction
+  - foundations.direct-proof
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 6
+    note: Standard induction proof pattern.

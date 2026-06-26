@@ -8,6 +8,9 @@ defines:
 depends_on:
   - foundations.relation
   - foundations.set
+  - foundations.reflexive-relation
+  - foundations.symmetric-relation
+  - foundations.transitive-relation
 
 statement: |
   Let $X$ be a set. A relation $\sim$ on $X$ is an equivalence relation if for all $x,y,z\in X$ it is reflexive, symmetric, and transitive: $x\sim x$; if $x\sim y$, then $y\sim x$; and if $x\sim y$ and $y\sim z$, then $x\sim z$.

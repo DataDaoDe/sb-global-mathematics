@@ -1,0 +1,21 @@
+id: foundations.asymmetric-relation.example.strict-subset
+kind: example
+title: Proper subset is asymmetric
+
+example_of:
+  - foundations.asymmetric-relation
+  - foundations.irreflexive-relation
+  - foundations.transitive-relation
+
+description: |
+  The proper subset relation $\subsetneq$ is asymmetric: if $A\subsetneq B$, then $B\subsetneq A$ cannot also hold. It is also irreflexive and transitive.
+
+display_math:
+  - latex: |
+      A\subsetneq B\quad\Longrightarrow\quad \neg(B\subsetneq A)
+    description: Asymmetry of proper subset inclusion.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Subset relations provide standard examples of order-like relation properties.

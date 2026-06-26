@@ -1,0 +1,54 @@
+id: foundations.relation-operation.history.operations-on-relations
+kind: historical_note
+title: Operations on relations
+
+date_label: Relations as manipulable set-theoretic objects
+event_type: synthesis
+start_year: 1870
+end_year: 1930
+
+description: |
+  Treating relations as sets of ordered pairs made it possible to operate on them directly. Domain, range, converse, identity, and composition became ordinary set-theoretic constructions. This unified relations with functions: functions have domains and ranges, function composition is a special case of relation composition, and inverse images arise from reversing pairs.
+
+summary: Once relations were encoded as sets of ordered pairs, domain, range, converse, identity, and composition became reusable operations.
+
+prior_formulation: Specific correspondences and transformations were often manipulated in context before the common set-of-pairs representation made the operations uniform.
+
+conceptual_change: Relation operations became set operations on ordered pairs.
+
+resulting_formulation: Modern foundations treats relations as objects with domain, range, converse, identity, and composition operations.
+
+enabled_developments:
+  - Function operations could be seen as special cases of relation operations.
+  - Paths and reachability could be modeled by iterated relation composition.
+  - Equivalence and order relations could be transformed and compared set-theoretically.
+
+display_math:
+  - latex: |
+      \operatorname{dom}(R),\quad \operatorname{ran}(R),\quad R^{-1},\quad S\circ R
+    description: Core operations on relations.
+
+subjects:
+  - foundations.relation-domain
+  - foundations.relation-range
+  - foundations.converse-relation
+  - foundations.relation-composition
+  - foundations.identity-relation
+
+developed_from:
+  - foundations.relation
+  - foundations.ordered-pair
+  - foundations.cartesian-product
+
+developed_into:
+  - foundations.reflexive-closure
+  - foundations.transitive-closure
+  - foundations.function
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Relations, functions, and composition are standard preliminary set-theoretic language.
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Chapter 2
+    note: Relation operations are part of formal set-theoretic background.

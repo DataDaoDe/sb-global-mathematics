@@ -1,0 +1,24 @@
+id: foundations.transitive-relation.definition
+kind: definition
+title: Definition of transitive relation
+
+defines:
+  - foundations.transitive-relation
+
+depends_on:
+  - foundations.relation
+  - foundations.conjunction
+  - foundations.conditional-statement
+
+statement: |
+  A relation $R$ on a set $X$ is transitive if whenever $xRy$ and $yRz$, then $xRz$.
+
+display_math:
+  - latex: |
+      \forall x,y,z\in X,\ (xRy\wedge yRz)\Rightarrow xRz
+    description: Transitivity condition.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Transitivity is a common law in equivalence and order relations.

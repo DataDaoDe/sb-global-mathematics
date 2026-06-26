@@ -1,0 +1,16 @@
+id: foundations.maximal-element
+kind: concept
+title: Maximal element
+
+summary: A maximal element of a subset has no strictly larger element of that subset above it.
+
+display_math:
+  - latex: |
+      m\in A,\qquad \neg\exists a\in A,\ m<a
+    description: Maximal element condition.
+
+defined_by:
+  - foundations.maximal-element.definition
+
+broader_concepts:
+  - foundations.partial-order

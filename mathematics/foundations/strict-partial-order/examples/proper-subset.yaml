@@ -1,0 +1,22 @@
+id: foundations.strict-partial-order.example.proper-subset
+kind: example
+title: Proper subset is a strict partial order
+
+example_of:
+  - foundations.strict-partial-order
+  - foundations.asymmetric-relation
+  - foundations.irreflexive-relation
+  - foundations.transitive-relation
+
+description: |
+  On the power set $\mathcal{P}(X)$, proper subset inclusion $\subsetneq$ is irreflexive, asymmetric, and transitive. It is not total in general because two subsets can be incomparable.
+
+display_math:
+  - latex: |
+      A\subsetneq B,\quad B\subsetneq C\quad\Longrightarrow\quad A\subsetneq C
+    description: Transitivity of proper subset inclusion.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Proper subset inclusion is a standard strict order-like relation.

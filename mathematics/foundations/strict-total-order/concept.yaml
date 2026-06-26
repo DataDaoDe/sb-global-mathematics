@@ -1,0 +1,16 @@
+id: foundations.strict-total-order
+kind: concept
+title: Strict total order
+
+summary: A strict total order is a strict partial order in which any two distinct elements are comparable in exactly one direction.
+
+display_math:
+  - latex: |
+      x\ne y\Rightarrow (x<y\vee y<x)
+    description: Total comparability for distinct elements.
+
+defined_by:
+  - foundations.strict-total-order.definition
+
+broader_concepts:
+  - foundations.strict-partial-order

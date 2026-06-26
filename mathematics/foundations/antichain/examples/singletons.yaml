@@ -1,0 +1,19 @@
+id: foundations.antichain.example.singletons
+kind: example
+title: Singleton subsets form an antichain
+
+example_of:
+  - foundations.antichain
+
+description: |
+  In the power set $\mathcal{P}(\{1,2,3\})$ ordered by inclusion, the subsets $\{1\}$, $\{2\}$, and $\{3\}$ form an antichain because none is contained in another.
+
+display_math:
+  - latex: |
+      \{\{1\},\{2\},\{3\}\}
+    description: An antichain under subset inclusion.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Power sets ordered by inclusion provide standard examples of chains and antichains.

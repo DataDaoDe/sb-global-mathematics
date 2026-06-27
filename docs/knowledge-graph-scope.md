@@ -176,6 +176,7 @@ Repository-wide completeness validation must also enforce the baseline authoring
 * concepts must have historical context;
 * propositions must have at least one proof;
 * proofs must list each proposition they prove in `depends_on`;
+* proof-step dependencies must resolve to mathematical entities and must also appear in the proof's top-level `depends_on`;
 * counterexamples must identify what necessity they demonstrate;
 * question progression links must be reciprocal between `prerequisite_questions` and `successor_questions`;
 * definitions, propositions, proofs, examples, counterexamples, questions, and historical notes must cite at least one source;
@@ -279,6 +280,20 @@ Narrative text fields may include inline and block math:
 * block math: `$$f'(x)=2x$$`.
 
 Repository validation must render embedded text math with KaTeX so broken expressions are caught before consumers display them.
+
+## Annotated Proof Steps
+
+Proof entities may include a `steps` list for detailed exposition. The top-level `argument` remains the concise proof summary, while `steps` records the line-by-line instructional structure.
+
+Each proof step has:
+
+* `label`: a short unique name for the step;
+* `statement`: the mathematical assertion established or used at that step;
+* `justification`: the reason the step is allowed, such as a definition, axiom, theorem, truth condition, or previously established proposition;
+* `depends_on`: optional references to mathematical entities used by the step;
+* `display_math`: optional KaTeX-compatible expressions local to the step.
+
+Step dependencies are explanatory citations, not proof-assistant formal derivations. Repository validation must still resolve them, reject non-mathematical targets, and require them to be mirrored in the proof's top-level `depends_on` so graph navigation remains complete.
 
 ## Near-Term Definition of Done
 

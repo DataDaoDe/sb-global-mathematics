@@ -1,0 +1,24 @@
+id: foundations.function.injective.proposition.composition-injective
+kind: proposition
+title: Composition of injective functions is injective
+
+proposition_type: theorem
+
+claim: |
+  If $f:A\to B$ and $g:B\to C$ are injective functions, then $g\circ f:A\to C$ is injective.
+
+display_math:
+  - latex: |
+      f,g\text{ injective}\quad\Longrightarrow\quad g\circ f\text{ injective}
+    description: Injectivity is preserved by composition.
+
+depends_on:
+  - foundations.function
+  - foundations.function.injective
+  - foundations.relation-composition
+  - foundations.conditional-statement
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Composition and injectivity are standard preliminary facts about functions.

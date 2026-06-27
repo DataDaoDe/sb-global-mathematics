@@ -1,0 +1,24 @@
+id: foundations.subset.proposition.transitive
+kind: proposition
+title: Subset inclusion is transitive
+
+proposition_type: theorem
+
+claim: |
+  If $A\subseteq B$ and $B\subseteq C$, then $A\subseteq C$.
+
+display_math:
+  - latex: |
+      A\subseteq B,\quad B\subseteq C\quad\Longrightarrow\quad A\subseteq C
+    description: Transitivity of subset inclusion.
+
+depends_on:
+  - foundations.subset
+  - foundations.membership
+  - foundations.conditional-statement
+  - foundations.universal-quantifier
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Subset inclusion is treated as a basic transitive comparison of sets.

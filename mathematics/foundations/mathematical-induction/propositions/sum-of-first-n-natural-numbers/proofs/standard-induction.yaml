@@ -12,6 +12,63 @@ argument: |
   $1+2+\cdots+n+(n+1)=n(n+1)/2+(n+1)=(n+1)(n+2)/2$.
   This is exactly the formula with $n+1$ in place of $n$. By mathematical induction, the formula holds for every $n\ge 1$.
 
+steps:
+  - label: State the induction predicate
+    statement: |
+      Let $P(n)$ be the assertion that $1+2+\cdots+n=\frac{n(n+1)}{2}$.
+    justification: |
+      Mathematical induction requires a predicate indexed by the natural numbers.
+    depends_on:
+      - foundations.mathematical-induction
+      - foundations.mathematical-induction.proposition.sum-of-first-n-natural-numbers
+
+  - label: Verify the base case
+    statement: |
+      For $n=1$, the formula gives $1=\frac{1(1+1)}{2}$, so $P(1)$ is true.
+    justification: |
+      This establishes the first case required by the induction principle.
+    depends_on:
+      - foundations.mathematical-induction
+    display_math:
+      - latex: 1=\frac{1(1+1)}{2}
+        description: The base case for the sum formula.
+
+  - label: Assume the induction hypothesis
+    statement: |
+      Assume $P(n)$ holds for some $n\ge 1$, so $1+2+\cdots+n=\frac{n(n+1)}{2}$.
+    justification: |
+      The induction step begins by assuming the current case in order to prove the next case.
+    depends_on:
+      - foundations.mathematical-induction
+
+  - label: Add the next term
+    statement: |
+      Add $n+1$ to both sides of the induction hypothesis.
+    justification: |
+      The sum through $n+1$ is the sum through $n$ plus the next term.
+    depends_on:
+      - foundations.direct-proof
+    display_math:
+      - latex: 1+2+\cdots+n+(n+1)=\frac{n(n+1)}{2}+(n+1)
+        description: Extending the finite sum by its next term.
+
+  - label: Simplify to the next formula
+    statement: |
+      The right side simplifies to $\frac{(n+1)(n+2)}{2}$.
+    justification: |
+      Factoring out $n+1$ gives $(n+1)(n+2)/2$, which is the claimed formula with $n+1$ in place of $n$.
+    depends_on:
+      - foundations.direct-proof
+
+  - label: Invoke induction
+    statement: |
+      Since the base case and induction step both hold, the formula holds for every $n\ge 1$.
+    justification: |
+      This is the conclusion licensed by the principle of mathematical induction.
+    depends_on:
+      - foundations.mathematical-induction
+      - foundations.mathematical-induction.proposition.sum-of-first-n-natural-numbers
+
 display_math:
   - latex: |
       \frac{n(n+1)}{2}+(n+1)

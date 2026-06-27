@@ -131,6 +131,7 @@ const proof: Proof = {
   ],
   method: "direct proof",
   argument: "The claim follows directly from the definition.",
+  steps: [],
   display_math: displayMath,
   depends_on: [
     parseEntityId("algebra.test.concept.proposition.basic-claim"),
@@ -815,6 +816,200 @@ describe("repository validation", () => {
           "algebra.test.concept.proposition.basic-claim.proof.direct",
         targetId: "algebra.test.concept.proposition.basic-claim",
         path: ["depends_on"],
+      }),
+    ]);
+  });
+
+  it("rejects unresolved proof step dependencies", () => {
+    const result = validateEntities([
+      loaded(concept),
+      loaded(definition),
+      loaded(example),
+      loaded(question),
+      loaded(historicalNote),
+      loaded(proposition),
+      loaded({
+        ...proof,
+        steps: [
+          {
+            label: "Use a missing dependency",
+            statement: "This step cites a missing entity.",
+            justification:
+              "Repository validation must reject unresolved step dependencies.",
+            depends_on: [
+              parseEntityId("algebra.test.concept.missing"),
+            ],
+            display_math: [],
+          },
+        ],
+        depends_on: [
+          ...proof.depends_on,
+          parseEntityId("algebra.test.concept.missing"),
+        ],
+      }),
+      loaded(source),
+    ], testMathematicsRoot);
+
+    const referenceIssues = result.issues.filter((issue) =>
+      issue.code === "unresolved-reference"
+    );
+
+    expect(result.valid).toBe(false);
+    expect(referenceIssues).toEqual([
+      expect.objectContaining({
+        code: "unresolved-reference",
+        entityId:
+          "algebra.test.concept.proposition.basic-claim.proof.direct",
+        targetId: "algebra.test.concept.missing",
+        path: ["depends_on"],
+      }),
+      expect.objectContaining({
+        code: "unresolved-reference",
+        entityId:
+          "algebra.test.concept.proposition.basic-claim.proof.direct",
+        targetId: "algebra.test.concept.missing",
+        path: ["steps", "0", "depends_on"],
+      }),
+    ]);
+  });
+
+  it("rejects proof step dependencies on non-mathematical entities", () => {
+    const result = validateEntities([
+      loaded(concept),
+      loaded(definition),
+      loaded(example),
+      loaded(question),
+      loaded(historicalNote),
+      loaded(proposition),
+      loaded({
+        ...proof,
+        steps: [
+          {
+            label: "Use a source as a dependency",
+            statement: "This step incorrectly cites a source as mathematics.",
+            justification:
+              "Proof steps may cite sources through source_refs, not depends_on.",
+            depends_on: [
+              parseEntityId("source.test"),
+            ],
+            display_math: [],
+          },
+        ],
+        depends_on: [
+          ...proof.depends_on,
+          parseEntityId("source.test"),
+        ],
+      }),
+      loaded(source),
+    ], testMathematicsRoot);
+
+    const referenceIssues = result.issues.filter((issue) =>
+      issue.code === "wrong-reference-kind"
+    );
+
+    expect(result.valid).toBe(false);
+    expect(referenceIssues).toEqual([
+      expect.objectContaining({
+        code: "wrong-reference-kind",
+        entityId:
+          "algebra.test.concept.proposition.basic-claim.proof.direct",
+        targetId: "source.test",
+        path: ["depends_on"],
+      }),
+      expect.objectContaining({
+        code: "wrong-reference-kind",
+        entityId:
+          "algebra.test.concept.proposition.basic-claim.proof.direct",
+        targetId: "source.test",
+        path: ["steps", "0", "depends_on"],
+      }),
+    ]);
+  });
+
+  it("rejects proof step dependencies missing from top-level depends_on", () => {
+    const result = validateEntities([
+      loaded(concept),
+      loaded(definition),
+      loaded(example),
+      loaded(question),
+      loaded(historicalNote),
+      loaded(proposition),
+      loaded({
+        ...proof,
+        steps: [
+          {
+            label: "Use the definition",
+            statement: "This step cites the definition.",
+            justification:
+              "The definition must also remain visible as a top-level proof dependency.",
+            depends_on: [
+              parseEntityId("algebra.test.concept.definition"),
+            ],
+            display_math: [],
+          },
+        ],
+        depends_on: [
+          parseEntityId("algebra.test.concept.proposition.basic-claim"),
+        ],
+      }),
+      loaded(source),
+    ], testMathematicsRoot);
+
+    const proofIssues = result.issues.filter((issue) =>
+      issue.code === "inconsistent-proof"
+    );
+
+    expect(result.valid).toBe(false);
+    expect(proofIssues).toEqual([
+      expect.objectContaining({
+        code: "inconsistent-proof",
+        entityId:
+          "algebra.test.concept.proposition.basic-claim.proof.direct",
+        targetId: "algebra.test.concept.definition",
+        path: ["steps", "0", "depends_on"],
+      }),
+    ]);
+  });
+
+  it("rejects invalid display math inside proof steps", () => {
+    const result = validateEntities([
+      loaded(concept),
+      loaded(definition),
+      loaded(example),
+      loaded(question),
+      loaded(historicalNote),
+      loaded(proposition),
+      loaded({
+        ...proof,
+        steps: [
+          {
+            label: "Write malformed math",
+            statement: "This step has malformed display math.",
+            justification: "Validation should render step display math.",
+            depends_on: [],
+            display_math: [
+              {
+                latex: "\\frac{1}",
+                description: "A malformed step expression.",
+              },
+            ],
+          },
+        ],
+      }),
+      loaded(source),
+    ], testMathematicsRoot);
+
+    const displayMathIssues = result.issues.filter((issue) =>
+      issue.code === "invalid-display-math"
+    );
+
+    expect(result.valid).toBe(false);
+    expect(displayMathIssues).toEqual([
+      expect.objectContaining({
+        code: "invalid-display-math",
+        entityId:
+          "algebra.test.concept.proposition.basic-claim.proof.direct",
+        path: ["steps", "0", "display_math", "0", "latex"],
       }),
     ]);
   });

@@ -73,6 +73,11 @@ export type WebNamespaceTree = {
   readonly root: WebNamespaceTreeNode;
 };
 
+export type WebGraphData = {
+  readonly nodes: readonly WebEntitySummary[];
+  readonly edges: readonly GraphEdge[];
+};
+
 export type WebDataBundle = {
   readonly metadata: ArtifactMetadata;
   readonly pages: readonly WebEntityPage[];
@@ -80,6 +85,7 @@ export type WebDataBundle = {
   readonly search: readonly WebSearchEntry[];
   readonly tree: WebNamespaceTree;
   readonly timeline: readonly WebTimelineEntry[];
+  readonly graph: WebGraphData;
 };
 
 const INCOMING_RELATION_GROUPS: Partial<
@@ -127,6 +133,10 @@ export function buildWebData(graph: GraphArtifact): WebDataBundle {
     search: graph.entities.map(toSearchEntry),
     tree: buildNamespaceTree(graph.entities),
     timeline: buildTimeline(graph.entities, entitiesById),
+    graph: {
+      nodes: graph.entities.map(toSummary),
+      edges: graph.edges,
+    },
   };
 }
 

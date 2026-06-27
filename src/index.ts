@@ -116,13 +116,18 @@ export type {
 export {
   ProofArgumentSchema,
   ProofMethodSchema,
+  ProofStepJustificationSchema,
+  ProofStepLabelSchema,
   ProofSchema,
+  ProofStepSchema,
+  ProofStepStatementSchema,
   isProof,
   parseProof,
 } from "./domain/proof.js";
 
 export type {
   Proof,
+  ProofStep,
 } from "./domain/proof.js";
 
 export {

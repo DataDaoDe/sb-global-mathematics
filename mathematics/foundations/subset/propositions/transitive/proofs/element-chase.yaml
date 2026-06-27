@@ -1,0 +1,84 @@
+id: foundations.subset.proposition.transitive.proof.element-chase
+kind: proof
+title: Element-chase proof of subset transitivity
+
+proves:
+  - foundations.subset.proposition.transitive
+
+method: direct proof
+
+argument: |
+  Assume $A\subseteq B$ and $B\subseteq C$. Let $x\in A$ be arbitrary. Since $A\subseteq B$, we have $x\in B$. Since $B\subseteq C$, we then have $x\in C$. Thus every element of $A$ is an element of $C$, so $A\subseteq C$.
+
+steps:
+  - label: Assume the subset hypotheses
+    statement: |
+      Suppose $A\subseteq B$ and $B\subseteq C$.
+    justification: |
+      A direct proof begins by assuming the hypotheses of the conditional statement.
+    depends_on:
+      - foundations.subset.proposition.transitive
+      - foundations.conditional-statement
+
+  - label: Choose an arbitrary element of A
+    statement: |
+      Let $x\in A$ be arbitrary.
+    justification: |
+      To prove $A\subseteq C$, it is enough to show that every element of $A$ lies in $C$.
+    depends_on:
+      - foundations.subset
+      - foundations.universal-quantifier
+
+  - label: Move from A into B
+    statement: |
+      Since $A\subseteq B$ and $x\in A$, it follows that $x\in B$.
+    justification: |
+      This applies the definition of subset inclusion to the first hypothesis.
+    depends_on:
+      - foundations.subset
+
+  - label: Move from B into C
+    statement: |
+      Since $B\subseteq C$ and $x\in B$, it follows that $x\in C$.
+    justification: |
+      This applies the definition of subset inclusion to the second hypothesis.
+    depends_on:
+      - foundations.subset
+
+  - label: Generalize to all elements of A
+    statement: |
+      Because the chosen $x\in A$ was arbitrary, every element of $A$ lies in $C$.
+    justification: |
+      Universal generalization is valid because no special property of $x$ was used beyond $x\in A$.
+    depends_on:
+      - foundations.universal-quantifier
+      - foundations.subset
+
+  - label: Conclude subset transitivity
+    statement: |
+      Therefore $A\subseteq C$.
+    justification: |
+      This is exactly the membership condition in the definition of subset.
+    depends_on:
+      - foundations.subset
+      - foundations.subset.proposition.transitive
+    display_math:
+      - latex: A\subseteq C
+        description: The desired conclusion.
+
+display_math:
+  - latex: |
+      x\in A\Rightarrow x\in B\Rightarrow x\in C
+    description: The element-chase behind subset transitivity.
+
+depends_on:
+  - foundations.subset.proposition.transitive
+  - foundations.subset
+  - foundations.membership
+  - foundations.conditional-statement
+  - foundations.universal-quantifier
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Element-chasing is the standard proof method for elementary subset facts.

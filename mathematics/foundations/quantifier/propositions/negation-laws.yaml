@@ -1,0 +1,28 @@
+id: foundations.quantifier.proposition.negation-laws
+kind: proposition
+title: Quantifier negation laws
+
+proposition_type: theorem
+
+claim: |
+  For a formula $\varphi(x)$, $\neg\forall x\,\varphi(x)$ is logically equivalent to $\exists x\,\neg\varphi(x)$, and $\neg\exists x\,\varphi(x)$ is logically equivalent to $\forall x\,\neg\varphi(x)$.
+
+display_math:
+  - latex: |
+      \neg\forall x\,\varphi(x)\equiv \exists x\,\neg\varphi(x),
+      \qquad
+      \neg\exists x\,\varphi(x)\equiv \forall x\,\neg\varphi(x)
+    description: Negation moves across a quantifier by switching universal and existential quantifiers.
+
+depends_on:
+  - foundations.quantifier
+  - foundations.universal-quantifier
+  - foundations.existential-quantifier
+  - foundations.negation
+  - foundations.logical-equivalence
+  - foundations.first-order-formula
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.2
+    note: Quantifier satisfaction clauses imply the usual negation dualities.

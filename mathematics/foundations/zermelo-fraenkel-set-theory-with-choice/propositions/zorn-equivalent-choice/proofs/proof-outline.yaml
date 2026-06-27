@@ -10,6 +10,77 @@ method: equivalence proof
 argument: |
   From choice, one proves Zorn's lemma by using choices to extend nonmaximal elements along chains until a maximal element must occur. Conversely, assume Zorn's lemma and let $A$ be a family of nonempty sets. Partially order all partial choice functions by extension. The union of any chain of partial choice functions is again a partial choice function, so every chain has an upper bound. Zorn's lemma gives a maximal partial choice function, and maximality forces it to be defined on every member of $A$.
 
+steps:
+  - label: State the equivalence target
+    statement: |
+      The proof outline relates the axiom of choice to Zorn's lemma over the background axioms of ZF.
+    justification: |
+      The proposition being proved records this standard equivalence inside ZFC.
+    depends_on:
+      - foundations.zermelo-fraenkel-set-theory-with-choice.proposition.zorn-equivalent-choice
+      - foundations.zermelo-fraenkel-set-theory-with-choice.definition.axiom-of-choice
+
+  - label: Sketch choice implies Zorn
+    statement: |
+      Assuming choice, one can choose extensions of nonmaximal elements along chains until a maximal element must appear.
+    justification: |
+      Choice supplies the selections needed in the standard construction used to prove Zorn's lemma from AC.
+    depends_on:
+      - foundations.zermelo-fraenkel-set-theory-with-choice.definition.axiom-of-choice
+      - foundations.chain
+      - foundations.maximal-element
+
+  - label: Partially order partial choice functions
+    statement: |
+      Conversely, given a family of nonempty sets, order partial choice functions by extension.
+    justification: |
+      A partial choice function is a function selecting an element from each set in its domain, and extension is a relation comparing such functions.
+    depends_on:
+      - foundations.function
+      - foundations.relation
+      - foundations.zermelo-fraenkel-set-theory-with-choice.definition.axiom-of-choice
+    display_math:
+      - latex: f\leq g \quad\text{when}\quad g\text{ extends }f
+        description: The ordering relation on partial choice functions.
+
+  - label: Show chains have upper bounds
+    statement: |
+      The union of a chain of partial choice functions is again a partial choice function extending every member of the chain.
+    justification: |
+      Chain compatibility prevents conflicting values, so the union remains a function and serves as an upper bound.
+    depends_on:
+      - foundations.chain
+      - foundations.upper-bound
+      - foundations.function
+
+  - label: Apply Zorn to obtain maximality
+    statement: |
+      Since every chain has an upper bound, Zorn's lemma gives a maximal partial choice function.
+    justification: |
+      This is the defining conclusion of Zorn's lemma in the partially ordered set of partial choice functions.
+    depends_on:
+      - foundations.zermelo-fraenkel-set-theory-with-choice.proposition.zorn-equivalent-choice
+      - foundations.upper-bound
+      - foundations.maximal-element
+
+  - label: Force totality by maximality
+    statement: |
+      The maximal partial choice function must be defined on every set in the original family.
+    justification: |
+      If some nonempty set were omitted, choosing one of its elements would extend the function, contradicting maximality.
+    depends_on:
+      - foundations.maximal-element
+      - foundations.zermelo-fraenkel-set-theory-with-choice.definition.axiom-of-choice
+
+  - label: Recover a choice function
+    statement: |
+      The maximal partial choice function is therefore a choice function for the whole family.
+    justification: |
+      Being defined on every member of the family and selecting an element from each member is exactly the role required by the axiom of choice.
+    depends_on:
+      - foundations.function
+      - foundations.zermelo-fraenkel-set-theory-with-choice.definition.axiom-of-choice
+
 display_math:
   - latex: |
       \{\text{partial choice functions}\},\ \subseteq

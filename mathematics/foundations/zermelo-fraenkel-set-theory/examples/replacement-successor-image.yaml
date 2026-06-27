@@ -1,0 +1,21 @@
+id: foundations.zermelo-fraenkel-set-theory.example.replacement-successor-image
+kind: example
+title: Replacement forms the successor image of a set
+
+example_of:
+  - foundations.zermelo-fraenkel-set-theory
+  - foundations.zermelo-fraenkel-set-theory.definition.replacement
+  - foundations.function
+
+description: |
+  If $A$ is a set of natural numbers and a formula defines the unique successor $n\cup\{n\}$ for each $n\in A$, Replacement says that the image of $A$ under this definable assignment is also a set. The axiom is not merely carving out a subset of an already given set; it collects values produced by a functional rule.
+
+display_math:
+  - latex: |
+      A\longmapsto S[A]=\{n\cup\{n\}:n\in A\}
+    description: Replacement collects the successors of all members of $A$.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Replacement asserts that definable functional images of sets are sets.

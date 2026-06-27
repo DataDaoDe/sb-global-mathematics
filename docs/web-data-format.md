@@ -16,6 +16,8 @@ generated/web/
 ├── index.json
 ├── search.json
 ├── tree.json
+├── graph.json
+├── timeline.json
 └── entities/
     └── <entity-id>.json
 ```
@@ -90,6 +92,36 @@ and also have descendants such as `definition`, `example`, and `proposition`.
 
 The namespace tree is an editorial browsing structure. It must not be treated as
 the full mathematical relation graph.
+
+## Graph
+
+`graph.json` is the browser-oriented relation graph:
+
+```json
+{
+  "nodes": [
+    {
+      "id": "foundations.relation",
+      "kind": "concept",
+      "title": "Relation"
+    }
+  ],
+  "edges": [
+    {
+      "from": "foundations.relation",
+      "relation": "defined_by",
+      "to": "foundations.relation.definition"
+    }
+  ]
+}
+```
+
+`nodes` intentionally uses compact entity summaries. Consumers that need full
+entity data should load the corresponding file under `entities/`.
+
+`edges` preserves the typed graph relations emitted by the canonical graph
+builder. Interactive graph views should filter by relation type and visible
+neighborhood rather than render every edge at once.
 
 ## Entity Page
 

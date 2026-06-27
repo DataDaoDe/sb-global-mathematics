@@ -1,0 +1,102 @@
+id: foundations.quantifier.proposition.negation-laws.proof.semantic-duality
+kind: proof
+title: Semantic proof of the quantifier negation laws
+
+proves:
+  - foundations.quantifier.proposition.negation-laws
+
+method: semantic proof
+
+argument: |
+  In a structure, $\forall x\,\varphi(x)$ is true exactly when $\varphi(a)$ is true for every domain element $a$. Its negation is therefore true exactly when it is not the case that every $a$ satisfies $\varphi$, which means that some $a$ fails to satisfy $\varphi$. That is exactly $\exists x\,\neg\varphi(x)$. Similarly, $\exists x\,\varphi(x)$ is true exactly when some $a$ satisfies $\varphi$. Its negation is true exactly when no $a$ satisfies $\varphi$, which means every $a$ satisfies $\neg\varphi$. That is exactly $\forall x\,\neg\varphi(x)$.
+
+steps:
+  - label: Expand the universal statement
+    statement: |
+      The formula $\forall x\,\varphi(x)$ is true exactly when every domain element satisfies $\varphi$.
+    justification: |
+      This is the semantic satisfaction condition for the universal quantifier.
+    depends_on:
+      - foundations.universal-quantifier
+      - foundations.first-order-formula
+
+  - label: Negate the universal condition
+    statement: |
+      The formula $\neg\forall x\,\varphi(x)$ is true exactly when not every domain element satisfies $\varphi$.
+    justification: |
+      Negation reverses the truth value of the formula it is applied to.
+    depends_on:
+      - foundations.negation
+      - foundations.universal-quantifier
+
+  - label: Convert not all to some failure
+    statement: |
+      Not every domain element satisfies $\varphi$ exactly when some domain element satisfies $\neg\varphi$.
+    justification: |
+      This is the semantic duality between universal and existential quantification under negation.
+    depends_on:
+      - foundations.existential-quantifier
+      - foundations.negation
+    display_math:
+      - latex: \neg\forall x\,\varphi(x)\equiv \exists x\,\neg\varphi(x)
+        description: Negating a universal statement yields an existential counterexample.
+
+  - label: Expand the existential statement
+    statement: |
+      The formula $\exists x\,\varphi(x)$ is true exactly when at least one domain element satisfies $\varphi$.
+    justification: |
+      This is the semantic satisfaction condition for the existential quantifier.
+    depends_on:
+      - foundations.existential-quantifier
+      - foundations.first-order-formula
+
+  - label: Negate the existential condition
+    statement: |
+      The formula $\neg\exists x\,\varphi(x)$ is true exactly when no domain element satisfies $\varphi$.
+    justification: |
+      Negating existence says that there is no witness.
+    depends_on:
+      - foundations.negation
+      - foundations.existential-quantifier
+
+  - label: Convert no witness to universal negation
+    statement: |
+      No domain element satisfies $\varphi$ exactly when every domain element satisfies $\neg\varphi$.
+    justification: |
+      If there is no witness for $\varphi$, each object is a witness for the negated predicate, and conversely.
+    depends_on:
+      - foundations.universal-quantifier
+      - foundations.negation
+    display_math:
+      - latex: \neg\exists x\,\varphi(x)\equiv \forall x\,\neg\varphi(x)
+        description: Negating an existential statement yields a universal negative.
+
+  - label: Conclude logical equivalence
+    statement: |
+      Both paired formulas have the same truth conditions in every structure, so both quantifier negation laws hold.
+    justification: |
+      Logical equivalence is sameness of truth value under every interpretation and assignment.
+    depends_on:
+      - foundations.logical-equivalence
+      - foundations.quantifier.proposition.negation-laws
+
+display_math:
+  - latex: |
+      \neg\forall x\,\varphi(x)\equiv \exists x\,\neg\varphi(x),
+      \qquad
+      \neg\exists x\,\varphi(x)\equiv \forall x\,\neg\varphi(x)
+    description: The two semantic dualities between quantifiers and negation.
+
+depends_on:
+  - foundations.quantifier.proposition.negation-laws
+  - foundations.quantifier
+  - foundations.universal-quantifier
+  - foundations.existential-quantifier
+  - foundations.negation
+  - foundations.logical-equivalence
+  - foundations.first-order-formula
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 2.2
+    note: Quantifier satisfaction clauses imply the usual negation dualities.

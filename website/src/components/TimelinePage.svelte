@@ -31,6 +31,7 @@
   <nav class="top-nav">
     <a href="/">Global Mathematics</a>
     <a href="/tree">Tree</a>
+    <a href="/graph">Graph</a>
     <span>{siteData.timeline.length} historical entries</span>
   </nav>
 

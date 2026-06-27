@@ -10,6 +10,43 @@ method: truth table
 argument: |
   To test validity, look only at rows in which all premises are true. If $P$ is true and $P\Rightarrow Q$ is true, then the truth table for the conditional forces $Q$ to be true. There is no valuation in which both premises are true and the conclusion is false. Therefore the argument form is logically valid.
 
+steps:
+  - label: Use the validity criterion
+    statement: |
+      To prove that the argument form is valid, it is enough to show that no valuation makes every premise true while making the conclusion false.
+    justification: |
+      This is the semantic criterion in the definition of logical validity.
+    depends_on:
+      - foundations.logical-validity
+    display_math:
+      - latex: P,\; P\Rightarrow Q \models Q
+        description: The validity claim for modus ponens.
+
+  - label: Restrict attention to true-premise rows
+    statement: |
+      A counterexample to validity would have to be a row in which both $P$ and $P\Rightarrow Q$ are true.
+    justification: |
+      Rows with a false premise cannot witness invalidity, because logical validity only rules out valuations where all premises are true and the conclusion is false.
+    depends_on:
+      - foundations.logical-validity
+
+  - label: Read the conditional truth condition
+    statement: |
+      If $P$ is true and $P\Rightarrow Q$ is true, then $Q$ must be true.
+    justification: |
+      By the truth condition for the conditional, the only row with $P$ true and $Q$ false makes $P\Rightarrow Q$ false. That row therefore cannot have both premises true.
+    depends_on:
+      - foundations.conditional-statement
+
+  - label: Conclude that no counterexample row exists
+    statement: |
+      There is no valuation in which $P$ and $P\Rightarrow Q$ are true while $Q$ is false.
+    justification: |
+      The preceding truth-table analysis eliminates exactly the kind of row that would violate logical validity, so the modus ponens argument form is valid.
+    depends_on:
+      - foundations.deduction.proposition.modus-ponens-valid
+      - foundations.logical-validity
+
 display_math:
   - latex: |
       \begin{array}{c c|c|c}

@@ -13,6 +13,7 @@
   <nav class="top-nav">
     <a href="/">Global Mathematics</a>
     <a href="/timeline">Timeline</a>
+    <a href="/graph">Graph</a>
     <span>{siteData.metadata.entity_count} entities</span>
   </nav>
 

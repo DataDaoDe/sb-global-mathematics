@@ -1,0 +1,21 @@
+id: foundations.zermelo-fraenkel-set-theory-with-choice.proposition.zorn-equivalent-choice.example.vector-space-basis
+kind: example
+title: Zorn's lemma gives a basis for a vector space
+
+example_of:
+  - foundations.zermelo-fraenkel-set-theory-with-choice.proposition.zorn-equivalent-choice
+  - foundations.chain
+  - foundations.maximal-element
+
+description: |
+  To prove that every vector space has a basis, order linearly independent subsets by inclusion. The union of a chain of linearly independent subsets is still linearly independent, so every chain has an upper bound. Zorn's lemma gives a maximal linearly independent set, and maximality implies that it spans the whole vector space.
+
+display_math:
+  - latex: |
+      \mathcal{L}=\{S\subseteq V:S\text{ is linearly independent}\}
+    description: The partially ordered family used in the standard Zorn argument.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Zorn's lemma is a standard route to maximal objects such as bases.

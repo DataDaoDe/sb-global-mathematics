@@ -1,0 +1,97 @@
+id: foundations.set-union.proposition.absorption-laws.proof.membership-equivalence
+kind: proof
+title: Membership proof of the absorption laws
+
+proves:
+  - foundations.set-union.proposition.absorption-laws
+
+method: extensional membership proof
+
+argument: |
+  For any object $x$, membership in $A\cup(A\cap B)$ is equivalent to $x\in A$ or $(x\in A$ and $x\in B)$, which is logically equivalent to $x\in A$. Thus $A\cup(A\cap B)=A$. Similarly, membership in $A\cap(A\cup B)$ is equivalent to $x\in A$ and $(x\in A$ or $x\in B)$, which is logically equivalent to $x\in A$. Thus $A\cap(A\cup B)=A$.
+
+steps:
+  - label: Reduce equality to membership
+    statement: |
+      To prove the two set equalities, compare membership of an arbitrary object $x$ in each side.
+    justification: |
+      Sets are equal when they have the same elements, so membership equivalence proves set equality.
+    depends_on:
+      - foundations.membership
+      - foundations.logical-equivalence
+
+  - label: Expand the first left side
+    statement: |
+      Membership in $A\cup(A\cap B)$ means $x\in A$ or $x\in A\cap B$.
+    justification: |
+      This is the definition of union.
+    depends_on:
+      - foundations.set-union
+    display_math:
+      - latex: x\in A\cup(A\cap B)\iff x\in A\vee x\in A\cap B
+        description: Expanding the outer union.
+
+  - label: Expand the intersection
+    statement: |
+      The condition $x\in A\cap B$ means $x\in A$ and $x\in B$.
+    justification: |
+      This is the definition of intersection.
+    depends_on:
+      - foundations.set-intersection
+
+  - label: Simplify the first formula
+    statement: |
+      The formula $x\in A$ or $(x\in A$ and $x\in B)$ is equivalent to $x\in A$.
+    justification: |
+      This is the logical absorption pattern $P\vee(P\wedge Q)\equiv P$.
+    depends_on:
+      - foundations.logical-equivalence
+      - foundations.set-union.proposition.absorption-laws
+
+  - label: Expand the second left side
+    statement: |
+      Membership in $A\cap(A\cup B)$ means $x\in A$ and $(x\in A$ or $x\in B)$.
+    justification: |
+      This uses the definitions of intersection and union.
+    depends_on:
+      - foundations.set-intersection
+      - foundations.set-union
+    display_math:
+      - latex: x\in A\cap(A\cup B)\iff x\in A\wedge(x\in A\vee x\in B)
+        description: Expanding the second absorption law.
+
+  - label: Simplify the second formula
+    statement: |
+      The formula $x\in A$ and $(x\in A$ or $x\in B)$ is equivalent to $x\in A$.
+    justification: |
+      This is the logical absorption pattern $P\wedge(P\vee Q)\equiv P$.
+    depends_on:
+      - foundations.logical-equivalence
+      - foundations.set-union.proposition.absorption-laws
+
+  - label: Conclude both set identities
+    statement: |
+      Therefore $A\cup(A\cap B)=A$ and $A\cap(A\cup B)=A$.
+    justification: |
+      In both cases, every object belongs to the left side exactly when it belongs to $A$.
+    depends_on:
+      - foundations.membership
+      - foundations.set-union.proposition.absorption-laws
+
+display_math:
+  - latex: |
+      x\in A\cup(A\cap B)\iff x\in A,\qquad
+      x\in A\cap(A\cup B)\iff x\in A
+    description: Membership equivalences proving the absorption laws.
+
+depends_on:
+  - foundations.set-union.proposition.absorption-laws
+  - foundations.set-union
+  - foundations.set-intersection
+  - foundations.membership
+  - foundations.logical-equivalence
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Set identities are commonly proved by comparing membership conditions.

@@ -15,6 +15,14 @@ export type DisplayMath = {
   readonly description?: string;
 };
 
+export type ProofStep = {
+  readonly label: string;
+  readonly statement: string;
+  readonly justification: string;
+  readonly depends_on?: readonly string[];
+  readonly display_math?: readonly DisplayMath[];
+};
+
 export type SourceReference = {
   readonly source: string;
   readonly locator?: string;
@@ -26,6 +34,7 @@ export type Entity = {
   readonly kind: EntityKind;
   readonly title: string;
   readonly display_math?: readonly DisplayMath[];
+  readonly steps?: readonly ProofStep[];
   readonly source_refs?: readonly SourceReference[];
   readonly [key: string]: unknown;
 };
@@ -122,4 +131,10 @@ export type SiteData = {
   readonly search: readonly SearchEntry[];
   readonly tree: NamespaceTree;
   readonly timeline: readonly TimelineEntry[];
+  readonly graph: GraphData;
+};
+
+export type GraphData = {
+  readonly nodes: readonly EntitySummary[];
+  readonly edges: readonly Edge[];
 };

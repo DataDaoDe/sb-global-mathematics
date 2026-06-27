@@ -22,6 +22,10 @@ describe("web data builder", () => {
         title: entity.title,
       })),
     );
+    expect(webData.graph).toEqual({
+      nodes: webData.index,
+      edges: graph.edges,
+    });
     expect(webData.search).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
@@ -33,13 +37,13 @@ describe("web data builder", () => {
     );
     expect(webData.tree.root.counts).toEqual({
       concept: 131,
-      counterexample: 18,
+      counterexample: 20,
       definition: 142,
-      example: 140,
+      example: 145,
       historical_note: 33,
       person: 26,
-      proof: 16,
-      proposition: 16,
+      proof: 23,
+      proposition: 23,
       question: 23,
       source: 26,
     });

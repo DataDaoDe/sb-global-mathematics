@@ -37,6 +37,7 @@ describe("Proof", () => {
       method: "direct proof",
       argument:
         "By definition, a commutative unital ring is a ring with a multiplicative identity whose multiplication is commutative. The referenced definition depends on the concept of an associative unital ring, so every commutative unital ring satisfies the requirements of an associative unital ring.",
+      steps: [],
       display_math: [
         {
           latex:
@@ -92,6 +93,93 @@ describe("Proof", () => {
     const result = ProofSchema.safeParse({
       ...proof,
       argument: "   ",
+    });
+
+    expect(result.success).toBe(false);
+  });
+
+  it("accepts annotated proof steps", () => {
+    const result = ProofSchema.safeParse({
+      ...proof,
+      steps: [
+        {
+          label: "Unpack the definition",
+          statement:
+            "Assume $R$ is a commutative unital ring.",
+          justification:
+            "This is the hypothesis of the proposition being proved.",
+          depends_on: [
+            "algebra.ring.commutative-unital.proposition.specializes-associative-unital",
+          ],
+          display_math: [
+            {
+              latex: "\\mathrm{CommutativeUnitalRing}(R)",
+              description: "The proof hypothesis for $R$.",
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(result.success).toBe(true);
+  });
+
+  it("rejects duplicate proof step labels", () => {
+    const result = ProofSchema.safeParse({
+      ...proof,
+      steps: [
+        {
+          label: "Use the definition",
+          statement: "Use the defining conditions.",
+          justification: "This is licensed by the definition.",
+        },
+        {
+          label: "Use the definition",
+          statement: "Repeat the same label.",
+          justification: "Proof step labels must identify distinct steps.",
+        },
+      ],
+    });
+
+    expect(result.success).toBe(false);
+  });
+
+  it("rejects duplicate proof step dependencies", () => {
+    const [dependencyId] = proof.depends_on;
+
+    if (dependencyId === undefined) {
+      throw new Error("Repository proof has no dependency");
+    }
+
+    const result = ProofSchema.safeParse({
+      ...proof,
+      steps: [
+        {
+          label: "Use a dependency",
+          statement: "A cited dependency supports the step.",
+          justification: "The step cites the same dependency twice.",
+          depends_on: [
+            dependencyId,
+            dependencyId,
+          ],
+        },
+      ],
+    });
+
+    expect(result.success).toBe(false);
+  });
+
+  it("rejects unknown proof step fields", () => {
+    const result = ProofSchema.safeParse({
+      ...proof,
+      steps: [
+        {
+          label: "Use the definition",
+          statement: "Use the defining conditions.",
+          justification: "This is licensed by the definition.",
+          confidence: "obvious",
+        },
+      ],
     });
 
     expect(result.success).toBe(false);

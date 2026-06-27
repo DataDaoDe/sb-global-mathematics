@@ -1,0 +1,88 @@
+id: foundations.function.injective.proposition.composition-injective.proof.unwind-definitions
+kind: proof
+title: Definition-unwinding proof that injective functions compose
+
+proves:
+  - foundations.function.injective.proposition.composition-injective
+
+method: direct proof
+
+argument: |
+  Assume $f:A\to B$ and $g:B\to C$ are injective. To show $g\circ f$ is injective, suppose $(g\circ f)(a)=(g\circ f)(a')$ for elements $a,a'\in A$. By definition of composition, this means $g(f(a))=g(f(a'))$. Since $g$ is injective, $f(a)=f(a')$. Since $f$ is injective, $a=a'$. Therefore $g\circ f$ is injective.
+
+steps:
+  - label: Assume two injective functions
+    statement: |
+      Let $f:A\to B$ and $g:B\to C$ be injective functions.
+    justification: |
+      A direct proof starts by assuming the hypotheses of the theorem.
+    depends_on:
+      - foundations.function.injective.proposition.composition-injective
+      - foundations.function
+      - foundations.function.injective
+
+  - label: Start with equal composite outputs
+    statement: |
+      Suppose $(g\circ f)(a)=(g\circ f)(a')$ for $a,a'\in A$.
+    justification: |
+      To prove injectivity of $g\circ f$, one must show equal outputs force equal inputs.
+    depends_on:
+      - foundations.function.injective
+      - foundations.relation-composition
+
+  - label: Expand the composition
+    statement: |
+      The equality $(g\circ f)(a)=(g\circ f)(a')$ means $g(f(a))=g(f(a'))$.
+    justification: |
+      Function composition is the function case of relation composition: apply $f$ first, then $g$.
+    depends_on:
+      - foundations.relation-composition
+      - foundations.function
+    display_math:
+      - latex: (g\circ f)(a)=g(f(a))
+        description: Evaluation of the composite function.
+
+  - label: Use injectivity of g
+    statement: |
+      Since $g$ is injective and $g(f(a))=g(f(a'))$, we get $f(a)=f(a')$.
+    justification: |
+      This applies the definition of injective function to $g$.
+    depends_on:
+      - foundations.function.injective
+
+  - label: Use injectivity of f
+    statement: |
+      Since $f$ is injective and $f(a)=f(a')$, we get $a=a'$.
+    justification: |
+      This applies the definition of injective function to $f$.
+    depends_on:
+      - foundations.function.injective
+
+  - label: Conclude the composite is injective
+    statement: |
+      Equal outputs under $g\circ f$ force equal inputs, so $g\circ f$ is injective.
+    justification: |
+      This is exactly the definition of injectivity for the composite function.
+    depends_on:
+      - foundations.function.injective
+      - foundations.function.injective.proposition.composition-injective
+
+display_math:
+  - latex: |
+      (g\circ f)(a)=(g\circ f)(a')
+      \Rightarrow g(f(a))=g(f(a'))
+      \Rightarrow f(a)=f(a')
+      \Rightarrow a=a'
+    description: The equality chain proving injectivity of the composite.
+
+depends_on:
+  - foundations.function.injective.proposition.composition-injective
+  - foundations.function
+  - foundations.function.injective
+  - foundations.relation-composition
+  - foundations.conditional-statement
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Direct proof by applying injectivity of the outer and inner functions.

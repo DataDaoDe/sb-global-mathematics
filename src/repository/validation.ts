@@ -61,6 +61,13 @@ const MATHEMATICAL_ENTITY_KINDS = [
   "historical_note",
 ] as const satisfies readonly SupportedEntityKind[];
 
+function isMathematicalEntityKind(
+  kind: SupportedEntityKind,
+): kind is typeof MATHEMATICAL_ENTITY_KINDS[number] {
+  return (MATHEMATICAL_ENTITY_KINDS as readonly SupportedEntityKind[])
+    .includes(kind);
+}
+
 export async function loadRepositoryEntities(
   rootPath = MATHEMATICS_ROOT,
 ): Promise<LoadedEntity[]> {
@@ -293,6 +300,32 @@ function validateProofCompleteness(
       targetId,
     });
   }
+
+  entity.steps.forEach((step, stepIndex) => {
+    const missingTopLevelDependencies = step.depends_on.filter((dependencyId) =>
+      !entity.depends_on.includes(dependencyId)
+    );
+
+    if (missingTopLevelDependencies.length === 0) {
+      return;
+    }
+
+    const [targetId] = missingTopLevelDependencies;
+
+    if (targetId === undefined) {
+      return;
+    }
+
+    issues.push({
+      code: "inconsistent-proof",
+      message:
+        `Proof "${entity.id}" uses step dependency "${targetId}" that is not listed in top-level depends_on.`,
+      entityId: entity.id,
+      filePath: loadedEntity.filePath,
+      path: ["steps", String(stepIndex), "depends_on"],
+      targetId,
+    });
+  });
 }
 
 function validateCounterexampleCompleteness(
@@ -484,8 +517,47 @@ function validateDisplayMath(
   }
 
   for (const [index, expression] of entity.display_math.entries()) {
+    validateDisplayMathExpression(
+      loadedEntity,
+      issues,
+      expression.latex,
+      ["display_math", String(index), "latex"],
+      `display_math.${index}`,
+    );
+  }
+
+  if (entity.kind === "proof") {
+    for (const [stepIndex, step] of entity.steps.entries()) {
+      for (const [expressionIndex, expression] of step.display_math.entries()) {
+        validateDisplayMathExpression(
+          loadedEntity,
+          issues,
+          expression.latex,
+          [
+            "steps",
+            String(stepIndex),
+            "display_math",
+            String(expressionIndex),
+            "latex",
+          ],
+          `steps.${stepIndex}.display_math.${expressionIndex}`,
+        );
+      }
+    }
+  }
+}
+
+function validateDisplayMathExpression(
+  loadedEntity: LoadedEntity,
+  issues: RepositoryValidationIssue[],
+  latex: string,
+  path: readonly string[],
+  label: string,
+): void {
+  const { entity } = loadedEntity;
+
     try {
-      katex.renderToString(expression.latex, {
+      katex.renderToString(latex, {
         displayMode: true,
         throwOnError: true,
         strict: "error",
@@ -494,14 +566,13 @@ function validateDisplayMath(
       issues.push({
         code: "invalid-display-math",
         message:
-          `Entity "${entity.id}" has invalid display math at display_math.${index}: ${errorMessage(error)}`,
+          `Entity "${entity.id}" has invalid display math at ${label}: ${errorMessage(error)}`,
         entityId: entity.id,
         filePath: loadedEntity.filePath,
-        path: ["display_math", String(index), "latex"],
+        path,
         targetId: entity.id,
       });
     }
-  }
 }
 
 function validateTextMath(
@@ -611,6 +682,25 @@ function textFieldsFor(
           fieldName: "argument",
           text: entity.argument,
         },
+        ...entity.steps.flatMap((step, stepIndex) => [
+          {
+            fieldName: `steps.${stepIndex}.statement`,
+            text: step.statement,
+          },
+          {
+            fieldName: `steps.${stepIndex}.justification`,
+            text: step.justification,
+          },
+          ...step.display_math.flatMap((expression, expressionIndex) =>
+            expression.description === undefined ? [] : [
+              {
+                fieldName:
+                  `steps.${stepIndex}.display_math.${expressionIndex}.description`,
+                text: expression.description,
+              },
+            ]
+          ),
+        ]),
         ...displayMathDescriptions,
       ];
 
@@ -799,6 +889,52 @@ function validateReferences(
           entityId: loadedEntity.entity.id,
           filePath: loadedEntity.filePath,
           path: rule.path,
+          targetId,
+        });
+      }
+    }
+  }
+
+  validateProofStepReferences(loadedEntity, entitiesById, issues);
+}
+
+function validateProofStepReferences(
+  loadedEntity: LoadedEntity,
+  entitiesById: ReadonlyMap<string, LoadedEntity>,
+  issues: RepositoryValidationIssue[],
+): void {
+  const { entity } = loadedEntity;
+
+  if (entity.kind !== "proof") {
+    return;
+  }
+
+  for (const [stepIndex, step] of entity.steps.entries()) {
+    for (const targetId of step.depends_on) {
+      const targetEntity = entitiesById.get(targetId);
+      const path = ["steps", String(stepIndex), "depends_on"];
+
+      if (targetEntity === undefined) {
+        issues.push({
+          code: "unresolved-reference",
+          message:
+            `Entity "${entity.id}" references missing entity "${targetId}" at ${path.join(".")}`,
+          entityId: entity.id,
+          filePath: loadedEntity.filePath,
+          path,
+          targetId,
+        });
+        continue;
+      }
+
+      if (!isMathematicalEntityKind(targetEntity.entity.kind)) {
+        issues.push({
+          code: "wrong-reference-kind",
+          message:
+            `Entity "${entity.id}" references "${targetId}" as ${path.join(".")}, but target kind is "${targetEntity.entity.kind}"`,
+          entityId: entity.id,
+          filePath: loadedEntity.filePath,
+          path,
           targetId,
         });
       }

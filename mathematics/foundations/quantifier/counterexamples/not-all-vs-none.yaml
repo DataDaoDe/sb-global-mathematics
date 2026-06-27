@@ -1,0 +1,31 @@
+id: foundations.quantifier.counterexample.not-all-vs-none
+kind: counterexample
+title: Not all does not mean none
+
+counterexample_to:
+  - foundations.quantifier.proposition.negation-laws
+
+demonstrates_necessity_of:
+  - foundations.quantifier.proposition.negation-laws
+  - foundations.existential-quantifier
+  - foundations.universal-quantifier
+
+description: |
+  The statement "not every natural number is even" is true, but the statement "every natural number is not even" is false. Negating a universal statement produces an existential counterexample, not a universal negation. The correct transformation is $\neg\forall n\,E(n)\equiv\exists n\,\neg E(n)$.
+
+display_math:
+  - latex: |
+      \neg\forall n\in\mathbb{N}\,E(n)
+      \not\equiv
+      \forall n\in\mathbb{N}\,\neg E(n)
+    description: The invalid quantifier-negation move.
+  - latex: |
+      \neg\forall n\in\mathbb{N}\,E(n)
+      \equiv
+      \exists n\in\mathbb{N}\,\neg E(n)
+    description: The correct quantifier negation law.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Negating quantified statements requires changing the quantifier and negating the predicate.

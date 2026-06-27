@@ -1,0 +1,26 @@
+id: foundations.logical-equivalence.proposition.de-morgan-laws
+kind: proposition
+title: De Morgan's laws for propositions
+
+proposition_type: theorem
+
+claim: |
+  For propositions $P$ and $Q$, $\neg(P\wedge Q)\equiv(\neg P\vee\neg Q)$ and $\neg(P\vee Q)\equiv(\neg P\wedge\neg Q)$.
+
+display_math:
+  - latex: |
+      \neg(P\wedge Q)\equiv(\neg P\vee\neg Q),\qquad
+      \neg(P\vee Q)\equiv(\neg P\wedge\neg Q)
+    description: De Morgan's laws for conjunction, disjunction, and negation.
+
+depends_on:
+  - foundations.logical-equivalence
+  - foundations.negation
+  - foundations.conjunction
+  - foundations.disjunction
+  - foundations.truth-table
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: De Morgan's laws are standard truth-table equivalences.

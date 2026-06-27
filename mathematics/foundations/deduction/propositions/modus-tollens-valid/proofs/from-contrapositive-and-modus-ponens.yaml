@@ -10,6 +10,45 @@ method: contrapositive equivalence
 argument: |
   By contrapositive equivalence, $P\Rightarrow Q$ is equivalent to $\neg Q\Rightarrow \neg P$. If the premises include $P\Rightarrow Q$ and $\neg Q$, replace the first premise by its equivalent contrapositive and then apply modus ponens to $\neg Q$ and $\neg Q\Rightarrow \neg P$. The conclusion $\neg P$ follows, so the original argument form is valid.
 
+steps:
+  - label: Replace the conditional by its contrapositive
+    statement: |
+      The premise $P\Rightarrow Q$ may be read equivalently as $\neg Q\Rightarrow \neg P$.
+    justification: |
+      This is exactly contrapositive equivalence for conditional statements.
+    depends_on:
+      - foundations.conditional-statement.proposition.contrapositive-equivalence
+      - foundations.contrapositive
+
+  - label: Use the negative premise
+    statement: |
+      The second premise of modus tollens supplies $\neg Q$.
+    justification: |
+      After replacing the conditional by its contrapositive, $\neg Q$ is the antecedent needed to apply modus ponens.
+    depends_on:
+      - foundations.deduction.proposition.modus-tollens-valid
+
+  - label: Apply modus ponens to the contrapositive
+    statement: |
+      From $\neg Q$ and $\neg Q\Rightarrow \neg P$, infer $\neg P$.
+    justification: |
+      This is modus ponens applied to the contrapositive conditional.
+    depends_on:
+      - foundations.deduction.proposition.modus-ponens-valid
+      - foundations.conditional-statement
+    display_math:
+      - latex: \neg Q,\quad \neg Q\Rightarrow \neg P \models \neg P
+        description: The modus ponens instance inside modus tollens.
+
+  - label: Transfer validity back to the original form
+    statement: |
+      Therefore $P\Rightarrow Q$ together with $\neg Q$ entails $\neg P$.
+    justification: |
+      Replacing a premise by a logically equivalent formula preserves the absence of a true-premise false-conclusion valuation.
+    depends_on:
+      - foundations.deduction.proposition.modus-tollens-valid
+      - foundations.logical-validity
+
 display_math:
   - latex: |
       P\Rightarrow Q\equiv \neg Q\Rightarrow \neg P,\qquad
@@ -21,6 +60,7 @@ depends_on:
   - foundations.deduction.proposition.modus-ponens-valid
   - foundations.conditional-statement.proposition.contrapositive-equivalence
   - foundations.logical-validity
+  - foundations.conditional-statement
   - foundations.contrapositive
 
 source_refs:

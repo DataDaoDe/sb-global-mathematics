@@ -1,0 +1,24 @@
+id: foundations.set-union.proposition.absorption-laws
+kind: proposition
+title: Union and intersection satisfy absorption laws
+
+proposition_type: theorem
+
+claim: |
+  For sets $A$ and $B$, $A\cup(A\cap B)=A$ and $A\cap(A\cup B)=A$.
+
+display_math:
+  - latex: |
+      A\cup(A\cap B)=A,\qquad A\cap(A\cup B)=A
+    description: The two absorption laws for union and intersection.
+
+depends_on:
+  - foundations.set-union
+  - foundations.set-intersection
+  - foundations.membership
+  - foundations.logical-equivalence
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Absorption laws are standard elementary identities for set operations.

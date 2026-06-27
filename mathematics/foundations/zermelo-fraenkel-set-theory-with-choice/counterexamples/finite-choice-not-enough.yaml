@@ -1,0 +1,25 @@
+id: foundations.zermelo-fraenkel-set-theory-with-choice.counterexample.finite-choice-not-enough
+kind: counterexample
+title: Finite choice does not explain the axiom of choice
+
+counterexample_to:
+  - foundations.zermelo-fraenkel-set-theory-with-choice.definition.axiom-of-choice
+
+demonstrates_necessity_of:
+  - foundations.zermelo-fraenkel-set-theory-with-choice.definition.axiom-of-choice
+  - foundations.indexed-family
+
+description: |
+  From two nonempty sets $A$ and $B$, one can choose an element of each by making two explicit choices. This does not capture the force of the axiom of choice. AC is needed as an axiom because it asserts simultaneous choice for arbitrary indexed families of nonempty sets, including infinite families where no uniform selection rule is supplied.
+
+display_math:
+  - latex: |
+      A\ne\varnothing,\ B\ne\varnothing
+      \quad\not\text{ the same as }\quad
+      \forall i\in I\,(A_i\ne\varnothing)\Rightarrow\exists f\,\forall i\,(f(i)\in A_i)
+    description: Finite explicit choice is weaker than the general choice-function assertion.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: The axiom of choice concerns arbitrary families of nonempty sets, not merely finitely many explicit choices.

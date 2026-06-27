@@ -1,0 +1,21 @@
+id: foundations.zermelo-fraenkel-set-theory.example.foundation-excludes-membership-loop
+kind: example
+title: Foundation excludes a membership loop
+
+example_of:
+  - foundations.zermelo-fraenkel-set-theory
+  - foundations.zermelo-fraenkel-set-theory.definition.foundation
+  - foundations.membership
+
+description: |
+  Foundation rules out a situation such as $x\in x$. If such a set existed, the singleton $\{x\}$ would be nonempty but would have no member disjoint from it, because its only member $x$ would meet $\{x\}$ through $x$ itself. The axiom forces membership chains to bottom out instead of circling back.
+
+display_math:
+  - latex: |
+      x\in x\quad\text{is ruled out by Foundation}
+    description: A self-membership loop violates the foundation axiom.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Foundation prohibits infinitely descending or circular membership behavior.

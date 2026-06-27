@@ -18,6 +18,7 @@
     <a href="/">Global Mathematics</a>
     <a href="/tree">Tree</a>
     <a href="/timeline">Timeline</a>
+    <a href="/graph">Graph</a>
   </nav>
 
   <section class="home-hero">

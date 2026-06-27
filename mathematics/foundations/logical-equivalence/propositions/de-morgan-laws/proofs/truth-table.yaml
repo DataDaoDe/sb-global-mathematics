@@ -1,0 +1,87 @@
+id: foundations.logical-equivalence.proposition.de-morgan-laws.proof.truth-table
+kind: proof
+title: Truth-table proof of De Morgan's laws
+
+proves:
+  - foundations.logical-equivalence.proposition.de-morgan-laws
+
+method: truth table
+
+argument: |
+  For each assignment of truth values to $P$ and $Q$, compute the truth values of $P\wedge Q$, $P\vee Q$, their negations, and the corresponding formulas $\neg P\vee\neg Q$ and $\neg P\wedge\neg Q$. The columns for $\neg(P\wedge Q)$ and $\neg P\vee\neg Q$ agree in every row, and the columns for $\neg(P\vee Q)$ and $\neg P\wedge\neg Q$ agree in every row. Therefore both De Morgan equivalences hold.
+
+steps:
+  - label: Enumerate truth-value cases
+    statement: |
+      Check the four possible assignments of truth values to $P$ and $Q$.
+    justification: |
+      A truth-table proof of a two-variable equivalence must consider all four valuations.
+    depends_on:
+      - foundations.truth-table
+
+  - label: Compute conjunction and disjunction
+    statement: |
+      The column for $P\wedge Q$ is true only when both $P$ and $Q$ are true, while the column for $P\vee Q$ is true when at least one is true.
+    justification: |
+      These are the truth conditions for conjunction and inclusive disjunction.
+    depends_on:
+      - foundations.conjunction
+      - foundations.disjunction
+
+  - label: Negate the compound columns
+    statement: |
+      The columns for $\neg(P\wedge Q)$ and $\neg(P\vee Q)$ are obtained by reversing the truth values of $P\wedge Q$ and $P\vee Q$.
+    justification: |
+      Negation is true exactly when the negated formula is false.
+    depends_on:
+      - foundations.negation
+
+  - label: Compare with separated negations
+    statement: |
+      The column for $\neg(P\wedge Q)$ matches $\neg P\vee\neg Q$, and the column for $\neg(P\vee Q)$ matches $\neg P\wedge\neg Q$.
+    justification: |
+      The displayed truth table computes both sides of each equivalence in every row.
+    depends_on:
+      - foundations.negation
+      - foundations.conjunction
+      - foundations.disjunction
+    display_math:
+      - latex: |
+          \neg(P\wedge Q)\equiv(\neg P\vee\neg Q)
+        description: The first De Morgan law.
+      - latex: |
+          \neg(P\vee Q)\equiv(\neg P\wedge\neg Q)
+        description: The second De Morgan law.
+
+  - label: Conclude logical equivalence
+    statement: |
+      Since the paired columns agree for every valuation, both De Morgan laws are logical equivalences.
+    justification: |
+      Logical equivalence is equality of truth value under every valuation.
+    depends_on:
+      - foundations.logical-equivalence
+      - foundations.logical-equivalence.proposition.de-morgan-laws
+
+display_math:
+  - latex: |
+      \begin{array}{c c|c|c|c|c}
+      P&Q&\neg(P\wedge Q)&\neg P\vee\neg Q&\neg(P\vee Q)&\neg P\wedge\neg Q\\
+      T&T&F&F&F&F\\
+      T&F&T&T&F&F\\
+      F&T&T&T&F&F\\
+      F&F&T&T&T&T
+      \end{array}
+    description: Truth table verifying both De Morgan laws.
+
+depends_on:
+  - foundations.logical-equivalence.proposition.de-morgan-laws
+  - foundations.logical-equivalence
+  - foundations.negation
+  - foundations.conjunction
+  - foundations.disjunction
+  - foundations.truth-table
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: De Morgan's laws are standard truth-table equivalences.

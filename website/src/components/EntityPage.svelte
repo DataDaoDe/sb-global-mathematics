@@ -5,6 +5,7 @@
   import EntityDetails from "./EntityDetails.svelte";
   import EntityLink from "./EntityLink.svelte";
   import HistorySection from "./HistorySection.svelte";
+  import ProofSteps from "./ProofSteps.svelte";
   import RelationSection from "./RelationSection.svelte";
   import SourceReferences from "./SourceReferences.svelte";
   import TextMath from "./TextMath.svelte";
@@ -172,6 +173,10 @@
             <h2>Argument</h2>
             <TextMath className="entity-prose" text={String(page.entity.argument)} />
           </section>
+        {/if}
+
+        {#if page.entity.steps?.length}
+          <ProofSteps steps={page.entity.steps} index={siteData.index} />
         {/if}
 
         {#if page.entity.display_math}

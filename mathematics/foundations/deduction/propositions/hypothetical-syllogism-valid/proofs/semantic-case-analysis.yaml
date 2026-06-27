@@ -10,6 +10,53 @@ method: semantic case analysis
 argument: |
   Assume $P\Rightarrow Q$ and $Q\Rightarrow R$ are true. To show $P\Rightarrow R$, consider a case in which $P$ is true. Since $P\Rightarrow Q$ is true, $Q$ must be true. Since $Q\Rightarrow R$ is true, $R$ must be true. Thus whenever $P$ is true, $R$ is true, so $P\Rightarrow R$ is true. Therefore no valuation makes the premises true and the conclusion false.
 
+steps:
+  - label: Assume true premises
+    statement: |
+      Work under a valuation where $P\Rightarrow Q$ and $Q\Rightarrow R$ are both true.
+    justification: |
+      To prove validity, we examine valuations in which all premises are true and show that the conclusion cannot be false.
+    depends_on:
+      - foundations.logical-validity
+
+  - label: Test the conclusion condition
+    statement: |
+      To show $P\Rightarrow R$, consider the case in which $P$ is true.
+    justification: |
+      A conditional can fail only when its antecedent is true and its consequent is false, so the only threatening case for $P\Rightarrow R$ starts with $P$ true.
+    depends_on:
+      - foundations.conditional-statement
+
+  - label: Derive the intermediate consequent
+    statement: |
+      From $P$ and $P\Rightarrow Q$, infer $Q$.
+    justification: |
+      This is an instance of modus ponens.
+    depends_on:
+      - foundations.deduction.proposition.modus-ponens-valid
+      - foundations.conditional-statement
+
+  - label: Derive the final consequent
+    statement: |
+      From $Q$ and $Q\Rightarrow R$, infer $R$.
+    justification: |
+      This is a second instance of modus ponens, now applied to the conditional $Q\Rightarrow R$.
+    depends_on:
+      - foundations.deduction.proposition.modus-ponens-valid
+      - foundations.conditional-statement
+
+  - label: Conclude validity
+    statement: |
+      Whenever the premises are true, $P$ true forces $R$ true, so $P\Rightarrow R$ is true.
+    justification: |
+      There is no valuation with true premises and false conclusion, which is the criterion for logical validity.
+    depends_on:
+      - foundations.deduction.proposition.hypothetical-syllogism-valid
+      - foundations.logical-validity
+    display_math:
+      - latex: P\Rightarrow Q,\quad Q\Rightarrow R \models P\Rightarrow R
+        description: The semantic validity claim for hypothetical syllogism.
+
 display_math:
   - latex: |
       P\Rightarrow Q,\quad Q\Rightarrow R,\quad P

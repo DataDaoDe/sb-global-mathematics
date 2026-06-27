@@ -10,6 +10,36 @@ method: truth table
 argument: |
   Compare the truth values of $P\Rightarrow Q$ and $\neg Q\Rightarrow \neg P$. If $P$ and $Q$ are both true, both conditionals are true. If $P$ is true and $Q$ is false, both conditionals are false. If $P$ is false and $Q$ is true, both conditionals are true. If both are false, both conditionals are true. The two statements therefore have the same truth value in every case, so they are logically equivalent.
 
+steps:
+  - label: Identify the two forms
+    statement: |
+      The statement $P\Rightarrow Q$ has contrapositive $\neg Q\Rightarrow \neg P$.
+    justification: |
+      This is the definition of the contrapositive of a conditional statement.
+    depends_on:
+      - foundations.conditional-statement
+      - foundations.contrapositive
+    display_math:
+      - latex: P\Rightarrow Q \quad\text{and}\quad \neg Q\Rightarrow \neg P
+        description: A conditional and its contrapositive.
+
+  - label: Compare truth values row by row
+    statement: |
+      In each of the four possible assignments of truth values to $P$ and $Q$, the formulas $P\Rightarrow Q$ and $\neg Q\Rightarrow \neg P$ have the same truth value.
+    justification: |
+      The truth table for the conditional shows that a conditional is false exactly when its antecedent is true and its consequent is false.
+    depends_on:
+      - foundations.conditional-statement
+
+  - label: Apply logical equivalence
+    statement: |
+      Since the two formulas have the same truth value under every valuation, they are logically equivalent.
+    justification: |
+      Logical equivalence is established by equality of truth value across all valuations.
+    depends_on:
+      - foundations.logical-validity
+      - foundations.conditional-statement.proposition.contrapositive-equivalence
+
 display_math:
   - latex: |
       \begin{array}{c c|c|c}

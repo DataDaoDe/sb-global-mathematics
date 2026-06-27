@@ -1,0 +1,23 @@
+id: foundations.logical-equivalence.proposition.double-negation
+kind: proposition
+title: Double negation is logically equivalent to the original proposition
+
+proposition_type: theorem
+
+claim: |
+  For any proposition $P$, the formulas $\neg\neg P$ and $P$ are logically equivalent.
+
+display_math:
+  - latex: |
+      \neg\neg P\equiv P
+    description: Double negation equivalence in classical propositional logic.
+
+depends_on:
+  - foundations.logical-equivalence
+  - foundations.negation
+  - foundations.truth-table
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Truth tables establish elementary logical equivalences.

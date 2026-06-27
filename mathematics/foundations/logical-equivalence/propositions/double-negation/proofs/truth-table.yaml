@@ -1,0 +1,65 @@
+id: foundations.logical-equivalence.proposition.double-negation.proof.truth-table
+kind: proof
+title: Truth-table proof of double negation equivalence
+
+proves:
+  - foundations.logical-equivalence.proposition.double-negation
+
+method: truth table
+
+argument: |
+  Compare $P$ and $\neg\neg P$ on the two possible truth values of $P$. If $P$ is true, then $\neg P$ is false and $\neg\neg P$ is true. If $P$ is false, then $\neg P$ is true and $\neg\neg P$ is false. Thus $P$ and $\neg\neg P$ have the same truth value on every valuation, so they are logically equivalent.
+
+steps:
+  - label: List the possible valuations
+    statement: |
+      There are two possible truth values for $P$: true and false.
+    justification: |
+      A truth-table proof checks every valuation of the propositional variables involved.
+    depends_on:
+      - foundations.truth-table
+
+  - label: Negate once
+    statement: |
+      The formula $\neg P$ has the opposite truth value from $P$.
+    justification: |
+      This is the truth condition in the definition of negation.
+    depends_on:
+      - foundations.negation
+
+  - label: Negate again
+    statement: |
+      The formula $\neg\neg P$ has the opposite truth value from $\neg P$, so it has the same truth value as $P$.
+    justification: |
+      Applying the negation truth table twice returns the original truth value.
+    depends_on:
+      - foundations.negation
+
+  - label: Conclude logical equivalence
+    statement: |
+      Since $P$ and $\neg\neg P$ agree in every row, they are logically equivalent.
+    justification: |
+      Logical equivalence means sameness of truth value under every valuation.
+    depends_on:
+      - foundations.logical-equivalence
+      - foundations.logical-equivalence.proposition.double-negation
+
+display_math:
+  - latex: |
+      \begin{array}{c|c|c}
+      P&\neg P&\neg\neg P\\
+      T&F&T\\
+      F&T&F
+      \end{array}
+    description: Truth table showing that $P$ and $\neg\neg P$ agree.
+
+depends_on:
+  - foundations.logical-equivalence.proposition.double-negation
+  - foundations.logical-equivalence
+  - foundations.negation
+  - foundations.truth-table
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 1
+    note: Truth tables establish elementary logical equivalences.

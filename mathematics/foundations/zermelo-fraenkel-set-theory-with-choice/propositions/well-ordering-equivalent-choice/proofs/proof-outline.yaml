@@ -10,6 +10,82 @@ method: equivalence proof
 argument: |
   Assume the axiom of choice. Given a set $A$, choose an element from every nonempty subset of $A$. Transfinite recursion then repeatedly selects the next unused element until $A$ has been exhausted; ordering elements by the stage at which they are chosen gives a well-ordering of $A$. Conversely, assume every set can be well-ordered. For any family of nonempty sets, well-order the union of the family and choose from each member its least element in that well-order. This defines a choice function.
 
+steps:
+  - label: Use choice on nonempty subsets
+    statement: |
+      Assuming the axiom of choice, choose one element from every nonempty subset of a given set $A$.
+    justification: |
+      The family of nonempty subsets of $A$ is a family of nonempty sets, so AC supplies a simultaneous choice.
+    depends_on:
+      - foundations.zermelo-fraenkel-set-theory-with-choice.definition.axiom-of-choice
+
+  - label: Select elements recursively
+    statement: |
+      Repeatedly choose the next element from the nonempty set of elements not yet selected.
+    justification: |
+      The chosen selector for nonempty subsets gives a definite next element whenever unused elements remain.
+    depends_on:
+      - foundations.zermelo-fraenkel-set-theory-with-choice.definition.axiom-of-choice
+      - foundations.function
+
+  - label: Order by selection stage
+    statement: |
+      Put $x<y$ when $x$ is selected at an earlier stage than $y$.
+    justification: |
+      Ordering by first selection stage produces a relation on $A$.
+    depends_on:
+      - foundations.relation
+      - foundations.well-order
+
+  - label: Obtain a well-order
+    statement: |
+      The resulting order is a well-order of $A$.
+    justification: |
+      Every nonempty subset has a first selected element, which is least in the stage order.
+    depends_on:
+      - foundations.well-order
+      - foundations.zermelo-fraenkel-set-theory-with-choice.proposition.well-ordering-equivalent-choice
+    display_math:
+      - latex: \mathrm{AC}\Longrightarrow \text{every set can be well-ordered}
+        description: The first direction of the equivalence.
+
+  - label: Assume well-orderability
+    statement: |
+      Conversely, assume every set can be well-ordered.
+    justification: |
+      This is the hypothesis for proving the axiom of choice from the well-ordering principle.
+    depends_on:
+      - foundations.well-order
+      - foundations.zermelo-fraenkel-set-theory-with-choice.proposition.well-ordering-equivalent-choice
+
+  - label: Well-order the union of a family
+    statement: |
+      Given a family of nonempty sets, well-order its union.
+    justification: |
+      The assumed well-ordering principle applies to the union as a set.
+    depends_on:
+      - foundations.well-order
+      - foundations.set-union
+
+  - label: Choose least elements
+    statement: |
+      For each member of the family, choose its least element in the well-order of the union.
+    justification: |
+      Each member is nonempty, so the well-order supplies a least element.
+    depends_on:
+      - foundations.well-order
+      - foundations.least-element
+
+  - label: Define the choice function
+    statement: |
+      Mapping each set in the family to its least element defines a choice function.
+    justification: |
+      The assignment selects one element from each nonempty member, which is exactly what AC requires.
+    depends_on:
+      - foundations.function
+      - foundations.zermelo-fraenkel-set-theory-with-choice.definition.axiom-of-choice
+      - foundations.zermelo-fraenkel-set-theory-with-choice.proposition.well-ordering-equivalent-choice
+
 display_math:
   - latex: |
       \mathrm{AC}\Rightarrow\text{well-order every }A,\qquad
@@ -21,6 +97,8 @@ depends_on:
   - foundations.zermelo-fraenkel-set-theory-with-choice.definition.axiom-of-choice
   - foundations.relation
   - foundations.well-order
+  - foundations.least-element
+  - foundations.set-union
   - foundations.function
 
 source_refs:

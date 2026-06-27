@@ -1,0 +1,22 @@
+id: foundations.zermelo-fraenkel-set-theory-with-choice.proposition.well-ordering-equivalent-choice.example.least-element-choice-function
+kind: example
+title: A well-order defines a choice function by least elements
+
+example_of:
+  - foundations.zermelo-fraenkel-set-theory-with-choice.proposition.well-ordering-equivalent-choice
+  - foundations.well-order
+  - foundations.least-element
+  - foundations.function
+
+description: |
+  If a set $U$ is well-ordered and $\mathcal{A}$ is a family of nonempty subsets of $U$, then each $A\in\mathcal{A}$ has a least element. Sending each $A$ to its least element defines a choice function for the family.
+
+display_math:
+  - latex: |
+      c(A)=\min_{<}(A)
+    description: Choosing the least element of each nonempty subset in a fixed well-order.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: The well-ordering principle implies choice by selecting least elements.

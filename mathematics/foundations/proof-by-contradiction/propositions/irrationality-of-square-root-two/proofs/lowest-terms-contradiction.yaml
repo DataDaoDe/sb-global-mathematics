@@ -10,6 +10,68 @@ method: proof by contradiction
 argument: |
   Assume, for contradiction, that $\sqrt{2}=a/b$ for integers $a$ and $b\ne 0$, with $a/b$ written in lowest terms. Then $a^2=2b^2$, so $a^2$ is even and hence $a$ is even. Write $a=2k$. Substitution gives $4k^2=2b^2$, so $b^2=2k^2$ and $b$ is even. Thus both $a$ and $b$ are divisible by $2$, contradicting that $a/b$ was in lowest terms. Therefore $\sqrt{2}$ is irrational.
 
+steps:
+  - label: Assume rationality in lowest terms
+    statement: |
+      Suppose, for contradiction, that $\sqrt{2}=a/b$ for integers $a$ and $b\ne 0$, with $a/b$ in lowest terms.
+    justification: |
+      Proof by contradiction starts by assuming the negation of the desired claim and deriving an impossibility.
+    depends_on:
+      - foundations.proof-by-contradiction
+      - foundations.proof-by-contradiction.proposition.irrationality-of-square-root-two
+
+  - label: Square the equation
+    statement: |
+      Squaring $\sqrt{2}=a/b$ gives $a^2=2b^2$.
+    justification: |
+      Squaring both sides and multiplying by $b^2$ preserves equality because $b\ne 0$.
+    depends_on:
+      - foundations.direct-proof
+    display_math:
+      - latex: \sqrt{2}=\frac{a}{b}\quad\Longrightarrow\quad a^2=2b^2
+        description: Clearing denominators after squaring the rationality assumption.
+
+  - label: Conclude the numerator is even
+    statement: |
+      Since $a^2=2b^2$, the square $a^2$ is even, and therefore $a$ is even.
+    justification: |
+      If the square of an integer is even, then the integer itself is even; otherwise an odd integer would have an odd square.
+    depends_on:
+      - foundations.direct-proof
+
+  - label: Substitute an even numerator
+    statement: |
+      Write $a=2k$ for some integer $k$ and substitute into $a^2=2b^2$ to obtain $b^2=2k^2$.
+    justification: |
+      This uses the definition of evenness and then simplifies the resulting equality.
+    depends_on:
+      - foundations.direct-proof
+
+  - label: Conclude the denominator is even
+    statement: |
+      Since $b^2=2k^2$, the square $b^2$ is even, and therefore $b$ is even.
+    justification: |
+      The same parity fact used for $a$ applies to $b$.
+    depends_on:
+      - foundations.direct-proof
+
+  - label: Derive the contradiction
+    statement: |
+      Both $a$ and $b$ are divisible by $2$, contradicting the assumption that $a/b$ was in lowest terms.
+    justification: |
+      A fraction in lowest terms cannot have a common divisor greater than $1$ in its numerator and denominator.
+    depends_on:
+      - foundations.contradiction
+
+  - label: Discharge the contradiction assumption
+    statement: |
+      Therefore $\sqrt{2}$ is irrational.
+    justification: |
+      Since assuming rationality leads to a contradiction, proof by contradiction establishes the negation of that assumption.
+    depends_on:
+      - foundations.proof-by-contradiction
+      - foundations.proof-by-contradiction.proposition.irrationality-of-square-root-two
+
 display_math:
   - latex: |
       a^2=2b^2,\quad a=2k,\quad b^2=2k^2
@@ -18,6 +80,7 @@ display_math:
 depends_on:
   - foundations.proof-by-contradiction.proposition.irrationality-of-square-root-two
   - foundations.proof-by-contradiction
+  - foundations.direct-proof
   - foundations.contradiction
 
 source_refs:

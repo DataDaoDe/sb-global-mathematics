@@ -10,6 +10,88 @@ method: direct proof
 argument: |
   Let $\sim$ be an equivalence relation on $X$. Each $x\in X$ lies in its own class $[x]$ by reflexivity, so the union of all classes is $X$. Each class is nonempty for the same reason. If two classes overlap, choose $z\in[x]\cap[y]$. Then $z\sim x$ and $z\sim y$; by symmetry and transitivity, every element equivalent to $x$ is equivalent to $y$, and conversely. Hence $[x]=[y]$. Therefore distinct equivalence classes are disjoint and the classes partition $X$. Conversely, given a partition $\mathcal{P}$ of $X$, define $x\sim y$ when $x$ and $y$ lie in the same part of $\mathcal{P}$. Every element lies in the same part as itself, same-part membership is symmetric, and chaining same-part membership is transitive because parts are disjoint. Thus this relation is an equivalence relation.
 
+steps:
+  - label: Form equivalence classes
+    statement: |
+      Given an equivalence relation $\sim$ on $X$, form the classes $[x]=\{y\in X:y\sim x\}$.
+    justification: |
+      This is the definition of an equivalence class associated with a relation.
+    depends_on:
+      - foundations.equivalence-class
+      - foundations.equivalence-relation
+    display_math:
+      - latex: '[x]=\{y\in X:y\sim x\}'
+        description: The equivalence class of $x$.
+
+  - label: Show classes cover the set
+    statement: |
+      Every $x\in X$ belongs to its own class $[x]$, so the union of all equivalence classes is $X$.
+    justification: |
+      Reflexivity gives $x\sim x$, which places each element in at least one class.
+    depends_on:
+      - foundations.reflexive-relation
+      - foundations.equivalence-class
+
+  - label: Show classes are nonempty
+    statement: |
+      Each class $[x]$ is nonempty because it contains $x$.
+    justification: |
+      This again follows from reflexivity of the equivalence relation.
+    depends_on:
+      - foundations.reflexive-relation
+      - foundations.equivalence-class
+
+  - label: Overlap forces equality
+    statement: |
+      If $[x]\cap[y]\ne\varnothing$, then $[x]=[y]$.
+    justification: |
+      Choose $z\in[x]\cap[y]$. Symmetry turns $z\sim x$ into $x\sim z$, and transitivity with $z\sim y$ shows elements equivalent to $x$ are equivalent to $y$; the reverse inclusion is analogous.
+    depends_on:
+      - foundations.symmetric-relation
+      - foundations.transitive-relation
+      - foundations.equivalence-class
+    display_math:
+      - latex: '[x]\cap[y]\ne\varnothing\Longrightarrow [x]=[y]'
+        description: Equivalence classes cannot overlap without being identical.
+
+  - label: Conclude a partition from classes
+    statement: |
+      The equivalence classes are nonempty, cover $X$, and are pairwise disjoint when distinct, so they form a partition of $X$.
+    justification: |
+      These are exactly the defining conditions of a partition.
+    depends_on:
+      - foundations.partition
+      - foundations.equivalence-relation.proposition.corresponds-to-partition
+
+  - label: Build a relation from a partition
+    statement: |
+      Conversely, given a partition $\mathcal{P}$ of $X$, define $x\sim y$ when $x$ and $y$ lie in the same part of $\mathcal{P}$.
+    justification: |
+      A partition supplies unique parts covering $X$, so same-part membership is a well-defined binary relation on $X$.
+    depends_on:
+      - foundations.partition
+      - foundations.relation
+
+  - label: Verify reflexivity, symmetry, and transitivity
+    statement: |
+      Same-part membership is reflexive, symmetric, and transitive.
+    justification: |
+      Each element lies in its own part, same-part membership is symmetric by equality of the part, and transitivity follows because partition parts are disjoint.
+    depends_on:
+      - foundations.partition
+      - foundations.reflexive-relation
+      - foundations.symmetric-relation
+      - foundations.transitive-relation
+
+  - label: Conclude the converse direction
+    statement: |
+      Therefore the relation induced by a partition is an equivalence relation.
+    justification: |
+      A relation that is reflexive, symmetric, and transitive satisfies the definition of equivalence relation.
+    depends_on:
+      - foundations.equivalence-relation
+      - foundations.equivalence-relation.proposition.corresponds-to-partition
+
 display_math:
   - latex: |
       [x]\cap[y]\ne\varnothing\quad\Longrightarrow\quad [x]=[y]
@@ -18,7 +100,9 @@ display_math:
 depends_on:
   - foundations.equivalence-relation.proposition.corresponds-to-partition
   - foundations.equivalence-class
+  - foundations.equivalence-relation
   - foundations.partition
+  - foundations.relation
   - foundations.reflexive-relation
   - foundations.symmetric-relation
   - foundations.transitive-relation

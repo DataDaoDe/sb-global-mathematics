@@ -1,0 +1,24 @@
+id: foundations.tautology.proposition.excluded-middle
+kind: proposition
+title: Law of excluded middle is a tautology
+
+proposition_type: theorem
+
+claim: |
+  For any proposition $P$, the formula $P\vee\neg P$ is a tautology.
+
+display_math:
+  - latex: |
+      \models P\vee\neg P
+    description: The law of excluded middle as a tautology.
+
+depends_on:
+  - foundations.tautology
+  - foundations.disjunction
+  - foundations.negation
+  - foundations.truth-table
+
+source_refs:
+  - source: source.enderton-mathematical-introduction-to-logic-second-edition
+    locator: Section 1.2
+    note: Tautologies are propositional formulas true under every truth assignment.

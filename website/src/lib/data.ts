@@ -1,5 +1,6 @@
 import type {
   EntityPage,
+  GraphData,
   Metadata,
   NamespaceTree,
   SearchEntry,
@@ -11,12 +12,13 @@ const DATA_ROOT = "/data";
 type Fetch = typeof fetch;
 
 export async function loadSiteData(fetcher: Fetch = fetch): Promise<SiteData> {
-  const [metadata, index, search, tree, timeline] = await Promise.all([
+  const [metadata, index, search, tree, timeline, graph] = await Promise.all([
     loadJson<Metadata>(fetcher, `${DATA_ROOT}/metadata.json`),
     loadJson<SearchEntry[]>(fetcher, `${DATA_ROOT}/index.json`),
     loadJson<SearchEntry[]>(fetcher, `${DATA_ROOT}/search.json`),
     loadJson<NamespaceTree>(fetcher, `${DATA_ROOT}/tree.json`),
     loadJson<TimelineEntry[]>(fetcher, `${DATA_ROOT}/timeline.json`),
+    loadJson<GraphData>(fetcher, `${DATA_ROOT}/graph.json`),
   ]);
 
   return {
@@ -25,6 +27,7 @@ export async function loadSiteData(fetcher: Fetch = fetch): Promise<SiteData> {
     search,
     tree,
     timeline,
+    graph,
   };
 }
 

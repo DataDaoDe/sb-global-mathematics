@@ -10,6 +10,44 @@ method: direct proof
 argument: |
   Let $\leq$ be a well-order on $X$, and let $<$ be its associated strict order. Take any nonempty subset $A\subseteq X$. By the definition of well-order, $A$ has a least element $m$. Since $m\leq a$ for every $a\in A$, there is no element $a\in A$ with $a<m$. Thus $m$ is $<$-minimal in $A$. Every nonempty subset has such a minimal element, so $<$ is well-founded.
 
+steps:
+  - label: Start with an arbitrary nonempty subset
+    statement: |
+      Let $A\subseteq X$ be nonempty.
+    justification: |
+      To prove well-foundedness, one must show that every nonempty subset has a minimal element.
+    depends_on:
+      - foundations.well-founded-relation
+
+  - label: Use the well-order property
+    statement: |
+      Because $\leq$ is a well-order on $X$, the subset $A$ has a least element $m$.
+    justification: |
+      The defining property of a well-order is that each nonempty subset has a least element.
+    depends_on:
+      - foundations.well-order
+      - foundations.least-element
+    display_math:
+      - latex: m=\min A
+        description: The least element provided by the well-order.
+
+  - label: Convert least to minimal
+    statement: |
+      Since $m\leq a$ for every $a\in A$, there is no $a\in A$ with $a<m$.
+    justification: |
+      A least element is below every element of the subset, so no strictly smaller element of the subset exists.
+    depends_on:
+      - foundations.least-element
+
+  - label: Conclude well-foundedness
+    statement: |
+      The arbitrary nonempty subset $A$ has a $<$-minimal element, so the strict order $<$ is well-founded.
+    justification: |
+      This is exactly the condition required by the definition of a well-founded relation.
+    depends_on:
+      - foundations.well-founded-relation
+      - foundations.well-order.proposition.implies-well-founded
+
 display_math:
   - latex: |
       m=\min A\quad\Longrightarrow\quad \neg\exists a\in A,\ a<m

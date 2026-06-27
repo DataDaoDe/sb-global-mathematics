@@ -1,0 +1,23 @@
+id: foundations.zermelo-fraenkel-set-theory-with-choice.example.choice-from-pairs-without-rule
+kind: example
+title: Choosing from many pairs without a uniform rule
+
+example_of:
+  - foundations.zermelo-fraenkel-set-theory-with-choice
+  - foundations.zermelo-fraenkel-set-theory-with-choice.definition.axiom-of-choice
+  - foundations.indexed-family
+
+description: |
+  For a family $\{A_i:i\in I\}$ of nonempty two-element sets, there may be no displayed formula that distinguishes one member of each pair. The axiom of choice asserts that a function still exists that selects one element from every $A_i$.
+
+display_math:
+  - latex: |
+      \forall i\in I\,(A_i\ne\varnothing)
+      \quad\Longrightarrow\quad
+      \exists f\ \forall i\in I\,(f(i)\in A_i)
+    description: A choice function for an indexed family of nonempty sets.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Choice is commonly formulated as the existence of a selector for any family of nonempty sets.

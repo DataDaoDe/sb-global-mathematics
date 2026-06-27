@@ -167,6 +167,64 @@ Socrates Academy and other applications
 
 The source repository is authoritative. Generated databases and indexes are replaceable build artifacts.
 
+## Local SDK and dataset consumption
+
+This repository can be consumed by Socrates Academy as a local package while remaining independently developed.
+
+The package name is:
+
+```text
+@socrates-academy/global-mathematics
+```
+
+Before consuming it from another project, build the SDK and generated datasets:
+
+```bash
+pnpm build:package
+```
+
+This produces:
+
+* `dist/` - the TypeScript SDK compiled to JavaScript with declaration files;
+* `generated/web/` - browser-oriented JSON datasets;
+* `generated/global-mathematics.sqlite` - a SQLite export for bulk/offline use.
+
+In the Socrates Academy application, add a local dependency that points at this directory:
+
+```json
+{
+  "dependencies": {
+    "@socrates-academy/global-mathematics": "file:./subprojects/global-mathematics"
+  }
+}
+```
+
+Use the correct relative path for the consuming package. The local dependency keeps this project independent while allowing the application to consume the current SDK and dataset artifacts.
+
+SDK usage:
+
+```ts
+import {
+  parseMathematicalEntity,
+  type MathematicalEntity
+} from "@socrates-academy/global-mathematics";
+```
+
+Dataset usage:
+
+```ts
+import graph from "@socrates-academy/global-mathematics/data/graph.json";
+import index from "@socrates-academy/global-mathematics/data/index.json";
+```
+
+Entity page JSON files are exported under:
+
+```text
+@socrates-academy/global-mathematics/data/entities/<entity-id>.json
+```
+
+The package remains marked `private` until the public `1.0` release to prevent accidental publication. For local development, Socrates Academy should rebuild this package whenever it needs the latest dataset state.
+
 Source content uses:
 
 * YAML for structured metadata;

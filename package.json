@@ -1,10 +1,35 @@
 {
-  "name": "global-mathematics",
+  "name": "@socrates-academy/global-mathematics",
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./data/metadata.json": "./generated/web/metadata.json",
+    "./data/index.json": "./generated/web/index.json",
+    "./data/search.json": "./generated/web/search.json",
+    "./data/tree.json": "./generated/web/tree.json",
+    "./data/timeline.json": "./generated/web/timeline.json",
+    "./data/graph.json": "./generated/web/graph.json",
+    "./data/entities/*.json": "./generated/web/entities/*.json",
+    "./data/sqlite": "./generated/global-mathematics.sqlite",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "generated/web",
+    "generated/global-mathematics.sqlite",
+    "README.md"
+  ],
   "scripts": {
-    "build": "pnpm validate && pnpm build:graph && pnpm build:sqlite && pnpm build:web-data",
+    "build": "pnpm validate && pnpm build:sdk && pnpm build:graph && pnpm build:sqlite && pnpm build:web-data",
+    "build:package": "pnpm build",
+    "build:sdk": "tsc -p tsconfig.build.json",
     "build:website": "pnpm build && pnpm prepare:website-data && cd website && vite build",
     "build:graph": "tsc -p tsconfig.validate.json && node .validation-build/cli/build-graph.js",
     "build:sqlite": "tsc -p tsconfig.validate.json && node .validation-build/cli/build-sqlite.js",

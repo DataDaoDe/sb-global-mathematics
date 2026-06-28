@@ -1,0 +1,27 @@
+id: foundations.set-builder-notation.question.how-can-a-condition-define-a-set
+kind: question
+title: How can a condition define a set?
+
+asks: |
+  When does a logical condition determine a legitimate set rather than an unrestricted collection?
+
+display_math:
+  - latex: |
+      \{x\in A:P(x)\}
+    description: Restricted set-builder notation.
+
+motivates:
+  - foundations.set-builder-notation
+
+related_concepts:
+  - foundations.class
+  - foundations.proper-class
+  - foundations.empty-set
+
+source_refs:
+  - source: source.zermelo-1908-grundlagen-mengenlehre
+    locator: Axiom III
+    note: Separation restricts set formation to subsets of already given sets.
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Modern set-builder notation is constrained by separation in axiomatic set theory.

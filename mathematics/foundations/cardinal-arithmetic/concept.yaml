@@ -1,0 +1,17 @@
+id: foundations.cardinal-arithmetic
+kind: concept
+title: Cardinal arithmetic
+
+summary: Cardinal arithmetic defines addition, multiplication, and exponentiation of cardinal numbers using disjoint unions, Cartesian products, and function sets.
+
+display_math:
+  - latex: |
+      \kappa+\lambda,\quad \kappa\lambda,\quad \kappa^\lambda
+    description: Cardinal sum, product, and exponentiation.
+
+defined_by:
+  - foundations.cardinal-arithmetic.definition
+
+broader_concepts:
+  - foundations.cardinal-number
+  - foundations.cardinality

@@ -1,0 +1,35 @@
+id: foundations.class.history.paradox-and-classes
+kind: historical_note
+title: Classes after the paradoxes
+
+date_label: Early twentieth century
+event_type: formalization
+start_year: 1903
+
+description: |
+  Set-theoretic paradoxes forced mathematicians to distinguish ordinary sets from broader definable collections.
+
+summary: Classes helped discuss definable collections without making all of them sets.
+
+conceptual_change: |
+  A property-defined collection was no longer automatically a set; it could be treated as a class while set existence required axiomatic justification.
+
+display_math:
+  - latex: |
+      \{x:x\notin x\}
+    description: Russell-style problematic collection.
+
+subjects:
+  - foundations.class
+  - foundations.proper-class
+
+developed_from:
+  - foundations.unrestricted-comprehension
+
+source_refs:
+  - source: source.russell-1903-principles-of-mathematics
+    locator: Chapter X
+    note: Russell presented the paradox that undermined unrestricted comprehension.
+  - source: source.zermelo-1908-grundlagen-mengenlehre
+    locator: 1908 paper
+    note: Zermelo's axiomatization restricted set formation.

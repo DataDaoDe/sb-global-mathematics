@@ -1,0 +1,19 @@
+id: foundations.set-equality.example.same-elements
+kind: example
+title: Same elements in a different listing
+
+example_of:
+  - foundations.set-equality
+
+description: |
+  The sets $\{1,2\}$ and $\{2,1,1\}$ are equal because they have exactly the same elements; listing order and repeated listings do not create new elements.
+
+display_math:
+  - latex: |
+      \{1,2\}=\{2,1,1\}
+    description: Equal finite sets with the same elements.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Elementary set notation treats order and repeated listings as irrelevant to set equality.

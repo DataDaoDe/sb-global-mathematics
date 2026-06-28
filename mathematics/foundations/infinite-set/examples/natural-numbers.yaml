@@ -1,0 +1,19 @@
+id: foundations.infinite-set.example.natural-numbers
+kind: example
+title: The natural numbers are infinite
+
+example_of:
+  - foundations.infinite-set
+
+description: |
+  The set $\mathbb{N}$ is infinite: no finite initial segment exhausts all natural numbers.
+
+display_math:
+  - latex: |
+      \mathbb{N}=\{0,1,2,3,\ldots\}
+    description: Natural numbers as an infinite set.
+
+source_refs:
+  - source: source.dedekind-1888-was-sind-zahlen
+    locator: 1888 monograph
+    note: Natural-number systems are Dedekind's motivating example of infinity.

@@ -1,0 +1,19 @@
+id: foundations.finite-set.example.three-letters
+kind: example
+title: A finite set of letters
+
+example_of:
+  - foundations.finite-set
+
+description: |
+  The set $\{a,b,c\}$ is finite because it has exactly three elements.
+
+display_math:
+  - latex: |
+      |\{a,b,c\}|=3
+    description: Cardinality of a three-element finite set.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Finite sets are basic examples in preliminary set language.

@@ -1,0 +1,31 @@
+id: foundations.ordinal.history.cantor-ordinals
+kind: historical_note
+title: Cantor's transfinite order types
+
+date_label: Late nineteenth century
+event_type: origin
+start_year: 1890
+
+description: |
+  Cantor introduced transfinite ordinal numbers to compare the order types of well-ordered sets beyond the finite.
+
+summary: Ordinals extended counting order into the transfinite.
+
+conceptual_change: |
+  Infinite sequences could be compared by order type, not only by cardinal size.
+
+display_math:
+  - latex: |
+      0,1,2,\ldots,\omega,\omega+1,\ldots
+    description: Beginning of the ordinal sequence.
+
+subjects:
+  - foundations.ordinal
+
+developed_from:
+  - foundations.well-order
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 2
+    note: Modern set theory develops ordinals as the formal theory of well-order types.

@@ -1,0 +1,19 @@
+id: foundations.ordinal.example.first-finite-ordinals
+kind: example
+title: First finite ordinals
+
+example_of:
+  - foundations.ordinal
+
+description: |
+  In the von Neumann construction, $0=\varnothing$, $1=\{0\}$, and $2=\{0,1\}$ are ordinals.
+
+display_math:
+  - latex: |
+      0=\varnothing,\quad 1=\{0\},\quad 2=\{0,1\}
+    description: First finite ordinals.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 2
+    note: Finite ordinals are initial examples of von Neumann ordinals.

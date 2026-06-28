@@ -1,0 +1,19 @@
+id: foundations.set-builder-notation.example.even-natural-numbers
+kind: example
+title: Even natural numbers by a condition
+
+example_of:
+  - foundations.set-builder-notation
+
+description: |
+  The notation $\{n\in\mathbb{N}:2\mid n\}$ describes the natural numbers divisible by $2$.
+
+display_math:
+  - latex: |
+      \{n\in\mathbb{N}:2\mid n\}=\{0,2,4,6,\ldots\}
+    description: Even natural numbers described by set-builder notation.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 4
+    note: Introductory proof texts use set-builder notation for subsets defined by conditions.

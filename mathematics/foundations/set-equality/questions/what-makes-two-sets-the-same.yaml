@@ -1,0 +1,24 @@
+id: foundations.set-equality.question.what-makes-two-sets-the-same
+kind: question
+title: What makes two sets the same?
+
+asks: |
+  If a set is determined only by membership, how can we prove that two set descriptions name the same set?
+
+display_math:
+  - latex: |
+      \forall x\,(x\in A\iff x\in B)
+    description: The membership comparison used to prove set equality.
+
+motivates:
+  - foundations.set-equality
+
+related_concepts:
+  - foundations.empty-set
+  - foundations.unordered-pair
+  - foundations.pair-set
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Extensionality motivates equality proofs by membership equivalence.

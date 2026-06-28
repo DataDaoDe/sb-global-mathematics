@@ -1,0 +1,18 @@
+id: foundations.set-equality
+kind: concept
+title: Set equality
+
+summary: |
+  Set equality is extensional equality: two sets are equal exactly when they have the same elements.
+
+display_math:
+  - latex: |
+      A=B
+    description: Equality of sets.
+
+defined_by:
+  - foundations.set-equality.definition
+
+broader_concepts:
+  - foundations.set
+  - foundations.membership

@@ -1,0 +1,32 @@
+id: foundations.cardinal-arithmetic.history.cantor-cardinal-arithmetic
+kind: historical_note
+title: Arithmetic of transfinite cardinal numbers
+
+date_label: Late nineteenth century
+event_type: generalization
+start_year: 1890
+
+description: |
+  Cantor's theory of transfinite cardinal numbers made it possible to add, multiply, and exponentiate infinite sizes.
+
+summary: Cardinal arithmetic generalized finite arithmetic to set sizes.
+
+conceptual_change: |
+  Operations on numbers were reinterpreted through operations on sets, which exposed new behavior for infinite cardinalities.
+
+display_math:
+  - latex: |
+      \aleph_0+\aleph_0=\aleph_0
+    description: A basic infinite-cardinal arithmetic identity.
+
+subjects:
+  - foundations.cardinal-arithmetic
+
+developed_from:
+  - foundations.cardinal-number
+  - foundations.aleph
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 3
+    note: Modern set theory develops arithmetic for infinite cardinals.

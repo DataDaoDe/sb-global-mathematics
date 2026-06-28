@@ -1,0 +1,26 @@
+id: foundations.unordered-pair.definition
+kind: definition
+title: Definition of unordered pair
+
+definition_style: set-theoretic
+
+defines:
+  - foundations.unordered-pair
+
+depends_on:
+  - foundations.set
+  - foundations.membership
+  - foundations.set-equality
+
+statement: |
+  The unordered pair $\{a,b\}$ is the set whose elements are exactly $a$ and $b$. If $a=b$, then $\{a,b\}$ is the singleton $\{a\}$.
+
+display_math:
+  - latex: |
+      x\in\{a,b\}\iff (x=a\vee x=b)
+    description: Membership condition for an unordered pair.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Pairing is one of the basic set-existence principles.

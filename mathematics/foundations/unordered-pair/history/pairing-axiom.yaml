@@ -1,0 +1,35 @@
+id: foundations.unordered-pair.history.pairing-axiom
+kind: historical_note
+title: Pairing as a set-existence principle
+
+date_label: Early axiomatic set theory
+event_type: formalization
+start_year: 1908
+
+description: |
+  The pairing axiom guarantees that any two given sets can be collected into one set.
+
+summary: Pairing made finite set formation an explicit axiom.
+
+conceptual_change: |
+  Instead of assuming any small collection exists informally, set theory stated a precise rule producing a set from two given objects.
+
+display_math:
+  - latex: |
+      \forall a\,\forall b\,\exists p\,\forall x\,(x\in p\iff (x=a\vee x=b))
+    description: Pairing axiom.
+
+subjects:
+  - foundations.unordered-pair
+  - foundations.pair-set
+
+developed_from:
+  - foundations.set
+
+source_refs:
+  - source: source.zermelo-1908-grundlagen-mengenlehre
+    locator: Axiom II
+    note: Pairing appears among Zermelo's elementary set-existence principles.
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Modern ZF includes pairing.

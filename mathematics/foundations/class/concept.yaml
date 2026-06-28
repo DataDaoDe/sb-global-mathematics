@@ -1,0 +1,17 @@
+id: foundations.class
+kind: concept
+title: Class
+
+summary: A class is a collection described by a property, used in set theory to discuss collections that may or may not be sets.
+
+display_math:
+  - latex: |
+      \{x:P(x)\}
+    description: Informal class notation for objects satisfying a property.
+
+defined_by:
+  - foundations.class.definition
+
+broader_concepts:
+  - foundations.predicate
+  - foundations.set

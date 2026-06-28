@@ -1,0 +1,17 @@
+id: foundations.aleph
+kind: concept
+title: Aleph
+
+summary: Aleph notation names the well-ordered sequence of infinite cardinal numbers.
+
+display_math:
+  - latex: |
+      \aleph_\alpha
+    description: The $\alpha$th aleph cardinal.
+
+defined_by:
+  - foundations.aleph.definition
+
+broader_concepts:
+  - foundations.cardinal-number
+  - foundations.ordinal

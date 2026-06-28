@@ -1,0 +1,31 @@
+id: foundations.infinite-set.history.dedekind-infinite
+kind: historical_note
+title: Dedekind's structural view of infinity
+
+date_label: "1888"
+event_type: formalization
+start_year: 1888
+
+description: |
+  Dedekind characterized infinite systems by the existence of a bijection with a proper part, shifting infinity from vague endlessness to a structural property.
+
+summary: Dedekind made infinity a property expressible by mappings.
+
+conceptual_change: |
+  Infinite size could be recognized by self-similarity under bijection, not merely by inability to finish counting.
+
+display_math:
+  - latex: |
+      A\sim B\subsetneq A
+    description: Dedekind-infinite behavior.
+
+subjects:
+  - foundations.infinite-set
+
+developed_from:
+  - foundations.cardinality
+
+source_refs:
+  - source: source.dedekind-1888-was-sind-zahlen
+    locator: 1888 monograph
+    note: Dedekind used mappings to define infinite systems.

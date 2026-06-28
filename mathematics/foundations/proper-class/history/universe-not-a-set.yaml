@@ -1,0 +1,35 @@
+id: foundations.proper-class.history.universe-not-a-set
+kind: historical_note
+title: The universe is not a set
+
+date_label: Early axiomatic set theory
+event_type: formalization
+start_year: 1908
+
+description: |
+  Axiomatic set theory avoids a universal set by allowing discourse about the universe of all sets without making that universe itself a set.
+
+summary: Proper classes preserve global talk without universal-set paradoxes.
+
+conceptual_change: |
+  The universe of sets could be used as a background collection while set existence remained governed by axioms.
+
+display_math:
+  - latex: |
+      V\notin V
+    description: Informal reminder that $V$ is not a set in ZF.
+
+subjects:
+  - foundations.proper-class
+
+developed_from:
+  - foundations.class
+  - foundations.unrestricted-comprehension
+
+source_refs:
+  - source: source.zermelo-1908-grundlagen-mengenlehre
+    locator: 1908 paper
+    note: Zermelo's axioms avoid unrestricted universal set formation.
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Modern set theory treats $V$ as the universe of all sets, not as a set.

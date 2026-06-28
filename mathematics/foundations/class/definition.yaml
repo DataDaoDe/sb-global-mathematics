@@ -1,0 +1,27 @@
+id: foundations.class.definition
+kind: definition
+title: Definition of class
+
+definition_style: formal
+scope: Set-theoretic discourse
+
+defines:
+  - foundations.class
+
+depends_on:
+  - foundations.predicate
+  - foundations.set
+  - foundations.membership
+
+statement: |
+  A class is a collection specified by a property or formula. A class may be a set, but in axiomatic set theory not every class is assumed to be a set.
+
+display_math:
+  - latex: |
+      C=\{x:P(x)\}
+    description: Informal notation for a class defined by a property.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Classes are used informally to describe definable collections while preserving the set/class distinction.

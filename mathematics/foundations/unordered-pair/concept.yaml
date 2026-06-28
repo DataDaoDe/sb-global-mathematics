@@ -1,0 +1,16 @@
+id: foundations.unordered-pair
+kind: concept
+title: Unordered pair
+
+summary: An unordered pair is a set whose elements are exactly two specified objects, with no first or second coordinate.
+
+display_math:
+  - latex: |
+      \{a,b\}
+    description: The unordered pair containing $a$ and $b$.
+
+defined_by:
+  - foundations.unordered-pair.definition
+
+broader_concepts:
+  - foundations.set

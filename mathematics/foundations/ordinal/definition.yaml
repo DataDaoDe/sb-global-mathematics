@@ -1,0 +1,27 @@
+id: foundations.ordinal.definition
+kind: definition
+title: Definition of ordinal
+
+definition_style: set-theoretic
+
+defines:
+  - foundations.ordinal
+
+depends_on:
+  - foundations.set
+  - foundations.membership
+  - foundations.well-order
+
+statement: |
+  An ordinal is a transitive set that is well-ordered by the membership relation $\in$.
+
+display_math:
+  - latex: |
+      \alpha\text{ is an ordinal}\iff
+      \alpha\text{ is transitive and }(\alpha,\in)\text{ is well-ordered}
+    description: Ordinal as a transitive membership-well-ordered set.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 2
+    note: Ordinals are transitive sets well-ordered by membership.

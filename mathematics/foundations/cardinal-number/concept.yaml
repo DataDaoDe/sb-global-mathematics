@@ -1,0 +1,17 @@
+id: foundations.cardinal-number
+kind: concept
+title: Cardinal number
+
+summary: A cardinal number is an ordinal used as the canonical representative of a set's size.
+
+display_math:
+  - latex: |
+      \kappa
+    description: A typical cardinal number.
+
+defined_by:
+  - foundations.cardinal-number.definition
+
+broader_concepts:
+  - foundations.cardinality
+  - foundations.ordinal

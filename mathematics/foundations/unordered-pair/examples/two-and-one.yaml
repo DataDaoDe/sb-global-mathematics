@@ -1,0 +1,19 @@
+id: foundations.unordered-pair.example.two-and-one
+kind: example
+title: Order does not matter in an unordered pair
+
+example_of:
+  - foundations.unordered-pair
+
+description: |
+  The unordered pairs $\{1,2\}$ and $\{2,1\}$ are equal because they contain the same two elements.
+
+display_math:
+  - latex: |
+      \{1,2\}=\{2,1\}
+    description: Equal unordered pairs.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Finite set notation ignores order.

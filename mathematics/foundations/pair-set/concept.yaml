@@ -1,0 +1,17 @@
+id: foundations.pair-set
+kind: concept
+title: Pair set
+
+summary: A pair set is a set with exactly two distinct elements.
+
+display_math:
+  - latex: |
+      \{a,b\}\quad(a\ne b)
+    description: A pair set with two distinct elements.
+
+defined_by:
+  - foundations.pair-set.definition
+
+broader_concepts:
+  - foundations.unordered-pair
+  - foundations.finite-set

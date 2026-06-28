@@ -1,0 +1,35 @@
+id: foundations.finite-set.history.finite-cardinality
+kind: historical_note
+title: Finiteness through counting and bijection
+
+date_label: Nineteenth-century set theory
+event_type: formalization
+start_year: 1888
+
+description: |
+  Modern set theory characterizes finite sets through bijection with initial segments of the natural numbers.
+
+summary: Bijections turned finite counting into a structural criterion.
+
+conceptual_change: |
+  Finiteness became independent of a particular listing: what matters is whether the set can be matched exactly with a natural-number-sized initial segment.
+
+display_math:
+  - latex: |
+      A\sim\{1,\ldots,n\}
+    description: A finite set bijective with an initial segment.
+
+subjects:
+  - foundations.finite-set
+
+developed_from:
+  - foundations.cardinality
+  - foundations.natural-number
+
+source_refs:
+  - source: source.dedekind-1888-was-sind-zahlen
+    locator: 1888 monograph
+    note: Dedekind used mappings to distinguish finite and infinite systems.
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Modern set theory treats finite cardinals as natural numbers.

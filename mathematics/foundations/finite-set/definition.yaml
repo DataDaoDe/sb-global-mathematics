@@ -1,0 +1,27 @@
+id: foundations.finite-set.definition
+kind: definition
+title: Definition of finite set
+
+definition_style: formal
+
+defines:
+  - foundations.finite-set
+
+depends_on:
+  - foundations.set
+  - foundations.bijection
+  - foundations.natural-number
+  - foundations.cardinality
+
+statement: |
+  A set $A$ is finite if there is a natural number $n$ such that $A$ is bijective with $\{1,\ldots,n\}$. The case $n=0$ is the empty set.
+
+display_math:
+  - latex: |
+      A\text{ is finite}\iff \exists n\in\mathbb{N}\ (|A|=n)
+    description: Finiteness by natural-number cardinality.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Finite cardinalities are identified with natural numbers.

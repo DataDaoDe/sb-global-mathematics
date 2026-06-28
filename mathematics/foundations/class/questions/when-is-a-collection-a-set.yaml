@@ -1,0 +1,26 @@
+id: foundations.class.question.when-is-a-collection-a-set
+kind: question
+title: When is a collection a set?
+
+asks: |
+  Which definable collections can be treated as sets, and which must remain proper classes?
+
+display_math:
+  - latex: |
+      \{x:P(x)\}
+    description: A property-defined collection.
+
+motivates:
+  - foundations.class
+  - foundations.proper-class
+
+related_concepts:
+  - foundations.set-builder-notation
+
+source_refs:
+  - source: source.russell-1903-principles-of-mathematics
+    locator: Chapter X
+    note: Russell's paradox shows the danger of treating every definable collection as a set.
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Modern set theory distinguishes sets from proper classes in informal metatheory.

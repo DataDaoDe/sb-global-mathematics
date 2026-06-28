@@ -1,0 +1,32 @@
+id: foundations.cardinal-number.history.cardinals-as-initial-ordinals
+kind: historical_note
+title: Cardinals as initial ordinals
+
+date_label: Modern axiomatic set theory
+event_type: synthesis
+start_year: 1922
+
+description: |
+  In axiomatic set theory, cardinal numbers are commonly represented by the least ordinal of a given size.
+
+summary: Initial ordinals provide canonical representatives for set size.
+
+conceptual_change: |
+  Cardinality moved from an equivalence relation among sets to a canonical object: the initial ordinal of that equivalence class.
+
+display_math:
+  - latex: |
+      |A|=\min\{\alpha:\alpha\text{ is an ordinal and }\alpha\sim A\}
+    description: Cardinal as least equipotent ordinal.
+
+subjects:
+  - foundations.cardinal-number
+
+developed_from:
+  - foundations.cardinality
+  - foundations.ordinal
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 3
+    note: Cardinals are developed as initial ordinals.

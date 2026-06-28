@@ -1,0 +1,17 @@
+id: foundations.ordinal
+kind: concept
+title: Ordinal
+
+summary: An ordinal is a transitive set well-ordered by membership, used to represent order type.
+
+display_math:
+  - latex: |
+      \alpha
+    description: A typical ordinal.
+
+defined_by:
+  - foundations.ordinal.definition
+
+broader_concepts:
+  - foundations.set
+  - foundations.well-order

@@ -1,0 +1,30 @@
+id: foundations.cardinal-arithmetic.definition
+kind: definition
+title: Definition of cardinal arithmetic
+
+definition_style: set-theoretic
+
+defines:
+  - foundations.cardinal-arithmetic
+
+depends_on:
+  - foundations.cardinal-number
+  - foundations.cardinality
+  - foundations.set-union
+  - foundations.cartesian-product
+  - foundations.function
+
+statement: |
+  For cardinals $\kappa=|A|$ and $\lambda=|B|$, cardinal addition is the size of a disjoint union of $A$ and $B$, cardinal multiplication is the size of $A\times B$, and cardinal exponentiation $\kappa^\lambda$ is the size of the set of functions from $B$ to $A$.
+
+display_math:
+  - latex: |
+      \kappa+\lambda=|A\sqcup B|,\quad
+      \kappa\lambda=|A\times B|,\quad
+      \kappa^\lambda=|A^B|
+    description: Cardinal operations represented by set constructions.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 3
+    note: Cardinal arithmetic is defined through cardinalities of standard set constructions.

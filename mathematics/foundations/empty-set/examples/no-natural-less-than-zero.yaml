@@ -1,0 +1,19 @@
+id: foundations.empty-set.example.no-natural-less-than-zero
+kind: example
+title: No natural numbers below zero
+
+example_of:
+  - foundations.empty-set
+
+description: |
+  The set of natural numbers less than $0$ is empty, since no natural number satisfies the defining condition.
+
+display_math:
+  - latex: |
+      \{n\in \mathbb{N}: n<0\}=\varnothing
+    description: A set-builder description of the empty set.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 4
+    note: Set-builder notation and empty-set examples are standard in introductory proof texts.

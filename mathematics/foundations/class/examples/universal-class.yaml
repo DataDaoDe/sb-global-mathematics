@@ -1,0 +1,19 @@
+id: foundations.class.example.universal-class
+kind: example
+title: The class of all sets
+
+example_of:
+  - foundations.class
+
+description: |
+  The collection of all sets is a class: it is described by the property of being a set.
+
+display_math:
+  - latex: |
+      V=\{x:x=x\}
+    description: Informal notation for the universe of sets.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Set theory often writes $V$ for the universe of all sets.

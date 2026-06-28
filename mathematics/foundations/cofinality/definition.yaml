@@ -1,0 +1,26 @@
+id: foundations.cofinality.definition
+kind: definition
+title: Definition of cofinality
+
+definition_style: set-theoretic
+
+defines:
+  - foundations.cofinality
+
+depends_on:
+  - foundations.ordinal
+  - foundations.cardinal-number
+  - foundations.function
+
+statement: |
+  The cofinality $\operatorname{cf}(\alpha)$ of an ordinal $\alpha$ is the least ordinal length of an increasing unbounded sequence in $\alpha$.
+
+display_math:
+  - latex: |
+      \operatorname{cf}(\alpha)=\min\{\beta:\exists f:\beta\to\alpha\text{ increasing and unbounded in }\alpha\}
+    description: Cofinality by the least length of a cofinal map.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 3
+    note: Cofinality is a central invariant of ordinals and cardinals.

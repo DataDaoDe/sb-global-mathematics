@@ -1,0 +1,17 @@
+id: foundations.cofinality
+kind: concept
+title: Cofinality
+
+summary: Cofinality measures the least size of an unbounded subset needed to approach the top of an ordered set, especially an ordinal or cardinal.
+
+display_math:
+  - latex: |
+      \operatorname{cf}(\alpha)
+    description: Cofinality of an ordinal $\alpha$.
+
+defined_by:
+  - foundations.cofinality.definition
+
+broader_concepts:
+  - foundations.ordinal
+  - foundations.cardinal-number

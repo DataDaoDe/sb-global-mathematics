@@ -1,0 +1,19 @@
+id: foundations.proper-class.example.class-of-all-sets
+kind: example
+title: The class of all sets is proper
+
+example_of:
+  - foundations.proper-class
+
+description: |
+  The class $V$ of all sets is not itself a set in ZF; if it were a set, unrestricted set formation would reintroduce paradoxical collections.
+
+display_math:
+  - latex: |
+      V=\{x:x=x\}
+    description: Informal notation for the proper class of all sets.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: $V$ denotes the universe of sets, treated as a proper class in informal metatheory.

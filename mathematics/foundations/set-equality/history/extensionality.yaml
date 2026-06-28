@@ -1,0 +1,37 @@
+id: foundations.set-equality.history.extensionality
+kind: historical_note
+title: Extensional equality in axiomatic set theory
+
+date_label: Early twentieth century
+event_type: formalization
+start_year: 1908
+
+description: |
+  Axiomatic set theory made extensionality explicit: sets are identified by their elements, not by the way they are described or listed.
+
+summary: Extensionality formalized the rule that sets with the same elements are equal.
+
+conceptual_change: |
+  Equality for sets became a rule about membership rather than a rule about notation, presentation, or mental construction.
+
+resulting_formulation: |
+  Modern set theory proves $A=B$ by proving that every object belongs to $A$ exactly when it belongs to $B$.
+
+display_math:
+  - latex: |
+      A=B\iff \forall x\,(x\in A\iff x\in B)
+    description: Extensional equality.
+
+subjects:
+  - foundations.set-equality
+
+developed_from:
+  - foundations.set
+
+source_refs:
+  - source: source.zermelo-1908-grundlagen-mengenlehre
+    locator: Axiom I
+    note: Zermelo's extensionality axiom identifies sets with the same elements.
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Modern presentations retain extensionality as a basic axiom.

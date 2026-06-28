@@ -1,0 +1,19 @@
+id: foundations.aleph.example.aleph-zero
+kind: example
+title: Aleph zero
+
+example_of:
+  - foundations.aleph
+
+description: |
+  $\aleph_0$ is the first aleph and the cardinality of the natural numbers.
+
+display_math:
+  - latex: |
+      \aleph_0=|\mathbb{N}|
+    description: The least infinite cardinal.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 3
+    note: $\aleph_0$ is the first infinite cardinal.

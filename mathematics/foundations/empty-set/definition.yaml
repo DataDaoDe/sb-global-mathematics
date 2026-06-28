@@ -1,0 +1,26 @@
+id: foundations.empty-set.definition
+kind: definition
+title: Definition of empty set
+
+definition_style: set-theoretic
+
+defines:
+  - foundations.empty-set
+
+depends_on:
+  - foundations.set
+  - foundations.membership
+  - foundations.set-equality
+
+statement: |
+  The empty set $\varnothing$ is the set with no elements. By set equality, any two sets with no elements are equal.
+
+display_math:
+  - latex: |
+      \forall x\,(x\notin \varnothing)
+    description: No object is an element of the empty set.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: The empty set is a standard basic set whose uniqueness follows from extensionality.

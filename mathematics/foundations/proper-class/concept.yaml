@@ -1,0 +1,16 @@
+id: foundations.proper-class
+kind: concept
+title: Proper class
+
+summary: A proper class is a class that is not a set.
+
+display_math:
+  - latex: |
+      C\text{ is a class and }C\text{ is not a set}
+    description: Informal characterization of a proper class.
+
+defined_by:
+  - foundations.proper-class.definition
+
+broader_concepts:
+  - foundations.class

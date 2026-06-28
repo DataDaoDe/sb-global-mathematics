@@ -1,0 +1,17 @@
+id: foundations.infinite-set
+kind: concept
+title: Infinite set
+
+summary: An infinite set is a set that is not finite; equivalently in standard set theory, it can contain arbitrarily large finite subsets.
+
+display_math:
+  - latex: |
+      |A|\geq\aleph_0
+    description: Informal cardinal-size notation for an infinite set.
+
+defined_by:
+  - foundations.infinite-set.definition
+
+broader_concepts:
+  - foundations.set
+  - foundations.cardinality

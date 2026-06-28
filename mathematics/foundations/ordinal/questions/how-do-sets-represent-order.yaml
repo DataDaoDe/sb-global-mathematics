@@ -1,0 +1,24 @@
+id: foundations.ordinal.question.how-do-sets-represent-order
+kind: question
+title: How do sets represent order?
+
+asks: |
+  How can a set encode not only how many earlier stages there are, but their order?
+
+display_math:
+  - latex: |
+      (\alpha,\in)
+    description: Membership ordering on an ordinal.
+
+motivates:
+  - foundations.ordinal
+
+related_concepts:
+  - foundations.cardinal-number
+  - foundations.aleph
+  - foundations.cofinality
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 2
+    note: Ordinals represent well-ordered order types.

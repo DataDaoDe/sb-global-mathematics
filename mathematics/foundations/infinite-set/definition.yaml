@@ -1,0 +1,29 @@
+id: foundations.infinite-set.definition
+kind: definition
+title: Definition of infinite set
+
+definition_style: formal
+
+defines:
+  - foundations.infinite-set
+
+depends_on:
+  - foundations.set
+  - foundations.finite-set
+  - foundations.cardinality
+
+statement: |
+  A set is infinite if it is not finite. In ZF, the axiom of infinity asserts the existence of at least one infinite set.
+
+display_math:
+  - latex: |
+      A\text{ is infinite}\iff A\text{ is not finite}
+    description: Infiniteness as non-finiteness.
+
+source_refs:
+  - source: source.dedekind-1888-was-sind-zahlen
+    locator: 1888 monograph
+    note: Dedekind analyzed infinite systems through self-maps.
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Infinite sets are central to the ZF axiom of infinity and cardinal theory.

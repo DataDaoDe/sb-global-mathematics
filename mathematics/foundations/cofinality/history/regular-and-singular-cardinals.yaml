@@ -1,0 +1,32 @@
+id: foundations.cofinality.history.regular-and-singular-cardinals
+kind: historical_note
+title: Cofinality and the shape of infinity
+
+date_label: Twentieth-century set theory
+event_type: generalization
+start_year: 1920
+
+description: |
+  Cofinality became a way to distinguish infinite ordinals and cardinals by how they can be approached from below.
+
+summary: Cofinality measures the internal approach structure of an infinite size or order.
+
+conceptual_change: |
+  Infinite objects with the same broad size behavior could be classified by the least length of an unbounded approximation.
+
+display_math:
+  - latex: |
+      \operatorname{cf}(\kappa)=\kappa
+    description: Regular cardinal condition.
+
+subjects:
+  - foundations.cofinality
+
+developed_from:
+  - foundations.ordinal
+  - foundations.cardinal-number
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 3
+    note: Cofinality underlies the distinction between regular and singular cardinals.

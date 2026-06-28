@@ -1,0 +1,31 @@
+id: foundations.pair-set.history.two-element-sets
+kind: historical_note
+title: Two-element sets in elementary set formation
+
+date_label: Modern elementary set theory
+event_type: terminology
+start_year: 1908
+
+description: |
+  Pair sets isolate the special case of an unordered pair whose two listed objects are distinct.
+
+summary: Pair sets name the exactly-two-element case of unordered pairing.
+
+conceptual_change: |
+  The terminology separates a set with exactly two elements from a general unordered pair, which may collapse to a singleton when both entries are equal.
+
+display_math:
+  - latex: |
+      a\ne b\Rightarrow |\{a,b\}|=2
+    description: Pair sets have cardinality two.
+
+subjects:
+  - foundations.pair-set
+
+developed_from:
+  - foundations.unordered-pair
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Elementary set notation distinguishes finite sets by their elements.

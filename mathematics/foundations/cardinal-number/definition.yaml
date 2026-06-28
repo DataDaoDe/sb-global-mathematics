@@ -1,0 +1,27 @@
+id: foundations.cardinal-number.definition
+kind: definition
+title: Definition of cardinal number
+
+definition_style: set-theoretic
+
+defines:
+  - foundations.cardinal-number
+
+depends_on:
+  - foundations.ordinal
+  - foundations.cardinality
+  - foundations.bijection
+
+statement: |
+  A cardinal number is an ordinal that is not in bijection with any smaller ordinal. It represents the cardinality shared by all sets bijective with it.
+
+display_math:
+  - latex: |
+      \kappa\text{ is a cardinal}\iff
+      \kappa\text{ is an ordinal and }\forall\alpha<\kappa,\ |\alpha|\ne|\kappa|
+    description: Cardinal as an initial ordinal.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 3
+    note: Cardinals are initial ordinals representing sizes of sets.

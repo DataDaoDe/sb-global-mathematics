@@ -1,0 +1,27 @@
+id: foundations.finite-set.question.how-can-we-tell-a-set-is-finite
+kind: question
+title: How can we tell whether a set is finite?
+
+asks: |
+  What distinguishes a set that can be exhausted by counting from a set that cannot?
+
+display_math:
+  - latex: |
+      |A|=n\quad\text{or}\quad A\text{ is not finite}
+    description: The finite/infinite distinction by cardinality.
+
+motivates:
+  - foundations.finite-set
+  - foundations.infinite-set
+
+related_concepts:
+  - foundations.cardinality
+  - foundations.natural-number
+
+source_refs:
+  - source: source.dedekind-1888-was-sind-zahlen
+    locator: 1888 monograph
+    note: Dedekind used mappings to distinguish finite and infinite systems.
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Modern set theory defines finite and infinite sets through cardinal behavior.

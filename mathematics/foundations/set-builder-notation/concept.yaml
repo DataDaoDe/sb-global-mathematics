@@ -1,0 +1,17 @@
+id: foundations.set-builder-notation
+kind: concept
+title: Set-builder notation
+
+summary: Set-builder notation describes a set by specifying a source set and a condition that its elements must satisfy.
+
+display_math:
+  - latex: |
+      \{x\in A:P(x)\}
+    description: Elements of $A$ satisfying predicate $P$.
+
+defined_by:
+  - foundations.set-builder-notation.definition
+
+broader_concepts:
+  - foundations.set
+  - foundations.predicate

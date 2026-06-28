@@ -1,0 +1,25 @@
+id: foundations.aleph.definition
+kind: definition
+title: Definition of aleph
+
+definition_style: set-theoretic
+
+defines:
+  - foundations.aleph
+
+depends_on:
+  - foundations.cardinal-number
+  - foundations.ordinal
+
+statement: |
+  The alephs are the infinite cardinals indexed in increasing order by ordinals. $\aleph_0$ is the least infinite cardinal, and $\aleph_{\alpha+1}$ is the next cardinal after $\aleph_\alpha$.
+
+display_math:
+  - latex: |
+      \aleph_0<\aleph_1<\aleph_2<\cdots
+    description: Beginning of the aleph sequence.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 3
+    note: Aleph notation enumerates the infinite cardinals.

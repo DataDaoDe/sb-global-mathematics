@@ -1,0 +1,19 @@
+id: foundations.cardinal-number.example.aleph-zero
+kind: example
+title: The cardinality of the natural numbers
+
+example_of:
+  - foundations.cardinal-number
+
+description: |
+  The cardinal number $\aleph_0$ represents the size of the natural numbers and of every countably infinite set.
+
+display_math:
+  - latex: |
+      |\mathbb{N}|=\aleph_0
+    description: Cardinality of the natural numbers.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 3
+    note: $\aleph_0$ is the first infinite cardinal.

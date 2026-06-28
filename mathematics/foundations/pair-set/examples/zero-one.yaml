@@ -1,0 +1,19 @@
+id: foundations.pair-set.example.zero-one
+kind: example
+title: A two-element set
+
+example_of:
+  - foundations.pair-set
+
+description: |
+  The set $\{0,1\}$ is a pair set because $0$ and $1$ are distinct and every element of the set is one of them.
+
+display_math:
+  - latex: |
+      x\in\{0,1\}\iff (x=0\vee x=1)
+    description: Membership in the pair set $\{0,1\}$.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Small finite sets illustrate basic set notation.

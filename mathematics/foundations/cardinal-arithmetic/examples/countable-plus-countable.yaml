@@ -1,0 +1,19 @@
+id: foundations.cardinal-arithmetic.example.countable-plus-countable
+kind: example
+title: Countable plus countable
+
+example_of:
+  - foundations.cardinal-arithmetic
+
+description: |
+  The disjoint union of two countably infinite sets is countably infinite, so $\aleph_0+\aleph_0=\aleph_0$.
+
+display_math:
+  - latex: |
+      \aleph_0+\aleph_0=\aleph_0
+    description: Infinite cardinal addition for two countable sets.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 3
+    note: Basic cardinal arithmetic includes sums and products of infinite cardinals.

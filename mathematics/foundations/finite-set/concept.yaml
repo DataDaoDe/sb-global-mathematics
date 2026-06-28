@@ -1,0 +1,17 @@
+id: foundations.finite-set
+kind: concept
+title: Finite set
+
+summary: A finite set is a set whose elements can be put in bijection with $\{1,\ldots,n\}$ for some natural number $n$.
+
+display_math:
+  - latex: |
+      |A|=n
+    description: A finite set with $n$ elements.
+
+defined_by:
+  - foundations.finite-set.definition
+
+broader_concepts:
+  - foundations.set
+  - foundations.cardinality

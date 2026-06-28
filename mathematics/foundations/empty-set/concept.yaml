@@ -1,0 +1,16 @@
+id: foundations.empty-set
+kind: concept
+title: Empty set
+
+summary: The empty set is the unique set with no elements.
+
+display_math:
+  - latex: |
+      \varnothing
+    description: Standard symbol for the empty set.
+
+defined_by:
+  - foundations.empty-set.definition
+
+broader_concepts:
+  - foundations.set

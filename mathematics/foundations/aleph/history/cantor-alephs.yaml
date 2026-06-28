@@ -1,0 +1,31 @@
+id: foundations.aleph.history.cantor-alephs
+kind: historical_note
+title: Cantor's aleph notation
+
+date_label: Late nineteenth century
+event_type: terminology
+start_year: 1890
+
+description: |
+  Cantor introduced aleph notation to name transfinite cardinal numbers in a well-ordered sequence.
+
+summary: Aleph notation gave names to infinite cardinal sizes.
+
+conceptual_change: |
+  Infinite sizes became organized as a sequence of cardinals rather than a single undifferentiated infinity.
+
+display_math:
+  - latex: |
+      \aleph_0,\aleph_1,\aleph_2,\ldots
+    description: Aleph sequence.
+
+subjects:
+  - foundations.aleph
+
+developed_from:
+  - foundations.cardinal-number
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 3
+    note: Modern set theory uses Cantor's aleph notation for infinite cardinals.

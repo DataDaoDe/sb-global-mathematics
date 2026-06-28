@@ -1,0 +1,24 @@
+id: foundations.cardinal-arithmetic.question.how-do-sizes-combine
+kind: question
+title: How do sizes combine?
+
+asks: |
+  Once set size is represented by cardinal numbers, what operations on sets should define addition, multiplication, and exponentiation of sizes?
+
+display_math:
+  - latex: |
+      |A\sqcup B|,\quad |A\times B|,\quad |A^B|
+    description: Set constructions behind cardinal arithmetic.
+
+motivates:
+  - foundations.cardinal-arithmetic
+
+related_concepts:
+  - foundations.cardinal-number
+  - foundations.aleph
+  - foundations.cofinality
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 3
+    note: Cardinal operations are defined from disjoint unions, products, and function sets.

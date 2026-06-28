@@ -1,0 +1,26 @@
+id: foundations.pair-set.definition
+kind: definition
+title: Definition of pair set
+
+definition_style: set-theoretic
+
+defines:
+  - foundations.pair-set
+
+depends_on:
+  - foundations.set
+  - foundations.unordered-pair
+  - foundations.set-equality
+
+statement: |
+  A pair set is an unordered pair $\{a,b\}$ with $a\ne b$, so it has exactly the two elements $a$ and $b$.
+
+display_math:
+  - latex: |
+      a\ne b\Rightarrow x\in\{a,b\}\iff (x=a\vee x=b)
+    description: Membership condition for a pair set.
+
+source_refs:
+  - source: source.dummit-foote-abstract-algebra-third-edition
+    locator: Section 0.1
+    note: Two-element sets are standard examples of finite sets.

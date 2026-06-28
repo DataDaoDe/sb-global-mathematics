@@ -1,0 +1,25 @@
+id: foundations.set-equality.definition
+kind: definition
+title: Definition of set equality
+
+definition_style: set-theoretic
+
+defines:
+  - foundations.set-equality
+
+depends_on:
+  - foundations.set
+  - foundations.membership
+
+statement: |
+  Two sets $A$ and $B$ are equal if and only if every object is an element of $A$ exactly when it is an element of $B$.
+
+display_math:
+  - latex: |
+      A=B\iff \forall x\,(x\in A\iff x\in B)
+    description: Extensional equality of sets.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 1
+    note: Extensionality is the standard equality criterion for sets.

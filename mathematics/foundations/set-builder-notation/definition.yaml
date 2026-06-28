@@ -1,0 +1,27 @@
+id: foundations.set-builder-notation.definition
+kind: definition
+title: Definition of set-builder notation
+
+definition_style: formal
+
+defines:
+  - foundations.set-builder-notation
+
+depends_on:
+  - foundations.set
+  - foundations.membership
+  - foundations.predicate
+  - foundations.subset
+
+statement: |
+  Set-builder notation $\{x\in A:P(x)\}$ denotes the subset of $A$ whose elements are exactly the objects $x$ of $A$ that satisfy the condition $P(x)$.
+
+display_math:
+  - latex: |
+      y\in\{x\in A:P(x)\}\iff (y\in A\wedge P(y))
+    description: Membership condition for restricted set-builder notation.
+
+source_refs:
+  - source: source.velleman-how-to-prove-it-third-edition
+    locator: Chapter 4
+    note: Restricted set-builder notation is standard notation for subsets defined by predicates.

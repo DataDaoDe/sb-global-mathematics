@@ -1,0 +1,19 @@
+id: foundations.cofinality.example.cofinality-of-omega
+kind: example
+title: Cofinality of omega
+
+example_of:
+  - foundations.cofinality
+
+description: |
+  The ordinal $\omega$ has cofinality $\omega$: the sequence $0,1,2,\ldots$ is increasing and unbounded in $\omega$, and no finite sequence is unbounded in $\omega$.
+
+display_math:
+  - latex: |
+      \operatorname{cf}(\omega)=\omega
+    description: Cofinality of the first infinite ordinal.
+
+source_refs:
+  - source: source.jech-set-theory-third-millennium
+    locator: Chapter 3
+    note: $\omega$ is the basic regular infinite ordinal example.

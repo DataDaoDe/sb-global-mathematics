@@ -1,0 +1,18 @@
+id: category-theory.pullback
+kind: concept
+title: Pullback
+
+summary: A pullback is a universal object of compatible pairs over a common codomain.
+
+display_math:
+  - latex: |
+      A\times_C B
+    description: Pullback of $A\to C$ and $B\to C$.
+
+defined_by:
+  - category-theory.pullback.definition
+
+broader_concepts:
+  - category-theory.category
+  - category-theory.product
+  - category-theory.equalizer

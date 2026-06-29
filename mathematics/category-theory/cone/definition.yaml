@@ -1,0 +1,29 @@
+id: category-theory.cone.definition
+kind: definition
+title: Definition of cone
+
+definition_style: categorical
+
+defines:
+  - category-theory.cone
+
+depends_on:
+  - category-theory.category
+  - category-theory.commutative-diagram
+  - category-theory.morphism
+
+statement: |
+  A cone from an object $X$ to a diagram $D:J\to\mathcal{C}$ is a family of morphisms $x_j:X\to D(j)$, one for each object $j$ of $J$, compatible with every morphism in the diagram.
+
+display_math:
+  - latex: |
+      D(\alpha)\circ x_j=x_k
+    description: Cone compatibility for a morphism $\alpha:j\to k$ in the indexing category.
+
+source_refs:
+  - source: source.leinster-basic-category-theory
+    locator: Section 5.1
+    note: Cones are the objects compared by the universal property of limits.
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter V
+    note: Cones are standard language for limits.

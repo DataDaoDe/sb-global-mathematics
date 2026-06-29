@@ -1,0 +1,19 @@
+id: category-theory.exponential-object.example.function-set
+kind: example
+title: Function set as exponential
+
+example_of:
+  - category-theory.exponential-object
+
+description: |
+  In $\mathbf{Set}$, the exponential $B^A$ is the set of all functions from $A$ to $B$.
+
+display_math:
+  - latex: |
+      B^A=\{f:A\to B\}
+    description: Function set represented as an exponential object.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 3
+    note: Function sets are a fundamental set construction expressed by exponentials.

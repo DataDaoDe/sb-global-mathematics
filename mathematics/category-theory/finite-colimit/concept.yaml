@@ -1,0 +1,16 @@
+id: category-theory.finite-colimit
+kind: concept
+title: Finite colimit
+
+summary: A finite colimit is a colimit of a finite diagram, including initial objects, binary coproducts, and coequalizer-like quotient constructions.
+
+display_math:
+  - latex: |
+      \operatorname{colim}D\quad(D\text{ finite})
+    description: Colimit of a finite diagram.
+
+defined_by:
+  - category-theory.finite-colimit.definition
+
+broader_concepts:
+  - category-theory.colimit

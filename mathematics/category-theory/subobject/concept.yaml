@@ -1,0 +1,17 @@
+id: category-theory.subobject
+kind: concept
+title: Subobject
+
+summary: A subobject is an isomorphism class of monomorphisms into a fixed object, generalizing subsets.
+
+display_math:
+  - latex: |
+      S\rightarrowtail A
+    description: A subobject of $A$ represented by a monomorphism.
+
+defined_by:
+  - category-theory.subobject.definition
+
+broader_concepts:
+  - category-theory.category
+  - foundations.subset

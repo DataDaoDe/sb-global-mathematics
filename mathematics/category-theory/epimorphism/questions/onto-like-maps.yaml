@@ -1,0 +1,24 @@
+id: category-theory.epimorphism.question.onto-like-maps
+kind: question
+title: What makes a map onto-like?
+
+asks: |
+  Which categorical property captures the idea that a map supplies enough inputs to determine all maps out of its codomain?
+
+display_math:
+  - latex: |
+      u\circ e=v\circ e\Rightarrow u=v
+    description: Cancellation as the categorical test for being onto-like.
+
+motivates:
+  - category-theory.epimorphism
+
+related_concepts:
+  - category-theory.coproduct
+  - category-theory.isomorphism
+  - foundations.zermelo-fraenkel-set-theory-with-choice
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 2
+    note: Surjection-like maps are analyzed categorically as epimorphisms.

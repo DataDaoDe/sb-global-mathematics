@@ -1,0 +1,27 @@
+id: foundations.elementary-theory-category-of-sets.question.sets-from-maps
+kind: question
+title: How can sets be axiomatized through maps?
+
+asks: |
+  Which categorical properties of sets and functions are enough to recover ordinary set constructions structurally?
+
+display_math:
+  - latex: |
+      A\xrightarrow{f}B
+    description: Structural set theory studies sets through mappings.
+
+motivates:
+  - foundations.elementary-theory-category-of-sets
+
+related_concepts:
+  - category-theory.terminal-object
+  - category-theory.product
+  - category-theory.equalizer
+  - category-theory.exponential-object
+  - category-theory.subobject-classifier
+  - category-theory.natural-numbers-object
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Introduction
+    note: Presents sets through mappings and categorical structure.

@@ -1,0 +1,24 @@
+id: category-theory.product.question.pairing-by-maps
+kind: question
+title: What makes an object behave like pairs?
+
+asks: |
+  How can a category recognize ordered pairs without first defining them as sets of sets?
+
+display_math:
+  - latex: |
+      X\xrightarrow{\langle f,g\rangle}A\times B
+    description: Pairing two maps through a product.
+
+motivates:
+  - category-theory.product
+
+related_concepts:
+  - category-theory.terminal-object
+  - category-theory.pullback
+  - category-theory.exponential-object
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 1
+    note: Products express ordered-pair structure through mappings.

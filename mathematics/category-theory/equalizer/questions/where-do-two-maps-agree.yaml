@@ -1,0 +1,23 @@
+id: category-theory.equalizer.question.where-do-two-maps-agree
+kind: question
+title: Where do two maps agree?
+
+asks: |
+  How can a category express the subset of a domain on which two parallel maps have the same value?
+
+display_math:
+  - latex: |
+      f(a)=g(a)
+    description: Pointwise agreement condition represented by an equalizer.
+
+motivates:
+  - category-theory.equalizer
+
+related_concepts:
+  - category-theory.pullback
+  - category-theory.subobject
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 2
+    note: Equalizers express definable subsets by equations.

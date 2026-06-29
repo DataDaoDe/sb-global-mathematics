@@ -1,0 +1,28 @@
+id: category-theory.subobject.definition
+kind: definition
+title: Definition of subobject
+
+definition_style: categorical
+
+defines:
+  - category-theory.subobject
+
+depends_on:
+  - category-theory.category
+  - category-theory.morphism
+
+statement: |
+  A subobject of an object $A$ is represented by a monomorphism $m:S\to A$. Two such monomorphisms represent the same subobject when their domains are isomorphic over $A$.
+
+display_math:
+  - latex: |
+      m:S\to A
+    description: A monomorphism representing a subobject.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 2
+    note: Subobjects generalize subsets in the categorical treatment of sets.
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter I
+    note: Subobjects are represented by monomorphisms.

@@ -1,0 +1,24 @@
+id: category-theory.pullback.question.compatible-pairs
+kind: question
+title: How are compatible pairs represented?
+
+asks: |
+  How can a category form the object of pairs whose images agree under two maps to a common object?
+
+display_math:
+  - latex: |
+      f(a)=g(b)
+    description: Compatibility condition defining a pullback in sets.
+
+motivates:
+  - category-theory.pullback
+
+related_concepts:
+  - category-theory.product
+  - category-theory.equalizer
+  - category-theory.subobject
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 2
+    note: Pullbacks organize compatible-pair constructions.

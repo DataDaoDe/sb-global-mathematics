@@ -1,0 +1,19 @@
+id: category-theory.finite-colimit.example.empty-and-disjoint-sum
+kind: example
+title: Empty set and disjoint sum as finite colimits
+
+example_of:
+  - category-theory.finite-colimit
+
+description: |
+  In $\mathbf{Set}$, the empty set is an initial object and disjoint union is a binary coproduct, so both are finite colimit constructions.
+
+display_math:
+  - latex: |
+      \varnothing,\qquad A+B
+    description: Basic finite colimits in $\mathbf{Set}$.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 2
+    note: Empty sets and sums are structural set constructions.

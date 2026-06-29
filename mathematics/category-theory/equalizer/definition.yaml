@@ -1,0 +1,28 @@
+id: category-theory.equalizer.definition
+kind: definition
+title: Definition of equalizer
+
+definition_style: categorical
+
+defines:
+  - category-theory.equalizer
+
+depends_on:
+  - category-theory.category
+  - category-theory.morphism
+
+statement: |
+  Given parallel morphisms $f,g:A\to B$, an equalizer is a morphism $e:E\to A$ such that $f\circ e=g\circ e$, and every morphism $h:X\to A$ with $f\circ h=g\circ h$ factors uniquely through $e$.
+
+display_math:
+  - latex: |
+      f\circ e=g\circ e
+    description: Equalizing condition.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 2
+    note: Equalizers express subsets defined by equality of mappings.
+  - source: source.leinster-basic-category-theory
+    locator: Section 5.1
+    note: Equalizers are a standard finite-limit construction.

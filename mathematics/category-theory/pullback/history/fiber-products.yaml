@@ -1,0 +1,33 @@
+id: category-theory.pullback.history.fiber-products
+kind: historical_note
+title: Pullbacks as generalized fiber products
+
+date_label: Mid-twentieth-century category theory
+event_type: generalization
+start_year: 1945
+
+description: |
+  Pullbacks abstracted the construction of inverse images and fiber products into a single universal property.
+
+summary: Pullbacks generalize compatible-pair and inverse-image constructions.
+
+conceptual_change: |
+  Instead of treating inverse images and solution sets as separate constructions, category theory recognized both as instances of a limiting universal property.
+
+display_math:
+  - latex: |
+      A\times_C B
+    description: Pullback notation.
+
+subjects:
+  - category-theory.pullback
+
+developed_from:
+  - foundations.preimage
+  - foundations.cartesian-product
+  - category-theory.product
+
+source_refs:
+  - source: source.leinster-basic-category-theory
+    locator: Section 5.1
+    note: Pullbacks are a central class of limits.

@@ -1,0 +1,25 @@
+id: category-theory.commutative-diagram.question.equations-as-pictures
+kind: question
+title: How can equations between maps be drawn?
+
+asks: |
+  How can many equations between composites be represented without writing each composite separately?
+
+display_math:
+  - latex: |
+      g\circ f=k\circ h
+    description: A diagrammatic equation between composites.
+
+motivates:
+  - category-theory.commutative-diagram
+
+related_concepts:
+  - category-theory.product
+  - category-theory.equalizer
+  - category-theory.pullback
+  - category-theory.cone
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 1
+    note: Diagrams are used to state mapping equations compactly.

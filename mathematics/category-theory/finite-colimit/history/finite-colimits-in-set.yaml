@@ -1,0 +1,32 @@
+id: category-theory.finite-colimit.history.finite-colimits-in-set
+kind: historical_note
+title: Finite colimits in structural set theory
+
+date_label: Categorical set theory
+event_type: synthesis
+start_year: 1964
+
+description: |
+  Finite colimits group the categorical constructions that build finite alternatives and finite quotients.
+
+summary: Finite colimits supply empty-object and disjoint-sum structure for categorical set theory.
+
+conceptual_change: |
+  Empty sets and disjoint unions were seen as instances of a finite colimit principle, dual to finite limits.
+
+display_math:
+  - latex: |
+      \text{finite diagrams have colimits}
+    description: Finite-colimit existence principle.
+
+subjects:
+  - category-theory.finite-colimit
+
+developed_from:
+  - category-theory.colimit
+  - foundations.elementary-theory-category-of-sets
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapters 1-2
+    note: Structural set theory develops finite universal constructions in the category of sets.

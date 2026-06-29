@@ -1,0 +1,26 @@
+id: category-theory.coproduct.question.case-defined-maps
+kind: question
+title: What object supports definition by cases?
+
+asks: |
+  What categorical construction lets maps out of a combined object be specified separately on two parts?
+
+display_math:
+  - latex: |
+      A\xrightarrow{f}X,\quad B\xrightarrow{g}X
+      \quad\leadsto\quad
+      A+B\xrightarrow{[f,g]}X
+    description: A map from a coproduct defined by cases.
+
+motivates:
+  - category-theory.coproduct
+
+related_concepts:
+  - category-theory.initial-object
+  - category-theory.product
+  - category-theory.finite-colimit
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 1
+    note: Coproducts encode disjoint alternatives and definition by cases.

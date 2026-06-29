@@ -1,0 +1,29 @@
+id: category-theory.pullback.definition
+kind: definition
+title: Definition of pullback
+
+definition_style: categorical
+
+defines:
+  - category-theory.pullback
+
+depends_on:
+  - category-theory.category
+  - category-theory.morphism
+  - category-theory.product
+
+statement: |
+  Given morphisms $f:A\to C$ and $g:B\to C$, a pullback is an object $P$ with maps $p_1:P\to A$ and $p_2:P\to B$ such that $f\circ p_1=g\circ p_2$, universal among all such compatible pairs.
+
+display_math:
+  - latex: |
+      f\circ p_1=g\circ p_2
+    description: Pullback compatibility condition.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 2
+    note: Pullbacks express inverse image and fiber-product constructions in sets.
+  - source: source.leinster-basic-category-theory
+    locator: Section 5.1
+    note: Pullbacks are a standard finite-limit construction.

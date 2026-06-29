@@ -1,0 +1,32 @@
+id: category-theory.subobject.history.subsets-as-monomorphisms
+kind: historical_note
+title: Subsets as monomorphisms
+
+date_label: Mid-twentieth-century category theory
+event_type: generalization
+start_year: 1945
+
+description: |
+  Category theory generalized subset inclusion by focusing on maps that behave like inclusions.
+
+summary: Subobjects abstract subsets as inclusion-like morphisms.
+
+conceptual_change: |
+  Being a part of an object became a property of a morphism into that object, up to isomorphism over the object.
+
+display_math:
+  - latex: |
+      S\to A
+    description: Subobject represented by an inclusion-like map.
+
+subjects:
+  - category-theory.subobject
+
+developed_from:
+  - foundations.subset
+  - category-theory.morphism
+
+source_refs:
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter I
+    note: Subobjects are standard categorical generalizations of subsets.

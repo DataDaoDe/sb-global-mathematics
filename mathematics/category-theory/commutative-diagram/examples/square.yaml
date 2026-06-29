@@ -1,0 +1,19 @@
+id: category-theory.commutative-diagram.example.square
+kind: example
+title: A commutative square
+
+example_of:
+  - category-theory.commutative-diagram
+
+description: |
+  A square with maps $f:A\to B$, $h:A\to C$, $g:B\to D$, and $k:C\to D$ commutes when the two paths from $A$ to $D$ have the same composite.
+
+display_math:
+  - latex: |
+      g\circ f=k\circ h
+    description: Commutativity condition for a square.
+
+source_refs:
+  - source: source.leinster-basic-category-theory
+    locator: Chapter 1
+    note: Commutative squares are basic examples of diagrammatic equations.

@@ -1,0 +1,32 @@
+id: category-theory.natural-numbers-object.history.recursion-as-universal-property
+kind: historical_note
+title: Recursion as a universal property
+
+date_label: Categorical set theory
+event_type: synthesis
+start_year: 1964
+
+description: |
+  Natural numbers objects express arithmetic recursion as a categorical universal property.
+
+summary: NNOs characterize natural numbers by their recursion principle.
+
+conceptual_change: |
+  The natural numbers were specified not by a particular set construction, but by the unique maps generated from zero and successor data.
+
+display_math:
+  - latex: |
+      (0,s)\leadsto \text{unique recursion}
+    description: Natural numbers object as recursion structure.
+
+subjects:
+  - category-theory.natural-numbers-object
+
+developed_from:
+  - foundations.natural-number
+  - foundations.mathematical-induction
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 4
+    note: Presents natural numbers through categorical recursion.

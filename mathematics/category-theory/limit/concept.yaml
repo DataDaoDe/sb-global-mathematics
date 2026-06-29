@@ -1,0 +1,17 @@
+id: category-theory.limit
+kind: concept
+title: Limit
+
+summary: A limit is a universal cone to a diagram, representing the most efficient object satisfying all compatibility conditions of that diagram.
+
+display_math:
+  - latex: |
+      \lim D
+    description: Limit of a diagram $D$.
+
+defined_by:
+  - category-theory.limit.definition
+
+broader_concepts:
+  - category-theory.cone
+  - category-theory.commutative-diagram

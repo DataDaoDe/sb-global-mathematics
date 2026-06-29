@@ -1,0 +1,16 @@
+id: category-theory.colimit
+kind: concept
+title: Colimit
+
+summary: A colimit is a universal cocone from a diagram, dual to a limit.
+
+display_math:
+  - latex: |
+      \operatorname{colim}D
+    description: Colimit of a diagram $D$.
+
+defined_by:
+  - category-theory.colimit.definition
+
+broader_concepts:
+  - category-theory.commutative-diagram

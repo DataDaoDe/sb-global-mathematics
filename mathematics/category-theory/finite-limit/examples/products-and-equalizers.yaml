@@ -1,0 +1,19 @@
+id: category-theory.finite-limit.example.products-and-equalizers
+kind: example
+title: Products and equalizers generate finite limits
+
+example_of:
+  - category-theory.finite-limit
+
+description: |
+  In many presentations, having a terminal object, binary products, and equalizers is enough to construct all finite limits.
+
+display_math:
+  - latex: |
+      1,\quad A\times B,\quad \operatorname{Eq}(f,g)
+    description: Basic finite-limit ingredients.
+
+source_refs:
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter V
+    note: Finite limits can be built from terminal objects, products, and equalizers.

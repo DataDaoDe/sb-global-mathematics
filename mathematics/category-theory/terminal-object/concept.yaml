@@ -1,0 +1,17 @@
+id: category-theory.terminal-object
+kind: concept
+title: Terminal object
+
+summary: A terminal object is an object receiving a unique morphism from every object of the category.
+
+display_math:
+  - latex: |
+      1
+    description: Common notation for a terminal object.
+
+defined_by:
+  - category-theory.terminal-object.definition
+
+broader_concepts:
+  - category-theory.category
+  - category-theory.object

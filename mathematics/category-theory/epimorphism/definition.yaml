@@ -1,0 +1,29 @@
+id: category-theory.epimorphism.definition
+kind: definition
+title: Definition of epimorphism
+
+definition_style: categorical
+
+defines:
+  - category-theory.epimorphism
+
+depends_on:
+  - category-theory.category
+  - category-theory.morphism
+  - category-theory.morphism-composition
+
+statement: |
+  A morphism $e:A\to B$ is an epimorphism if for all morphisms $u,v:B\to X$, the equality $u\circ e=v\circ e$ implies $u=v$.
+
+display_math:
+  - latex: |
+      u\circ e=v\circ e\Rightarrow u=v
+    description: Right-cancellation property of an epimorphism.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 2
+    note: Epimorphisms express surjection-like behavior in structural set theory.
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter I
+    note: Standard cancellative definition of epimorphism.

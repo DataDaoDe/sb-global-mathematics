@@ -1,0 +1,32 @@
+id: category-theory.colimit.history.dual-limit-theory
+kind: historical_note
+title: Colimits as dual universal constructions
+
+date_label: General category theory
+event_type: synthesis
+start_year: 1945
+
+description: |
+  Colimit theory provided the dual to limit theory, organizing constructions that assemble or identify objects.
+
+summary: Colimits unify coproducts, coequalizers, and other gluing constructions.
+
+conceptual_change: |
+  Combining and quotienting constructions could be recognized as universal cocones from diagrams.
+
+display_math:
+  - latex: |
+      \text{initial cocone}\quad\leadsto\quad\text{colimit}
+    description: Colimit as a universal cocone.
+
+subjects:
+  - category-theory.colimit
+
+developed_from:
+  - category-theory.coproduct
+  - category-theory.commutative-diagram
+
+source_refs:
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter V
+    note: General category theory develops limits and colimits dually.

@@ -1,0 +1,17 @@
+id: category-theory.product
+kind: concept
+title: Product
+
+summary: A categorical product is an object equipped with projections that universally represents pairs of morphisms into two objects.
+
+display_math:
+  - latex: |
+      A\times B
+    description: Product of two objects.
+
+defined_by:
+  - category-theory.product.definition
+
+broader_concepts:
+  - category-theory.category
+  - foundations.cartesian-product

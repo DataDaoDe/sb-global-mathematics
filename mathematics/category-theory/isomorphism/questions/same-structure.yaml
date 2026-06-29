@@ -1,0 +1,24 @@
+id: category-theory.isomorphism.question.same-structure
+kind: question
+title: When are two objects the same structurally?
+
+asks: |
+  What does it mean for two objects in a category to differ only by reversible renaming?
+
+display_math:
+  - latex: |
+      A\xrightarrow{\sim}B
+    description: Isomorphism as reversible structure-preserving map.
+
+motivates:
+  - category-theory.isomorphism
+
+related_concepts:
+  - category-theory.monomorphism
+  - category-theory.epimorphism
+  - category-theory.functor
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 1
+    note: Structural set theory treats isomorphic objects as equivalent for categorical purposes.

@@ -1,0 +1,19 @@
+id: category-theory.colimit.example.coproduct-as-colimit
+kind: example
+title: Coproducts are colimits
+
+example_of:
+  - category-theory.colimit
+
+description: |
+  A binary coproduct is the colimit of a discrete diagram with two objects.
+
+display_math:
+  - latex: |
+      A+B=\operatorname{colim}(A\quad B)
+    description: Coproduct as a colimit of a discrete two-object diagram.
+
+source_refs:
+  - source: source.leinster-basic-category-theory
+    locator: Section 5.2
+    note: Coproducts are basic examples of colimits.

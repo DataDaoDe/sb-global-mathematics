@@ -1,0 +1,18 @@
+id: category-theory.natural-numbers-object
+kind: concept
+title: Natural numbers object
+
+summary: A natural numbers object is an object with zero and successor maps satisfying the universal recursion property of natural numbers.
+
+display_math:
+  - latex: |
+      N
+    description: A natural numbers object.
+
+defined_by:
+  - category-theory.natural-numbers-object.definition
+
+broader_concepts:
+  - category-theory.category
+  - foundations.natural-number
+  - foundations.mathematical-induction

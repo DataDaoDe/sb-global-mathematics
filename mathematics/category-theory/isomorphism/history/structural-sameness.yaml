@@ -1,0 +1,32 @@
+id: category-theory.isomorphism.history.structural-sameness
+kind: historical_note
+title: Isomorphism as structural sameness
+
+date_label: Modern structural mathematics
+event_type: synthesis
+start_year: 1945
+
+description: |
+  Category theory made isomorphism the general expression of sameness appropriate to a mathematical context.
+
+summary: Isomorphisms identify objects up to reversible structure-preserving transformation.
+
+conceptual_change: |
+  Instead of relying on equality of underlying presentations, category theory compared objects by invertible morphisms.
+
+display_math:
+  - latex: |
+      A\cong B
+    description: Isomorphic objects.
+
+subjects:
+  - category-theory.isomorphism
+
+developed_from:
+  - foundations.bijection
+  - category-theory.morphism
+
+source_refs:
+  - source: source.eilenberg-mac-lane-1945-natural-equivalences
+    locator: Introduction
+    note: Category theory arose to study structural correspondences and natural equivalences.

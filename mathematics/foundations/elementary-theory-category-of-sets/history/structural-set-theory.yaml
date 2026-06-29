@@ -1,0 +1,35 @@
+id: foundations.elementary-theory-category-of-sets.history.structural-set-theory
+kind: historical_note
+title: Structural axioms for sets
+
+date_label: Late twentieth-century categorical set theory
+event_type: synthesis
+start_year: 1964
+
+description: |
+  ETCS shifted the axiomatization of sets from a membership-first theory of the cumulative hierarchy to a structural theory of the category of sets and functions.
+
+summary: ETCS formulates set theory through categorical structure rather than primitive membership.
+
+conceptual_change: |
+  Set-theoretic constructions such as products, subsets, function sets, and natural numbers became characterized by universal properties in a category of sets.
+
+display_math:
+  - latex: |
+      \text{sets and functions}\longrightarrow \text{categorical structure}
+    description: Structural shift in categorical set theory.
+
+subjects:
+  - foundations.elementary-theory-category-of-sets
+
+developed_from:
+  - category-theory.category
+  - foundations.set
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Introduction
+    note: Explains the structural viewpoint on sets.
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter VI
+    note: Places categorical set theory in the broader theory of topoi.

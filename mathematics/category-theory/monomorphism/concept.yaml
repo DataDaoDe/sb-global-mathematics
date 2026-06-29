@@ -1,0 +1,17 @@
+id: category-theory.monomorphism
+kind: concept
+title: Monomorphism
+
+summary: A monomorphism is a morphism that is left-cancellable, categorically generalizing injective functions.
+
+display_math:
+  - latex: |
+      A\rightarrowtail B
+    description: Common notation for a monomorphism.
+
+defined_by:
+  - category-theory.monomorphism.definition
+
+broader_concepts:
+  - category-theory.morphism
+  - foundations.function.injective

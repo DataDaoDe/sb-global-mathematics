@@ -1,0 +1,19 @@
+id: category-theory.natural-numbers-object.example.natural-numbers-in-set
+kind: example
+title: Natural numbers object in Set
+
+example_of:
+  - category-theory.natural-numbers-object
+
+description: |
+  In $\mathbf{Set}$, the ordinary natural numbers with $0$ and successor form a natural numbers object because functions out of $\mathbb{N}$ are determined uniquely by an initial value and a recursion step.
+
+display_math:
+  - latex: |
+      u(0)=a,\qquad u(n+1)=r(u(n))
+    description: Ordinary recursion on natural numbers.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 4
+    note: Ordinary natural-number recursion is the motivating example of an NNO.

@@ -1,0 +1,19 @@
+id: category-theory.initial-object.example.empty-set
+kind: example
+title: The empty set is initial in Set
+
+example_of:
+  - category-theory.initial-object
+
+description: |
+  In $\mathbf{Set}$, the empty set is initial because for every set $A$ there is exactly one function $\varnothing\to A$.
+
+display_math:
+  - latex: |
+      \forall A\ \exists!\,f:\varnothing\to A
+    description: Unique empty-domain function.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 1
+    note: The empty set is the basic initial-object example in the category of sets.

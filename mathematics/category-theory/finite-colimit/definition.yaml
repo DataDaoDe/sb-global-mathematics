@@ -1,0 +1,29 @@
+id: category-theory.finite-colimit.definition
+kind: definition
+title: Definition of finite colimit
+
+definition_style: categorical
+
+defines:
+  - category-theory.finite-colimit
+
+depends_on:
+  - category-theory.colimit
+  - category-theory.initial-object
+  - category-theory.coproduct
+
+statement: |
+  A finite colimit is the colimit of a diagram with finitely many objects and morphisms. A category has finite colimits when every finite diagram in it has a colimit.
+
+display_math:
+  - latex: |
+      D\text{ finite}\Rightarrow \operatorname{colim}D\text{ exists}
+    description: Existence condition for finite colimits.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 2
+    note: Finite colimit constructions include empty sets and disjoint sums in categorical set theory.
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter V
+    note: Finite colimits are standard categorical structure dual to finite limits.

@@ -1,0 +1,29 @@
+id: category-theory.terminal-object.definition
+kind: definition
+title: Definition of terminal object
+
+definition_style: categorical
+
+defines:
+  - category-theory.terminal-object
+
+depends_on:
+  - category-theory.category
+  - category-theory.object
+  - category-theory.morphism
+
+statement: |
+  An object $1$ of a category $\mathcal{C}$ is terminal if for every object $A$ of $\mathcal{C}$ there exists exactly one morphism $A\to 1$.
+
+display_math:
+  - latex: |
+      \forall A\in\mathcal{C}\ \exists!\,(!_{A}:A\to 1)
+    description: Unique morphism from each object to a terminal object.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 1
+    note: Terminal objects express singleton-like structure categorically.
+  - source: source.leinster-basic-category-theory
+    locator: Section 5.1
+    note: Defines terminal objects by a universal mapping property.

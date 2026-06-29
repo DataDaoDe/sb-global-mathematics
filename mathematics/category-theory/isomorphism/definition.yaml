@@ -1,0 +1,30 @@
+id: category-theory.isomorphism.definition
+kind: definition
+title: Definition of isomorphism
+
+definition_style: categorical
+
+defines:
+  - category-theory.isomorphism
+
+depends_on:
+  - category-theory.category
+  - category-theory.morphism
+  - category-theory.identity-morphism
+  - category-theory.morphism-composition
+
+statement: |
+  A morphism $f:A\to B$ is an isomorphism if there exists a morphism $g:B\to A$ such that $g\circ f=\mathrm{id}_A$ and $f\circ g=\mathrm{id}_B$.
+
+display_math:
+  - latex: |
+      g\circ f=\mathrm{id}_A,\qquad f\circ g=\mathrm{id}_B
+    description: Two-sided inverse equations for an isomorphism.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 1
+    note: Isomorphism is the categorical notion of structural sameness.
+  - source: source.leinster-basic-category-theory
+    locator: Chapter 1
+    note: Standard definition of isomorphism in a category.

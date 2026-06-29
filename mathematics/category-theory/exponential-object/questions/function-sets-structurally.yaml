@@ -1,0 +1,23 @@
+id: category-theory.exponential-object.question.function-sets-structurally
+kind: question
+title: What makes a function set?
+
+asks: |
+  How can a category recognize the set of all maps from $A$ to $B$ without first listing its elements?
+
+display_math:
+  - latex: |
+      X\times A\to B
+    description: Families of maps from $A$ to $B$ parameterized by $X$.
+
+motivates:
+  - category-theory.exponential-object
+
+related_concepts:
+  - category-theory.product
+  - category-theory.subobject-classifier
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 3
+    note: Exponentials capture function sets by their mapping property.

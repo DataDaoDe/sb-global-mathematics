@@ -1,0 +1,30 @@
+id: category-theory.subobject-classifier.definition
+kind: definition
+title: Definition of subobject classifier
+
+definition_style: categorical
+
+defines:
+  - category-theory.subobject-classifier
+
+depends_on:
+  - category-theory.category
+  - category-theory.terminal-object
+  - category-theory.subobject
+  - category-theory.pullback
+
+statement: |
+  A subobject classifier is an object $\Omega$ with a truth morphism $\mathrm{true}:1\to\Omega$ such that every subobject $m:S\to A$ is the pullback of $\mathrm{true}$ along a unique characteristic morphism $\chi_m:A\to\Omega$.
+
+display_math:
+  - latex: |
+      S\cong A\times_{\Omega}1
+    description: A subobject recovered as a pullback along its characteristic morphism.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 3
+    note: Subobject classifiers express predicates and characteristic functions categorically.
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter VI
+    note: Subobject classifiers are part of elementary topos structure.

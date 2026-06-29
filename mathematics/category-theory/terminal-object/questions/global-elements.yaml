@@ -1,0 +1,23 @@
+id: category-theory.terminal-object.question.global-elements
+kind: question
+title: How are elements seen categorically?
+
+asks: |
+  If a category describes objects through morphisms, how can ordinary elements of a set be represented by maps?
+
+display_math:
+  - latex: |
+      1\to A
+    description: A generalized element of $A$ from a terminal object.
+
+motivates:
+  - category-theory.terminal-object
+
+related_concepts:
+  - category-theory.product
+  - category-theory.subobject-classifier
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 1
+    note: Elements are treated through mappings from a one-element set.

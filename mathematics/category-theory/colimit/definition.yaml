@@ -1,0 +1,29 @@
+id: category-theory.colimit.definition
+kind: definition
+title: Definition of colimit
+
+definition_style: categorical
+
+defines:
+  - category-theory.colimit
+
+depends_on:
+  - category-theory.category
+  - category-theory.commutative-diagram
+  - category-theory.morphism
+
+statement: |
+  A colimit of a diagram $D:J\to\mathcal{C}$ is a universal cocone from $D$: every compatible family of morphisms from the diagram to an object $X$ factors uniquely through the colimit object.
+
+display_math:
+  - latex: |
+      \mathrm{Cocone}(D,X)\cong \mathrm{Hom}_{\mathcal{C}}(\operatorname{colim}D,X)
+    description: Universal property of a colimit.
+
+source_refs:
+  - source: source.leinster-basic-category-theory
+    locator: Section 5.2
+    note: Colimits are dual to limits.
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter V
+    note: Standard definition of colimits by universal cocones.

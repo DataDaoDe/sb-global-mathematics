@@ -1,0 +1,24 @@
+id: category-theory.natural-numbers-object.question.recursion-categorically
+kind: question
+title: What categorical property captures recursion?
+
+asks: |
+  Which universal property says that a map out of the natural numbers is determined by a base value and a successor step?
+
+display_math:
+  - latex: |
+      1\to N,\qquad N\to N
+    description: Zero and successor structure.
+
+motivates:
+  - category-theory.natural-numbers-object
+
+related_concepts:
+  - foundations.natural-number
+  - foundations.mathematical-induction
+  - foundations.elementary-theory-category-of-sets
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 4
+    note: Natural numbers are characterized by recursion in structural set theory.

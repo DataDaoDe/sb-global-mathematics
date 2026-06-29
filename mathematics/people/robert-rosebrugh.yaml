@@ -1,0 +1,10 @@
+id: person.robert-rosebrugh
+kind: person
+title: Robert Rosebrugh
+
+sort_name: Rosebrugh, Robert
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Author metadata
+    note: Coauthor of Sets for Mathematics.

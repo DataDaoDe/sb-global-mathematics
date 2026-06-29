@@ -1,0 +1,29 @@
+id: category-theory.monomorphism.definition
+kind: definition
+title: Definition of monomorphism
+
+definition_style: categorical
+
+defines:
+  - category-theory.monomorphism
+
+depends_on:
+  - category-theory.category
+  - category-theory.morphism
+  - category-theory.morphism-composition
+
+statement: |
+  A morphism $m:A\to B$ is a monomorphism if for all morphisms $u,v:X\to A$, the equality $m\circ u=m\circ v$ implies $u=v$.
+
+display_math:
+  - latex: |
+      m\circ u=m\circ v\Rightarrow u=v
+    description: Left-cancellation property of a monomorphism.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 2
+    note: Monomorphisms represent inclusion-like maps in structural set theory.
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter I
+    note: Standard cancellative definition of monomorphism.

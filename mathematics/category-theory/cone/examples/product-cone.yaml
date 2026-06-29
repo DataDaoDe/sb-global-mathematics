@@ -1,0 +1,19 @@
+id: category-theory.cone.example.product-cone
+kind: example
+title: A cone to a two-object discrete diagram
+
+example_of:
+  - category-theory.cone
+
+description: |
+  A pair of morphisms $X\to A$ and $X\to B$ is a cone from $X$ to the discrete diagram containing $A$ and $B$.
+
+display_math:
+  - latex: |
+      X\xrightarrow{f}A,\qquad X\xrightarrow{g}B
+    description: Cone data for a binary product diagram.
+
+source_refs:
+  - source: source.leinster-basic-category-theory
+    locator: Section 5.1
+    note: Product cones are basic examples of cones.

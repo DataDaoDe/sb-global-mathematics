@@ -1,0 +1,31 @@
+id: category-theory.cone.history.cones-before-limits
+kind: historical_note
+title: Cones as comparison data
+
+date_label: General limit theory
+event_type: formalization
+start_year: 1945
+
+description: |
+  Cones provide the common language for comparing all ways an object can map into a diagram.
+
+summary: Cones organize compatible families of maps into a diagram.
+
+conceptual_change: |
+  Products, equalizers, and pullbacks could be described uniformly as universal cones.
+
+display_math:
+  - latex: |
+      X\Rightarrow D
+    description: Informal notation for a cone from $X$ to a diagram $D$.
+
+subjects:
+  - category-theory.cone
+
+developed_from:
+  - category-theory.commutative-diagram
+
+source_refs:
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter V
+    note: General limit theory uses cones to unify universal constructions.

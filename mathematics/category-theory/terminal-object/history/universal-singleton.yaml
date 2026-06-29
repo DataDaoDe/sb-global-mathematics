@@ -1,0 +1,32 @@
+id: category-theory.terminal-object.history.universal-singleton
+kind: historical_note
+title: Singleton by universal property
+
+date_label: Mid-twentieth-century category theory
+event_type: generalization
+start_year: 1945
+
+description: |
+  Category theory recast the one-element set as a terminal object, defined not by inspecting its elements but by the unique maps into it.
+
+summary: Terminal objects generalize singleton-like behavior.
+
+conceptual_change: |
+  The singleton was recognized by its mapping property, allowing the same idea to apply in categories beyond sets.
+
+display_math:
+  - latex: |
+      A\to 1
+    description: The unique map to a terminal object.
+
+subjects:
+  - category-theory.terminal-object
+
+developed_from:
+  - foundations.singleton
+  - category-theory.category
+
+source_refs:
+  - source: source.leinster-basic-category-theory
+    locator: Section 5.1
+    note: Universal properties generalize familiar objects from sets.

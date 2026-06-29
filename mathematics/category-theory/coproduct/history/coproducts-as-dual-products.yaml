@@ -1,0 +1,32 @@
+id: category-theory.coproduct.history.coproducts-as-dual-products
+kind: historical_note
+title: Coproducts as dual products
+
+date_label: Mid-twentieth-century category theory
+event_type: generalization
+start_year: 1945
+
+description: |
+  Category theory revealed disjoint unions as the dual construction to products: maps out of the coproduct correspond to pairs of maps out of the summands.
+
+summary: Coproducts generalize disjoint union by a universal mapping property.
+
+conceptual_change: |
+  Combining alternatives became characterized by how maps from the combined object are specified by cases.
+
+display_math:
+  - latex: |
+      \mathrm{Hom}(A+B,X)\cong \mathrm{Hom}(A,X)\times\mathrm{Hom}(B,X)
+    description: Coproduct represented by a hom-set bijection.
+
+subjects:
+  - category-theory.coproduct
+
+developed_from:
+  - foundations.set-union
+  - category-theory.product
+
+source_refs:
+  - source: source.leinster-basic-category-theory
+    locator: Section 5.1
+    note: Coproducts are standard dual universal constructions.

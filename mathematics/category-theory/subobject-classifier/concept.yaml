@@ -1,0 +1,17 @@
+id: category-theory.subobject-classifier
+kind: concept
+title: Subobject classifier
+
+summary: A subobject classifier is an object of truth values that classifies subobjects by characteristic morphisms.
+
+display_math:
+  - latex: |
+      \Omega
+    description: Standard notation for a subobject classifier.
+
+defined_by:
+  - category-theory.subobject-classifier.definition
+
+broader_concepts:
+  - category-theory.subobject
+  - foundations.truth-value

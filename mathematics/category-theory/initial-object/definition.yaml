@@ -1,0 +1,29 @@
+id: category-theory.initial-object.definition
+kind: definition
+title: Definition of initial object
+
+definition_style: categorical
+
+defines:
+  - category-theory.initial-object
+
+depends_on:
+  - category-theory.category
+  - category-theory.object
+  - category-theory.morphism
+
+statement: |
+  An object $0$ of a category $\mathcal{C}$ is initial if for every object $A$ of $\mathcal{C}$ there exists exactly one morphism $0\to A$.
+
+display_math:
+  - latex: |
+      \forall A\in\mathcal{C}\ \exists!\,(0\to A)
+    description: Unique morphism from an initial object to every object.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 1
+    note: Initial objects express empty-set-like structure categorically.
+  - source: source.leinster-basic-category-theory
+    locator: Section 5.1
+    note: Defines initial objects as the dual of terminal objects.

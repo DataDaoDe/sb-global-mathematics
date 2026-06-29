@@ -1,0 +1,17 @@
+id: foundations.elementary-theory-category-of-sets
+kind: concept
+title: Elementary Theory of the Category of Sets
+
+summary: The Elementary Theory of the Category of Sets, abbreviated ETCS, axiomatizes sets structurally as a category with the categorical properties expected of sets and functions.
+
+display_math:
+  - latex: |
+      \mathbf{Set}
+    description: The category of sets as the intended model of ETCS.
+
+defined_by:
+  - foundations.elementary-theory-category-of-sets.definition
+
+broader_concepts:
+  - foundations.set
+  - category-theory.category

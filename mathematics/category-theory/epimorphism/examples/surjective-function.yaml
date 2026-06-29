@@ -1,0 +1,19 @@
+id: category-theory.epimorphism.example.surjective-function
+kind: example
+title: Surjective functions are epimorphisms in Set
+
+example_of:
+  - category-theory.epimorphism
+
+description: |
+  In $\mathbf{Set}$, a function is an epimorphism exactly when it is surjective.
+
+display_math:
+  - latex: |
+      f:A\to B\text{ epi}\iff f\text{ is surjective}
+    description: Epimorphisms in $\mathbf{Set}$.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 2
+    note: Epimorphisms specialize to surjective functions in the category of sets.

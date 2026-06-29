@@ -1,0 +1,32 @@
+id: category-theory.subobject-classifier.history.truth-values-in-a-category
+kind: historical_note
+title: Truth values as a categorical object
+
+date_label: Elementary topos theory
+event_type: synthesis
+start_year: 1964
+
+description: |
+  Subobject classifiers internalized the idea that subsets are classified by predicates with truth values.
+
+summary: Subobject classifiers make truth values part of categorical structure.
+
+conceptual_change: |
+  Predicates became morphisms to a classifier object, and subsets became pullbacks of the truth morphism.
+
+display_math:
+  - latex: |
+      \chi:S\subseteq A\longmapsto A\to\Omega
+    description: Subobjects classified by characteristic maps.
+
+subjects:
+  - category-theory.subobject-classifier
+
+developed_from:
+  - category-theory.subobject
+  - foundations.truth-value
+
+source_refs:
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter VI
+    note: Subobject classifiers are central to elementary topoi.

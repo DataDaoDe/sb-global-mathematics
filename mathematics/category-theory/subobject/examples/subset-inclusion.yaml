@@ -1,0 +1,19 @@
+id: category-theory.subobject.example.subset-inclusion
+kind: example
+title: Subset inclusion as subobject
+
+example_of:
+  - category-theory.subobject
+
+description: |
+  In $\mathbf{Set}$, a subset $S\subseteq A$ determines a subobject by its inclusion function $S\to A$.
+
+display_math:
+  - latex: |
+      S\subseteq A\quad\leadsto\quad S\to A
+    description: A subset represented as a subobject.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 2
+    note: Subsets are represented categorically by inclusion maps.

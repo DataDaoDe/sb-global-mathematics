@@ -1,0 +1,31 @@
+id: category-theory.finite-limit.definition
+kind: definition
+title: Definition of finite limit
+
+definition_style: categorical
+
+defines:
+  - category-theory.finite-limit
+
+depends_on:
+  - category-theory.limit
+  - category-theory.terminal-object
+  - category-theory.product
+  - category-theory.equalizer
+  - category-theory.pullback
+
+statement: |
+  A finite limit is the limit of a diagram with finitely many objects and morphisms. A category has finite limits when every finite diagram in it has a limit.
+
+display_math:
+  - latex: |
+      D\text{ finite}\Rightarrow \lim D\text{ exists}
+    description: Existence condition for finite limits.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 2
+    note: Finite limits are part of the categorical structure used to axiomatize sets.
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter V
+    note: Finite limits are standard categorical structure.

@@ -1,0 +1,10 @@
+id: source.lawvere-rosebrugh-sets-for-mathematics
+kind: source
+title: Sets for Mathematics
+
+source_type: book
+author_refs:
+  - person.f-william-lawvere
+  - person.robert-rosebrugh
+year: 2003
+isbn: "0521010608"

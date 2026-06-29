@@ -1,0 +1,29 @@
+id: category-theory.commutative-diagram.definition
+kind: definition
+title: Definition of commutative diagram
+
+definition_style: categorical
+
+defines:
+  - category-theory.commutative-diagram
+
+depends_on:
+  - category-theory.category
+  - category-theory.morphism
+  - category-theory.morphism-composition
+
+statement: |
+  A diagram in a category is commutative if any two directed paths in the diagram with the same source and target have equal composite morphisms.
+
+display_math:
+  - latex: |
+      p_1=p_2
+    description: Equality of path composites in a commutative diagram.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 1
+    note: Commutative diagrams express equations between composites of mappings.
+  - source: source.leinster-basic-category-theory
+    locator: Chapter 1
+    note: Diagrammatic equations are standard category-theoretic notation.

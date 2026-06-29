@@ -1,0 +1,25 @@
+id: category-theory.limit.question.unify-universal-constructions
+kind: question
+title: What unifies products, equalizers, and pullbacks?
+
+asks: |
+  How can several compatibility constructions be described as instances of one universal mapping pattern?
+
+display_math:
+  - latex: |
+      \lim D
+    description: A limit as a universal solution to a diagram.
+
+motivates:
+  - category-theory.limit
+
+related_concepts:
+  - category-theory.cone
+  - category-theory.product
+  - category-theory.equalizer
+  - category-theory.pullback
+
+source_refs:
+  - source: source.leinster-basic-category-theory
+    locator: Section 5.1
+    note: Limits unify products, equalizers, and pullbacks.

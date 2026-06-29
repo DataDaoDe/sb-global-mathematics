@@ -1,0 +1,17 @@
+id: category-theory.coproduct
+kind: concept
+title: Coproduct
+
+summary: A coproduct is an object equipped with injections that universally represents maps out of two objects into a common codomain.
+
+display_math:
+  - latex: |
+      A+B
+    description: Coproduct of two objects.
+
+defined_by:
+  - category-theory.coproduct.definition
+
+broader_concepts:
+  - category-theory.category
+  - foundations.set-union

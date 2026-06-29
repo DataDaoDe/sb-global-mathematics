@@ -1,0 +1,19 @@
+id: category-theory.pullback.example.fiber-product-of-sets
+kind: example
+title: Fiber product of sets
+
+example_of:
+  - category-theory.pullback
+
+description: |
+  In $\mathbf{Set}$, the pullback of $f:A\to C$ and $g:B\to C$ is the set of pairs $(a,b)$ whose images in $C$ agree.
+
+display_math:
+  - latex: |
+      A\times_C B=\{(a,b)\in A\times B:f(a)=g(b)\}
+    description: Pullback as a subset of a Cartesian product.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 2
+    note: Pullbacks describe compatible pairs over a common codomain.

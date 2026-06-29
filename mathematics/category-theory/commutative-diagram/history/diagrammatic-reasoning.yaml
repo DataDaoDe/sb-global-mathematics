@@ -1,0 +1,31 @@
+id: category-theory.commutative-diagram.history.diagrammatic-reasoning
+kind: historical_note
+title: Diagrammatic equations
+
+date_label: Mid-twentieth-century category theory
+event_type: formalization
+start_year: 1945
+
+description: |
+  Category theory made diagrams a precise way to state and reason about equations between composed maps.
+
+summary: Commutative diagrams turn equations of composites into reusable visual syntax.
+
+conceptual_change: |
+  Reasoning with maps shifted from long algebraic strings of composites to diagrams whose path equalities encode the same information.
+
+display_math:
+  - latex: |
+      \text{same endpoints}\Rightarrow \text{same composite}
+    description: Informal commutativity principle.
+
+subjects:
+  - category-theory.commutative-diagram
+
+developed_from:
+  - category-theory.morphism-composition
+
+source_refs:
+  - source: source.eilenberg-mac-lane-1945-natural-equivalences
+    locator: Section 1
+    note: Early category theory organized morphisms and their composites diagrammatically.

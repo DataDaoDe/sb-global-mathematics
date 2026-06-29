@@ -1,0 +1,25 @@
+id: category-theory.finite-colimit.question.finite-combination
+kind: question
+title: What finite combination structure is needed for sets?
+
+asks: |
+  Which finite universal constructions let categorical set theory express empty objects, disjoint alternatives, and finite gluing?
+
+display_math:
+  - latex: |
+      0,\quad A+B
+    description: Basic finite-colimit constructions.
+
+motivates:
+  - category-theory.finite-colimit
+
+related_concepts:
+  - foundations.elementary-theory-category-of-sets
+  - category-theory.initial-object
+  - category-theory.coproduct
+  - category-theory.colimit
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 2
+    note: Structural set theory includes finite combination constructions alongside finite compatibility constructions.

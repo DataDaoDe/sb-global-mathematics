@@ -1,0 +1,34 @@
+id: foundations.elementary-theory-category-of-sets.definition
+kind: definition
+title: Definition of ETCS
+
+definition_style: axiomatic
+scope: Structural set theory
+
+defines:
+  - foundations.elementary-theory-category-of-sets
+
+depends_on:
+  - category-theory.category
+  - category-theory.terminal-object
+  - category-theory.product
+  - category-theory.equalizer
+  - category-theory.exponential-object
+  - category-theory.subobject-classifier
+  - category-theory.natural-numbers-object
+
+statement: |
+  ETCS is an axiomatic theory of sets stated in categorical language. It characterizes a category of sets and functions by structural properties such as finite limits, exponentials, a subobject classifier, a natural numbers object, and set-like well-pointed behavior.
+
+display_math:
+  - latex: |
+      \mathbf{Set}\text{ is a well-pointed topos with a natural numbers object}
+    description: Informal summary of the ETCS structural package.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapters 1-3
+    note: Develops set theory through the structural properties of the category of sets.
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter VI
+    note: Standard reference for topos-theoretic categorical structure related to ETCS.

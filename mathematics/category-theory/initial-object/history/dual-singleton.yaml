@@ -1,0 +1,32 @@
+id: category-theory.initial-object.history.dual-singleton
+kind: historical_note
+title: Empty object by universal property
+
+date_label: Mid-twentieth-century category theory
+event_type: generalization
+start_year: 1945
+
+description: |
+  Category theory recognized the empty set by its unique maps out, dual to the singleton's unique maps in.
+
+summary: Initial objects generalize empty-set-like behavior.
+
+conceptual_change: |
+  Emptiness became expressible as a mapping property rather than as the absence of listed elements.
+
+display_math:
+  - latex: |
+      0\to A
+    description: The universal map from an initial object.
+
+subjects:
+  - category-theory.initial-object
+
+developed_from:
+  - foundations.empty-set
+  - category-theory.category
+
+source_refs:
+  - source: source.leinster-basic-category-theory
+    locator: Section 5.1
+    note: Initial objects are introduced as universal objects.

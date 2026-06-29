@@ -1,0 +1,33 @@
+id: category-theory.limit.history.universal-limits
+kind: historical_note
+title: Limits unify compatibility constructions
+
+date_label: General category theory
+event_type: synthesis
+start_year: 1945
+
+description: |
+  Limit theory unified many familiar constructions by treating each as a universal cone to a diagram.
+
+summary: Limits provide one language for products, equalizers, pullbacks, and related constructions.
+
+conceptual_change: |
+  Instead of learning each construction separately, mathematicians could recognize the same universal pattern across diagrams.
+
+display_math:
+  - latex: |
+      \text{terminal cone}\quad\leadsto\quad\text{limit}
+    description: Limit as a terminal cone.
+
+subjects:
+  - category-theory.limit
+
+developed_from:
+  - category-theory.product
+  - category-theory.equalizer
+  - category-theory.pullback
+
+source_refs:
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter V
+    note: General limit theory is a central part of category theory.

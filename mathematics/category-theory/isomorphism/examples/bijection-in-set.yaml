@@ -1,0 +1,19 @@
+id: category-theory.isomorphism.example.bijection-in-set
+kind: example
+title: Bijections are isomorphisms in Set
+
+example_of:
+  - category-theory.isomorphism
+
+description: |
+  In $\mathbf{Set}$, the isomorphisms are exactly the bijective functions, with inverse functions as two-sided inverses.
+
+display_math:
+  - latex: |
+      f:A\to B\text{ is an isomorphism}\iff f\text{ is bijective}
+    description: Isomorphisms in $\mathbf{Set}$.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 1
+    note: Isomorphisms in sets are bijections.

@@ -1,0 +1,30 @@
+id: category-theory.product.definition
+kind: definition
+title: Definition of product
+
+definition_style: categorical
+
+defines:
+  - category-theory.product
+
+depends_on:
+  - category-theory.category
+  - category-theory.object
+  - category-theory.morphism
+
+statement: |
+  A product of objects $A$ and $B$ is an object $A\times B$ with projections $\pi_1:A\times B\to A$ and $\pi_2:A\times B\to B$ such that every pair of morphisms $f:X\to A$ and $g:X\to B$ factors uniquely through a morphism $\langle f,g\rangle:X\to A\times B$.
+
+display_math:
+  - latex: |
+      \pi_1\circ\langle f,g\rangle=f,\qquad
+      \pi_2\circ\langle f,g\rangle=g
+    description: Universal property of a binary product.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 1
+    note: Products are introduced by their universal property in the category of sets.
+  - source: source.leinster-basic-category-theory
+    locator: Section 5.1
+    note: Standard categorical definition of binary products.

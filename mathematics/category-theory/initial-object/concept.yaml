@@ -1,0 +1,17 @@
+id: category-theory.initial-object
+kind: concept
+title: Initial object
+
+summary: An initial object is an object admitting a unique morphism to every object of the category.
+
+display_math:
+  - latex: |
+      0
+    description: Common notation for an initial object.
+
+defined_by:
+  - category-theory.initial-object.definition
+
+broader_concepts:
+  - category-theory.category
+  - category-theory.object

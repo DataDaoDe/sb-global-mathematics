@@ -1,0 +1,19 @@
+id: category-theory.limit.example.product-as-limit
+kind: example
+title: Products are limits
+
+example_of:
+  - category-theory.limit
+
+description: |
+  A binary product is the limit of a discrete diagram with two objects.
+
+display_math:
+  - latex: |
+      A\times B=\lim(A\quad B)
+    description: Product as a limit of a discrete two-object diagram.
+
+source_refs:
+  - source: source.leinster-basic-category-theory
+    locator: Section 5.1
+    note: Products are basic examples of limits.

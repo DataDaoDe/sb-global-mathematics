@@ -1,0 +1,32 @@
+id: category-theory.monomorphism.history.cancellation-instead-of-elements
+kind: historical_note
+title: Injectivity without elements
+
+date_label: Mid-twentieth-century category theory
+event_type: generalization
+start_year: 1945
+
+description: |
+  Monomorphisms reformulate injectivity as a cancellation property that makes sense in any category.
+
+summary: Monomorphisms generalize injective functions by left cancellation.
+
+conceptual_change: |
+  A map could be recognized as inclusion-like without evaluating elements, using only composition with other morphisms.
+
+display_math:
+  - latex: |
+      m\circ u=m\circ v\Rightarrow u=v
+    description: Left cancellation.
+
+subjects:
+  - category-theory.monomorphism
+
+developed_from:
+  - foundations.function.injective
+  - category-theory.morphism-composition
+
+source_refs:
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter I
+    note: Cancellative definitions of monic and epic maps are foundational category-theoretic language.

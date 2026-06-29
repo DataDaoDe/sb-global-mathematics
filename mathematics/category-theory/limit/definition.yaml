@@ -1,0 +1,29 @@
+id: category-theory.limit.definition
+kind: definition
+title: Definition of limit
+
+definition_style: categorical
+
+defines:
+  - category-theory.limit
+
+depends_on:
+  - category-theory.category
+  - category-theory.cone
+  - category-theory.morphism
+
+statement: |
+  A limit of a diagram $D:J\to\mathcal{C}$ is a cone $\lambda:L\to D$ such that every cone $x:X\to D$ factors uniquely through $\lambda$ by a morphism $X\to L$.
+
+display_math:
+  - latex: |
+      \mathrm{Cone}(X,D)\cong \mathrm{Hom}_{\mathcal{C}}(X,L)
+    description: Universal property of a limit.
+
+source_refs:
+  - source: source.leinster-basic-category-theory
+    locator: Section 5.1
+    note: Limits are terminal objects in categories of cones.
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter V
+    note: Standard definition of limits by universal cones.

@@ -1,0 +1,18 @@
+id: category-theory.exponential-object
+kind: concept
+title: Exponential object
+
+summary: An exponential object represents the object of morphisms from one object to another inside a category.
+
+display_math:
+  - latex: |
+      B^A
+    description: Exponential object of maps from $A$ to $B$.
+
+defined_by:
+  - category-theory.exponential-object.definition
+
+broader_concepts:
+  - category-theory.category
+  - category-theory.product
+  - foundations.function

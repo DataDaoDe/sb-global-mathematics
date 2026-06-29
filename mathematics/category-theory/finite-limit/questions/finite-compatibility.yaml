@@ -1,0 +1,25 @@
+id: category-theory.finite-limit.question.finite-compatibility
+kind: question
+title: What finite compatibility structure is needed for sets?
+
+asks: |
+  Which finite universal constructions let categorical set theory express products, equations, and inverse images?
+
+display_math:
+  - latex: |
+      1,\quad A\times B,\quad \operatorname{Eq}(f,g),\quad A\times_C B
+    description: Common finite-limit constructions.
+
+motivates:
+  - category-theory.finite-limit
+
+related_concepts:
+  - foundations.elementary-theory-category-of-sets
+  - category-theory.product
+  - category-theory.equalizer
+  - category-theory.pullback
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 2
+    note: ETCS uses finite-limit structure to express set-like compatibility constructions.

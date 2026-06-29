@@ -1,0 +1,32 @@
+id: category-theory.exponential-object.history.cartesian-closed-structure
+kind: historical_note
+title: Function spaces by adjunction
+
+date_label: Mid-twentieth-century category theory
+event_type: generalization
+start_year: 1945
+
+description: |
+  Exponential objects generalized function sets and function spaces through the natural correspondence between maps out of a product and maps into an exponential.
+
+summary: Exponentials express internal function objects categorically.
+
+conceptual_change: |
+  A function set became recognizable by how parameterized functions transpose, not by an external enumeration of functions.
+
+display_math:
+  - latex: |
+      X\times A\to B\quad\leftrightarrow\quad X\to B^A
+    description: Currying correspondence for exponentials.
+
+subjects:
+  - category-theory.exponential-object
+
+developed_from:
+  - foundations.function
+  - category-theory.product
+
+source_refs:
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter IV
+    note: Cartesian closed categories center on products and exponentials.

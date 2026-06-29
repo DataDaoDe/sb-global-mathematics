@@ -1,0 +1,17 @@
+id: category-theory.isomorphism
+kind: concept
+title: Isomorphism
+
+summary: An isomorphism is a morphism with a two-sided inverse, expressing sameness of structure inside a category.
+
+display_math:
+  - latex: |
+      A\cong B
+    description: Isomorphic objects.
+
+defined_by:
+  - category-theory.isomorphism.definition
+
+broader_concepts:
+  - category-theory.morphism
+  - foundations.bijection

@@ -1,0 +1,17 @@
+id: category-theory.commutative-diagram
+kind: concept
+title: Commutative diagram
+
+summary: A commutative diagram is a diagram of objects and morphisms in which every directed path with the same start and end has the same composite.
+
+display_math:
+  - latex: |
+      g\circ f=k\circ h
+    description: Equality of composites expressed by a commutative diagram.
+
+defined_by:
+  - category-theory.commutative-diagram.definition
+
+broader_concepts:
+  - category-theory.category
+  - category-theory.morphism-composition

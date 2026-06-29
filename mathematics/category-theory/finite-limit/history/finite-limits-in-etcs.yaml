@@ -1,0 +1,32 @@
+id: category-theory.finite-limit.history.finite-limits-in-etcs
+kind: historical_note
+title: Finite limits in structural set theory
+
+date_label: Categorical set theory
+event_type: synthesis
+start_year: 1964
+
+description: |
+  Finite limits became part of the categorical package needed to recover ordinary finite set constructions structurally.
+
+summary: Finite limits supply the product, equation, and pullback structure used in categorical set theory.
+
+conceptual_change: |
+  Several basic set operations were grouped under one finite-limit requirement.
+
+display_math:
+  - latex: |
+      \text{finite diagrams have limits}
+    description: Finite-limit existence principle.
+
+subjects:
+  - category-theory.finite-limit
+
+developed_from:
+  - category-theory.limit
+  - foundations.elementary-theory-category-of-sets
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapters 1-2
+    note: Structural set theory develops finite universal constructions in the category of sets.

@@ -1,0 +1,19 @@
+id: category-theory.monomorphism.example.injective-function
+kind: example
+title: Injective functions are monomorphisms in Set
+
+example_of:
+  - category-theory.monomorphism
+
+description: |
+  In $\mathbf{Set}$, a function is a monomorphism exactly when it is injective.
+
+display_math:
+  - latex: |
+      f:A\to B\text{ mono}\iff f\text{ is injective}
+    description: Monomorphisms in $\mathbf{Set}$.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 2
+    note: Monomorphisms specialize to injective functions in the category of sets.

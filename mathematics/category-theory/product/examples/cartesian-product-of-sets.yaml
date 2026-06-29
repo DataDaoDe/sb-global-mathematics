@@ -1,0 +1,19 @@
+id: category-theory.product.example.cartesian-product-of-sets
+kind: example
+title: Cartesian product as categorical product
+
+example_of:
+  - category-theory.product
+
+description: |
+  In $\mathbf{Set}$, the categorical product of sets $A$ and $B$ is the Cartesian product $A\times B$ with its two projection functions.
+
+display_math:
+  - latex: |
+      \pi_1(a,b)=a,\qquad \pi_2(a,b)=b
+    description: Projections from the Cartesian product.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 1
+    note: Cartesian products are characterized by projections and pairing.

@@ -1,0 +1,19 @@
+id: category-theory.terminal-object.example.singleton-set
+kind: example
+title: A singleton set is terminal in Set
+
+example_of:
+  - category-theory.terminal-object
+
+description: |
+  In $\mathbf{Set}$, any singleton set is terminal because every set has exactly one function to it.
+
+display_math:
+  - latex: |
+      \forall A\ \exists!\,f:A\to\{*\}
+    description: Unique function from any set to a singleton.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 1
+    note: Singleton sets provide the basic terminal-object example in the category of sets.

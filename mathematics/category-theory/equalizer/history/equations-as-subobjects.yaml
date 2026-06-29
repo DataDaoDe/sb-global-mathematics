@@ -1,0 +1,32 @@
+id: category-theory.equalizer.history.equations-as-subobjects
+kind: historical_note
+title: Equations as universal subobjects
+
+date_label: Mid-twentieth-century category theory
+event_type: generalization
+start_year: 1945
+
+description: |
+  Equalizers turned the solution set of an equation between maps into a categorical construction.
+
+summary: Equalizers generalize subsets where two maps agree.
+
+conceptual_change: |
+  Solving an equation became a universal mapping problem: identify the largest domain through which all equalizing maps factor.
+
+display_math:
+  - latex: |
+      E\to A\rightrightarrows B
+    description: Equalizer diagram.
+
+subjects:
+  - category-theory.equalizer
+
+developed_from:
+  - foundations.set-builder-notation
+  - category-theory.category
+
+source_refs:
+  - source: source.leinster-basic-category-theory
+    locator: Section 5.1
+    note: Equalizers are basic universal constructions.

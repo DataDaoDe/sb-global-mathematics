@@ -1,0 +1,11 @@
+id: person.f-william-lawvere
+kind: person
+title: F. William Lawvere
+
+sort_name: Lawvere, F. William
+birth_year: 1937
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Author metadata
+    note: Coauthor of Sets for Mathematics.

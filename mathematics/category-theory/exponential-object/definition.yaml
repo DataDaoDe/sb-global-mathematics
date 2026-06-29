@@ -1,0 +1,29 @@
+id: category-theory.exponential-object.definition
+kind: definition
+title: Definition of exponential object
+
+definition_style: categorical
+
+defines:
+  - category-theory.exponential-object
+
+depends_on:
+  - category-theory.category
+  - category-theory.product
+  - category-theory.morphism
+
+statement: |
+  In a category with products, an exponential object $B^A$ represents maps into $B$ from a product with $A$: morphisms $X\to B^A$ correspond naturally to morphisms $X\times A\to B$.
+
+display_math:
+  - latex: |
+      \mathrm{Hom}(X,B^A)\cong \mathrm{Hom}(X\times A,B)
+    description: Exponential adjunction.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 3
+    note: Function sets are characterized categorically as exponentials.
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter IV
+    note: Exponentials are the defining structure of cartesian closed categories.

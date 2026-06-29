@@ -1,0 +1,32 @@
+id: category-theory.epimorphism.history.surjectivity-by-cancellation
+kind: historical_note
+title: Surjectivity without elements
+
+date_label: Mid-twentieth-century category theory
+event_type: generalization
+start_year: 1945
+
+description: |
+  Epimorphisms reformulate surjective behavior as right cancellation, a condition stated entirely in terms of composition.
+
+summary: Epimorphisms generalize surjective functions by right cancellation.
+
+conceptual_change: |
+  Onto-like behavior could be detected by whether postcomposition after the map distinguishes morphisms.
+
+display_math:
+  - latex: |
+      u\circ e=v\circ e\Rightarrow u=v
+    description: Right cancellation.
+
+subjects:
+  - category-theory.epimorphism
+
+developed_from:
+  - foundations.function.surjective
+  - category-theory.morphism-composition
+
+source_refs:
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter I
+    note: Cancellative definitions of monic and epic maps are foundational category-theoretic language.

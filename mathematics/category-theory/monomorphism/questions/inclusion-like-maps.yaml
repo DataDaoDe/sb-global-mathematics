@@ -1,0 +1,24 @@
+id: category-theory.monomorphism.question.inclusion-like-maps
+kind: question
+title: What makes a map inclusion-like?
+
+asks: |
+  Which categorical property captures the idea that a map loses no distinctions in its domain?
+
+display_math:
+  - latex: |
+      m\circ u=m\circ v\Rightarrow u=v
+    description: Cancellation as the categorical test for being inclusion-like.
+
+motivates:
+  - category-theory.monomorphism
+
+related_concepts:
+  - category-theory.subobject
+  - category-theory.equalizer
+  - category-theory.isomorphism
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 2
+    note: Inclusion-like maps are analyzed categorically as monomorphisms.

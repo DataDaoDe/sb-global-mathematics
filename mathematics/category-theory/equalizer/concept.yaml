@@ -1,0 +1,17 @@
+id: category-theory.equalizer
+kind: concept
+title: Equalizer
+
+summary: An equalizer is a universal subobject on which two parallel morphisms become equal.
+
+display_math:
+  - latex: |
+      E\to A\rightrightarrows B
+    description: Equalizer of two parallel morphisms.
+
+defined_by:
+  - category-theory.equalizer.definition
+
+broader_concepts:
+  - category-theory.category
+  - foundations.preimage

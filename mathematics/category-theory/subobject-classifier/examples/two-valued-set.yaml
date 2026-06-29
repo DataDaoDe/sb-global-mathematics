@@ -1,0 +1,19 @@
+id: category-theory.subobject-classifier.example.two-valued-set
+kind: example
+title: Truth values classify subsets in Set
+
+example_of:
+  - category-theory.subobject-classifier
+
+description: |
+  In $\mathbf{Set}$, the two-element set $\{0,1\}$ classifies subsets: a subset $S\subseteq A$ corresponds to its characteristic function $\chi_S:A\to\{0,1\}$.
+
+display_math:
+  - latex: |
+      \chi_S(a)=1\iff a\in S
+    description: Characteristic function of a subset.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 3
+    note: Truth values and characteristic functions classify subsets in the category of sets.

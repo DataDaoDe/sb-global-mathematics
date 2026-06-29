@@ -1,0 +1,23 @@
+id: category-theory.initial-object.question.empty-by-maps
+kind: question
+title: How is emptiness recognized by maps?
+
+asks: |
+  What mapping property distinguishes an empty object without inspecting its elements?
+
+display_math:
+  - latex: |
+      0\to A
+    description: Unique map out of an initial object.
+
+motivates:
+  - category-theory.initial-object
+
+related_concepts:
+  - category-theory.terminal-object
+  - category-theory.coproduct
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 1
+    note: Structural set theory recognizes empty-set behavior by universal mapping properties.

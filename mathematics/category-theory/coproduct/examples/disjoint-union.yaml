@@ -1,0 +1,19 @@
+id: category-theory.coproduct.example.disjoint-union
+kind: example
+title: Disjoint union as coproduct
+
+example_of:
+  - category-theory.coproduct
+
+description: |
+  In $\mathbf{Set}$, the coproduct of $A$ and $B$ is their disjoint union, with injections remembering which summand an element came from.
+
+display_math:
+  - latex: |
+      A+B=(A\times\{0\})\cup(B\times\{1\})
+    description: A standard disjoint-union model of a coproduct of sets.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 1
+    note: Coproducts in sets are disjoint unions.

@@ -1,0 +1,30 @@
+id: category-theory.natural-numbers-object.definition
+kind: definition
+title: Definition of natural numbers object
+
+definition_style: categorical
+
+defines:
+  - category-theory.natural-numbers-object
+
+depends_on:
+  - category-theory.category
+  - category-theory.terminal-object
+  - category-theory.product
+  - foundations.natural-number
+
+statement: |
+  A natural numbers object is an object $N$ with morphisms $0:1\to N$ and $s:N\to N$ such that for every object $A$, point $a:1\to A$, and morphism $r:A\to A$, there is a unique morphism $u:N\to A$ with $u\circ 0=a$ and $u\circ s=r\circ u$.
+
+display_math:
+  - latex: |
+      u\circ 0=a,\qquad u\circ s=r\circ u
+    description: Recursion equations for the natural numbers object.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 4
+    note: The natural numbers object captures recursion and induction categorically.
+  - source: source.mac-lane-categories-working-mathematician-second-edition
+    locator: Chapter VI
+    note: Natural numbers objects are standard structure in elementary topoi.

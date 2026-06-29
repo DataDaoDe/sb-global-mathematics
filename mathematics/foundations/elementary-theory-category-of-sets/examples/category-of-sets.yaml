@@ -1,0 +1,20 @@
+id: foundations.elementary-theory-category-of-sets.example.category-of-sets
+kind: example
+title: Sets and functions as the intended ETCS model
+
+example_of:
+  - foundations.elementary-theory-category-of-sets
+
+description: |
+  The ordinary category whose objects are sets and whose morphisms are functions is the motivating example for ETCS. Its categorical structure expresses familiar set operations without taking membership as the primitive organizing relation.
+
+display_math:
+  - latex: |
+      \mathrm{Ob}(\mathbf{Set})=\{\text{sets}\},\qquad
+      \mathrm{Hom}_{\mathbf{Set}}(A,B)=\{f:A\to B\}
+    description: Objects and morphisms in the intended category of sets.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 1
+    note: Uses the category of sets and mappings as the basic setting.

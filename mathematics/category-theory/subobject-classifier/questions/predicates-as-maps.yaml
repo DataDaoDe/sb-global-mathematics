@@ -1,0 +1,24 @@
+id: category-theory.subobject-classifier.question.predicates-as-maps
+kind: question
+title: How are predicates represented by maps?
+
+asks: |
+  What categorical object plays the role of truth values so that predicates correspond to characteristic morphisms?
+
+display_math:
+  - latex: |
+      A\to\Omega
+    description: Predicate on $A$ represented by a morphism to truth values.
+
+motivates:
+  - category-theory.subobject-classifier
+
+related_concepts:
+  - category-theory.subobject
+  - category-theory.pullback
+  - foundations.truth-value
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 3
+    note: The subobject classifier connects predicates, subsets, and truth values.

@@ -1,0 +1,17 @@
+id: category-theory.cone
+kind: concept
+title: Cone
+
+summary: A cone to a diagram is an object with compatible morphisms to every object in the diagram.
+
+display_math:
+  - latex: |
+      X\to D(j)
+    description: Components of a cone from vertex $X$ to a diagram $D$.
+
+defined_by:
+  - category-theory.cone.definition
+
+broader_concepts:
+  - category-theory.commutative-diagram
+  - category-theory.morphism

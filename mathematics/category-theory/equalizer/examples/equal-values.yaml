@@ -1,0 +1,19 @@
+id: category-theory.equalizer.example.equal-values
+kind: example
+title: Equalizer of two functions
+
+example_of:
+  - category-theory.equalizer
+
+description: |
+  In $\mathbf{Set}$, the equalizer of functions $f,g:A\to B$ is the subset of $A$ consisting of elements where the two functions agree.
+
+display_math:
+  - latex: |
+      E=\{a\in A:f(a)=g(a)\}
+    description: Equalizer subset of a pair of functions.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 2
+    note: Equalizers correspond to solution sets of equations between maps.

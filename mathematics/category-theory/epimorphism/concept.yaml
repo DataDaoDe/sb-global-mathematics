@@ -1,0 +1,17 @@
+id: category-theory.epimorphism
+kind: concept
+title: Epimorphism
+
+summary: An epimorphism is a morphism that is right-cancellable, categorically generalizing surjective behavior.
+
+display_math:
+  - latex: |
+      A\twoheadrightarrow B
+    description: Common notation for an epimorphism.
+
+defined_by:
+  - category-theory.epimorphism.definition
+
+broader_concepts:
+  - category-theory.morphism
+  - foundations.function.surjective

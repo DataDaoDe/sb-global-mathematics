@@ -1,0 +1,24 @@
+id: category-theory.colimit.question.unify-gluing-constructions
+kind: question
+title: What unifies disjoint unions and quotients?
+
+asks: |
+  How can gluing, identifying, and combining constructions be described by one universal pattern?
+
+display_math:
+  - latex: |
+      \operatorname{colim}D
+    description: A colimit as a universal receiving object from a diagram.
+
+motivates:
+  - category-theory.colimit
+
+related_concepts:
+  - category-theory.coproduct
+  - category-theory.finite-colimit
+  - foundations.quotient-set
+
+source_refs:
+  - source: source.leinster-basic-category-theory
+    locator: Section 5.2
+    note: Colimits unify coproducts, coequalizers, and related gluing constructions.

@@ -1,0 +1,24 @@
+id: category-theory.subobject.question.subsets-by-inclusion
+kind: question
+title: How are subsets represented by maps?
+
+asks: |
+  If elements are secondary to morphisms, what categorical structure represents a subset of an object?
+
+display_math:
+  - latex: |
+      S\to A
+    description: Inclusion-like map representing a subobject.
+
+motivates:
+  - category-theory.subobject
+
+related_concepts:
+  - category-theory.equalizer
+  - category-theory.pullback
+  - category-theory.subobject-classifier
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 2
+    note: Subsets are studied through their inclusion maps.

@@ -1,0 +1,16 @@
+id: category-theory.finite-limit
+kind: concept
+title: Finite limit
+
+summary: A finite limit is a limit of a finite diagram, including terminal objects, binary products, equalizers, and pullbacks.
+
+display_math:
+  - latex: |
+      \lim D\quad(D\text{ finite})
+    description: Limit of a finite diagram.
+
+defined_by:
+  - category-theory.finite-limit.definition
+
+broader_concepts:
+  - category-theory.limit

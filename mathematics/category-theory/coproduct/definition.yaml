@@ -1,0 +1,29 @@
+id: category-theory.coproduct.definition
+kind: definition
+title: Definition of coproduct
+
+definition_style: categorical
+
+defines:
+  - category-theory.coproduct
+
+depends_on:
+  - category-theory.category
+  - category-theory.object
+  - category-theory.morphism
+
+statement: |
+  A coproduct of objects $A$ and $B$ is an object $A+B$ with injections $i_1:A\to A+B$ and $i_2:B\to A+B$ such that every pair of morphisms $f:A\to X$ and $g:B\to X$ factors uniquely through a morphism $[f,g]:A+B\to X$.
+
+display_math:
+  - latex: |
+      [f,g]\circ i_1=f,\qquad [f,g]\circ i_2=g
+    description: Universal property of a binary coproduct.
+
+source_refs:
+  - source: source.lawvere-rosebrugh-sets-for-mathematics
+    locator: Chapter 1
+    note: Coproducts express disjoint union structurally.
+  - source: source.leinster-basic-category-theory
+    locator: Section 5.1
+    note: Defines coproducts as the dual of products.

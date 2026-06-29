@@ -1,0 +1,24 @@
+id: category-theory.cone.question.compatible-families
+kind: question
+title: How do maps target an entire diagram?
+
+asks: |
+  What data describe a single object mapping compatibly into every part of a diagram?
+
+display_math:
+  - latex: |
+      X\to D(j)
+    description: Cone components from a common vertex.
+
+motivates:
+  - category-theory.cone
+
+related_concepts:
+  - category-theory.limit
+  - category-theory.product
+  - category-theory.pullback
+
+source_refs:
+  - source: source.leinster-basic-category-theory
+    locator: Section 5.1
+    note: Cones are introduced to state limits uniformly.
